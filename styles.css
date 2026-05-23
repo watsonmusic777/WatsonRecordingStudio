@@ -129,6 +129,7 @@ a:hover {
     border-bottom: 1px solid rgba(245, 201, 107, 0.18);
     background: transparent;
     position: relative;
+    margin-top: 110px;   /* ← ADD THIS */
 }
 
 /* ===========================
@@ -179,9 +180,12 @@ a:hover {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-
     border-bottom: none !important;
+	position: relative;
+    z-index: 1;
 }
+
+
 
 .hero-home .hero-logo {
     width: 100%;
