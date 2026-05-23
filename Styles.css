@@ -1,303 +1,86 @@
-/* 1. Root Variables — Dark Premium + Very Soft Gold */
-:root {
-  --bg: #050505;
-  --bg-alt: #0d0d0d;
-  --bg-soft: #151515;
-  --gold: #e8d7b9;          /* very soft champagne gold */
-  --gold-soft: #cbbfa5;
-  --text: #f5f5f5;
-  --muted: #9a9a9a;
-  --border: #1f1f1f;
+/* STORE PAGE — HERO SECTION */
+.hero-store {
+    background-image: url("images/wrs-logo-big.png");
+    background-size: 70%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: rgba(255, 180, 60, 0.25); /* amber wash */
+    background-blend-mode: overlay;             /* blends logo + color */
+    opacity: 0.18;                              /* subtle cinematic fade */
 }
 
-/* 2. Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* STORE PAGE — LAYOUT WRAPPER */
+.store-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
 }
 
-/* 3. Base */
-body {
-  background: radial-gradient(circle at top, #1a1a1a 0%, #050505 60%);
-  color: var(--text);
-  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  line-height: 1.6;
+/* STORE PAGE — PRODUCT GRID */
+.store-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 30px;
 }
 
-/* 4. Links */
-a {
-  color: var(--gold);
-  text-decoration: none;
-}
-a:hover {
-  color: var(--gold-soft);
-}
-
-/* 5. Navbar */
-.navbar {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 18px 32px;
-  background: rgba(0, 0, 0, 0.85);
-  backdrop-filter: blur(10px);
-  border-bottom: 1px solid var(--border);
-  position: sticky;
-  top: 0;
-  z-index: 20;
+/* STORE PAGE — PRODUCT CARD */
+.store-item {
+    background: #1a1a1a;
+    border: 1px solid rgba(255, 180, 60, 0.25);
+    border-radius: 10px;
+    padding: 20px;
+    text-align: center;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.navbar .logo {
-  color: var(--gold);
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
+.store-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 180, 60, 0.25);
 }
 
-.navbar ul {
-  list-style: none;
-  display: flex;
-  gap: 20px;
+/* PRODUCT IMAGE */
+.store-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
 }
 
-.navbar li a {
-  color: var(--text);
-  font-size: 0.9rem;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-}
-.navbar li a:hover {
-  color: var(--gold);
+/* PRODUCT TITLE */
+.store-item h3 {
+    color: #f5f5f5;
+    margin-top: 15px;
+    font-size: 1.2rem;
 }
 
-/* 6. Hero (Home Page) */
-.hero {
-  padding: 120px 24px;
-  text-align: center;
-  background: radial-gradient(circle at top, #e8d7b922, #050505 70%);
-  animation: fadeIn 1s ease-out;
+/* PRODUCT PRICE */
+.store-item .price {
+    color: #ffb43c;
+    font-size: 1.1rem;
+    margin-top: 10px;
 }
 
-.hero h1 {
-  font-size: 2.8rem;
-  margin-bottom: 12px;
+/* BUY BUTTON */
+.store-item .buy-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #ffb43c;
+    color: #000;
+    border-radius: 6px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: background 0.2s ease;
 }
 
-.hero p {
-  max-width: 640px;
-  margin: 0 auto 24px;
-  color: var(--muted);
+.store-item .buy-btn:hover {
+    background: #ffcc70;
 }
-
-/* 7. Buttons */
-.btn {
-  padding: 12px 26px;
-  border-radius: 999px;
-  font-size: 0.95rem;
-  cursor: pointer;
-  transition: 0.2s ease-out;
-  border: 1px solid transparent;
+.nav-logo {
+    width: 140px;   /* perfect readable size */
+    height: auto;
+    display: block;
 }
-
-.btn-primary {
-  background: var(--gold);
-  color: #000;
-}
-.btn-primary:hover {
-  background: var(--gold-soft);
-  transform: translateY(-2px);
-}
-
-.btn-secondary {
-  background: transparent;
-  color: var(--text);
-  border-color: var(--border);
-}
-.btn-secondary:hover {
-  border-color: var(--gold);
-  color: var(--gold);
-}
-
-/* 8. HD Page Header System */
-.page-header {
-  position: relative;
-  text-align: center;
-  color: var(--text);
-}
-
-.page-header-hero {
-  width: 100%;
-  height: 360px;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-}
-
-.page-header-hero::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to bottom, rgba(0,0,0,0.55), #050505 85%);
-}
-
-.page-header-inner {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  align-items: center;
-  padding-bottom: 40px;
-  animation: fadeUp 0.8s ease-out;
-}
-
-.page-header h1 {
-  font-size: 2.2rem;
-  margin-bottom: 6px;
-}
-
-.page-header p {
-  color: var(--muted);
-  max-width: 640px;
-}
-
-/* Per-page hero images */
-.hero-about    { background-image: url("images/about-header.jpg"); }
-.hero-music    { background-image: url("images/music-header.jpg"); }
-.hero-digital  { background-image: url("images/digitalmusic-header.jpg"); }
-.hero-store    { background-image: url("images/store-header.jpg"); }
-.hero-terms    { background-image: url("images/terms-header.jpg"); }
-
-/* 9. Content Sections */
-.section,
-.page-content,
-.content {
-  padding: 56px 24px;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.section h2,
-.page-content h2,
-.content h2 {
-  font-size: 1.7rem;
-  margin-bottom: 14px;
-}
-
-.section p,
-.page-content p,
-.content p {
-  margin-bottom: 12px;
-  color: #e0e0e0;
-}
-/* 10. Cards & Grids */
-.card,
-.track-card,
-.playlist-card,
-.gear-card {
-  background: var(--bg-alt);
-  border-radius: 12px;
-  padding: 20px;
-  border: 1px solid var(--border);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.55);
-  transition: 0.2s ease-out;
-}
-
-.card,
-.track-card,
-.playlist-card,
-.gear-card {
-  background: var(--bg-alt);
-  border-radius: 12px;
-  padding: 20px;
-  border: 1px solid var(--border);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.55);
-  transition: 0.2s ease-out;
-}
-
-.card:hover,
-.track-card:hover,
-.playlist-card:hover,
-.gear-card:hover {
-  transform: translateY(-4px);
-  border-color: var(--gold-soft);
-  box-shadow: 0 18px 50px rgba(0,0,0,0.8);
-}
-
-/* 11. Quote & Lists */
-.studio-quote {
-  margin: 24px 0;
-  padding: 16px 20px;
-  border-left: 3px solid var(--gold-soft);
-  background: #101010;
-  color: var(--muted);
-  font-style: italic;
-}
-
-.feature-list,
-.benefit-list {
-  list-style: none;
-  margin: 12px 0;
-}
-.feature-list li,
-.benefit-list li {
-  margin-bottom: 8px;
-}
-
-/* 12. Footer */
-.footer {
-  padding: 24px;
-  text-align: center;
-  color: var(--muted);
-  border-top: 1px solid var(--border);
-  margin-top: 40px;
-}
-
-
-/* 13. Animations */
-@keyframes fadeIn {
-  from { opacity: 0; }
-  to   { opacity: 1; }
-}
-@keyframes fadeUp {
-  from { opacity: 0; transform: translateY(12px); }
-  to   { opacity: 1; transform: translateY(0); }
-}
-
-/* 14. Responsive */
-@media (max-width: 768px) {
-  .navbar ul {
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .page-header-hero {
-    height: 260px;
-  }
-  .hero-home { background-image: url("images/home-header.jpg"); }
-  .hero-about { background-image: url("images/about-header.jpg"); }
-  .hero-music { background-image: url("images/music-header.jpg"); }
-  .hero-digital { background-image: url("images/digitalmusic-header.jpg"); }
-  .hero-store { background-image: url("images/store-header.jpg"); }
-  .hero-terms { background-image: url("images/licensing-header.jpg"); }
-}  /* ← CLOSE MEDIA QUERY HERE */
-
-/* GLOBAL BUTTON RULES */
-.card a.btn {
-  display: inline-block;
-  margin-top: 10px;
-}
-
-.card .btn + .btn {
-  margin-left: 10px;
-}
-
-/* GLOBAL GRID RULE */
-.grid,
-.music-grid,
-.playlist-grid,
-.gear-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+.logo {
+    display: flex;
+    align-items: center;
 }

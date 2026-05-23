@@ -5,8 +5,8 @@
 *::before,
 *::after {
   box-sizing: border-box;
+	
 }
-
 html, body {
   margin: 0;
   padding: 0;
@@ -82,39 +82,69 @@ a:hover {
   background: rgba(245, 201, 107, 0.12);
   color: #ffffff;
 }
+.nav-logo {
+    height: 110px;      /* Big enough to read */
+    width: auto;        /* Keeps it horizontal */
+    display: block;
+}
+
+.navbar .logo img {
+    height: 110px !important;
+    width: auto !important;
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
 
 /* ========== Page Header / Hero ========== */
 
+/* CINEMATIC HERO FOR MARKETPLACE */
 .page-header {
-  width: 100%;
-  border-bottom: 1px solid rgba(245, 201, 107, 0.18);
-  background: radial-gradient(circle at top, #151520 0, #050509 55%);
+    width: 100%;
+    border-bottom: 1px solid rgba(245, 201, 107, 0.18);
+    background: transparent;
+    position: relative;
 }
 
-.page-header img {
-  width: 100%;
-  height: 260px;
-  object-fit: cover;
-  opacity: 0.85;
+.page-header-hero.hero-store {
+    width: 100%;
+    height: 260px;
+
+    background-color: #0d0d0d;
+    background-image: radial-gradient(
+        circle at center,
+        rgba(255, 200, 80, 0.65) 0%,   /* MUCH brighter center */
+        rgba(0, 0, 0, 0.85) 60%,
+        #000 100%
+    );
+    background-blend-mode: screen;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+    z-index: 1;
 }
 
-/* Hero variant with text overlay */
 
-.page-header-hero {
-  position: relative;
-  min-height: 260px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 48px 16px;
-  background-size: cover;
-  background-position: center;
+.page-header-hero.hero-store img {
+    width: 260px;
+    height: auto;
+    filter: drop-shadow(0 0 25px rgba(255, 180, 60, 0.35));
+}
+.page-header-hero.hero-store {
+    background-image: radial-gradient(
+        circle at center,
+        rgba(255, 200, 80, 0.55) 0%,   /* brighter center */
+        rgba(0, 0, 0, 0.85) 60%,
+        #000 100%
+    );
 }
 
-.hero-store {
-  background-image: linear-gradient(135deg, rgba(5,5,9,0.9), rgba(10,10,18,0.9)),
-                    url("images/store-header.jpg");
-}
+
 
 .hero-digital {
   background-image: linear-gradient(135deg, rgba(5,5,9,0.9), rgba(10,10,18,0.9)),

@@ -17,33 +17,41 @@
 <meta name="description" content="Watson Recording Studio creates cinematic music, digital sound design, and professional audio for artists, filmmakers, and creators. Explore music, licensing, and premium downloads.">
 
     <link rel="stylesheet" href="Styles.css">
+	<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 </head>
 
 <body>
 
     <nav class="navbar">
+    <div class="logo">Watson Recording Studio</div>
 
-        <div class="logo">Watson Recording Studio</div>
-        <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="About.html">About</a></li>
-            <li><a href="Music.html">Music</a></li>
-            <li><a href="DigitalMusic.html">Digital Music</a></li>
-            <li><a href="GearShop.html">Gear Shop</a></li>
-            <li><a href="Store.html">Store</a></li>
-            <li><a href="Merch.html">Merch</a></li>
-            <li><a href="Membership.html">Membership</a></li>
-            <li><a href="Playlist.html">Playlist</a></li>
-            <li><a href="Press.html">Press</a></li>
-            <li><a href="Blog.html">Blog</a></li>
-            <li><a href="Contact.html">Contact</a></li>
-        </ul>
-    </nav>
+    <div class="hamburger" onclick="toggleMenu()">
+        ☰
+    </div>
+
+    <ul id="nav-menu">
+        <li><a href="index.html" class="active">Home</a></li>
+        <li><a href="About.html">About</a></li>
+        <li><a href="Music.html">Music</a></li>
+        <li><a href="DigitalMusic.html">Digital Music</a></li>
+        <li><a href="GearShop.html">Gear Shop</a></li>
+        <li><a href="Store.html">Store</a></li>
+        <li><a href="Merch.html">Merch</a></li>
+        <li><a href="Membership.html">Membership</a></li>
+        <li><a href="Playlist.html">Playlist</a></li>
+        <li><a href="Press.html">Press</a></li>
+        <li><a href="Blog.html">Blog</a></li>
+        <li><a href="Contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+
 <header class="page-header">
   <div class="page-header-hero hero-home">
     <div class="page-header-inner">
       <h1>Watson Recording Studio</h1>
-      <p>Where sound becomes cinema. Where creativity becomes legacy.</p>
+      <p>Where sound becomes cinema.<br>Where creativity becomes legacy.</p>
+
     </div>
   </div>
 </header>
@@ -59,26 +67,32 @@
   <a class="btn btn-secondary" href="Store.html">Visit the Store</a>
 </section>
 
-<section class="section">
-  <h2>Featured Releases</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>Digital Horizons</h3>
-      <p>A futuristic blend of synth, atmosphere, and cinematic energy.</p>
-      <a class="btn btn-primary" href="Store.html">Listen / Buy</a>
+<section class="featured-releases">
+    <h2>Featured Releases</h2>
+
+    <div class="release-grid">
+
+        <div class="release-card">
+            <h3>Digital Horizons</h3>
+            <p>A futuristic blend of synth, atmosphere, and cinematic energy.</p>
+            <a href="#" class="release-btn">Listen / Buy</a>
+        </div>
+
+        <div class="release-card">
+            <h3>Golden Echoes</h3>
+            <p>Warm tones, emotional depth, and a signature studio sound.</p>
+            <a href="#" class="release-btn">Listen / Buy</a>
+        </div>
+
+        <div class="release-card">
+            <h3>Nightfall Sessions</h3>
+            <p>Dark, moody, and immersive — crafted for storytellers.</p>
+            <a href="#" class="release-btn">Listen / Buy</a>
+        </div>
+
     </div>
-    <div class="card">
-      <h3>Golden Echoes</h3>
-      <p>Warm tones, emotional depth, and a signature studio sound.</p>
-      <a class="btn btn-primary" href="Store.html">Listen / Buy</a>
-    </div>
-    <div class="card">
-      <h3>Nightfall Sessions</h3>
-      <p>Dark, moody, and immersive — crafted for storytellers.</p>
-      <a class="btn btn-primary" href="Store.html">Listen / Buy</a>
-    </div>
-  </div>
 </section>
+
 
 <section class="section">
   <h2>Studio Services</h2>
@@ -117,5 +131,12 @@
 </footer>
 
   <script src="app.js"></script>
+	<script><!-- <script src="app.js"></script> -->
+
+function toggleMenu() {
+    document.getElementById("nav-menu").classList.toggle("show");
+}
+</script>
+
 </body>
 </html>
