@@ -131,6 +131,12 @@ a:hover {
     position: relative;
     margin-top: 110px;   /* ← ADD THIS */
 }
+header, .header, .site-header, .navbar, .nav-container {
+    background: transparent !important;
+}
+header, .site-header, .navbar {
+    background: transparent !important;
+}
 
 /* ===========================
    STORE HERO (Marketplace)
@@ -177,13 +183,16 @@ a:hover {
     background-image:
         linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
         url("images/wrs-portrait-main.png");
+
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     border-bottom: none !important;
-	position: relative;
+    position: relative;
     z-index: 1;
 }
+
 
 
 
@@ -208,6 +217,13 @@ a:hover {
     margin-bottom: 20px;
     filter: drop-shadow(0 0 20px rgba(255,255,255,0.4));
 }
+.hero-logo {
+    width: 420px;
+    height: auto;
+    display: block;
+    margin: 0 auto 20px;
+    filter: drop-shadow(0 0 20px rgba(255,255,255,0.4));
+}
 
 /* Center text inside home hero */
 .hero-home .page-header-inner {
@@ -222,6 +238,12 @@ a:hover {
     filter: drop-shadow(0 0 20px rgba(255,255,255,0.4));
 }
 
+..wrs-logo {
+    background: transparent;
+    display: block;
+    height: 80px;     /* controls the actual size */
+    width: auto;      /* keeps proportions correct */
+}
 
 /* ========== Typography ========== */
 
