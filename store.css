@@ -97,6 +97,31 @@ a:hover {
     display: flex;
     align-items: center;
 }
+.nav-logo img {
+    filter: drop-shadow(0 0 10px rgba(255,255,255,1));
+}
+.hero-logo {
+    width: 100%;
+    max-width: 420px;   /* Full size on desktop */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .hero-logo {
+        max-width: 320px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .hero-logo {
+        max-width: 240px;
+    }
+}
+
 
 /* ========== Page Header / Hero ========== */
 

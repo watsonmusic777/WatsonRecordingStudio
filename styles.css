@@ -8,6 +8,27 @@
     background-blend-mode: overlay;             /* blends logo + color */
     opacity: 0.18;                              /* subtle cinematic fade */
 }
+.hero-logo {
+    width: 100%;
+    max-width: 420px;   /* Full size on desktop */
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+    .hero-logo {
+        max-width: 320px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 600px) {
+    .hero-logo {
+        max-width: 240px;
+    }
+}
 
 /* STORE PAGE — LAYOUT WRAPPER */
 .store-container {
@@ -83,4 +104,12 @@
 .logo {
     display: flex;
     align-items: center;
+}
+html, body {
+    overflow-y: auto !important;
+}
+.nav-logo img {
+    filter: drop-shadow(0 0 10px rgba(255,255,255,1));
+}
+
 }
