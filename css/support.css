@@ -1,0 +1,191 @@
+@charset "utf-8";
+/* -----------------------------------------
+   WATSON RECORDING STUDIO — GLOBAL STYLES
+   Dark Mode • Deep Electric Violet Theme
+------------------------------------------*/
+
+/* BRAND COLORS */
+:root {
+    --violet: #6445B3;
+    --violet-light: #7d63d1;
+    --violet-dark: #4a2f8a;
+
+    --amber: #ffb347;
+
+    --bg: #0a0a0f;
+    --bg-light: #14141a;
+    --bg-lighter: #1d1d26;
+
+    --text: #cfcfcf;
+    --text-light: #e6e6e6;
+    --text-dark: #9a9a9a;
+
+    --radius: 10px;
+    --transition: 0.25s ease;
+}
+
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    line-height: 1.6;
+}
+
+/* GLOBAL LINKS */
+a {
+    color: var(--violet);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+a:hover {
+    color: var(--amber);
+}
+
+/* GLOBAL HEADINGS */
+h1, h2, h3, h4 {
+    color: var(--violet-light);
+    font-weight: 700;
+}
+
+/* GLOBAL BUTTONS */
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition);
+    border: none;
+}
+
+.btn-primary {
+    background: var(--violet);
+    color: #fff;
+}
+
+.btn-primary:hover {
+    background: var(--violet-light);
+    box-shadow: 0 0 12px var(--violet);
+}
+
+.btn-amber {
+    background: var(--amber);
+    color: #000;
+}
+
+.btn-amber:hover {
+    background: #ffca6a;
+    box-shadow: 0 0 12px var(--amber);
+}
+
+/* GLOBAL CONTAINERS */
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* GLOBAL CARDS */
+.card {
+    background: var(--bg-light);
+    border: 1px solid #222;
+    border-radius: var(--radius);
+    padding: 20px;
+    transition: var(--transition);
+}
+
+.card:hover {
+    border-color: var(--violet);
+    transform: translateY(-3px);
+}
+
+/* GLOBAL INPUTS */
+input, textarea, select {
+    width: 100%;
+    padding: 12px;
+    border-radius: var(--radius);
+    border: 1px solid #333;
+    background: var(--bg-lighter);
+    color: var(--text);
+    transition: var(--transition);
+}
+
+input:focus, textarea:focus, select:focus {
+    border-color: var(--violet);
+    box-shadow: 0 0 8px var(--violet);
+    outline: none;
+}
+
+/* GLOBAL SECTIONS */
+section {
+    padding: 60px 20px;
+}
+
+/* GLOBAL SHADOWS */
+.shadow {
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+/* GLOBAL GRADIENTS */
+.gradient-violet {
+    background: linear-gradient(135deg, #6445B3, #8A2BE2);
+}
+
+.gradient-hero {
+    background: radial-gradient(circle at top, #6445B3 0%, #0a0a0f 60%);
+}
+
+/* GLOBAL NAVBAR */
+.navbar {
+    width: 100%;
+    background: #0d0d14;
+    border-bottom: 1px solid #1f1f2a;
+    padding: 15px 25px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+}
+
+.navbar a {
+    color: var(--text-light);
+    margin-left: 20px;
+    font-weight: 500;
+}
+
+.navbar a:hover {
+    color: var(--amber);
+}
+
+/* GLOBAL FOOTER */
+footer {
+    background: #0d0d14;
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid #1f1f2a;
+    color: var(--text-dark);
+}
+
+/* GLOBAL ANIMATIONS */
+.fade-in {
+    animation: fadeIn 0.8s ease forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@charset "utf-8";
+/* CSS Document */
+
