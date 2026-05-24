@@ -1,0 +1,122 @@
+@charset "utf-8";
+/* CSS Document */
+/* --------------------------------------------------
+   wrs.css — Watson Recording Studio Cinematic Theme
+   Clean • Modern • Gradient • Hero Overlay
+-------------------------------------------------- */
+
+/* ROOT COLORS */
+:root {
+    --violet: #6a00ff;
+    --amber: #ffb347;
+    --dark-bg: #2A1F18;
+    --text-light: #ffffff;
+    --text-soft: rgba(255,255,255,0.85);
+}
+
+/* GLOBAL RESET */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--dark-bg);
+    color: var(--text-light);
+    font-family: 'Segoe UI', sans-serif;
+    overflow-x: hidden;
+}
+
+/* --------------------------------------------------
+   CINEMATIC NAV BAR
+-------------------------------------------------- */
+
+nav {
+    width: 100%;
+    height: 100px; /* TALL CINEMATIC */
+    background: linear-gradient(90deg, var(--violet), var(--amber));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.4);
+}
+
+/* LOGO BELOW NAV */
+.logo-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 120px; /* space under tall nav */
+}
+
+.logo-container img {
+    width: 180px;
+    height: auto;
+}
+
+/* --------------------------------------------------
+   HERO SECTION — FULL-WIDTH PORTRAIT
+-------------------------------------------------- */
+
+.hero {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* DARK OVERLAY FOR TEXT READABILITY */
+.hero::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+/* HERO TEXT */
+.hero-text {
+    position: relative;
+    text-align: center;
+    z-index: 2;
+    padding: 20px;
+}
+
+.hero-text h1 {
+    font-size: 3.5rem;
+    font-weight: 700;
+    text-shadow: 0 4px 20px rgba(0,0,0,0.7);
+    margin-bottom: 15px;
+}
+
+.hero-text h2 {
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: var(--text-soft);
+    text-shadow: 0 3px 15px rgba(0,0,0,0.6);
+}
+
+/* FADE-IN ANIMATION */
+.hero-text {
+    animation: fadeIn 2s ease-out forwards;
+    opacity: 0;
+}
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* --------------------------------------------------
+   FOOTER — MATCHING GRADIENT
+-------------------------------------------------- */
+
+footer {
+    width: 100%;
+}
