@@ -97,9 +97,13 @@ a:hover {
 
 /* RIGHT‑SIDE NAV LOGO */
   .nav-logo-right img {
-   height: 120px;
-   width: auto;
+  height: 350px;
+  width: 350px;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
 }
+
 
 
 /* ========== HERO SECTION (REBUILT) ========== */
