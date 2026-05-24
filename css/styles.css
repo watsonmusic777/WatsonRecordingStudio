@@ -311,3 +311,8 @@ nav a:hover::after {
 body {
     padding-top: 100px; /* adjust if needed */
 }
+nav {
+    top: 0 !important;
+    margin-top: 0 !important;
+    padding-top: 20px !important;
+}
