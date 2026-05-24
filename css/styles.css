@@ -307,3 +307,7 @@ nav a::after {
 nav a:hover::after {
     width: 100%;
 }
+/* Prevent content from sliding under the sticky header */
+body {
+    padding-top: 100px; /* adjust if needed */
+}
