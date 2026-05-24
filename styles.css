@@ -261,3 +261,6 @@ p {
     text-align: center;
   }
 }
+.nav-logo-right img {
+  filter: drop-shadow(0 0 12px rgba(255, 215, 0, 0.4));
+}
