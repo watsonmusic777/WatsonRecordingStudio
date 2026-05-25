@@ -100,6 +100,7 @@ body {
 .nav-logos {
     display: flex;
     align-items: center;
+    justify-content: center;   /* THIS is the missing piece */
     gap: 20px;
     white-space: nowrap;
 }
