@@ -26,6 +26,23 @@ body {
     overflow-x: hidden;
 }
 /* MAIN NAV BAR */
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* center the whole menu */
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center; /* center items inside */
+    flex-wrap: nowrap;
+    gap: 32px;
+}
+
+
+
 .main-nav {
     width: 100%;
     background: var(--violet);
@@ -35,18 +52,6 @@ body {
 }
 
 /* NAV MENU ROW */
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center;
-}
-
-.nav-menu {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 32px;
-}
 
 .nav-menu a {
     color: white;
@@ -68,16 +73,12 @@ body {
 }
 
 .nav-logo img {
-    width: 350px;
-    height: 350px;
+    width: 340px;
+    height: 340px;
     display: block;
     margin: 0 auto;
 }
 
-/* REMOVE OLD LOGO SYSTEM */
-.logo-container {
-    display: none !important;
-}
 
 /* --------------------------------------------------
    HERO SECTION — FULL-WIDTH PORTRAIT
