@@ -206,6 +206,20 @@ body {
 .player {
     display: none;
 }
+.what-we-do-card {
+    background: rgba(100, 69, 179, 0.18);
+    border: 1px solid rgba(100, 69, 179, 0.45);
+    padding: 20px;
+    border-radius: 12px;
+    margin-bottom: 20px;
+    transition: 0.3s ease;
+}
+
+.what-we-do-card:hover {
+    background: rgba(100, 69, 179, 0.28);
+    border-color: #6445B3;
+    transform: translateX(6px);
+}
 
 /* --------------------------------------------------
    ANIMATION
