@@ -169,4 +169,21 @@ body {
 
 footer {
     width: 100%;
+    background: var(--violet);
+    padding: 50px 0;
+    margin-top: 80px;
+    text-align: center;
+}
+
+footer .footer-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: var(--amber);
 }
