@@ -58,11 +58,6 @@ nav ul li a {
     margin-top: 120px; /* space under tall nav */
 }
 
-.logo-container img {
-    width: 180px; /* adjust this to taste */
-    height: auto;
-}
-
 .header-logo {
     width: 350px;
     height: auto;
