@@ -25,6 +25,60 @@ body {
     font-family: 'Segoe UI', sans-serif;
     overflow-x: hidden;
 }
+/* MAIN NAV BAR */
+
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center; /* center the whole menu */
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center; /* center items inside */
+    flex-wrap: nowrap;
+    gap: 32px;
+}
+
+
+
+.main-nav {
+    width: 100%;
+    background: var(--violet);
+    padding: 16px 0;
+    position: relative;   /* normal scrolling */
+    z-index: 999;
+}
+
+/* NAV MENU ROW */
+
+.nav-menu a {
+    color: white;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+.nav-menu a:hover {
+    color: var(--amber);
+}
+
+/* LOGO BELOW NAV — FULL SIZE */
+.nav-logo {
+    width: 100%;
+    text-align: center;
+    padding: 20px 0 30px 0;
+}
+
+.nav-logo img {
+    width: 340px;
+    height: 340px;
+    display: block;
+    margin: 0 auto;
+}
+
 
 /* --------------------------------------------------
    HERO SECTION — FULL-WIDTH PORTRAIT
@@ -72,17 +126,25 @@ body {
     color: var(--text-soft);
     text-shadow: 0 3px 15px rgba(0,0,0,0.6);
 }
-
-/* LOGO BELOW NAV */
-.logo-container {
-    width: 100%;
-    text-align: center;
-    margin-top: 60px; /* increased spacing */
+.hero {
+    margin-top: 420px; /* 350 logo + padding */
 }
 
-.logo-container img {
-    width: 300px;
-    height: auto;
+.featured-track {
+    background: var(--bg-light);
+    border: 1px solid var(--border);
+    border-radius: var(--radius);
+    padding: 40px;
+    margin: 60px auto;
+    max-width: 700px;
+    text-align: center;
+}
+.track-info p {
+    margin-bottom: 20px;
+}
+
+.track-info .btn {
+    margin-top: 10px;
 }
 
 /* FADE-IN ANIMATION */
@@ -96,4 +158,44 @@ body {
 
 footer {
     width: 100%;
+}
+.hero {
+    margin-top: 80px;
+}
+.featured-track {
+    text-align: center;
+    margin: 60px auto;
+    padding: 20px;
+    max-width: 700px;
+}
+
+.track-info {
+    margin-bottom: 30px;
+}
+
+.track-player audio {
+    width: 100%;
+    max-width: 350px;
+    border-radius: 8px;
+    margin-top: 20px;
+}
+footer {
+    background: var(--violet);
+    padding: 40px 20px;
+    text-align: center;
+    border-top: 1px solid var(--amber);
+    color: white;
+}
+
+footer .footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+footer a {
+    color: white;
+}
+
+footer a:hover {
+    color: var(--amber);
 }
