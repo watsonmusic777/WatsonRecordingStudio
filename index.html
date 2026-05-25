@@ -48,35 +48,43 @@
      FIXED NAVIGATION BAR
 =========================== -->
 <nav class="main-nav">
-    <div class="nav-inner">
-
-        <!-- LEFT: LOGO ROW (Expandable for partners) -->
-        <div class="nav-logos">
-            <img src="images/sitewide_logo.png" alt="Watson Recording Studio Logo" class="nav-logo-img">
-
-            <!-- Example partner logos (easy to add/remove) -->
-            <!-- <img src="images/partner1.png" class="partner-logo"> -->
-            <!-- <img src="images/partner2.png" class="partner-logo"> -->
-        </div>
-
-        <!-- RIGHT: MENU -->
+	
+    <!-- TOP NAV MENU -->
+    <div class="nav-container">
         <div class="nav-menu">
             <a href="index.html">Home</a>
-            <a href="about.html">About</a>
-            <a href="music.html">Music</a>
-            <a href="digitalmusic.html">Digital Music</a>
-            <a href="gear.html">Gear Shop</a>
-            <a href="store.html">Store</a>
-            <a href="merch.html">Merch</a>
-            <a href="membership.html">Membership</a>
-            <a href="playlist.html">Playlist</a>
-            <a href="press.html">Press</a>
-            <a href="blog.html">Blog</a>
-            <a href="contact.html">Contact</a>
+            <a href="About.html">About</a>
+            <a href="Music.html">Music</a>
+            <a href="DigitalMusic.html">Digital Music</a>
+            <a href="Gear.html">Gear Shop</a>
+            <a href="Store.html">Store</a>
+            <a href="Merch.html">Merch</a>
+            <a href="Membership.html">Membership</a>
+            <a href="Playlist.html">Playlist</a>
+            <a href="Press.html">Press</a>
+            <a href="Blog.html">Blog</a>
+            <a href="Contact.html">Contact</a>
         </div>
-
     </div>
+
 </nav>
+
+<!-- LOGO BELOW NAV -->
+<div class="nav-logo">
+    <center><img src="images/sitewide_logo.png" alt="Watson Recording Studio Logo"></center>
+</div>
+
+<div class="logo-row">
+    <div class="main-logo">
+        <img src="images/watson-logo.png" alt="Watson Recording Studio">
+    </div>
+
+    <div class="affiliate-logos">
+        <img src="images/company1.png" alt="Company 1">
+        <img src="images/company2.png" alt="Company 2">
+        <img src="images/company3.png" alt="Company 3">
+    </div>
+</div>
 
 <!-- ===========================
      CINEMATIC HERO
@@ -106,16 +114,27 @@
 <!-- ===========================
      FEATURED TRACK
 =========================== -->
-<section class="featured-track fade-in">
-    <h2>Midnight on River Street</h2>
-    <p>A smooth blend of jazz, funk, and island soul.</p>
+<section class="featured-tracks">
+    <div class="track-card" onclick="playTrack('audio/Midnight%20on%20River%20Street.mp3')">
+        <h3>Midnight on River Street</h3>
+        <p>Smooth jazz, funk, and island soul.</p>
+    </div>
 
-    <a href="audio/Midnight%20on%20River%20Street.mp3" class="btn" target="_blank">Listen Now</a>
+    <div class="track-card" onclick="playTrack('audio/track2.mp3')">
+        <h3>Track Two</h3>
+        <p>Description for track two.</p>
+    </div>
 
-    <audio controls class="track-player">
-        <source src="audio/Midnight%20on%20River%20Street.mp3" type="audio/mpeg">
-    </audio>
+    <div class="track-card" onclick="playTrack('audio/track3.mp3')">
+        <h3>Track Three</h3>
+        <p>Description for track three.</p>
+    </div>
 </section>
+
+<div class="master-player">
+    <audio id="jukebox" controls></audio>
+</div>
+
 
 <!-- ===========================
      SERVICES
@@ -182,6 +201,13 @@
         © 2026 Watson Recording Studio — All Rights Reserved
     </p>
 </footer>
+<script>
+function playTrack(src) {
+    const player = document.getElementById('jukebox');
+    player.src = src;
+    player.play();
+}
+</script>
 
 </body>
 </html>
