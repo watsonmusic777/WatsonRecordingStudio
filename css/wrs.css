@@ -1,7 +1,6 @@
 @charset "utf-8";
 /* --------------------------------------------------
    wrs.css — Watson Recording Studio Cinematic Theme
-   Clean • Modern • Gradient • Hero Overlay
 -------------------------------------------------- */
 
 :root {
@@ -25,33 +24,31 @@ body {
     font-family: 'Segoe UI', sans-serif;
     overflow-x: hidden;
 }
-/* MAIN NAV BAR */
 
-.nav-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: center; /* center the whole menu */
-}
-
-.nav-menu {
-    display: flex;
-    justify-content: center; /* center items inside */
-    flex-wrap: nowrap;
-    gap: 32px;
-}
-
-
+/* --------------------------------------------------
+   NAVIGATION
+-------------------------------------------------- */
 
 .main-nav {
     width: 100%;
     background: var(--violet);
     padding: 16px 0;
-    position: relative;   /* normal scrolling */
+    position: relative;
     z-index: 999;
 }
 
-/* NAV MENU ROW */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.nav-menu {
+    display: flex;
+    justify-content: center;
+    gap: 32px;
+}
 
 .nav-menu a {
     color: white;
@@ -65,7 +62,10 @@ body {
     color: var(--amber);
 }
 
-/* LOGO BELOW NAV — FULL SIZE */
+/* --------------------------------------------------
+   LOGO BELOW NAV
+-------------------------------------------------- */
+
 .nav-logo {
     width: 100%;
     text-align: center;
@@ -79,14 +79,19 @@ body {
     margin: 0 auto;
 }
 
+/* REMOVE OLD LOGO SYSTEM */
+.logo-container {
+    display: none !important;
+}
 
 /* --------------------------------------------------
-   HERO SECTION — FULL-WIDTH PORTRAIT
+   HERO SECTION
 -------------------------------------------------- */
 
 .hero {
     width: 100%;
     height: 100vh;
+    margin-top: 420px;
     background-size: cover;
     background-position: center;
     position: relative;
@@ -95,7 +100,6 @@ body {
     justify-content: center;
 }
 
-/* DARK OVERLAY FOR TEXT READABILITY */
 .hero::before {
     content: "";
     position: absolute;
@@ -103,7 +107,6 @@ body {
     background: rgba(0,0,0,0.45);
 }
 
-/* HERO TEXT */
 .hero-text {
     position: relative;
     text-align: center;
@@ -126,9 +129,10 @@ body {
     color: var(--text-soft);
     text-shadow: 0 3px 15px rgba(0,0,0,0.6);
 }
-.hero {
-    margin-top: 420px; /* 350 logo + padding */
-}
+
+/* --------------------------------------------------
+   FEATURED TRACK
+-------------------------------------------------- */
 
 .featured-track {
     background: var(--bg-light);
@@ -139,38 +143,9 @@ body {
     max-width: 700px;
     text-align: center;
 }
+
 .track-info p {
     margin-bottom: 20px;
-}
-
-.track-info .btn {
-    margin-top: 10px;
-}
-
-/* FADE-IN ANIMATION */
-@keyframes fadeIn {
-    to { opacity: 1; }
-}
-
-/* --------------------------------------------------
-   FOOTER — MATCHING GRADIENT
--------------------------------------------------- */
-
-footer {
-    width: 100%;
-}
-.hero {
-    margin-top: 80px;
-}
-.featured-track {
-    text-align: center;
-    margin: 60px auto;
-    padding: 20px;
-    max-width: 700px;
-}
-
-.track-info {
-    margin-bottom: 30px;
 }
 
 .track-player audio {
@@ -179,23 +154,19 @@ footer {
     border-radius: 8px;
     margin-top: 20px;
 }
+
+/* --------------------------------------------------
+   ANIMATION
+-------------------------------------------------- */
+
+@keyframes fadeIn {
+    to { opacity: 1; }
+}
+
+/* --------------------------------------------------
+   FOOTER
+-------------------------------------------------- */
+
 footer {
-    background: var(--violet);
-    padding: 40px 20px;
-    text-align: center;
-    border-top: 1px solid var(--amber);
-    color: white;
-}
-
-footer .footer-container {
-    max-width: 1200px;
-    margin: auto;
-}
-
-footer a {
-    color: white;
-}
-
-footer a:hover {
-    color: var(--amber);
+    width: 100%;
 }
