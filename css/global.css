@@ -38,7 +38,9 @@ body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
+	padding-top: 160px !important;
 }
+
 
 /* -----------------------------------------
    GLOBAL ELEMENTS
@@ -60,10 +62,13 @@ h1, h2, h3 {
 }
 
 .container {
-    width: 90%;
-    max-width: 1200px;
-    margin: auto;
+    width: 100%;
+    max-width: 1200px; /* or whatever size you want */
+    margin: 0 auto;    /* keeps it centered horizontally */
+    text-align: left;  /* stops centering ALL content */
+    display: block;    /* removes flex centering if applied */
 }
+
 
 .section {
     padding: 80px 0;
@@ -98,6 +103,24 @@ h1, h2, h3 {
 
 .btn-amber:hover {
     background: #ffca6a;
+}
+
+button,
+.btn,
+a.button {
+    background-color: #6445B3 !important;
+    color: white !important;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover,
+.btn:hover,
+a.button:hover {
+    background-color: #7A5CF0 !important; /* lighter violet */
 }
 
 /* -----------------------------------------
@@ -156,6 +179,12 @@ footer .copyright {
     color: var(--muted);
     font-size: 0.9rem;
 }
+footer {
+    background-color: #6445B3 !important;
+    color: white !important;
+    padding: 40px 0;
+    text-align: center;
+}
 
 /* -----------------------------------------
    ANIMATIONS
@@ -184,4 +213,36 @@ footer .copyright {
     .grid-3 {
         grid-template-columns: 1fr;
     }
+}
+
+nav a {
+    position: relative;
+    color: white;
+    text-decoration: none;
+}
+
+nav a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 3px;
+    background-color: #6445B3;
+    transition: width 0.3s ease;
+}
+
+nav a:hover::after {
+    width: 100%;
+}
+nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
+audio {
+    filter: hue-rotate(280deg) saturate(1.4) brightness(1.1);
 }
