@@ -38,16 +38,21 @@ body {
 /* --------------------------------------------------
    NAVIGATION (FIXED)
 -------------------------------------------------- */
+/* --------------------------------------------------
+   NAVIGATION (FIXED)
+-------------------------------------------------- */
 .main-nav {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     background: var(--violet);
-    padding: 16px 0;
+    padding: 28px 0; /* 1.5x height */
     z-index: 999;
 }
 
+
+/* NAV MENU CONTAINER */
 .nav-container {
     max-width: 1200px;
     margin: 0 auto;
@@ -72,37 +77,22 @@ body {
 .nav-menu a:hover {
     color: var(--amber);
 }
-.nav-inner {
-    width: 90%;
-    max-width: 1400px;
-    margin: 0 auto;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
 
 /* --------------------------------------------------
-   LOGO BELOW NAV
+   LOGO BELOW NAV (SEPARATE DIV)
 -------------------------------------------------- */
 .nav-logo {
     width: 100%;
     text-align: center;
-    padding: 20px 0 30px 0;
-    margin-top: 90px; /* space under fixed nav */
+    margin-top: 120px; /* adjusted for 28px nav height */
+    margin-bottom: 30px; /* space between logo and hero */
 }
 
-.nav-logo-img {
-    width: 120px;
-    object-fit: contain;
-}
-
-
-.nav-logos {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    white-space: nowrap;
+.nav-logo img {
+    width: 320px;
+    height: 320px;
+    display: block;
+    margin: 0 auto;
 }
 
 
@@ -145,31 +135,73 @@ body {
     text-shadow: 0 3px 15px rgba(0,0,0,0.6);
 }
 .hero {
-    margin-top: 120px;
+    margin-top: 0 !important;
+    top: 0 !important;
+    padding-top: 0 !important;
 }
+
+
 
 /* --------------------------------------------------
    FEATURED TRACK
 -------------------------------------------------- */
 .featured-track {
-    background: rgba(255,255,255,0.05);
-    border: 1px solid rgba(255,255,255,0.15);
-    border-radius: var(--radius);
-    padding: 40px;
-    margin: 60px auto;
+    background: rgba(255, 255, 255, 0.08); /* soft light card */
+    border: 1px solid rgba(255, 255, 255, 0.15); /* subtle border */
+    backdrop-filter: blur(6px); /* glass effect */
+    padding: 25px;
+    border-radius: 12px;
     max-width: 700px;
+    margin: 40px auto 20px auto;
     text-align: center;
 }
 
-.track-info p {
-    margin-bottom: 20px;
+
+.track-player {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
 }
 
 .track-player audio {
-    width: 100%;
     max-width: 350px;
-    border-radius: 8px;
-    margin-top: 20px;
+}
+.featured-tracks {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 500px;
+    margin-left: 40px;
+}
+
+.track-card {
+    background: rgba(100, 69, 179, 0.18);
+    border: 1px solid rgba(100, 69, 179, 0.45);
+    padding: 20px;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.track-card:hover {
+    background: rgba(100, 69, 179, 0.28);
+    border-color: #6445B3;
+    transform: translateX(6px);
+}
+
+
+.master-player {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 20px;
+    background: rgba(100, 69, 179, 0.2);
+    border: 1px solid rgba(100, 69, 179, 0.4);
+    border-radius: 12px;
+}
+
+.master-player audio {
+    width: 100%;
 }
 
 /* --------------------------------------------------
@@ -182,3 +214,6 @@ body {
 /* --------------------------------------------------
    FOOTER (use global footer)
 -------------------------------------------------- */
+body {
+    padding-top: 0px !important;
+}
