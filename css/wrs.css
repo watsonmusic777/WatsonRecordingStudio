@@ -100,10 +100,11 @@ body {
 .nav-logos {
     display: flex;
     align-items: center;
-    justify-content: center;   /* THIS is the missing piece */
+    justify-content: center;
     gap: 20px;
     white-space: nowrap;
 }
+
 
 /* --------------------------------------------------
    HERO SECTION
