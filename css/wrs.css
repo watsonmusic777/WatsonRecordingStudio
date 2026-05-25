@@ -59,9 +59,15 @@ nav ul li a {
 }
 
 .logo-container img {
-    width: 180px;
+    width: 180px; /* adjust this to taste */
     height: auto;
 }
+
+.header-logo {
+    width: 350px;
+    height: auto;
+}
+
 
 /* --------------------------------------------------
    HERO SECTION — FULL-WIDTH PORTRAIT
