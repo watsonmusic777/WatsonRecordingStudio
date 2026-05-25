@@ -1,5 +1,4 @@
 @charset "utf-8";
-/* CSS Document */
 /* --------------------------------------------------
    wrs.css — Watson Recording Studio Cinematic Theme
    Clean • Modern • Gradient • Hero Overlay
@@ -12,7 +11,6 @@
     --text-light: #ffffff;
     --text-soft: rgba(255,255,255,0.85);
 }
-
 
 /* GLOBAL RESET */
 * {
@@ -27,42 +25,6 @@ body {
     font-family: 'Segoe UI', sans-serif;
     overflow-x: hidden;
 }
-
-/* --------------------------------------------------
-   CINEMATIC NAV BAR
--------------------------------------------------- */
-
-background: linear-gradient(to bottom, var(--violet) 0%, var(--dark-bg) 100%);
-
-
-nav ul {
-    display: flex;
-    flex-direction: row;
-    gap: 30px;
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-
-nav ul li a {
-    color: white;
-    text-decoration: none;
-    font-size: 1.1rem;
-    font-weight: 500;
-}
-
-/* LOGO BELOW NAV */
-.logo-container {
-    width: 100%;
-    text-align: center;
-    margin-top: 120px; /* space under tall nav */
-}
-
-.header-logo {
-    width: 350px;
-    height: auto;
-}
-
 
 /* --------------------------------------------------
    HERO SECTION — FULL-WIDTH PORTRAIT
@@ -93,6 +55,8 @@ nav ul li a {
     text-align: center;
     z-index: 2;
     padding: 20px;
+    animation: fadeIn 2s ease-out forwards;
+    opacity: 0;
 }
 
 .hero-text h1 {
@@ -109,12 +73,19 @@ nav ul li a {
     text-shadow: 0 3px 15px rgba(0,0,0,0.6);
 }
 
-/* FADE-IN ANIMATION */
-.hero-text {
-    animation: fadeIn 2s ease-out forwards;
-    opacity: 0;
+/* LOGO BELOW NAV */
+.logo-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 60px; /* increased spacing */
 }
 
+.logo-container img {
+    width: 300px;
+    height: auto;
+}
+
+/* FADE-IN ANIMATION */
 @keyframes fadeIn {
     to { opacity: 1; }
 }
