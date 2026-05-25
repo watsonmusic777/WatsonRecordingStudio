@@ -231,5 +231,5 @@ body {
 .card:hover {
     background: rgba(100, 69, 179, 0.28);
     border-color: #6445B3;
-    transform: translateX(6px);
+    transform: translateX(6px);!important
 }
