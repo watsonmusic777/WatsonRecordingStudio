@@ -95,11 +95,8 @@ body {
     justify-content: center;
 }
 
-.hero::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
+.hero {
+    margin-top: 420px;
 }
 
 .hero-text {
