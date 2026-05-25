@@ -1,8 +1,5 @@
 @charset "utf-8";
-/* FORCE NEW DESIGN */
-
 /* CSS Document */
-
 /* --------------------------------------------------
    wrs.css — Watson Recording Studio Cinematic Theme
    Clean • Modern • Gradient • Hero Overlay
@@ -37,7 +34,7 @@ body {
 
 nav {
     width: 100%;
-    height: 100px; /* TALL CINEMATIC */
+    height: 120px; /* more room for logo + menu */
     background: linear-gradient(
         to bottom,
         var(--violet) 0%,
@@ -45,14 +42,29 @@ nav {
     );
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-between; /* spreads items left/right */
+    padding: 0 40px; /* breathing room */
     position: fixed;
     top: 0;
     left: 0;
     z-index: 999;
     box-shadow: 0 4px 20px rgba(0,0,0,0.4);
 }
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
 
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: 500;
+}
 
 /* LOGO BELOW NAV */
 .logo-container {
