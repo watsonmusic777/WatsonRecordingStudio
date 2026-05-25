@@ -72,6 +72,11 @@ body {
 .nav-menu a:hover {
     color: var(--amber);
 }
+.nav-inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
 
 /* --------------------------------------------------
    LOGO BELOW NAV
@@ -83,11 +88,15 @@ body {
     margin-top: 90px; /* space under fixed nav */
 }
 
-.nav-logo img {
-    width: 260px;
-    height: auto;
-    display: block;
-    margin: 0 auto;
+.nav-logo-img {
+    width: 140px;
+}
+
+.nav-logos {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    white-space: nowrap;
 }
 
 /* --------------------------------------------------
@@ -127,6 +136,9 @@ body {
     font-weight: 400;
     color: var(--text-soft);
     text-shadow: 0 3px 15px rgba(0,0,0,0.6);
+}
+.hero {
+    margin-top: 120px;
 }
 
 /* --------------------------------------------------
