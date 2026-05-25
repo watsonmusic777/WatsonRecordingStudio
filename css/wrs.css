@@ -203,6 +203,9 @@ body {
 .master-player audio {
     width: 100%;
 }
+.player {
+    display: none;
+}
 
 /* --------------------------------------------------
    ANIMATION
