@@ -26,35 +26,33 @@
 
 <body>
 
-<!-- ===========================
-     NAVIGATION
-     =========================== -->
-<div class="top-container">
+      <!-- MAIN NAV -->
+<nav class="main-nav">
+    <div class="nav-container">
 
-    <nav class="main-nav">
-        <ul class="nav-menu">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="marketplace.html">Marketplace</a></li>
-            <li><a href="lessons.html">Lessons</a></li>
-            <li><a href="studio.html">Studio</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="events.html">Events</a></li>
-            <li><a href="digital.html">Digital</a></li>
-            <li><a href="gear.html">Gear</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-            <li><a href="support.html">Support</a></li>
-            <li><a href="press.html">Press</a></li>
-            <li><a href="terms.html">Terms</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
+        <!-- NAV MENU ONLY -->
+        <div class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Music.html">Music</a>
+            <a href="DigitalMusic.html">Digital Music</a>
+            <a href="Gear.html">Gear Shop</a>
+            <a href="Store.html">Store</a>
+            <a href="Merch.html">Merch</a>
+            <a href="Membership.html">Membership</a>
+            <a href="Playlist.html">Playlist</a>
+            <a href="Press.html">Press</a>
+            <a href="Blog.html">Blog</a>
+            <a href="Contact.html">Contact</a>
+        </div>
 
-    <div class="logo-container">
-        <img src="images/sitewide_logo.png" alt="Watson Recording Studio Logo">
     </div>
+</nav>
 
+<!-- LOGO BELOW NAV, CENTERED -->
+<div class="nav-logo">
+    <img src="images/sitewide_logo.png" alt="Watson Recording Studio Logo">
 </div>
-
 
 <!-- LOGO BELOW NAV MENU -->
 
@@ -89,21 +87,28 @@
 <!-- ===========================
      FEATURED MUSIC
      =========================== -->
-<section class="section">
-  <div class="container fade-up">
-    <h2 class="section-title">Featured Track</h2>
+<!-- FEATURED TRACK SECTION -->
+<div class="featured-track fade-in">
 
-    <div class="card">
-      <img src="images/featured-track.jpg" alt="Featured Track" class="img-rounded img-shadow">
-      <h3 class="card-title">Midnight on River Street</h3>
-      <p class="card-text">A smooth blend of jazz, funk, and island soul.</p>
-      <div class="card-actions">
-        <a href="music.html" class="btn btn-secondary">Listen Now</a>
-      </div>
+    <!-- Featured Track Box -->
+    <div class="track-info">
+        <h2>Midnight on River Street</h2>
+        <p>A smooth blend of jazz, funk, and island soul.</p>
+
+        <a href="audio/Midnight%20on%20River%20Street.mp3" class="btn" target="_blank">
+            Listen Now
+        </a>
     </div>
 
-  </div>
-</section>
+    <!-- Audio Player BELOW the box -->
+    <div class="track-player">
+        <audio controls>
+            <source src="audio/Midnight%20on%20River%20Street.mp3" type="audio/mpeg">
+        </audio>
+    </div>
+
+</div>
+
 
 
 <!-- ===========================
