@@ -11,7 +11,7 @@
 <meta name="description" content="Premium recording, mixing, and production services in Honolulu, Hawaiʻi. Cinematic sound with island soul.">
 
 <!-- Keywords -->
-<meta name="keywords" content="Watson Recording Studio, Honolulu recording studio, music production, mixing, mastering, beats, Hawaiʻi music, studio services, Oahu recording, Waikiki music, Kakaa[...]
+<meta name="keywords" content="Watson Recording Studio, Honolulu recording studio, music production, mixing, mastering, beats, Hawaiʻi music, studio services, Oahu recording, Waikiki music, Kakaako studio">
 
 <!-- Author -->
 <meta name="author" content="Watson Recording Studio">
@@ -38,9 +38,8 @@
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
 
   
-  <link rel="stylesheet" href="css/global.css">
-<link rel="stylesheet" href="css/support.css">
-
+    <link rel="stylesheet" href="css/global.css">
+    <link rel="stylesheet" href="css/wrs.css?v=1000">
 </head>
 
 <body>
@@ -48,22 +47,26 @@
 <!-- ===========================
      FIXED NAVIGATION BAR
 =========================== -->
-<nav>
-    <div class="logo">Watson Recording Studio</div>
-    <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="music.html">Music</a></li>
-        <li><a href="digitalmusic.html">Digital Music</a></li>
-        <li><a href="gearshop.html">Gear Shop</a></li>
-        <li><a href="store.html">Store</a></li>
-        <li><a href="merch.html">Merch</a></li>
-        <li><a href="membership.html">Membership</a></li>
-        <li><a href="playlist.html">Playlist</a></li>
-        <li><a href="press.html">Press</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="contact.html">Contact</a></li>
-    </ul>
+<nav class="main-nav">
+	
+    <!-- TOP NAV MENU -->
+    <div class="nav-container">
+        <div class="nav-menu">
+            <a href="index.html">Home</a>
+            <a href="About.html">About</a>
+            <a href="Music.html">Music</a>
+            <a href="DigitalMusic.html">Digital Music</a>
+            <a href="Gear.html">Gear Shop</a>
+            <a href="Store.html">Store</a>
+            <a href="Merch.html">Merch</a>
+            <a href="Membership.html">Membership</a>
+            <a href="Playlist.html">Playlist</a>
+            <a href="Press.html">Press</a>
+            <a href="Blog.html">Blog</a>
+            <a href="Contact.html">Contact</a>
+        </div>
+    </div>
+
 </nav>
 
 <!-- LOGO BELOW NAV -->
@@ -103,7 +106,7 @@
         <h2>Welcome to the Sound</h2>
         <p>
             From Waikīkī to the world — Watson Recording Studio blends classic soul,
-            modern production, and island energy into a sound that's unmistakably ours.
+            modern production, and island energy into a sound that’s unmistakably ours.
         </p>
     </div>
 </section>
@@ -112,22 +115,19 @@
      FEATURED TRACK
 =========================== -->
 <section class="featured-tracks">
-    <div class="track-card">
+    <div class="track-card" onclick="playTrack('audio/Midnight%20on%20River%20Street.mp3')">
         <h3>Midnight on River Street</h3>
         <p>Smooth jazz, funk, and island soul.</p>
-        <button class="btn btn-listen" onclick="playTrack('audio/Midnight%20on%20River%20Street.mp3')">Listen Now</button>
     </div>
 
-    <div class="track-card">
-        <h3>Changing to be Happy</h3>
-        <p>A mix of Country Rock and R&B.</p>
-        <button class="btn btn-listen" onclick="playTrack('audio/Changing%20to%20be%20Happy.mp3')">Listen Now</button>
+    <div class="track-card" onclick="playTrack('audio/track2.mp3')">
+        <h3>Track Two</h3>
+        <p>Description for track two.</p>
     </div>
 
-    <div class="track-card">
+    <div class="track-card" onclick="playTrack('audio/track3.mp3')">
         <h3>Track Three</h3>
         <p>Description for track three.</p>
-        <button class="btn btn-listen" onclick="playTrack('audio/track3.mp3')">Listen Now</button>
     </div>
 </section>
 
@@ -167,34 +167,40 @@
 =========================== -->
 <section class="section fade-in text-center">
     <h2>Ready to Create?</h2>
-    <p>Let's bring your sound to life.</p>
+    <p>Let’s bring your sound to life.</p>
     <a href="contact.html" class="btn btn-amber">Book a Session</a>
 </section>
 
 <!-- ===========================
      FOOTER
 =========================== -->
-<footer class="footer">
-  <p>&copy; 2024 Watson Recording Studio. All rights reserved.</p>
+<footer>
+    <div class="footer-container">
+        <div>
+            <h3>Watson Recording Studio</h3>
+            <p>Honolulu, Hawaiʻi — Music • Media • Creative Production</p>
+        </div>
 
-  <p>
-    <a href="index.html">Home</a> • 
-    <a href="music.html">Music</a> •
-    <a href="licensing.html">Licensing</a> •
-    <a href="contact.html">Contact</a> •
-    <a href="press.html">Press</a> •
-    <a href="terms.html">Terms</a>
-  </p>
+        <div>
+            <h3>Links</h3>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+            <a href="press.html">Press</a>
+            <a href="terms.html">Terms</a>
+        </div>
 
-  <p class="social-links">
-    <a href="https://youtube.com/@watsonmusic777" target="_blank">YouTube</a> •
-    <a href="https://instagram.com/watsonmusic777" target="_blank">Instagram</a> •
-    <a href="https://x.com/John_G_Watson" target="_blank">X</a> •
-    <a href="https://facebook.com/watsonentllc" target="_blank">Facebook</a>
-  </p>
+        <div>
+            <h3>Social</h3>
+            <a href="#">YouTube</a>
+            <a href="#">Instagram</a>
+            <a href="#">Spotify</a>
+        </div>
+    </div>
+
+    <p class="copyright">
+        © 2026 Watson Recording Studio — All Rights Reserved
+    </p>
 </footer>
-
-
 <script>
 function playTrack(src) {
     const player = document.getElementById('jukebox');
