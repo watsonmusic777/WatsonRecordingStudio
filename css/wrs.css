@@ -156,6 +156,20 @@ body {
     text-align: center;
 }
 
+.btn {
+    background: var(--violet);
+    color: var(--white);
+    padding: 12px 22px;
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-block;
+    transition: 0.3s ease;
+    cursor: pointer;
+}
+
+.btn:hover {
+    background: var(--blue-hover);
+}
 
 .track-player {
     width: 100%;
