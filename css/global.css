@@ -107,6 +107,10 @@ a.button:hover {
 .btn-amber:hover {
     background: #ffca6a !important;
 }
+.btn:active {
+    transform: scale(0.96);
+    transition: transform 0.05s ease;
+}
 
 /* -----------------------------------------
    CARDS
