@@ -38,9 +38,8 @@ body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
-	padding-top: 160px !important;
+    padding-top: 160px !important;
 }
-
 
 /* -----------------------------------------
    GLOBAL ELEMENTS
@@ -63,12 +62,11 @@ h1, h2, h3 {
 
 .container {
     width: 100%;
-    max-width: 1200px; /* or whatever size you want */
-    margin: 0 auto;    /* keeps it centered horizontally */
-    text-align: left;  /* stops centering ALL content */
-    display: block;    /* removes flex centering if applied */
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: left;
+    display: block;
 }
-
 
 .section {
     padding: 80px 0;
@@ -81,46 +79,32 @@ h1, h2, h3 {
 /* -----------------------------------------
    BUTTONS
 ------------------------------------------*/
-.btn {
-    display: inline-block;
-    padding: 12px 28px;
-    border-radius: var(--radius);
-    background: var(--violet);
-    color: white;
-    font-weight: 600;
-    transition: background var(--transition), transform var(--transition);
-}
-
-.btn:hover {
-    background: var(--violet-light);
-    transform: translateY(-3px);
-}
-
-.btn-amber {
-    background: var(--amber);
-    color: #000;
-}
-
-.btn-amber:hover {
-    background: #ffca6a;
-}
-
 button,
 .btn,
 a.button {
-    background-color: #6445B3 !important;
+    background-color: var(--violet) !important;
     color: white !important;
     border: none;
     padding: 12px 24px;
-    border-radius: 6px;
+    border-radius: var(--radius);
     cursor: pointer;
-    transition: 0.3s ease;
+    transition: background var(--transition), transform var(--transition);
 }
 
 button:hover,
 .btn:hover,
 a.button:hover {
-    background-color: #7A5CF0 !important; /* lighter violet */
+    background-color: var(--violet-light) !important;
+    transform: translateY(-3px);
+}
+
+.btn-amber {
+    background: var(--amber) !important;
+    color: #000 !important;
+}
+
+.btn-amber:hover {
+    background: #ffca6a !important;
 }
 
 /* -----------------------------------------
@@ -143,10 +127,11 @@ a.button:hover {
    FOOTER
 ------------------------------------------*/
 footer {
-    background: var(--bg-light);
+    background-color: var(--violet) !important;
+    color: white !important;
+    padding: 40px 0;
+    text-align: center;
     border-top: 1px solid var(--border);
-    padding: 50px 0;
-    margin-top: 80px;
 }
 
 .footer-container {
@@ -174,16 +159,9 @@ footer a:hover {
 }
 
 footer .copyright {
-    text-align: center;
     margin-top: 40px;
     color: var(--muted);
     font-size: 0.9rem;
-}
-footer {
-    background-color: #6445B3 !important;
-    color: white !important;
-    padding: 40px 0;
-    text-align: center;
 }
 
 /* -----------------------------------------
@@ -197,6 +175,7 @@ footer {
     from { opacity: 0; transform: translateY(20px); }
     to   { opacity: 1; transform: translateY(0); }
 }
+
 /* -----------------------------------------
    GRID SYSTEM
 ------------------------------------------*/
@@ -215,6 +194,17 @@ footer {
     }
 }
 
+/* -----------------------------------------
+   NAVIGATION
+------------------------------------------*/
+nav {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0;
+    width: 100%;
+    z-index: 9999;
+}
+
 nav a {
     position: relative;
     color: white;
@@ -228,21 +218,17 @@ nav a::after {
     bottom: -4px;
     width: 0%;
     height: 3px;
-    background-color: #6445B3;
+    background-color: var(--violet);
     transition: width 0.3s ease;
 }
 
 nav a:hover::after {
     width: 100%;
 }
-nav {
-    position: fixed !important;
-    top: 0 !important;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-}
 
+/* -----------------------------------------
+   AUDIO PLAYER
+------------------------------------------*/
 audio {
     filter: hue-rotate(280deg) saturate(1.4) brightness(1.1);
 }
