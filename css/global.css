@@ -8,7 +8,8 @@
 
     --amber: #ffb347;
 
-    --bg: #0a0a0f;
+    {
+    --bg: #111118;
     --bg-light: #14141a;
     --bg-lighter: #1d1d26;
 
@@ -40,7 +41,7 @@ body {
     overflow-x: hidden;
     padding-top: 160px !important;
 }
-
+#111118
 /* -----------------------------------------
    GLOBAL ELEMENTS
 ------------------------------------------*/
