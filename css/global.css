@@ -214,3 +214,14 @@ nav ul li a {
 .hero-btn {
     margin-top: 10px;
 }
+.nav-logo {
+    width: 100%;
+    text-align: center;
+    margin-top: 120px; /* space below nav */
+    margin-bottom: 40px; /* space above hero */
+}
+
+.nav-logo img {
+    width: 320px;
+    height: auto;
+}
