@@ -1,3 +1,190 @@
 @charset "utf-8";
-/* CSS Document */
+/* =============================== */
+/* WATSON RECORDING STUDIO MOBILE  */
+/* =============================== */
+
+@media (max-width: 768px) {
+
+    /* GLOBAL RESET FOR MOBILE SPACING */
+    body {
+        padding: 0;
+        margin: 0;
+        overflow-x: hidden;
+    }
+
+    section {
+        padding: 40px 20px;
+    }
+
+    h1, h2, h3 {
+        text-align: center;
+        line-height: 1.2;
+    }
+
+    /* =============================== */
+    /* NAVIGATION BAR */
+    /* =============================== */
+
+    nav {
+        padding: 15px 20px;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column;
+        gap: 12px;
+        padding: 15px 0;
+        text-align: center;
+    }
+
+    nav a {
+        font-size: 1.1rem;
+        padding: 10px 0;
+    }
+
+    /* =============================== */
+    /* HERO SECTION */
+    /* =============================== */
+
+    .hero {
+        height: 360px;
+        background-size: cover;
+        background-position: center;
+        padding: 40px 20px;
+    }
+
+    .hero h1 {
+        font-size: 2rem;
+    }
+
+    .hero p {
+        font-size: 1.1rem;
+        max-width: 90%;
+        margin: 10px auto;
+    }
+
+    .hero .button {
+        width: 80%;
+        margin: 20px auto 0;
+        display: block;
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    /* =============================== */
+    /* MUSIC PLAYER */
+    /* =============================== */
+
+    .player-container {
+        width: 100%;
+        padding: 15px;
+        margin: 0 auto 30px;
+    }
+
+    audio {
+        width: 100%;
+    }
+
+    /* =============================== */
+    /* TRACK CARDS */
+    /* =============================== */
+
+    .track-grid,
+    .service-grid,
+    .playlist-grid,
+    .gear-grid {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 25px;
+    }
+
+    .track-card {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .track-card img {
+        width: 100%;
+        height: auto;
+        border-radius: 10px;
+    }
+
+    .track-card .button {
+        width: 80%;
+        margin: 15px auto 0;
+        display: block;
+        font-size: 1rem;
+        padding: 12px 20px;
+    }
+
+    /* =============================== */
+    /* EXPERIENCE SECTION */
+    /* =============================== */
+
+    .experience-section {
+        padding: 40px 20px;
+        margin: 40px auto;
+        max-width: 95%;
+    }
+
+    .experience-section p {
+        font-size: 1.05rem;
+        line-height: 1.5;
+    }
+
+    /* =============================== */
+    /* SERVICES SECTION */
+    /* =============================== */
+
+    .service-card {
+        padding: 25px;
+        text-align: center;
+    }
+
+    .service-card h3 {
+        font-size: 1.4rem;
+    }
+
+    .service-card p {
+        font-size: 1rem;
+    }
+
+    /* =============================== */
+    /* BUTTONS */
+    /* =============================== */
+
+    .button,
+    .btn-primary,
+    .btn-secondary {
+        width: 80%;
+        margin: 10px auto;
+        display: block;
+        padding: 12px 20px;
+        font-size: 1rem;
+        text-align: center;
+    }
+
+    /* =============================== */
+    /* FOOTER */
+    /* =============================== */
+
+    footer {
+        text-align: center;
+        padding: 40px 20px;
+    }
+
+    footer .footer-links {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    footer .social-icons {
+        margin-top: 20px;
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+    }
+}
 
