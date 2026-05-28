@@ -148,6 +148,19 @@ footer a:hover {
     to   { opacity: 1; transform: translateY(0); }
 }
 
+/* NAV LOGO BELOW NAV */
+.nav-logo {
+    width: 100%;
+    text-align: center;
+    margin-top: 120px;
+    margin-bottom: 40px;
+}
+
+.nav-logo img {
+    width: 320px;
+    height: auto;
+}
+
 /* GRID */
 .grid {
     display: grid;
@@ -213,15 +226,4 @@ nav ul li a {
 
 .hero-btn {
     margin-top: 10px;
-}
-.nav-logo {
-    width: 100%;
-    text-align: center;
-    margin-top: 120px; /* space below nav */
-    margin-bottom: 40px; /* space above hero */
-}
-
-.nav-logo img {
-    width: 320px;
-    height: auto;
 }
