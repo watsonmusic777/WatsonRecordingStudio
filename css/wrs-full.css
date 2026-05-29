@@ -73,17 +73,15 @@ body {
 /* LOGO */
 .nav-logo {
     text-align: center;
-   .nav-logo {
     padding: 10px 0 0;
 }
-
-
 
 .nav-logo img {
     width: 350px;
     height: auto;
     object-fit: contain;
 }
+
 
 /* ========================= */
 /*           HERO            */
