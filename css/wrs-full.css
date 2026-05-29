@@ -111,8 +111,8 @@ body {
 
 .hero {
     width: 100%;
-    min-height: 520px;        /* allows hero to expand */
-    height: auto;             /* prevents clipping */
+    min-height: 520px;
+    height: auto;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -137,6 +137,9 @@ body {
     width: 90%;
     max-width: 1200px;
     margin: 0 auto 80px;
+}
+.main-content > section:first-child {
+    margin-top: 80px;
 }
 
 /* ========================= */
