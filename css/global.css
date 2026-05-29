@@ -36,11 +36,9 @@ body {
     font-family: 'Inter', 'Segoe UI', sans-serif;
     line-height: 1.6;
     overflow-x: hidden;
-    padding-top: 80px; /* FIXED */
+    padding-top: 180px; /* adjust 160–200 depending on your logo/nav height */
 }
-body {
-    padding-top: 180px; /* adjust until the hero sits perfectly below the nav */
-}
+
 
 /* GLOBAL ELEMENTS */
 a {
@@ -126,6 +124,9 @@ h1, h2, h3 {
     box-shadow:
         inset 0 6px 14px rgba(255,255,255,0.25),
         inset 0 -8px 18px rgba(0,0,0,0.5);
+}
+.hero {
+    min-height: 600px;
 }
 
 .footer-container {
