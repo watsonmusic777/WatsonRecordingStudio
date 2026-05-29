@@ -1,9 +1,11 @@
 /* ============================================
-   WATSON RECORDING STUDIO — MAIN STYLES
-   (Matches new homepage layout)
+   WATSON RECORDING STUDIO — MAIN STYLES (CLEAN)
+   Matches rebuilt homepage + global theme
 ============================================ */
 
-/* GLOSSY CARD STYLE */
+/* -----------------------------------------
+   GLOSSY CARD
+------------------------------------------*/
 .glossy-card {
     background: linear-gradient(
         to bottom,
@@ -29,25 +31,20 @@
         0 10px 26px rgba(0,0,0,0.65);
 }
 
-/* HERO CONTENT */
+/* -----------------------------------------
+   HERO CONTENT (NO MARGIN OVERRIDES)
+------------------------------------------*/
 .hero-content {
-    margin-top: 80px;
+    text-align: center;
+    width: 100%;
 }
 
-.hero-content h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: var(--text-light);
-}
-
-.hero-btn {
-    margin-top: 20px;
-}
-
-/* FEATURED MUSIC SECTION */
+/* -----------------------------------------
+   FEATURED MUSIC SECTION
+------------------------------------------*/
 .music-player-section {
     text-align: center;
-    margin: 60px auto;
+    margin: 80px auto;
 }
 
 .music-player-section h2 {
@@ -56,7 +53,9 @@
     font-size: 2rem;
 }
 
-/* MASTER PLAYER */
+/* -----------------------------------------
+   MASTER PLAYER
+------------------------------------------*/
 .master-player {
     width: 100%;
     max-width: 700px;
@@ -79,7 +78,9 @@
     max-width: 650px;
 }
 
-/* TRACK LIST */
+/* -----------------------------------------
+   TRACK LIST
+------------------------------------------*/
 .track-list {
     display: flex;
     flex-direction: column;
@@ -87,7 +88,9 @@
     align-items: center;
 }
 
-/* TRACK CARD */
+/* -----------------------------------------
+   TRACK CARD
+------------------------------------------*/
 .track-card {
     background: var(--bg-light);
     padding: 20px 30px;
@@ -107,7 +110,9 @@
     color: var(--text-light);
 }
 
-/* BUTTON */
+/* -----------------------------------------
+   BUTTON (SINGLE CLEAN VERSION)
+------------------------------------------*/
 .btn {
     background: var(--violet);
     color: var(--text-light);
@@ -122,7 +127,10 @@
 .btn:hover {
     background: var(--violet-light);
 }
-/* LATEST RELEASES */
+
+/* -----------------------------------------
+   LATEST RELEASES
+------------------------------------------*/
 .latest-releases {
     text-align: center;
     margin: 80px auto;
@@ -134,7 +142,6 @@
     font-size: 2rem;
 }
 
-/* Release List */
 .release-list {
     display: flex;
     flex-direction: column;
@@ -142,7 +149,6 @@
     align-items: center;
 }
 
-/* Release Card */
 .release-card {
     background: var(--bg-light);
     padding: 25px 30px;
@@ -167,23 +173,9 @@
     color: var(--text-dark);
 }
 
-/* Button (already exists, but included for clarity) */
-.btn {
-    background: var(--violet);
-    color: var(--text-light);
-    padding: 12px 22px;
-    border-radius: 6px;
-    font-weight: 600;
-    display: inline-block;
-    transition: 0.3s ease;
-    cursor: pointer;
-}
-
-.btn:hover {
-    background: var(--violet-light);
-}
-
-/* EXPERIENCE SECTION */
+/* -----------------------------------------
+   EXPERIENCE SECTION
+------------------------------------------*/
 .experience-section {
     padding: 100px 20px;
     text-align: center;
@@ -194,6 +186,7 @@
     padding: 120px 40px;
     text-align: center;
     color: var(--text-light);
+    border-radius: 14px;
 }
 
 .wrs-experience h2 {
@@ -223,7 +216,9 @@
     font-style: italic;
 }
 
-/* SERVICES GRID */
+/* -----------------------------------------
+   SERVICES GRID
+------------------------------------------*/
 .services {
     padding: 100px 20px;
     text-align: center;
@@ -236,7 +231,9 @@
     margin-top: 40px;
 }
 
-/* CINEMATIC PANELS */
+/* -----------------------------------------
+   CINEMATIC SECTION
+------------------------------------------*/
 .cinematic-section {
     padding: 120px 40px;
     text-align: center;
@@ -252,11 +249,16 @@
         inset 0 -6px 16px rgba(0,0,0,0.6);
 }
 
-/* RESPONSIVE */
+/* -----------------------------------------
+   RESPONSIVE
+------------------------------------------*/
 @media (max-width: 900px) {
-    .track-grid,
     .service-grid {
         grid-template-columns: 1fr;
+    }
+
+    .wrs-experience h2 {
+        font-size: 2.2rem;
     }
 
     .hero-content h1 {
