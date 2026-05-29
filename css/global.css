@@ -42,8 +42,8 @@ body {
     line-height: 1.6;
     overflow-x: hidden;
 
-    /* Ensures content sits below fixed nav + logo */
-    padding-top: 110px;
+    /* space for fixed nav + logo */
+    padding-top: 260px;
 }
 
 /* -----------------------------------------
@@ -108,12 +108,6 @@ h1, h2, h3 {
     color: white;
     font-weight: 500;
 }
-header {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
 
 /* -----------------------------------------
    LOGO BELOW NAV
@@ -125,23 +119,18 @@ header {
     align-items: center;
 }
 
-
-.site-header .nav-logo {
-    margin-top: 5px;
-    margin-bottom: 5px;
+.nav-logo {
+    margin-top: 20px;
+    margin-bottom: 30px;
     display: flex;
     justify-content: center;
     width: 100%;
 }
 
-.site-header .nav-logo {
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
 .nav-logo img {
-    width: 350px;
-    height: 350px;
+    width: 100%;
+    max-width: 260px;
+    height: auto;
     object-fit: contain;
 }
 
@@ -149,8 +138,8 @@ header {
    HERO (GLOBAL BASE)
 ------------------------------------------*/
 .hero {
-    height: 760px; /* consistent height on all screen sizes */
-    padding: 140px 20px;
+    height: 760px;
+    padding: 40px 20px;
 
     background-size: cover;
     background-position: center;
@@ -161,14 +150,23 @@ header {
     box-shadow:
         inset 0 6px 14px rgba(255,255,255,0.25),
         inset 0 -8px 18px rgba(0,0,0,0.5);
-}
-.hero-content h1 {
-    font-size: 96px;          /* bigger */
-    font-weight: 900;         /* bolder */
-    letter-spacing: 3px;      /* wider */
-    text-shadow: 0 6px 18px rgba(0,0,0,0.75);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
+.hero-content {
+    text-align: center;
+    width: 100%;
+}
+
+.hero-content h1 {
+    font-size: 96px;
+    font-weight: 900;
+    letter-spacing: 3px;
+    text-shadow: 0 6px 18px rgba(0,0,0,0.75);
+}
 
 .hero-btn {
     font-size: 28px;
@@ -190,17 +188,8 @@ header {
     box-shadow: 0 10px 24px rgba(0,0,0,0.65);
 }
 
-
-.hero-content {
-    text-align: center;
-    margin-left: auto;
-    margin-right: auto;
-    width: 100%;
-   margin-top: 260px; /* adjust this number until it sits exactly where you want */
-}
-
 /* -----------------------------------------
-   FOOTER (CENTERED, FIXED)
+   FOOTER
 ------------------------------------------*/
 footer {
     width: 100%;
@@ -235,12 +224,17 @@ footer .social-links {
     width: 100%;
     text-align: center;
 }
+
+/* -----------------------------------------
+   MUSIC GRID
+------------------------------------------*/
 .master-player {
     width: 100%;
     display: flex;
     justify-content: center;
     margin: 40px 0;
 }
+
 .music-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
