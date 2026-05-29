@@ -121,6 +121,11 @@ header .nav-logo {
     width: 260px;
     height: auto;
 }
+.nav-logo {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
 
 /* -----------------------------------------
    HERO (GLOBAL BASE)
