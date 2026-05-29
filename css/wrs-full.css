@@ -1,26 +1,9 @@
-/* RESET */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
-/* GLOBAL */
-html, body {
-    width: 100%;
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #111118;
-    color: #fff;
-}
+/* ========================= */
+/*        HEADER SPACING     */
+/* ========================= */
 
 body {
-    padding-top: 380px;
-}
-
-
-
- /* prevents scrolling under navbar */
+    padding-top: 360px; /* ensures hero clears navbar + logo */
 }
 
 /* ========================= */
@@ -33,16 +16,16 @@ body {
     left: 0;
     width: 100%;
     z-index: 9999;
-    background: rgba(0,0,0,0.7);
+    background: rgba(0,0,0,0.75);
 }
 
 .navbar {
-    padding: 6px 0;
+    padding: 10px 0;
 }
 
 #nav-menu {
     display: flex;
-    flex-direction: row;      /* stays horizontal ALWAYS */
+    flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
     gap: 18px;
@@ -72,37 +55,16 @@ body {
     width: 100%;
 }
 
-/* LOGO */
+/* LOGO BLOCK */
 .nav-logo {
     background: #111118;
     text-align: center;
-    padding: 8px 0 14px;
+    padding: 10px 0 20px;
 }
 
 .nav-logo img {
     max-width: 380px;
     width: 100%;
-}
-
-/* ========================= */
-/*          BUTTONS          */
-/* ========================= */
-
-.btn {
-    display: inline-block;
-    padding: 10px 22px;
-    border-radius: 8px;
-    background: linear-gradient(135deg, #caa86f, #f3d89a);
-    color: #111118;
-    font-weight: 700;
-    text-decoration: none;
-    box-shadow: 0 8px 18px rgba(0,0,0,0.6);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
-}
-
-.btn:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 12px 26px rgba(0,0,0,0.8);
 }
 
 /* ========================= */
@@ -116,12 +78,14 @@ body {
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
+
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
 
+    margin-bottom: 80px; /* spacing below hero */
+}
 
 .hero-content h1 {
     font-size: 2.6rem;
@@ -138,9 +102,6 @@ body {
     max-width: 1200px;
     margin: 0 auto 80px;
 }
-.main-content > section:first-child {
-    margin-top: 80px;
-}
 
 /* ========================= */
 /*       MUSIC PLAYER        */
@@ -148,7 +109,7 @@ body {
 
 .master-player {
     text-align: center;
-    margin-bottom: 30px;
+    margin-bottom: 40px;
 }
 
 .master-player audio {
@@ -166,6 +127,7 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 40px;
+    margin-bottom: 80px;
 }
 
 /* ========================= */
@@ -178,11 +140,14 @@ body {
     background: radial-gradient(circle at top left, rgba(255,255,255,0.10), rgba(0,0,0,0.85));
     border-radius: 14px;
     padding: 22px;
+
     box-shadow:
         0 18px 40px rgba(0,0,0,0.85),
         inset 0 0 25px rgba(255,255,255,0.05);
+
     border: 1px solid rgba(122,92,235,0.35);
     backdrop-filter: blur(6px);
+
     transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
@@ -207,29 +172,28 @@ body {
 .cinematic-section {
     padding: 70px 20px;
     text-align: center;
+
     background: linear-gradient(135deg, rgba(122,92,235,0.12), rgba(0,0,0,0.9));
     border-top: 1px solid rgba(122,92,235,0.35);
     border-bottom: 1px solid rgba(122,92,235,0.35);
+
     box-shadow: inset 0 0 40px rgba(0,0,0,0.6);
+
+    margin-bottom: 80px;
 }
 
 /* ========================= */
-/*        PAGE TITLES        */
+/*        EXPERIENCE         */
 /* ========================= */
 
-.page-hero {
+.wrs-experience {
     text-align: center;
-    margin: 40px 0 30px;
+    margin-bottom: 80px;
 }
 
-.page-hero h1 {
-    font-size: 2.2rem;
-    margin-bottom: 8px;
-    color: #f5f1ff;
-}
-
-.page-hero p {
-    color: #cfcfe8;
+.wrs-experience p {
+    margin: 10px 0;
+    font-size: 1.1rem;
 }
 
 /* ========================= */
@@ -244,10 +208,14 @@ body {
 
 .footer-grid {
     width: 90%;
+    max-width: 1200px;
     margin: 0 auto 30px;
+
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
+
+    text-align: center;
 }
 
 .footer h3 {
@@ -280,10 +248,9 @@ body {
 @media (max-width: 900px) {
 
     body {
-        padding-top: 190px;
+        padding-top: 380px;
     }
 
-    /* NAVBAR STILL HORIZONTAL */
     #nav-menu {
         flex-direction: row;
         flex-wrap: wrap;
@@ -301,7 +268,7 @@ body {
     }
 
     .hero {
-        height: 420px;
+        min-height: 420px;
     }
 
     .hero-content h1 {
