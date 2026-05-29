@@ -126,12 +126,14 @@ header {
 }
 
 
-header .nav-logo {
-    margin: 10px 0 20px 0 !important;
-    display: flex !important;
-    justify-content: center !important;
+.site-header .nav-logo {
+    margin-top: 5px;
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
     width: 100%;
 }
+
 .site-header .nav-logo {
     margin-top: 20px;
     margin-bottom: 30px;
