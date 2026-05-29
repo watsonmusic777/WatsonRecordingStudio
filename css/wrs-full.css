@@ -34,7 +34,7 @@ body {
 }
 
 .navbar {
-    padding: 12px 0;
+    padding: 6px 0;
 }
 
 #nav-menu {
@@ -73,8 +73,10 @@ body {
 /* LOGO */
 .nav-logo {
     text-align: center;
-    padding: 20px 0 10px;
+   .nav-logo {
+    padding: 10px 0 0;
 }
+
 
 
 .nav-logo img {
@@ -99,8 +101,9 @@ body {
     justify-content: center;
     text-align: center;
 
-    padding-bottom: 60px;
-    margin-bottom: 80px;
+   padding-bottom: 20px;
+   margin-bottom: 20px;
+
 
     position: relative;
     overflow: visible;
