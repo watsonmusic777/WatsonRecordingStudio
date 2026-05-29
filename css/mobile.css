@@ -1,4 +1,10 @@
+
 @media (max-width: 900px) {
+    .hero {
+        height: 600px;
+        background-position: top center;
+    }
+
 
     body {
         padding-top: 190px;
