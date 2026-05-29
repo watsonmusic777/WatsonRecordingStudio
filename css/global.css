@@ -112,6 +112,13 @@ h1, h2, h3 {
 /* -----------------------------------------
    LOGO BELOW NAV
 ------------------------------------------*/
+header {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 header .nav-logo {
     margin: 10px 0 20px 0 !important;
     display: flex !important;
