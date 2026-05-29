@@ -89,12 +89,12 @@ body {
 
 .hero {
     width: 100%;
-    height: 820px; /* enough room for mouth + logo */
+    height: 820px; /* enough room for full face + logo */
     background-size: 100% auto; /* prevents zoom */
     background-repeat: no-repeat;
 
-    /* lower the image slightly so mouth + logo appear */
-    background-position: center top -120px;
+    /* move image UP so mouth + logo appear */
+    background-position: center top -260px;
 
     display: flex;
     align-items: flex-end;
@@ -107,13 +107,6 @@ body {
     position: relative;
     overflow: visible;
 }
-
-}
-
-
-
-
-
 
 .hero-content h1 {
     font-size: 2.8rem;
