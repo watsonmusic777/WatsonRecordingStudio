@@ -3,8 +3,9 @@
 /* ========================= */
 
 body {
-    padding-top: 420px;
+    padding-top: 530px;
 }
+
 
 
 
@@ -62,13 +63,15 @@ body {
 .nav-logo {
     background: #111118;
     text-align: center;
-    padding: 10px 0 120px;
+    padding: 20px 0 160px;
 }
 
 
+
 .nav-logo img {
-    max-width: 380px;
-    width: 100%;
+    width: 350px;
+    height: 350px;
+    object-fit: contain;
 }
 
 /* ========================= */
