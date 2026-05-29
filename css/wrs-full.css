@@ -3,24 +3,20 @@
 /* ========================= */
 
 body {
-    padding-top: 530px;
+    padding-top: 0; /* header is no longer fixed, no offset needed */
 }
-
-
-
-
 
 /* ========================= */
 /*        NAVIGATION         */
 /* ========================= */
 
 .site-header {
-    position: fixed;
+    position: relative; /* was fixed – now normal flow */
     top: 0;
     left: 0;
     width: 100%;
-    z-index: 9999;
-    background: rgba(0,0,0,0.75);
+    z-index: 10;
+    background: #111118; /* solid so hero never shows through */
 }
 
 .navbar {
@@ -35,6 +31,253 @@ body {
     gap: 18px;
     list-style: none;
 }
+
+#nav-menu a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    position: relative;
+}
+
+#nav-menu a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0;
+    height: 2px;
+    background: #7A5CEB;
+    transition: width 0.25s ease;
+}
+
+#nav-menu a:hover::after {
+    width: 100%;
+}
+
+/* LOGO BLOCK */
+.nav-logo {
+    background: #111118;
+    text-align: center;
+    padding: 20px 0 40px; /* normal, not huge */
+}
+
+.nav-logo img {
+    max-width: 350px;
+    width: 100%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* ========================= */
+/*           HERO            */
+/* ========================= */
+
+.hero {
+    width: 100%;
+    min-height: 520px;
+    height: auto;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    margin-bottom: 80px; /* spacing below hero */
+}
+
+.hero-content h1 {
+    font-size: 2.6rem;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.9);
+    margin-bottom: 18px;
+}
+
+/* ========================= */
+/*         MAIN WRAP         */
+/* ========================= */
+
+.main-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 80px;
+}
+
+/* ========================= */
+/*       MUSIC PLAYER        */
+/* ========================= */
+
+.master-player {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.master-player audio {
+    width: 100%;
+    max-width: 900px;
+}
+
+/* ========================= */
+/*           GRIDS           */
+/* ========================= */
+
+.music-grid,
+.service-grid,
+.generic-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 80px;
+}
+
+/* ========================= */
+/*     CINEMATIC 3D CARDS    */
+/* ========================= */
+
+.track-card,
+.service-card,
+.generic-card {
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.10), rgba(0,0,0,0.85));
+    border-radius: 14px;
+    padding: 22px;
+
+    box-shadow:
+        0 18px 40px rgba(0,0,0,0.85),
+        inset 0 0 25px rgba(255,255,255,0.05);
+
+    border: 1px solid rgba(122,92,235,0.35);
+    backdrop-filter: blur(6px);
+
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.track-card:hover,
+.service-card:hover,
+.generic-card:hover {
+    transform: translateY(-4px);
+    box-shadow:
+        0 25px 55px rgba(0,0,0,0.9),
+        inset 0 0 35px rgba(255,255,255,0.08);
+}
+
+.track-sub {
+    margin-bottom: 14px;
+    color: #d0d0d0;
+}
+
+/* ========================= */
+/*   CINEMATIC SECTIONS      */
+/* ========================= */
+
+.cinematic-section {
+    padding: 70px 20px;
+    text-align: center;
+
+    background: linear-gradient(135deg, rgba(122,92,235,0.12), rgba(0,0,0,0.9));
+    border-top: 1px solid rgba(122,92,235,0.35);
+    border-bottom: 1px solid rgba(122,92,235,0.35);
+
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.6);
+
+    margin-bottom: 80px;
+}
+
+/* ========================= */
+/*        EXPERIENCE         */
+/* ========================= */
+
+.wrs-experience {
+    text-align: center;
+    margin: 120px auto; /* clean top + bottom spacing */
+}
+
+.wrs-experience p {
+    margin: 10px 0;
+    font-size: 1.1rem;
+}
+
+/* ========================= */
+/*          FOOTER           */
+/* ========================= */
+
+.footer {
+    background: #111118;
+    padding: 60px 0 30px;
+    border-top: 1px solid rgba(255,255,255,0.08);
+}
+
+.footer-grid {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 40px;
+
+    text-align: center;
+}
+
+.footer h3 {
+    margin-bottom: 12px;
+    color: #f5f5f5;
+}
+
+.footer a {
+    color: #c8c8c8;
+    text-decoration: none;
+    display: block;
+    margin-bottom: 6px;
+    font-size: 0.9rem;
+}
+
+.footer a:hover {
+    color: #7A5CEB;
+}
+
+.footer-copy {
+    text-align: center;
+    font-size: 0.85rem;
+    color: #9a9a9a;
+}
+
+/* ========================= */
+/*        RESPONSIVE         */
+/* ========================= */
+
+@media (max-width: 900px) {
+
+    body {
+        padding-top: 0;
+    }
+
+    #nav-menu {
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .music-grid,
+    .service-grid,
+    .generic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: 420px;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
+
 
 #nav-menu a {
     color: #ffffff;
