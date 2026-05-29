@@ -101,6 +101,9 @@ body {
     font-weight: bold;
     border-radius: 6px;
 }
+.hero {
+    background-color: #111118;
+}
 
 /* ========================= */
 /* BUTTONS */
@@ -159,4 +162,7 @@ body {
     text-align: center;
     margin-top: 40px;
     color: #c8c8c8;
+}
+.footer {
+    background: #111118;
 }
