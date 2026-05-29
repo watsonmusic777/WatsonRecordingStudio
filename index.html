@@ -60,16 +60,35 @@
 
 
 <!-- ========================= -->
-<!-- MUSIC PLAYER SECTION -->
+<!-- FEATURED MUSIC SECTION -->
 <!-- ========================= -->
 
 <section class="music-player-section">
     <h2>Featured Music</h2>
 
-    <div class="player-container glossy-card">
-        <audio controls>
-            <source src="track1.mp3" type="audio/mpeg">
-        </audio>
+    <!-- MASTER PLAYER -->
+    <div class="master-player">
+        <audio id="jukebox" controls></audio>
+    </div>
+
+    <!-- TRACK LIST -->
+    <div class="track-list">
+
+        <div class="track-card">
+            <h3>Midnight on River Street</h3>
+            <a class="btn" onclick="playTrack('audio/MidnightOnRiverStreet.mp3')">Listen Now</a>
+        </div>
+
+        <div class="track-card">
+            <h3>Ocean Drive</h3>
+            <a class="btn" onclick="playTrack('audio/OceanDrive.mp3')">Listen Now</a>
+        </div>
+
+        <div class="track-card">
+            <h3>City Lights</h3>
+            <a class="btn" onclick="playTrack('audio/CityLights.mp3')">Listen Now</a>
+        </div>
+
     </div>
 </section>
 
