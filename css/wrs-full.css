@@ -90,7 +90,7 @@ body {
 /* HERO SECTION */
 .hero {
     width: 100%;
-    height: 1100px; /* tuned for 27-inch screens */
+    height: 700px; /* tuned for 27-inch screens */
     background-size: 150% auto;
     background-position: center top -240px; /* adjust up/down here */
     background-repeat: no-repeat;
