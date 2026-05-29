@@ -93,8 +93,8 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
 
-    /* Move image WAY up */
-    background-position: center top -260px;
+    /* Move image WAY up — removes forehead */
+    background-position: center top -340px;
 
     display: flex;
     align-items: flex-end;
@@ -107,6 +107,7 @@ body {
     position: relative;
     overflow: visible;
 }
+
 
 
 .hero-content h1 {
