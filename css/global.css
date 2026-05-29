@@ -132,9 +132,13 @@ header .nav-logo {
     justify-content: center !important;
     width: 100%;
 }
+.site-header .nav-logo {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
 
 .nav-logo img {
-    width: 260px;
+    width: 350px;
     height: auto;
 }
 
@@ -171,6 +175,12 @@ header .nav-logo {
     padding: 14px 32px;
 }
 
+.hero-content {
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
 
 /* -----------------------------------------
    FOOTER (CENTERED, FIXED)
