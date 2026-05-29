@@ -57,63 +57,62 @@
 <!-- FEATURED MUSIC -->
 <!-- ========================= -->
 
-<section class="music-player-section">
-    <h2>Featured Music</h2>
-    <p>Step inside the Watson sound. Every track below was crafted with intention, emotion, and late‑night River Street energy.</p>
+<section class="music-wrapper">
 
     <!-- MASTER PLAYER -->
     <div class="master-player">
         <audio id="jukebox" controls></audio>
     </div>
 
-    <!-- TRACK LIST -->
-    <div class="track-list">
+    <div class="music-grid">
 
-        <div class="track-card">
-            <h3>Midnight on River Street</h3>
-            <a class="btn" onclick="playTrack('audio/MidnightOnRiverStreet.mp3')">Listen Now</a>
+        <!-- LEFT COLUMN — FEATURED MUSIC -->
+        <div class="featured-column">
+            <h2>Featured Music</h2>
+            <p>Step inside the Watson sound. Every track below was crafted with intention and late‑night River Street energy.</p>
+
+            <div class="track-list">
+                <div class="track-card">
+                    <h3>Midnight on River Street</h3>
+                    <a class="btn" onclick="playTrack('audio/MidnightOnRiverStreet.mp3')">Listen Now</a>
+                </div>
+
+                <div class="track-card">
+                    <h3>Ocean Drive</h3>
+                    <a class="btn" onclick="playTrack('audio/OceanDrive.mp3')">Listen Now</a>
+                </div>
+
+                <div class="track-card">
+                    <h3>City Lights</h3>
+                    <a class="btn" onclick="playTrack('audio/CityLights.mp3')">Listen Now</a>
+                </div>
+            </div>
         </div>
 
-        <div class="track-card">
-            <h3>Ocean Drive</h3>
-            <a class="btn" onclick="playTrack('audio/OceanDrive.mp3')">Listen Now</a>
-        </div>
+        <!-- RIGHT COLUMN — LATEST RELEASES -->
+        <div class="releases-column">
+            <h2>Latest Releases</h2>
+            <p>Fresh from the booth — produced, mixed, and mastered with the signature WRS touch.</p>
 
-        <div class="track-card">
-            <h3>City Lights</h3>
-            <a class="btn" onclick="playTrack('audio/CityLights.mp3')">Listen Now</a>
-        </div>
+            <div class="release-list">
+                <div class="release-card">
+                    <h3>Track One</h3>
+                    <p>A smooth blend of jazz, funk, and late‑night groove.</p>
+                    <a class="btn" onclick="playTrack('audio/TrackOne.mp3')">Listen Now</a>
+                </div>
 
-    </div>
-</section>
+                <div class="release-card">
+                    <h3>Track Two</h3>
+                    <p>Warm tones and soulful melodies crafted in the WRS booth.</p>
+                    <a class="btn" onclick="playTrack('audio/TrackTwo.mp3')">Listen Now</a>
+                </div>
 
-
-<!-- ========================= -->
-<!-- LATEST RELEASES -->
-<!-- ========================= -->
-
-<section class="latest-releases">
-    <h2>Latest Releases</h2>
-    <p>Fresh from the booth — produced, mixed, and mastered with the signature WRS touch.</p>
-
-    <div class="release-list">
-
-        <div class="release-card">
-            <h3>Track One</h3>
-            <p>A smooth blend of jazz, funk, and late‑night groove.</p>
-            <a class="btn" onclick="playTrack('audio/TrackOne.mp3')">Listen Now</a>
-        </div>
-
-        <div class="release-card">
-            <h3>Track Two</h3>
-            <p>Warm tones and soulful melodies crafted in the WRS booth.</p>
-            <a class="btn" onclick="playTrack('audio/TrackTwo.mp3')">Listen Now</a>
-        </div>
-
-        <div class="release-card">
-            <h3>Track Three</h3>
-            <p>High‑energy production with signature Watson flavor.</p>
-            <a class="btn" onclick="playTrack('audio/TrackThree.mp3')">Listen Now</a>
+                <div class="release-card">
+                    <h3>Track Three</h3>
+                    <p>High‑energy production with signature Watson flavor.</p>
+                    <a class="btn" onclick="playTrack('audio/TrackThree.mp3')">Listen Now</a>
+                </div>
+            </div>
         </div>
 
     </div>
@@ -195,24 +194,44 @@
 <!-- ========================= -->
 
 <footer class="footer">
-    <p>&copy; 2026 Watson Recording Studio. All rights reserved.</p>
+    <div class="footer-grid">
 
-    <p>
-        <a href="index.html">Home</a> • 
-        <a href="music.html">Music</a> •
-        <a href="licensing.html">Licensing</a> •
-        <a href="contact.html">Contact</a> •
-        <a href="press.html">Press</a> •
-        <a href="terms.html">Terms</a>
-    </p>
+        <!-- COLUMN 1: LINKS -->
+        <div class="footer-col">
+            <h3>Links</h3>
+            <a href="index.html">Home</a>
+            <a href="music.html">Music</a>
+            <a href="licensing.html">Licensing</a>
+            <a href="contact.html">Contact</a>
+            <a href="press.html">Press</a>
+            <a href="terms.html">Terms</a>
+        </div>
 
-    <p class="social-links">
-        <a href="https://youtube.com/@watsonmusic777" target="_blank">YouTube</a> •
-        <a href="https://instagram.com/watsonmusic777" target="_blank">Instagram</a> •
-        <a href="https://x.com/John_G_Watson" target="_blank">X</a> •
-        <a href="https://facebook.com/watsonentllc" target="_blank">Facebook</a>
-    </p>
+        <!-- COLUMN 2: SOCIAL -->
+        <div class="footer-col">
+            <h3>Social</h3>
+            <a href="https://youtube.com/@watsonmusic777" target="_blank">YouTube</a>
+            <a href="https://instagram.com/watsonmusic777" target="_blank">Instagram</a>
+            <a href="https://x.com/John_G_Watson" target="_blank">X</a>
+            <a href="https://facebook.com/watsonentllc" target="_blank">Facebook</a>
+        </div>
+
+        <!-- COLUMN 3: OTHER LINKS -->
+        <div class="footer-col">
+            <h3>Other</h3>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="studio.html">Studio</a>
+            <a href="events.html">Events</a>
+            <a href="gear.html">Gear</a>
+            <a href="faq.html">FAQ</a>
+            <a href="support.html">Support</a>
+        </div>
+
+    </div>
+
+    <p class="footer-copy">&copy; 2026 Watson Recording Studio. All rights reserved.</p>
 </footer>
+
 
 
 <script>
