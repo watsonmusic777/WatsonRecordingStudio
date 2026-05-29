@@ -64,6 +64,11 @@ body {
     margin-top: 5px;
     margin-bottom: 5px;
 }
+.nav-logo {
+    background: #111118;
+    text-align: center;
+    padding: 10px 0;
+}
 
 .nav-logo img {
     max-width: 400px; /* adjust to 500px if you want bigger */
