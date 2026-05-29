@@ -15,7 +15,7 @@ body {
 /* ========================= */
 
 .site-header {
-    position: relative; /* NOT FIXED */
+    position: relative;
     width: 100%;
     background: linear-gradient(
         to bottom,
@@ -32,8 +32,6 @@ body {
         0 6px 30px rgba(0,0,0,0.55);
     z-index: 10;
 }
-
-/* NAV MENU */
 
 .navbar {
     padding: 12px 0;
@@ -57,7 +55,6 @@ body {
 }
 
 /* GOLD UNDERLINE */
-
 #nav-menu a::after {
     content: "";
     position: absolute;
@@ -65,7 +62,7 @@ body {
     bottom: -4px;
     width: 0;
     height: 2px;
-    background: #F5C96B; /* GOLD */
+    background: #F5C96B;
     transition: width 0.25s ease;
 }
 
@@ -74,7 +71,6 @@ body {
 }
 
 /* LOGO */
-
 .nav-logo {
     text-align: center;
     padding: 25px 0 40px;
@@ -92,7 +88,7 @@ body {
 
 .hero {
     width: 100%;
-    height: 760px; /* TALL HERO FIX */
+    height: 760px; /* FIXED HERO HEIGHT */
     background-size: cover;
     background-position: top center;
     background-repeat: no-repeat;
@@ -108,7 +104,6 @@ body {
     position: relative;
     overflow: visible;
 }
-
 
 .hero-content h1 {
     font-size: 2.8rem;
@@ -285,7 +280,7 @@ body {
 }
 
 .footer a:hover {
-    color: #F5C96B; /* GOLD */
+    color: #F5C96B;
 }
 
 .footer-copy {
@@ -315,7 +310,8 @@ body {
     }
 
     .hero {
-        min-height: 420px;
+        height: 600px;
+        background-position: top center;
     }
 
     .hero-content h1 {
