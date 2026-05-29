@@ -1,131 +1,23 @@
-/* ============================================
-   MOBILE STYLES — WATSON RECORDING STUDIO
-   (Optimized for 900px and below)
-============================================ */
-
 @media (max-width: 900px) {
 
-    /* BODY */
     body {
-        padding-top: 160px; /* reduced for mobile nav + logo */
+        padding-top: 200px;
     }
 
-    /* NAVIGATION */
-    .navbar {
-        padding: 14px 0;
+    #nav-menu {
+        flex-direction: column;
+        gap: 10px;
     }
 
-    .navbar ul {
-        flex-wrap: wrap;
-        justify-content: center;
-        gap: 18px;
-        padding: 0 10px;
-    }
-
-    .navbar ul li a {
-        font-size: 0.9rem;
-    }
-
-    /* LOGO BELOW NAV */
-    .nav-logo {
-        margin: 10px 0 20px 0;
-    }
-
-    .nav-logo img {
-        width: 160px;
-        max-width: 160px;
-        height: auto;
-    }
-
-    /* HERO */
-    .hero {
-        padding: 80px 20px;
-        height: auto;
-        min-height: 480px;
-        background-position: center;
-        background-size: cover;
-
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .hero-content h1 {
-        font-size: 1.9rem;
-        line-height: 1.3;
-    }
-
-    .hero-btn {
-        padding: 10px 20px;
-        font-size: 0.9rem;
-    }
-
-    /* FEATURED TRACKS */
-    .featured-tracks {
-        padding: 60px 20px;
-    }
-
-    .track-grid {
+    .music-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
-    }
-
-    .track-card img {
-        width: 100%;
-    }
-
-    /* EXPERIENCE SECTION */
-    .wrs-experience {
-        padding: 80px 20px;
-    }
-
-    .wrs-experience h2 {
-        font-size: 2.2rem;
-    }
-
-    .wrs-experience .tagline {
-        font-size: 1.1rem;
-    }
-
-    .experience-line {
-        font-size: 1.1rem;
-    }
-
-    .destination {
-        font-size: 1.2rem;
-    }
-
-    /* SERVICES GRID */
-    .services {
-        padding: 80px 20px;
     }
 
     .service-grid {
         grid-template-columns: 1fr;
-        gap: 30px;
     }
 
-    /* CINEMATIC PANELS */
-    .cinematic-section {
-        padding: 80px 20px;
-        margin-top: 30px;
-    }
-
-    .cinematic-section h2 {
-        font-size: 1.8rem;
-    }
-
-    /* FOOTER */
-    footer {
-        padding: 30px 10px;
-    }
-
-    footer p {
-        font-size: 0.9rem;
-    }
-
-    /* MUSIC GRID */
-    .music-grid {
+    .footer-grid {
         grid-template-columns: 1fr;
     }
 }
