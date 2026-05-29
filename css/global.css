@@ -127,7 +127,7 @@ h1, h2, h3 {
    HERO (GLOBAL BASE)
 ------------------------------------------*/
 .hero {
-    text-align: center;
+    height: 760px; /* consistent height on all screen sizes */
     padding: 140px 20px;
 
     background-size: cover;
@@ -139,9 +139,8 @@ h1, h2, h3 {
     box-shadow:
         inset 0 6px 14px rgba(255,255,255,0.25),
         inset 0 -8px 18px rgba(0,0,0,0.5);
-
-    min-height: 760px; /* increased hero height */
 }
+
 
 /* -----------------------------------------
    FOOTER (CENTERED, FIXED)
