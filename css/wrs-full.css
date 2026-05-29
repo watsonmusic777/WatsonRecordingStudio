@@ -90,7 +90,7 @@ body {
 .hero {
     width: 100%;
     height: 820px;
-    background-size: contain;
+    background-size: 90% auto;
     background-repeat: no-repeat;
     background-position: center top -340px;
 
