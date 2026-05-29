@@ -90,10 +90,11 @@ body {
 /* HERO SECTION */
 .hero {
     width: 100%;
-    height: 820px; /* balanced height for your portrait */
-    background-image: url('img/your-portrait.jpg'); /* replace with your path */
-    background-size: cover; /* natural, no over-zoom */
-    background-position: center top -360px; /* shows face + shirt evenly */
+    height: 820px;
+
+    background-image: url('img/your-portrait.jpg'); /* update path */
+    background-size: cover;
+    background-position: center top -420px; /* pulls image UP above container */
     background-repeat: no-repeat;
     background-color: #000;
 
