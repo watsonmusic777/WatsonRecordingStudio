@@ -89,12 +89,12 @@ body {
 
 .hero {
     width: 100%;
-    height: 520px;
+    height: 500px; /* slightly smaller so more of the face shows */
     background-size: cover;
     background-repeat: no-repeat;
 
-    /* Move image WAY up — removes forehead */
-    background-position: center top -340px;
+    /* Move image UP even more */
+    background-position: center top -420px;
 
     display: flex;
     align-items: flex-end;
@@ -107,6 +107,7 @@ body {
     position: relative;
     overflow: visible;
 }
+
 
 
 
