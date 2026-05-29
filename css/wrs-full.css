@@ -105,14 +105,18 @@ body {
 /* ========================= */
 
 .hero {
-    height: 520px;
+    width: 100%;
+    min-height: 520px;        /* allows hero to expand */
+    height: auto;             /* prevents clipping */
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
     text-align: center;
 }
+
 
 .hero-content h1 {
     font-size: 2.6rem;
