@@ -150,6 +150,26 @@ body {
     width: 100%;
     max-width: 900px;
 }
+.what-we-do {
+    text-align: center;
+    margin: 120px auto 80px;
+    position: relative;
+}
+
+.what-we-do::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 6px;
+    margin: 50px auto 0;
+    background:
+        linear-gradient(to right, #F5C96B, #7A5CEB),
+        linear-gradient(to right, #7A5CEB, #F5C96B);
+    background-size: 100% 2px, 100% 2px;
+    background-position: top, bottom;
+    background-repeat: no-repeat;
+    opacity: 0.9;
+}
 
 /* ========================= */
 /*           GRIDS           */
