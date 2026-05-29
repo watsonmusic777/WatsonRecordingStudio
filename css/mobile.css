@@ -1,18 +1,13 @@
 /* ============================================
    MOBILE STYLES — WATSON RECORDING STUDIO
-   (Optimized for 768px and below)
+   (Optimized for 900px and below)
 ============================================ */
 
 @media (max-width: 900px) {
-    .music-grid {
-        grid-template-columns: 1fr;
-    }
-}
-
 
     /* BODY */
     body {
-        padding-top: 120px; /* space for fixed nav */
+        padding-top: 160px; /* reduced for mobile nav + logo */
     }
 
     /* NAVIGATION */
@@ -31,20 +26,28 @@
         font-size: 0.9rem;
     }
 
-    /* CENTERED LOGO BELOW NAV */
+    /* LOGO BELOW NAV */
     .nav-logo {
         margin: 10px 0 20px 0;
     }
 
     .nav-logo img {
-        width: 180px;
+        width: 160px;
+        max-width: 160px;
+        height: auto;
     }
 
     /* HERO */
     .hero {
-        padding: 100px 20px;
+        padding: 80px 20px;
+        height: auto;
+        min-height: 480px;
         background-position: center;
         background-size: cover;
+
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
 
     .hero-content h1 {
@@ -119,5 +122,10 @@
 
     footer p {
         font-size: 0.9rem;
+    }
+
+    /* MUSIC GRID */
+    .music-grid {
+        grid-template-columns: 1fr;
     }
 }
