@@ -5,32 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watson Recording Studio</title>
 
-    <!-- META TAGS -->
-    <meta name="description" content="Watson Recording Studio — professional recording, mixing, mastering, and original music production in Honolulu. Experience cinematic sound, jazz, rock, funk, and orchestral creativity.">
-    <meta name="keywords" content="Watson Recording Studio, Honolulu recording studio, music production, mixing, mastering, jazz, funk, rock, orchestral music, Hawaii studio">
-    <meta name="author" content="Watson Recording Studio">
-
-    <!-- SOCIAL / OPEN GRAPH -->
-    <meta property="og:title" content="Watson Recording Studio">
-    <meta property="og:description" content="Where Sound Becomes Art — professional recording, mixing, mastering, and original music.">
-    <meta property="og:image" content="images/wrs-portrait-main.png">
-    <meta property="og:url" content="https://watsonrecordingstudio.com">
-    <meta property="og:type" content="website">
-
-    <!-- TWITTER CARD -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Watson Recording Studio">
-    <meta name="twitter:description" content="Where Sound Becomes Art — cinematic sound, jazz, rock, funk, and orchestral creativity.">
-    <meta name="twitter:image" content="images/wrs-portrait-main.png">
-
-    <link rel="icon" type="image/png" href="images/favicon.png">
-
     <link rel="stylesheet" href="css/global.css">
     <link rel="stylesheet" href="css/wrs.css">
     <link rel="stylesheet" href="css/mobile.css">
 </head>
 
 <body>
+
+<!-- ========================= -->
+<!--        HEADER + NAV       -->
+<!-- ========================= -->
 
 <header class="site-header">
     <nav class="navbar">
@@ -56,116 +40,133 @@
     </div>
 </header>
 
+<!-- ========================= -->
+<!--           HERO            -->
+<!-- ========================= -->
+
 <section class="hero" style="background-image: url('images/wrs-portrait-main.png');">
     <div class="hero-content">
         <h1>Where Sound Becomes Art</h1>
-        <a href="contact.html" class="btn hero-btn">Book a Session</a>
+        <a href="contact.html" class="btn">Book a Session</a>
     </div>
 </section>
 
-<section class="music-wrapper">
-    <div class="master-player">
-        <audio id="jukebox" controls></audio>
-    </div>
+<!-- ========================= -->
+<!--        MAIN CONTENT       -->
+<!-- ========================= -->
 
-    <div class="music-grid">
+<main class="main-content">
 
-        <div class="featured-column">
-            <h2>Featured Music</h2>
-
-            <div class="track-card">
-                <h3>Midnight on River Street</h3>
-                <p class="track-sub">A cinematic jazz‑orchestra piece inspired by late‑night River Street energy.</p>
-                <a class="btn" onclick="playTrack('audio/Midnight on River Street.mp3')">Listen Now</a>
-            </div>
-
-            <div class="track-card">
-                <h3>Changing to Be Happy</h3>
-                <p class="track-sub">An upbeat blend of country, rock, and funk with a feel‑good groove.</p>
-                <a class="btn" onclick="playTrack('audio/Changing to be Happy.mp3')">Listen Now</a>
-            </div>
-
-            <div class="track-card">
-                <h3>Fallen for Each Other (Rock Version 1)</h3>
-                <p class="track-sub">A powerful rock‑metal track driven by heavy guitars and raw emotion.</p>
-                <a class="btn" onclick="playTrack('audio/Fallen for Each Other (Rock Version 1).mp3')">Listen Now</a>
-            </div>
+    <!-- MUSIC PLAYER -->
+    <section class="music-wrapper">
+        <div class="master-player">
+            <audio id="jukebox" controls></audio>
         </div>
 
-        <div class="releases-column">
-            <h2>Latest Releases</h2>
+        <div class="music-grid">
 
-            <div class="track-card">
-                <h3>Youll Always Have My Heart</h3>
-                <p class="track-sub">A heartfelt jazz‑rock ballad filled with warmth, passion, and timeless emotion.</p>
-                <a class="btn" onclick="playTrack('audio/Youll Always Have My Heart.mp3')">Listen Now</a>
+            <!-- FEATURED MUSIC -->
+            <div class="featured-column">
+                <h2>Featured Music</h2>
+
+                <div class="track-card">
+                    <h3>Midnight on River Street</h3>
+                    <p class="track-sub">A cinematic jazz-orchestra piece inspired by late-night River Street energy.</p>
+                    <a class="btn" onclick="playTrack('audio/Midnight on River Street.mp3')">Listen Now</a>
+                </div>
+
+                <div class="track-card">
+                    <h3>Changing to Be Happy</h3>
+                    <p class="track-sub">An upbeat blend of country, rock, and funk with a feel-good groove.</p>
+                    <a class="btn" onclick="playTrack('audio/Changing to be Happy.mp3')">Listen Now</a>
+                </div>
+
+                <div class="track-card">
+                    <h3>Fallen for Each Other (Rock Version 1)</h3>
+                    <p class="track-sub">A powerful rock-infused track driven by heavy guitars and raw emotion.</p>
+                    <a class="btn" onclick="playTrack('audio/Fallen for Each Other (Rock Version 1).mp3')">Listen Now</a>
+                </div>
             </div>
 
-            <div class="track-card">
-                <h3>Concrete Jungle Love</h3>
-                <p class="track-sub">A bold rock ballad with emotional depth and a gritty city‑night atmosphere.</p>
-                <a class="btn" onclick="playTrack('audio/Concrete Jungle Love.mp3')">Listen Now</a>
+            <!-- LATEST RELEASES -->
+            <div class="releases-column">
+                <h2>Latest Releases</h2>
+
+                <div class="track-card">
+                    <h3>Youll Always Have My Heart</h3>
+                    <p class="track-sub">A heartfelt jazz-rock ballad filled with warmth, passion, and timeless emotion.</p>
+                    <a class="btn" onclick="playTrack('audio/Youll Always Have My Heart.mp3')">Listen Now</a>
+                </div>
+
+                <div class="track-card">
+                    <h3>Concrete Jungle Love</h3>
+                    <p class="track-sub">A bold rock ballad with emotional depth and a gritty city-night atmosphere.</p>
+                    <a class="btn" onclick="playTrack('audio/Concrete Jungle Love.mp3')">Listen Now</a>
+                </div>
+
+                <div class="track-card">
+                    <h3>Goodbye Baby</h3>
+                    <p class="track-sub">A soulful love ballad with emotional depth and a classic Watson feel.</p>
+                    <a class="btn" onclick="playTrack('audio/Goodbye Baby.mp3')">Listen Now</a>
+                </div>
             </div>
 
-            <div class="track-card">
-                <h3>Goodbye Baby</h3>
-                <p class="track-sub">A soulful love ballad with emotional depth and a classic Watson feel.</p>
-                <a class="btn" onclick="playTrack('audio/Goodbye Baby.mp3')">Listen Now</a>
+        </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="wrs-experience">
+        <h2>The Watson Experience</h2>
+        <p class="experience-line">A studio where your inspiration becomes the song inside.</p>
+        <p class="experience-line">A space where your music becomes the experience.</p>
+        <p class="experience-line">A vibe that builds your confidence in every lyric.</p>
+        <p class="experience-line">A brand everyone feels simply makes you belong here.</p>
+        <p class="experience-line">A studio booking process that feels like you already belong.</p>
+        <p class="destination"><em>You’re not just booking studio time — you’re stepping into a creative home built for artists who want to level up.</em></p>
+    </section>
+
+    <!-- SERVICES -->
+    <section class="services">
+        <h2>What We Do</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Recording</h3>
+                <p>Capture your performance with pristine clarity using world-class microphones and preamps.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Mixing</h3>
+                <p>Shape your sound with depth, warmth, and dimension. Every detail balanced. Every emotion amplified.</p>
+            </div>
+
+            <div class="service-card">
+                <h3>Mastering</h3>
+                <p>Finalize your track with industry-standard loudness, clarity, and tonal polish — ready for release.</p>
             </div>
         </div>
+    </section>
 
-    </div>
-</section>
+    <!-- CINEMATIC SECTIONS -->
+    <section class="cinematic-section">
+        <h2>A Studio Built for Artists</h2>
+        <p>Every detail in this space was designed to elevate your creativity and bring out your best performance.</p>
+    </section>
 
-<section class="wrs-experience">
-    <h2>The Watson Experience</h2>
-    <p class="tagline">Where Artists Feel at Home</p>
+    <section class="cinematic-section">
+        <h2>Crafted With Passion</h2>
+        <p>From the first note to the final master, your music is treated with the care and intention it deserves.</p>
+    </section>
 
-    <p class="experience-line">A studio where <strong>you feel inspired the second you step inside.</strong></p>
-    <p class="experience-line">A space where <strong>your music becomes the priority.</strong></p>
-    <p class="experience-line">A vibe that gives you <strong>confidence in every take.</strong></p>
-    <p class="experience-line">A brand experience that makes you feel like <strong>you belong here.</strong></p>
-    <p class="experience-line">A booking process that’s <strong>simple, welcoming, and artist‑friendly.</strong></p>
-    <p class="experience-line">A studio people talk about because <strong>you leave with something you’re proud of.</strong></p>
+    <section class="cinematic-section">
+        <h2>Experience the Watson Difference</h2>
+        <p>Where technology, artistry, and soul come together to create something unforgettable.</p>
+    </section>
 
-    <p class="destination"><em>You’re not just booking studio time — you’re stepping into a creative home built for artists who want to level up.</em></p>
-</section>
+</main>
 
-<section class="services">
-    <h2>What We Do</h2>
-
-    <div class="service-grid">
-        <div class="service-card">
-            <h3>Recording</h3>
-            <p>Capture your performance with pristine clarity using world‑class microphones and preamps.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Mixing</h3>
-            <p>Shape your sound with depth, warmth, and dimension. Every detail balanced. Every emotion amplified.</p>
-        </div>
-
-        <div class="service-card">
-            <h3>Mastering</h3>
-            <p>Finalize your track with industry‑standard loudness, clarity, and tonal polish — ready for release.</p>
-        </div>
-    </div>
-</section>
-
-<section class="cinematic-section">
-    <h2>A Studio Built for Artists</h2>
-    <p>Every detail in this space was designed to elevate your creativity and bring out your best performance.</p>
-</section>
-
-<section class="cinematic-section">
-    <h2>Crafted With Passion</h2>
-    <p>From the first note to the final master, your music is treated with the care and intention it deserves.</p>
-</section>
-
-<section class="cinematic-section">
-    <h2>Experience the Watson Difference</h2>
-    <p>Where technology, artistry, and soul come together to create something unforgettable.</p>
-</section>
+<!-- ========================= -->
+<!--          FOOTER          -->
+<!-- ========================= -->
 
 <footer class="footer">
     <div class="footer-grid">
@@ -200,6 +201,10 @@
 
     <p class="footer-copy">&copy; 2026 Watson Recording Studio. All rights reserved.</p>
 </footer>
+
+<!-- ========================= -->
+<!--        AUDIO SCRIPT       -->
+<!-- ========================= -->
 
 <script>
 function playTrack(file) {
