@@ -89,20 +89,21 @@ body {
 
 .hero {
     width: 100%;
-    height: 580px;
-    background-position: center top -160px;; /* pulls image UP */
+    height: 520px; /* smaller hero */
+    background-image: inherit; /* keeps your inline image */
     background-size: cover;
-    background-position: top center;
     background-repeat: no-repeat;
+
+    /* Move the image UP */
+    background-position: center top -180px;
 
     display: flex;
     align-items: flex-end;
     justify-content: center;
     text-align: center;
 
-   padding-bottom: 140px; /* was 20px */
-   margin-bottom: 20px;
-
+    padding-bottom: 130px; /* space before next section */
+    margin-bottom: 40px;
 
     position: relative;
     overflow: visible;
@@ -128,6 +129,7 @@ body {
 .btn:hover {
     background: #9b7dff;
 }
+
 
 /* ========================= */
 /*         MAIN WRAP         */
@@ -332,6 +334,28 @@ body {
 
 .track-card {
     margin-bottom: 40px !important;
+}
+/* ========================= */
+/*   MUSIC SECTION SPACING   */
+/* ========================= */
+
+.music-wrapper {
+    margin-top: 60px;
+}
+
+.music-grid {
+    row-gap: 50px;
+    column-gap: 50px;
+}
+
+.featured-column h2,
+.releases-column h2 {
+    margin: 0 0 35px 0 !important;
+}
+
+.track-card {
+    margin-bottom: 40px !important;
+    padding: 24px;
 }
 
 
