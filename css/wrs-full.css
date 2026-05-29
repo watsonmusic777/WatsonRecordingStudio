@@ -93,7 +93,7 @@ body {
     height: 820px; /* balanced height for your portrait */
     background-image: url('img/your-portrait.jpg'); /* replace with your path */
     background-size: cover; /* natural, no over-zoom */
-    background-position: center top; /* shows face + shirt evenly */
+    background-position: center top -360px; /* shows face + shirt evenly */
     background-repeat: no-repeat;
     background-color: #000;
 
