@@ -164,16 +164,19 @@ header .nav-logo {
     margin-left: auto;
     margin-right: auto;
 }
-.hero h1 {
-    font-size: 72px;
-    font-weight: 700;
-    line-height: 1.1;
+.hero-content h1 {
+    font-size: 88px;
+    font-weight: 900;
+    letter-spacing: 1.5px;
+    text-shadow: 0 4px 14px rgba(0,0,0,0.65);
 }
 
 
-.hero .hero-btn {
-    font-size: 22px;
-    padding: 14px 32px;
+.hero-btn {
+    font-size: 26px;
+    padding: 16px 40px;
+    font-weight: 700;
+    border-radius: 12px;
 }
 
 .hero-content {
@@ -181,7 +184,7 @@ header .nav-logo {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-   margin-top: 180px; /* adjust this number until it sits exactly where you want */
+   margin-top: 220px; /* adjust this number until it sits exactly where you want */
 }
 
 /* -----------------------------------------
