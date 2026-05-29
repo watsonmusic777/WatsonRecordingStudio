@@ -121,15 +121,25 @@ body {
 
 
 /* BUTTON */
-.hero-btn {
+.btn {
     display: inline-block;
     padding: 14px 32px;
-    background: #6a4bff;
-    color: #fff;
+    background: linear-gradient(135deg, #d4af37, #f7d774);
+    color: #000;
     font-size: 1.2rem;
+    font-weight: 600;
     border-radius: 6px;
     text-decoration: none;
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.45);
+    transition: 0.25s ease;
 }
+
+.btn:hover {
+    background: linear-gradient(135deg, #f7d774, #d4af37);
+    box-shadow: 0 0 28px rgba(247, 215, 116, 0.65);
+    transform: translateY(-2px);
+}
+
 
 /* RESPONSIVE HEIGHT FIXES */
 @media (max-width: 1600px) {
