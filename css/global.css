@@ -180,6 +180,7 @@ header .nav-logo {
     margin-left: auto;
     margin-right: auto;
     width: 100%;
+   margin-top: 180px; /* adjust this number until it sits exactly where you want */
 }
 
 /* -----------------------------------------
