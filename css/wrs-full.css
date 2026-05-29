@@ -92,7 +92,8 @@ body {
     height: 900px; /* increased window so face isn't cut off */
 
     background-size: 125% auto; /* keeps logo + face big enough */
-    background-position: center top -220px; /* moves image UP */
+   background-position: center top -260px;
+ /* moves image UP */
     background-repeat: no-repeat;
 
     display: flex;
