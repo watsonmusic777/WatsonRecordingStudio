@@ -165,26 +165,40 @@ header .nav-logo {
     margin-right: auto;
 }
 .hero-content h1 {
-    font-size: 88px;
-    font-weight: 900;
-    letter-spacing: 1.5px;
-    text-shadow: 0 4px 14px rgba(0,0,0,0.65);
+    font-size: 96px;          /* bigger */
+    font-weight: 900;         /* bolder */
+    letter-spacing: 3px;      /* wider */
+    text-shadow: 0 6px 18px rgba(0,0,0,0.75);
 }
 
 
 .hero-btn {
-    font-size: 26px;
-    padding: 16px 40px;
+    font-size: 28px;
+    padding: 18px 46px;
     font-weight: 700;
-    border-radius: 12px;
+    border-radius: 14px;
+
+    background: linear-gradient(135deg, #ffb347, #ff7b00);
+    color: white;
+
+    box-shadow: 0 6px 18px rgba(0,0,0,0.55);
+    border: 2px solid rgba(255,255,255,0.35);
+
+    transition: 0.25s ease;
 }
+
+.hero-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.65);
+}
+
 
 .hero-content {
     text-align: center;
     margin-left: auto;
     margin-right: auto;
     width: 100%;
-   margin-top: 220px; /* adjust this number until it sits exactly where you want */
+   margin-top: 260px; /* adjust this number until it sits exactly where you want */
 }
 
 /* -----------------------------------------
