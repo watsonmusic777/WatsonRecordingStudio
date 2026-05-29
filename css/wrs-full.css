@@ -94,7 +94,8 @@ body {
     background-repeat: no-repeat;
 
     /* move image UP so mouth + logo appear */
-    background-position: center top -300px;
+    background-position: center top -340px;
+
 
     display: flex;
     align-items: flex-end;
