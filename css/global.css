@@ -112,10 +112,10 @@ h1, h2, h3 {
 /* -----------------------------------------
    LOGO BELOW NAV
 ------------------------------------------*/
-.nav-logo {
-    width: 100%;
-    text-align: center;
-    margin: 10px 0 20px 0;
+header .nav-logo {
+    margin: 10px 0 20px 0 !important;
+}
+
 }
 
 .nav-logo img {
