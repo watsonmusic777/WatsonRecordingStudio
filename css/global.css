@@ -167,8 +167,9 @@ header .nav-logo {
 .hero h1 {
     font-size: 72px;
     font-weight: 700;
-    letter-spacing: 1px;
+    line-height: 1.1;
 }
+
 
 .hero .hero-btn {
     font-size: 22px;
