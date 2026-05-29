@@ -73,8 +73,9 @@ body {
 /* LOGO */
 .nav-logo {
     text-align: center;
-    padding: 25px 0 40px;
+    padding: 20px 0 10px;
 }
+
 
 .nav-logo img {
     width: 350px;
