@@ -89,12 +89,12 @@ body {
 
 .hero {
     width: 100%;
-    height: 680px; /* taller window so bottom shows */
+    height: 820px; /* taller window so bottom half shows */
     background-size: cover;
     background-repeat: no-repeat;
 
-    /* still cropped at top, but not too extreme */
-    background-position: center top -250px;
+    /* forehead still cropped, but bottom now visible */
+    background-position: center top -220px;
 
     display: flex;
     align-items: flex-end;
