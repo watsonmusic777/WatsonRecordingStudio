@@ -92,7 +92,8 @@ body {
     height: 820px;
     background-size: 90% auto;
     background-repeat: no-repeat;
-    background-position: center top -340px;
+    background-position: center top -120px;
+
 
     display: flex;
     align-items: flex-end;
