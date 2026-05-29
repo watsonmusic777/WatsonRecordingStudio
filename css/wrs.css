@@ -62,6 +62,19 @@
     border-radius: 10px;
     margin-bottom: 15px;
 }
+.master-player {
+    width: 100%;
+    max-width: 700px;   /* your chosen width */
+    margin: 0 auto;     /* centers the whole player */
+    padding: 20px;
+
+    background: rgba(100, 69, 179, 0.20);
+    border: 1px solid rgba(100, 69, 179, 0.40);
+    border-radius: 12px;
+
+    text-align: center;
+}
+
 
 /* EXPERIENCE SECTION */
 .experience-section {
