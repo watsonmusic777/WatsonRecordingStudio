@@ -32,12 +32,8 @@
 
 <body>
 
-<!-- ========================= -->
-<!-- NAVIGATION + LOGO -->
-<!-- ========================= -->
-
 <header class="site-header">
-    <nav class="navbar" role="navigation">
+    <nav class="navbar">
         <ul id="nav-menu">
             <li><a href="index.html">Home</a></li>
             <li><a href="marketplace.html">Marketplace</a></li>
@@ -60,11 +56,6 @@
     </div>
 </header>
 
-
-<!-- ========================= -->
-<!-- HERO SECTION -->
-<!-- ========================= -->
-
 <section class="hero" style="background-image: url('images/wrs-portrait-main.png');">
     <div class="hero-content">
         <h1>Where Sound Becomes Art</h1>
@@ -72,81 +63,59 @@
     </div>
 </section>
 
-
-<!-- ========================= -->
-<!-- MUSIC SECTION -->
-<!-- ========================= -->
-
 <section class="music-wrapper">
-
-    <!-- MASTER PLAYER -->
     <div class="master-player">
         <audio id="jukebox" controls></audio>
     </div>
 
     <div class="music-grid">
 
-        <!-- FEATURED MUSIC -->
         <div class="featured-column">
             <h2>Featured Music</h2>
 
-            <div class="track-list">
+            <div class="track-card">
+                <h3>Midnight on River Street</h3>
+                <p class="track-sub">A cinematic jazz‑orchestra piece inspired by late‑night River Street energy.</p>
+                <a class="btn" onclick="playTrack('audio/Midnight on River Street.mp3')">Listen Now</a>
+            </div>
 
-                <div class="track-card">
-                    <h3>Midnight on River Street</h3>
-                    <p class="track-sub">A cinematic jazz‑orchestra piece inspired by late‑night River Street energy.</p>
-                    <a class="btn" onclick="playTrack('audio/Midnight on River Street.mp3')">Listen Now</a>
-                </div>
+            <div class="track-card">
+                <h3>Changing to Be Happy</h3>
+                <p class="track-sub">An upbeat blend of country, rock, and funk with a feel‑good groove.</p>
+                <a class="btn" onclick="playTrack('audio/Changing to be Happy.mp3')">Listen Now</a>
+            </div>
 
-                <div class="track-card">
-                    <h3>Changing to Be Happy</h3>
-                    <p class="track-sub">An upbeat blend of country, rock, and funk with a feel‑good groove.</p>
-                    <a class="btn" onclick="playTrack('audio/Changing to be Happy.mp3')">Listen Now</a>
-                </div>
-
-                <div class="track-card">
-                    <h3>Fallen for Each Other (Rock Version 1)</h3>
-                    <p class="track-sub">A powerful rock‑metal track driven by heavy guitars and raw emotion.</p>
-                    <a class="btn" onclick="playTrack('audio/Fallen for Each Other (Rock Version 1).mp3')">Listen Now</a>
-                </div>
-
+            <div class="track-card">
+                <h3>Fallen for Each Other (Rock Version 1)</h3>
+                <p class="track-sub">A powerful rock‑metal track driven by heavy guitars and raw emotion.</p>
+                <a class="btn" onclick="playTrack('audio/Fallen for Each Other (Rock Version 1).mp3')">Listen Now</a>
             </div>
         </div>
 
-        <!-- LATEST RELEASES -->
         <div class="releases-column">
             <h2>Latest Releases</h2>
 
-            <div class="release-list">
+            <div class="track-card">
+                <h3>Youll Always Have My Heart</h3>
+                <p class="track-sub">A heartfelt jazz‑rock ballad filled with warmth, passion, and timeless emotion.</p>
+                <a class="btn" onclick="playTrack('audio/Youll Always Have My Heart.mp3')">Listen Now</a>
+            </div>
 
-                <div class="release-card">
-                    <h3>Youll Always Have My Heart</h3>
-                    <p class="track-sub">A heartfelt jazz‑rock ballad filled with warmth, passion, and timeless emotion.</p>
-                    <a class="btn" onclick="playTrack('audio/Youll Always Have My Heart.mp3')">Listen Now</a>
-                </div>
+            <div class="track-card">
+                <h3>Concrete Jungle Love</h3>
+                <p class="track-sub">A bold rock ballad with emotional depth and a gritty city‑night atmosphere.</p>
+                <a class="btn" onclick="playTrack('audio/Concrete Jungle Love.mp3')">Listen Now</a>
+            </div>
 
-                <div class="release-card">
-                    <h3>Concrete Jungle Love</h3>
-                    <p class="track-sub">A bold rock ballad with emotional depth and a gritty city‑night atmosphere.</p>
-                    <a class="btn" onclick="playTrack('audio/Concrete Jungle Love.mp3')">Listen Now</a>
-                </div>
-
-                <div class="release-card">
-                    <h3>Goodbye Baby</h3>
-                    <p class="track-sub">A soulful love ballad with emotional depth and a classic Watson feel.</p>
-                    <a class="btn" onclick="playTrack('audio/Goodbye Baby.mp3')">Listen Now</a>
-                </div>
-
+            <div class="track-card">
+                <h3>Goodbye Baby</h3>
+                <p class="track-sub">A soulful love ballad with emotional depth and a classic Watson feel.</p>
+                <a class="btn" onclick="playTrack('audio/Goodbye Baby.mp3')">Listen Now</a>
             </div>
         </div>
 
     </div>
 </section>
-
-
-<!-- ========================= -->
-<!-- WATSON EXPERIENCE -->
-<!-- ========================= -->
 
 <section class="wrs-experience">
     <h2>The Watson Experience</h2>
@@ -162,65 +131,44 @@
     <p class="destination"><em>You’re not just booking studio time — you’re stepping into a creative home built for artists who want to level up.</em></p>
 </section>
 
-
-<!-- ========================= -->
-<!-- SERVICES -->
-<!-- ========================= -->
-
 <section class="services">
     <h2>What We Do</h2>
 
     <div class="service-grid">
-
-        <div class="service-card glossy-card">
+        <div class="service-card">
             <h3>Recording</h3>
             <p>Capture your performance with pristine clarity using world‑class microphones and preamps.</p>
-            <a class="btn">Learn More</a>
         </div>
 
-        <div class="service-card glossy-card">
+        <div class="service-card">
             <h3>Mixing</h3>
             <p>Shape your sound with depth, warmth, and dimension. Every detail balanced. Every emotion amplified.</p>
-            <a class="btn">Learn More</a>
         </div>
 
-        <div class="service-card glossy-card">
+        <div class="service-card">
             <h3>Mastering</h3>
             <p>Finalize your track with industry‑standard loudness, clarity, and tonal polish — ready for release.</p>
-            <a class="btn">Learn More</a>
         </div>
-
     </div>
 </section>
 
-
-<!-- ========================= -->
-<!-- CINEMATIC PANELS -->
-<!-- ========================= -->
-
-<section class="cinematic-section glossy-panel">
+<section class="cinematic-section">
     <h2>A Studio Built for Artists</h2>
     <p>Every detail in this space was designed to elevate your creativity and bring out your best performance.</p>
 </section>
 
-<section class="cinematic-section glossy-panel">
+<section class="cinematic-section">
     <h2>Crafted With Passion</h2>
     <p>From the first note to the final master, your music is treated with the care and intention it deserves.</p>
 </section>
 
-<section class="cinematic-section glossy-panel">
+<section class="cinematic-section">
     <h2>Experience the Watson Difference</h2>
     <p>Where technology, artistry, and soul come together to create something unforgettable.</p>
 </section>
 
-
-<!-- ========================= -->
-<!-- FOOTER -->
-<!-- ========================= -->
-
 <footer class="footer">
     <div class="footer-grid">
-
         <div class="footer-col">
             <h3>Links</h3>
             <a href="index.html">Home</a>
@@ -248,12 +196,10 @@
             <a href="faq.html">FAQ</a>
             <a href="support.html">Support</a>
         </div>
-
     </div>
 
     <p class="footer-copy">&copy; 2026 Watson Recording Studio. All rights reserved.</p>
 </footer>
-
 
 <script>
 function playTrack(file) {
