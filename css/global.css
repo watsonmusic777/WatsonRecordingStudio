@@ -88,14 +88,18 @@ html, body {
 /* MAIN LOGO (between nav + hero) */
 .main-logo-container {
     width: 100%;
-    text-align: center;
-    margin-top: 20px;       /* move logo down */
-    margin-bottom: -120px;  /* pulls hero up under it */
+    display: flex;
+    justify-content: center;   /* centers horizontally */
+    align-items: center;        /* centers vertically inside container */
+    margin-top: 40px;
+    margin-bottom: -60px;
 }
 
 .main-logo {
     width: 260px;
+    display: block;             /* prevents inline weirdness */
 }
+
 
 /* ============================================================
    HERO — Final Clean Build
