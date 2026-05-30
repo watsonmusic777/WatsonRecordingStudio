@@ -6,19 +6,21 @@
     <title>Watson Recording Studio</title>
 
     <link rel="stylesheet" href="css/global.css">
-   
 </head>
 
 <body>
 
 <!-- ========================= -->
-<!--       GLOBAL NAVBAR       -->
+<!--       NAVBAR (NEW)        -->
 <!-- ========================= -->
-<header class="site-header">
-    <nav class="navbar">
+<header class="navbar">
+    <div class="nav-inner">
 
         <div class="nav-left">
-            <img src="images/watson-logo.png" class="nav-small-logo" alt="WRS Logo">
+            <img src="images/watson-logo.png" class="nav-logo" alt="Watson Recording Studio">
+        </div>
+
+        <nav class="nav-center">
             <ul class="nav-links">
                 <li><a class="active" href="index.html">Home</a></li>
                 <li><a href="about.html">About</a></li>
@@ -29,40 +31,35 @@
                 <li><a href="press.html">Press</a></li>
                 <li><a href="contact.html">Contact</a></li>
             </ul>
-        </div>
+        </nav>
 
-    </nav>
+    </div>
 </header>
 
 
 <!-- ========================= -->
-<!--     HERO LOGO SECTION     -->
-<!-- ========================= -->
-<section class="hero-rebuild">
-    <div class="hero-inner">
-        <img src="images/wrs-logo-main1.png" class="hero-logo" alt="Watson Recording Studio Emblem">
-    </div>
-</section>
-
-
-<!-- ========================= -->
-<!--   HERO BACKGROUND IMAGE   -->
+<!--     HERO (NEW SYSTEM)     -->
 <!-- ========================= -->
 <section class="hero" style="background-image: url('images/wrs-portrait-main.png');">
+    <div class="hero-overlay"></div>
+
     <div class="hero-content">
+        <img src="images/wrs-logo-main1.png" class="hero-logo" alt="WRS Logo">
+
         <h1>Where Sound Becomes Art</h1>
-        <a href="contact.html" class="btn">Book a Session</a>
+
+        <a href="contact.html" class="btn-primary">Book a Session</a>
     </div>
 </section>
+
 
 <!-- ========================= -->
 <!--        MAIN CONTENT       -->
 <!-- ========================= -->
-
 <main class="main-content">
 
     <!-- MUSIC PLAYER -->
-    <section class="music-wrapper">
+    <section class="music-section">
         <div class="master-player">
             <audio id="jukebox" controls></audio>
         </div>
@@ -70,63 +67,61 @@
         <div class="music-grid">
 
             <!-- FEATURED MUSIC -->
-            <div class="featured-column">
+            <div class="featured">
                 <h2>Featured Music</h2>
 
-                <div class="track-card">
+                <div class="music-card">
                     <h3>Midnight on River Street</h3>
-                    <p class="track-sub">A cinematic jazz-orchestra piece inspired by late-night River Street energy.</p>
-                    <a class="btn" onclick="playTrack('audio/Midnight on River Street.mp3')">Listen Now</a>
+                    <p>A cinematic jazz-orchestra piece inspired by late-night River Street energy.</p>
+                    <a class="btn-primary" onclick="playTrack('audio/Midnight on River Street.mp3')">Listen Now</a>
                 </div>
 
-                <div class="track-card">
+                <div class="music-card">
                     <h3>Changing to Be Happy</h3>
-                    <p class="track-sub">An upbeat blend of country, rock, and funk with a feel-good groove.</p>
-                    <a class="btn" onclick="playTrack('audio/Changing to be Happy.mp3')">Listen Now</a>
+                    <p>An upbeat blend of country, rock, and funk with a feel-good groove.</p>
+                    <a class="btn-primary" onclick="playTrack('audio/Changing to be Happy.mp3')">Listen Now</a>
                 </div>
 
-                <div class="track-card">
+                <div class="music-card">
                     <h3>Fallen for Each Other (Rock Version 1)</h3>
-                    <p class="track-sub">A powerful rock-infused track driven by heavy guitars and raw emotion.</p>
-                    <a class="btn" onclick="playTrack('audio/Fallen for Each Other (Rock Version 1).mp3')">Listen Now</a>
+                    <p>A powerful rock-infused track driven by heavy guitars and raw emotion.</p>
+                    <a class="btn-primary" onclick="playTrack('audio/Fallen for Each Other (Rock Version 1).mp3')">Listen Now</a>
                 </div>
             </div>
 
             <!-- LATEST RELEASES -->
-            <div class="releases-column">
+            <div class="releases">
                 <h2>Latest Releases</h2>
 
-                <div class="track-card">
+                <div class="music-card">
                     <h3>Youll Always Have My Heart</h3>
-                    <p class="track-sub">A heartfelt jazz-rock ballad filled with warmth, passion, and timeless emotion.</p>
-                    <a class="btn" onclick="playTrack('audio/Youll Always Have My Heart.mp3')">Listen Now</a>
+                    <p>A heartfelt jazz-rock ballad filled with warmth, passion, and timeless emotion.</p>
+                    <a class="btn-primary" onclick="playTrack('audio/Youll Always Have My Heart.mp3')">Listen Now</a>
                 </div>
 
-                <div class="track-card">
+                <div class="music-card">
                     <h3>Concrete Jungle Love</h3>
-                    <p class="track-sub">A bold rock ballad with emotional depth and a gritty city-night atmosphere.</p>
-                    <a class="btn" onclick="playTrack('audio/Concrete Jungle Love.mp3')">Listen Now</a>
+                    <p>A bold rock ballad with emotional depth and a gritty city-night atmosphere.</p>
+                    <a class="btn-primary" onclick="playTrack('audio/Concrete Jungle Love.mp3')">Listen Now</a>
                 </div>
 
-                <div class="track-card">
+                <div class="music-card">
                     <h3>Goodbye Baby</h3>
-                    <p class="track-sub">A soulful love ballad with emotional depth and a classic Watson feel.</p>
-                    <a class="btn" onclick="playTrack('audio/Goodbye Baby.mp3')">Listen Now</a>
+                    <p>A soulful love ballad with emotional depth and a classic Watson feel.</p>
+                    <a class="btn-primary" onclick="playTrack('audio/Goodbye Baby.mp3')">Listen Now</a>
                 </div>
             </div>
 
         </div>
     </section>
 
+
     <!-- EXPERIENCE -->
     <section class="wrs-experience">
         <h2>The Watson Experience</h2>
-        <p>A studio where your inspiration becomes the song inside.</p>
-        <p>A space where your music becomes the experience.</p>
-        <p>A vibe that builds your confidence in every lyric.</p>
-        <p>A brand everyone feels simply makes you belong here.</p>
-        <p><em>You’re not just booking studio time — you’re stepping into a creative home built for artists who want to level up.</em></p>
+        <p>You’re not just booking studio time — you’re stepping into a creative home built for artists who want to level up.</p>
     </section>
+
 
     <!-- SERVICES -->
     <section class="what-we-do">
@@ -164,9 +159,9 @@
                 <p>Subtle enhancements, transitions, and ear‑candy that elevate your track.</p>
             </div>
 
-        </div> <!-- FIXED: missing closing div -->
-
+        </div>
     </section>
+
 
     <!-- CINEMATIC SECTIONS -->
     <section class="cinematic-section">
@@ -186,10 +181,11 @@
 
 </main>
 
+
 <!-- ========================= -->
 <!--          FOOTER          -->
 <!-- ========================= -->
- <footer class="footer">
+<footer class="footer">
 
     <div class="footer-grid">
 
@@ -231,7 +227,6 @@
 <!-- ========================= -->
 <!--        AUDIO SCRIPT       -->
 <!-- ========================= -->
-
 <script>
 function playTrack(file) {
     const player = document.getElementById('jukebox');
