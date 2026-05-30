@@ -1,3 +1,88 @@
 @charset "utf-8";
-/* CSS Document */
+.about-container {
+    width: 90%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding-top: 120px;
+    color: #f2f2f2;
+}
+
+.about-intro h1 {
+    font-size: 2.8rem;
+    margin-bottom: 20px;
+    color: #d9c6ff;
+}
+
+.about-intro p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.about-services h2,
+.about-producer h2,
+.about-sound h2,
+.about-why h2,
+.about-cta h2 {
+    font-size: 2rem;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    color: #caa6ff;
+}
+
+.about-services ul,
+.about-why ul {
+    list-style: none;
+    padding: 0;
+}
+
+.about-services li,
+.about-why li {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    border-left: 3px solid #8a5cff;
+}
+
+.about-producer {
+    display: flex;
+    gap: 40px;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.producer-text {
+    flex: 1;
+}
+
+.producer-photo img {
+    width: 320px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(138, 92, 255, 0.4);
+}
+
+.about-sound p {
+    font-size: 1.2rem;
+    line-height: 1.7;
+}
+
+.about-cta {
+    text-align: center;
+    margin: 80px 0;
+}
+
+.cta-button {
+    display: inline-block;
+    padding: 14px 28px;
+    background: #8a5cff;
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    transition: 0.3s;
+}
+
+.cta-button:hover {
+    background: #a57aff;
+}
 
