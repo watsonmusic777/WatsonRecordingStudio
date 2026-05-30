@@ -91,7 +91,7 @@ html, body {
     justify-content: center;
     align-items: center;
 
-    margin-top: 10px;      /* was 40px — this brings logo closer to nav */
+    margin-top: 0px;      /* was 40px — this brings logo closer to nav */
     margin-bottom: -50px;  /* pulls hero up under the logo */
 }
 
@@ -140,14 +140,6 @@ html, body {
     align-items: center;
     justify-content: center;
 }
-
-.hero-logo {
-    width: 260px;
-    margin-top: -260px;
-    margin-bottom: 20px;
-}
-
-
 
 .hero-inner h1 {
     font-size: 3rem;
