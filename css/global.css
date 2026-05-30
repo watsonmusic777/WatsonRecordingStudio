@@ -78,6 +78,12 @@ body {
     text-align: center;
     padding: 8px 0 14px;
 }
+.nav-logo img {
+    height: 48px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
+}
 
 .nav-logo img {
     max-width: 380px;
