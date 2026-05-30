@@ -74,10 +74,16 @@ body {
 }
 
 .nav-logo {
-    background: #111118;
+    background: linear-gradient(
+        to bottom,
+        #0d0d0f 0%,
+        #111118 40%,
+        #0a0a0c 100%
+    );
     text-align: center;
     padding: 8px 0 14px;
 }
+
 .nav-logo img {
     height: 48px;
     width: auto;
