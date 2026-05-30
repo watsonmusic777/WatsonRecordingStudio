@@ -126,9 +126,10 @@ html, body {
 
 .hero-logo {
     width: 260px;
-    margin-top: -180px;
+    margin-top: -260px;
     margin-bottom: 20px;
 }
+
 
 
 .hero-inner h1 {
