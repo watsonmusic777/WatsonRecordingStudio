@@ -1,10 +1,7 @@
-/* ========================= */
-/* GLOBAL RESET */
-/* ========================= */
-
-/* ========================= */
-/*         GLOBAL CSS        */
-/* ========================= */
+/* ============================================================
+   WATSON RECORDING STUDIO — GLOBAL CINEMATIC CSS (Option 3)
+   Clean • Modern • Premium • Unified • No Conflicts
+   ============================================================ */
 
 /* RESET */
 * {
@@ -16,205 +13,296 @@
 /* BASE */
 html, body {
     width: 100%;
-    height: 100%;
-    font-family: Arial, Helvetica, sans-serif;
-    background: #010000; /* matches your logo background */
+    min-height: 100%;
+    background: #010000;
     color: #ffffff;
-    margin: 0;
-    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-
-body {
-    padding-top: 150px;
-}
-
-/* NAVBAR + LOGO */
-
-.site-header {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    z-index: 9999;
-    background: rgba(0,0,0,0.7);
-}
+/* ============================================================
+   NAVBAR — Logo Left, Nav Centered
+   ============================================================ */
 
 .navbar {
-    padding: 6px 0;
-}
-
-#nav-menu {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 18px;
-    list-style: none;
-}
-
-#nav-menu a {
-    color: #ffffff;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-    position: relative;
-}
-
-#nav-menu a::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: -4px;
-    width: 0;
-    height: 2px;
-    background: #7A5CEB;
-    transition: width 0.25s ease;
-}
-
-#nav-menu a:hover::after {
     width: 100%;
-}
-
-.nav-logo {
-    background: linear-gradient(
-        to bottom,
-        #0d0d0f 0%,
-        #111118 40%,
-        #0a0a0c 100%
-    );
-    text-align: center;
-    padding: 8px 0 14px;
-}
-.nav-logo img {
-    height: 60px;
-    width: auto;
-    display: block;
-}
-
-.nav-logo img {
-    height: 48px;
-    width: auto;
-    display: block;
-    margin: 0 auto;
-}
-
-.nav-logo img {
-    max-width: 380px;
-    width: 100%;
-}
-/* GLOBAL NAVBAR FIX */
-.top-nav-container {
-    width: 100%;
-    background: #2A1F18; /* your brown-charcoal */
+    background: #010000;
+    padding: 14px 0;
     position: fixed;
     top: 0;
     left: 0;
     z-index: 9999;
-    padding: 10px 0;
+    border-bottom: 1px solid rgba(255,255,255,0.08);
 }
 
-.nav-wrapper {
-    width: 90%;
-    max-width: 1300px;
+.nav-inner {
+    width: 92%;
+    max-width: 1400px;
     margin: 0 auto;
+
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-.logo-area .logo-text {
-    font-size: 1.4rem;
-    font-weight: bold;
-    color: #ffffff;
-    text-decoration: none;
+/* LOGO LEFT */
+.nav-left .nav-logo {
+    height: 60px;
+    width: auto;
+    display: block;
+}
+
+/* NAV CENTER */
+.nav-center {
+    flex: 1;
+    display: flex;
+    justify-content: center;
 }
 
 .nav-links {
     display: flex;
-    gap: 25px;
+    gap: 32px;
     list-style: none;
 }
 
-.nav-links li a {
+.nav-links a {
     color: #ffffff;
     text-decoration: none;
     font-size: 1rem;
-    transition: 0.3s;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 4px;
 }
 
-.nav-links li a:hover,
-.nav-links li a.active {
-    color: #a57aff; /* your violet hover color */
+/* Gold underline hover */
+.nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0;
+    height: 2px;
+    background: #F5C96B;
+    transition: width 0.25s ease;
 }
 
-/* BUTTONS */
+.nav-links a:hover::after {
+    width: 100%;
+}
 
-.btn {
+/* ============================================================
+   HERO — Cinematic, Clean, Perfectly Sized
+   ============================================================ */
+
+.hero {
+    width: 100%;
+    height: 760px;
+    background-image: url('img/your-portrait.jpg');
+    background-size: cover;
+    background-position: center top;
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 90px; /* space for navbar */
+}
+
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.hero-logo {
+    width: 260px;
+    margin-bottom: 22px;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.9);
+}
+
+/* BUTTON */
+.btn-primary {
     display: inline-block;
-    padding: 10px 22px;
-    border-radius: 8px;
+    padding: 12px 28px;
     background: linear-gradient(135deg, #caa86f, #f3d89a);
     color: #111118;
-    font-weight: 700;
+    font-weight: bold;
     text-decoration: none;
+    border-radius: 6px;
     box-shadow: 0 8px 18px rgba(0,0,0,0.6);
-    transition: transform 0.15s ease, box-shadow 0.15s ease;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-.btn:hover {
+.btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 26px rgba(0,0,0,0.8);
 }
-.top-nav-container {
-    background: linear-gradient(
-        to bottom,
-        #0d0d0f 0%,
-        #111118 40%,
-        #0a0a0c 100%
-    );
-    box-shadow: 
-        0 4px 12px rgba(0,0,0,0.6),
-        inset 0 0 12px rgba(255,255,255,0.05);
-    border-bottom: 1px solid rgba(255,255,255,0.08);
+
+/* ============================================================
+   MUSIC GRID — Balanced, Premium
+   ============================================================ */
+
+.music-section {
+    width: 92%;
+    max-width: 1400px;
+    margin: 120px auto;
 }
 
-/* FOOTER */
+.music-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+}
+
+.music-grid h2 {
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+/* MUSIC CARDS */
+.music-card {
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.10), rgba(0,0,0,0.85));
+    border-radius: 14px;
+    padding: 22px;
+    border: 1px solid rgba(122,92,235,0.35);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.85);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.music-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 55px rgba(0,0,0,0.9);
+}
+
+/* ============================================================
+   WATSON EXPERIENCE — Cinematic Lines
+   ============================================================ */
+
+.wrs-experience {
+    width: 92%;
+    max-width: 900px;
+    margin: 140px auto;
+    text-align: center;
+    position: relative;
+    padding: 80px 0;
+}
+
+.wrs-experience::before,
+.wrs-experience::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+}
+
+.wrs-experience::before {
+    top: 0;
+    background: linear-gradient(to right, rgba(245,201,107,0), rgba(245,201,107,0.85), rgba(245,201,107,0));
+}
+
+.wrs-experience::after {
+    bottom: 0;
+    background: linear-gradient(to right, rgba(122,92,235,0), rgba(122,92,235,0.85), rgba(122,92,235,0));
+}
+
+/* ============================================================
+   WHAT WE DO — Modern 3D Cards
+   ============================================================ */
+
+.what-we-do {
+    width: 92%;
+    max-width: 1400px;
+    margin: 120px auto;
+    text-align: center;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.10), rgba(0,0,0,0.85));
+    border-radius: 14px;
+    padding: 22px;
+    border: 1px solid rgba(122,92,235,0.35);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.85);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 55px rgba(0,0,0,0.9);
+}
+
+/* ============================================================
+   FOOTER — Clean, Modern, Premium
+   ============================================================ */
 
 .footer {
     background: #111118;
-    padding: 60px 0 30px;
-    border-top: 1px solid rgba(255,255,255,0.08);
+    padding: 70px 0 35px;
+    margin-top: 140px;
 }
 
 .footer-grid {
-    width: 90%;
+    width: 92%;
+    max-width: 1400px;
     margin: 0 auto 30px;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 40px;
-}
-
-.footer h3 {
-    margin-bottom: 12px;
-    color: #f5f5f5;
-}
-
-.footer a {
-    color: #c8c8c8;
-    text-decoration: none;
-    display: block;
-    margin-bottom: 6px;
-    font-size: 0.9rem;
-}
-
-.footer a:hover {
-    color: #7A5CEB;
+    text-align: center;
 }
 
 .footer-copy {
     text-align: center;
-    font-size: 0.85rem;
     color: #9a9a9a;
+    font-size: 0.85rem;
 }
 
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+    .nav-inner {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .nav-center {
+        justify-content: center;
+    }
+
+    .music-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .service-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        height: 600px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
 }
