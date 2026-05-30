@@ -85,6 +85,17 @@ html, body {
 .nav-links a:hover::after {
     width: 100%;
 }
+/* MAIN LOGO (between nav + hero) */
+.main-logo-container {
+    width: 100%;
+    text-align: center;
+    margin-top: 20px;       /* move logo down */
+    margin-bottom: -120px;  /* pulls hero up under it */
+}
+
+.main-logo {
+    width: 260px;
+}
 
 /* ============================================================
    HERO — Final Clean Build
