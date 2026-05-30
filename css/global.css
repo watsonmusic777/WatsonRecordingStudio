@@ -91,8 +91,8 @@ html, body {
     justify-content: center;
     align-items: center;
 
-     margin-top: -45px;     /* pulls logo WAY up */
-     margin-bottom: -60px;  /* keeps hero tucked under logo */
+    margin-top: -90px;     /* pulls logo WAY up */
+    margin-bottom: -60px;  /* keeps hero tucked under logo */
 }
 
 .main-logo {
@@ -112,7 +112,7 @@ html, body {
     min-height: 900px;
     background-image: url('../images/wrs-portrait-main.png');
     background-size: cover;
-    background-position: center -380px;
+     background-position: center -460px;
     background-repeat: no-repeat;
 
     position: relative;
