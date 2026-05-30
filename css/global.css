@@ -85,14 +85,14 @@ html, body {
 .nav-links a:hover::after {
     width: 100%;
 }
-/* MAIN LOGO (between nav + hero) */
 .main-logo-container {
     width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 40px;
-    margin-bottom: -20px;
+
+    margin-top: 10px;      /* was 40px — this brings logo closer to nav */
+    margin-bottom: -50px;  /* pulls hero up under the logo */
 }
 
 .main-logo {
