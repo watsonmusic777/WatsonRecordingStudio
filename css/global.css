@@ -1,5 +1,5 @@
 /* ============================================================
-   WATSON RECORDING STUDIO — GLOBAL CINEMATIC CSS (Option 3)
+   WATSON RECORDING STUDIO — GLOBAL CINEMATIC CSS (FINAL BUILD)
    Clean • Modern • Premium • Unified • No Conflicts
    ============================================================ */
 
@@ -17,13 +17,11 @@ html, body {
     background: #010000;
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
-    padding-top: 139px;
+    padding-top: 139px; /* navbar height */
 }
 
-
-
 /* ============================================================
-   NAVBAR — Logo Left, Nav Centered
+   NAVBAR
    ============================================================ */
 
 .navbar {
@@ -47,14 +45,12 @@ html, body {
     align-items: center;
 }
 
-/* LOGO LEFT */
 .nav-left .nav-logo {
     height: 60px;
     width: auto;
     display: block;
 }
 
-/* NAV CENTER */
 .nav-center {
     flex: 1;
     display: flex;
@@ -76,7 +72,6 @@ html, body {
     padding-bottom: 4px;
 }
 
-/* Gold underline hover */
 .nav-links a::after {
     content: "";
     position: absolute;
@@ -93,44 +88,23 @@ html, body {
 }
 
 /* ============================================================
-   HERO — Cinematic, Clean, Perfectly Sized
+   HERO — FINAL CLEAN BUILD
    ============================================================ */
 
-/* ============================
-   HERO FIX + LOGO FIX
-   ============================ */
-
-/* HERO SECTION */
 .hero {
     width: 100%;
     min-height: 900px;
-    height: auto;
     background-image: url('images/wrs-portrait-main.png');
     background-size: cover;
-    background-position: center -300px; /* moves image UP */
+    background-position: center -420px; /* crop forehead */
     background-repeat: no-repeat;
+
     position: relative;
-    margin-top: -900px;
     z-index: 1;
 
     display: flex;
     justify-content: center;
     align-items: center;
-}
-
-/* LOGO ABOVE HERO */
-header {
-    position: relative;
-    z-index: 10; /* keeps logo ABOVE hero */
-}
-
-/* CENTER THE LOGO */
-header .logo,
-.logo-block,
-.hero-logo {
-    display: flex;
-    justify-content: center;
-    width: 100%;
 }
 
 .hero-overlay {
@@ -139,19 +113,30 @@ header .logo,
     background: rgba(0,0,0,0.45);
 }
 
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    width: 100%;
+    text-align: center;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
 .hero-logo {
     width: 260px;
-    margin-bottom: 0; /* FIXED */
-   margin-top: -40px; /* move main logo UP */
+    margin-top: -120px; /* balanced between nav + hero image */
+    margin-bottom: 20px;
 }
 
 .hero-inner h1 {
     font-size: 3rem;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
     text-shadow: 0 10px 30px rgba(0,0,0,0.9);
 }
-
 
 /* BUTTON */
 .btn-primary {
@@ -170,25 +155,10 @@ header .logo,
     transform: translateY(-2px);
     box-shadow: 0 12px 26px rgba(0,0,0,0.8);
 }
-.hero-inner {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    width: 100%;
-    
-    display: flex;
-    flex-direction: column;
-    align-items: center;   /* centers logo + h1 + button */
-    justify-content: center; /* centers vertically */
-}
-
 
 /* ============================================================
-   MUSIC GRID — Balanced, Premium
+   MUSIC SECTION
    ============================================================ */
-/* ========================= */
-/*      MUSIC SECTION        */
-/* ========================= */
 
 .music-section {
     width: 92%;
@@ -196,7 +166,6 @@ header .logo,
     margin: 120px auto;
 }
 
-/* GRID LAYOUT */
 .music-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -208,13 +177,9 @@ header .logo,
     font-size: 2rem;
     font-weight: 700;
     letter-spacing: 0.5px;
-    color: #f5d98c; /* soft gold */
+    color: #f5d98c;
     text-shadow: 0 0 12px rgba(255, 215, 130, 0.45);
 }
-
-/* ========================= */
-/*        MUSIC CARDS        */
-/* ========================= */
 
 .music-card {
     background: linear-gradient(
@@ -224,21 +189,19 @@ header .logo,
     );
     border-radius: 16px;
     padding: 32px;
-    border: 1px solid rgba(255, 215, 130, 0.35); /* gold border */
+    border: 1px solid rgba(255, 215, 130, 0.35);
     box-shadow: 0 18px 40px rgba(0,0,0,0.85);
     position: relative;
     overflow: hidden;
     transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
 }
 
-/* Gold glow on hover */
 .music-card:hover {
     transform: translateY(-6px);
     box-shadow: 0 28px 60px rgba(0,0,0,0.9);
     border-color: rgba(255, 215, 130, 0.65);
 }
 
-/* Gold top accent bar */
 .music-card::before {
     content: "";
     position: absolute;
@@ -250,7 +213,6 @@ header .logo,
     opacity: 0.85;
 }
 
-/* Title */
 .music-card h3 {
     margin-bottom: 14px;
     font-size: 1.35rem;
@@ -259,7 +221,6 @@ header .logo,
     text-shadow: 0 0 10px rgba(255, 215, 130, 0.35);
 }
 
-/* Subtitle */
 .music-card p {
     margin-bottom: 22px;
     line-height: 1.55;
@@ -267,80 +228,36 @@ header .logo,
     font-size: 0.95rem;
 }
 
-/* Button spacing */
-.music-card a {
-    margin-top: 10px;
-    display: inline-block;
-}
-
-
 /* ============================================================
-   WATSON EXPERIENCE — Cinematic Lines
+   CINEMATIC TEXT SECTIONS
    ============================================================ */
 
-.wrs-experience {
+.cinematic-section {
     width: 92%;
     max-width: 900px;
     margin: 140px auto;
     text-align: center;
-    position: relative;
-    padding: 80px 0;
+    padding: 60px 0;
 }
 
-.wrs-experience::before,
-.wrs-experience::after {
-    content: "";
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    width: 60%;
-    height: 3px;
+.cinematic-section h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #f5d98c;
+    margin-bottom: 14px;
+    text-shadow: 0 0 12px rgba(245, 217, 140, 0.45);
 }
 
-.wrs-experience::before {
-    top: 0;
-    background: linear-gradient(to right, rgba(245,201,107,0), rgba(245,201,107,0.85), rgba(245,201,107,0));
-}
-
-.wrs-experience::after {
-    bottom: 0;
-    background: linear-gradient(to right, rgba(122,92,235,0), rgba(122,92,235,0.85), rgba(122,92,235,0));
+.cinematic-section p {
+    font-size: 1.15rem;
+    color: #e6e6e6;
+    line-height: 1.65;
+    max-width: 700px;
+    margin: 0 auto;
 }
 
 /* ============================================================
-   WHAT WE DO — Modern 3D Cards
-   ============================================================ */
-
-.what-we-do {
-    width: 92%;
-    max-width: 1400px;
-    margin: 120px auto;
-    text-align: center;
-}
-
-.service-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    margin-top: 50px;
-}
-
-.service-card {
-    background: radial-gradient(circle at top left, rgba(255,255,255,0.10), rgba(0,0,0,0.85));
-    border-radius: 14px;
-    padding: 22px;
-    border: 1px solid rgba(122,92,235,0.35);
-    box-shadow: 0 18px 40px rgba(0,0,0,0.85);
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.service-card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 25px 55px rgba(0,0,0,0.9);
-}
-
-/* ============================================================
-   FOOTER — Clean, Modern, Premium
+   FOOTER
    ============================================================ */
 
 .footer {
@@ -376,10 +293,6 @@ header .logo,
         gap: 12px;
     }
 
-    .nav-center {
-        justify-content: center;
-    }
-
     .music-grid {
         grid-template-columns: 1fr;
     }
@@ -389,88 +302,9 @@ header .logo,
     }
 
     .hero {
-        height: 600px;
+        min-height: 600px;
+        background-position: center -250px;
     }
 
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-}
-/* Watson Gold Audio Player */
-.audio-wrapper {
-    max-width: 900px;
-    margin: 40px auto;
-    padding: 25px 30px;
-    background: #0b0b0d;
-    border: 1px solid rgba(202,168,111,0.35);
-    border-radius: 12px;
-    box-shadow: 0 0 25px rgba(0,0,0,0.7);
-}
-
-.audio-wrapper audio {
-    width: 100%;
-    display: block;
-    margin: 0 auto;
-}
-
-.audio-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #f3d89a;
-    margin-bottom: 12px;
-    text-align: center;
-    letter-spacing: 0.5px;
-}
-/* ============================
-   FINAL HERO + LOGO FIX
-   ============================ */
-
-/* HERO SECTION */
-.hero {
-    width: 100%;
-    min-height: 900px; /* FIX: gives portrait room so bottom isn't cut */
-    background-image: url('images/wrs-portrait-main.png');
-    background-size: cover;
-    background-position: center -200px; /* moves image UP */
-    background-repeat: no-repeat;
-    position: relative;
-    margin-top: 0;
-    z-index: 1;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-/* HERO OVERLAY (unchanged) */
-.hero-overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,0,0,0.45);
-}
-
-/* KEEP LOGO ABOVE HERO */
-header {
-    position: relative;
-    z-index: 10;
-}
-
-/* CENTER THE LOGO PROPERLY */
-header .logo,
-.logo-block {
-    display: flex;
-    justify-content: center;
-    width: 100%;
-}
-
-/* HERO LOGO SIZE + SPACING */
-.hero-logo {
-    width: 260px;
-    margin-bottom: 0; /* FIX: removes gap pushing hero down */
-}
-
-/* LOGO SPACING UNDER NAV */
-body {
-    padding-top: 139px; /* your value is fine */
-}
-
+    .hero-inner h1 {
+        font
