@@ -435,4 +435,9 @@ html, body {
         margin-bottom: 0px;   /* stop pulling hero upward */
     }
 
-    
+    @media (max-width: 900px) {
+    .main-logo {
+        width: 200px;
+    }
+}
+
