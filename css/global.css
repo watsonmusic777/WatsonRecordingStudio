@@ -229,7 +229,7 @@ html, body {
 }
 
 /* ============================================================
-   CINEMATIC TEXT SECTIONS
+   CINEMATIC TEXT SECTIONS — Clean + Centered + Premium
    ============================================================ */
 
 .cinematic-section {
@@ -255,6 +255,7 @@ html, body {
     max-width: 700px;
     margin: 0 auto;
 }
+
 
 /* ============================================================
    FOOTER
