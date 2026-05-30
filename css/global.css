@@ -18,7 +18,10 @@ html, body {
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 120px; /* adjust until logo sits perfect */
+    padding-top: 140px;
 }
+
+
 
 
 /* ============================================================
@@ -149,6 +152,12 @@ html, body {
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 26px rgba(0,0,0,0.8);
+}
+.hero-inner {
+    position: relative;
+    z-index: 2;
+    text-align: center;
+    width: 100%;
 }
 
 /* ============================================================
