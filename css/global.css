@@ -17,6 +17,7 @@ html, body {
     color: #ffffff;
     font-family: Arial, Helvetica, sans-serif;
     padding-top: 139px; /* navbar height */
+    background: hotpink !important;
 }
 
 /* ============================================================
