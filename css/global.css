@@ -152,6 +152,18 @@ body {
     transform: translateY(-2px);
     box-shadow: 0 12px 26px rgba(0,0,0,0.8);
 }
+.top-nav-container {
+    background: linear-gradient(
+        to bottom,
+        #0d0d0f 0%,
+        #111118 40%,
+        #0a0a0c 100%
+    );
+    box-shadow: 
+        0 4px 12px rgba(0,0,0,0.6),
+        inset 0 0 12px rgba(255,255,255,0.05);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
+}
 
 /* FOOTER */
 
