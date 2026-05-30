@@ -91,7 +91,7 @@ html, body {
     justify-content: center;
     align-items: center;
 
-    margin-top: -150px;     /* pulls logo WAY up */
+    margin-top: -125px;     /* pulls logo WAY up */
     margin-bottom: -60px;   /* keeps hero tucked under logo */
 }
 
