@@ -91,10 +91,12 @@ html, body {
     justify-content: center;
     align-items: center;
 
-    height: 350px;          /* NEW — matches your logo size */
-    margin-top: -20px;      /* reset so we can adjust cleanly */
-    margin-bottom: -60px;
+    height: 350px;
+
+    margin-top: -60px;     /* moves entire container UP */
+    margin-bottom: -40px;  /* reduces space before hero */
 }
+
 
 .main-logo {
     width: 350px;
