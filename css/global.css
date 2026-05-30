@@ -174,7 +174,13 @@ header .logo,
     z-index: 2;
     text-align: center;
     width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;   /* centers logo + h1 + button */
+    justify-content: center; /* centers vertically */
 }
+
 
 /* ============================================================
    MUSIC GRID — Balanced, Premium
@@ -413,5 +419,57 @@ header .logo,
     margin-bottom: 12px;
     text-align: center;
     letter-spacing: 0.5px;
+}
+/* ============================
+   FINAL HERO + LOGO FIX
+   ============================ */
+
+/* HERO SECTION */
+.hero {
+    width: 100%;
+    min-height: 900px; /* FIX: gives portrait room so bottom isn't cut */
+    background-image: url('images/wrs-portrait-main.png');
+    background-size: cover;
+    background-position: center -200px; /* moves image UP */
+    background-repeat: no-repeat;
+    position: relative;
+    margin-top: 0;
+    z-index: 1;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* HERO OVERLAY (unchanged) */
+.hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.45);
+}
+
+/* KEEP LOGO ABOVE HERO */
+header {
+    position: relative;
+    z-index: 10;
+}
+
+/* CENTER THE LOGO PROPERLY */
+header .logo,
+.logo-block {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+
+/* HERO LOGO SIZE + SPACING */
+.hero-logo {
+    width: 260px;
+    margin-bottom: 0; /* FIX: removes gap pushing hero down */
+}
+
+/* LOGO SPACING UNDER NAV */
+body {
+    padding-top: 139px; /* your value is fine */
 }
 
