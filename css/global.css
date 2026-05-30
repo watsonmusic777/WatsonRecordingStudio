@@ -89,16 +89,18 @@ html, body {
 .main-logo-container {
     width: 100%;
     display: flex;
-    justify-content: center;   /* centers horizontally */
-    align-items: center;        /* centers vertically inside container */
+    justify-content: center;
+    align-items: center;
     margin-top: 40px;
-    margin-bottom: -60px;
+    margin-bottom: -20px;
 }
 
 .main-logo {
     width: 260px;
-    display: block;             /* prevents inline weirdness */
+    height: auto;
+    display: block;
 }
+
 
 
 /* ============================================================
@@ -435,12 +437,13 @@ html, body {
         grid-template-columns: 1fr;
     }
 
-    .hero {
-        min-height: 600px;
-        background-position: center -250px;
+  @media (max-width: 900px) {
+    .main-logo-container {
+        margin-top: 20px;
+        margin-bottom: 0px;   /* stop pulling hero upward */
     }
 
-    .hero-inner h1 {
-        font-size: 2.2rem;
+    .main-logo {
+        width: 200px;         /* slightly smaller for mobile */
     }
-}
+
