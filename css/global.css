@@ -96,7 +96,7 @@ html, body {
 }
 
 .main-logo {
-    width: 260px;
+    width: 350px;
     height: auto;
     display: block;
 }
@@ -435,9 +435,10 @@ html, body {
         margin-bottom: 0px;   /* stop pulling hero upward */
     }
 
-    @media (max-width: 900px) {
+   @media (max-width: 600px) {
     .main-logo {
         width: 200px;
     }
 }
+
 
