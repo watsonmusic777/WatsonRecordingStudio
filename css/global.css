@@ -95,6 +95,7 @@ html, body {
 
     margin-top: -110px;    /* moves entire container UP */
     margin-bottom: -40px;  /* reduces space before hero */
+    border: 3px solid red;
 }
 
 
