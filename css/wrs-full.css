@@ -71,16 +71,19 @@ body {
 }
 
 /* LOGO */
+/* NAVBAR LOGO */
 .nav-logo {
     text-align: center;
     padding: 10px 0 0;
 }
 
 .nav-logo img {
-    width: 350px;
-    height: auto;
-    object-fit: contain;
+    height: 60px;
+    width: auto;
+    display: block;
+    margin: 0 auto;
 }
+
 
 
 /* ========================= */
