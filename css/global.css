@@ -292,43 +292,58 @@ html, body {
     background: linear-gradient(to right, rgba(122,92,235,0), rgba(122,92,235,0.85), rgba(122,92,235,0));
 }
 
-<section class="what-we-do">
-    <h2>What We Do</h2>
+/* ============================================================
+   WHAT WE DO — Modern 3D Cards
+   ============================================================ */
 
-    <div class="service-grid">
+.what-we-do {
+    width: 92%;
+    max-width: 1400px;
+    margin: 120px auto;
+    text-align: center;
+}
 
-        <div class="service-card">
-            <h3>Recording</h3>
-            <p>Capture your performance with world‑class microphones and pristine preamps.</p>
-        </div>
+.what-we-do h2 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #f5d98c;
+    margin-bottom: 40px;
+    text-shadow: 0 0 12px rgba(245, 217, 140, 0.45);
+}
 
-        <div class="service-card">
-            <h3>Mixing</h3>
-            <p>Shape your sound with depth, warmth, punch, and dimension.</p>
-        </div>
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 20px;
+}
 
-        <div class="service-card">
-            <h3>Mastering</h3>
-            <p>Finalize your track with industry‑standard loudness, clarity, and tonal polish.</p>
-        </div>
+.service-card {
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.10), rgba(0,0,0,0.85));
+    border-radius: 14px;
+    padding: 22px;
+    border: 1px solid rgba(122,92,235,0.35);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.85);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
 
-        <div class="service-card">
-            <h3>Editing</h3>
-            <p>Timing correction, vocal alignment, noise cleanup, and performance tightening.</p>
-        </div>
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 55px rgba(0,0,0,0.9);
+}
 
-        <div class="service-card">
-            <h3>Stem Cleanup</h3>
-            <p>We clean, balance, and enhance your stems for a stronger mix foundation.</p>
-        </div>
+.service-card h3 {
+    color: #f5d98c;
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
 
-        <div class="service-card">
-            <h3>Production Polish</h3>
-            <p>Subtle enhancements, transitions, and ear‑candy that elevate your track.</p>
-        </div>
+.service-card p {
+    color: #e6e6e6;
+    line-height: 1.55;
+    font-size: 0.95rem;
+}
 
-    </div>
-</section>
 
 /* ============================================================
    CINEMATIC SECTIONS
