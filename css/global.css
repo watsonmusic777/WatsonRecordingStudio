@@ -1,6 +1,5 @@
 /* ============================================================
    WATSON RECORDING STUDIO — GLOBAL CINEMATIC CSS (FINAL BUILD)
-   Clean • Modern • Premium • Unified • No Conflicts
    ============================================================ */
 
 /* RESET */
@@ -88,15 +87,15 @@ html, body {
 }
 
 /* ============================================================
-   HERO — FINAL CLEAN BUILD
+   HERO — Final Clean Build
    ============================================================ */
 
 .hero {
     width: 100%;
     min-height: 900px;
-    background-image: url('images/wrs-portrait-main.png');
+    background-image: url('../images/wrs-portrait-main.png');
     background-size: cover;
-    background-position: center -420px; /* crop forehead */
+    background-position: center -420px;
     background-repeat: no-repeat;
 
     position: relative;
@@ -127,7 +126,7 @@ html, body {
 
 .hero-logo {
     width: 260px;
-    margin-top: -120px; /* balanced between nav + hero image */
+    margin-top: -120px;
     margin-bottom: 20px;
 }
 
@@ -138,7 +137,10 @@ html, body {
     text-shadow: 0 10px 30px rgba(0,0,0,0.9);
 }
 
-/* BUTTON */
+/* ============================================================
+   BUTTON
+   ============================================================ */
+
 .btn-primary {
     display: inline-block;
     padding: 12px 28px;
@@ -154,6 +156,35 @@ html, body {
 .btn-primary:hover {
     transform: translateY(-2px);
     box-shadow: 0 12px 26px rgba(0,0,0,0.8);
+}
+
+/* ============================================================
+   AUDIO PLAYER
+   ============================================================ */
+
+.audio-wrapper {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 25px 30px;
+    background: #0b0b0d;
+    border: 1px solid rgba(202,168,111,0.35);
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.7);
+}
+
+.audio-wrapper audio {
+    width: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+.audio-title {
+    font-size: 1.2rem;
+    font-weight: 600;
+    color: #f3d89a;
+    margin-bottom: 12px;
+    text-align: center;
+    letter-spacing: 0.5px;
 }
 
 /* ============================================================
@@ -229,7 +260,72 @@ html, body {
 }
 
 /* ============================================================
-   CINEMATIC TEXT SECTIONS — Clean + Centered + Premium
+   WATSON EXPERIENCE
+   ============================================================ */
+
+.wrs-experience {
+    width: 92%;
+    max-width: 900px;
+    margin: 140px auto;
+    text-align: center;
+    position: relative;
+    padding: 80px 0;
+}
+
+.wrs-experience::before,
+.wrs-experience::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60%;
+    height: 3px;
+}
+
+.wrs-experience::before {
+    top: 0;
+    background: linear-gradient(to right, rgba(245,201,107,0), rgba(245,201,107,0.85), rgba(245,201,107,0));
+}
+
+.wrs-experience::after {
+    bottom: 0;
+    background: linear-gradient(to right, rgba(122,92,235,0), rgba(122,92,235,0.85), rgba(122,92,235,0));
+}
+
+/* ============================================================
+   WHAT WE DO
+   ============================================================ */
+
+.what-we-do {
+    width: 92%;
+    max-width: 1400px;
+    margin: 120px auto;
+    text-align: center;
+}
+
+.service-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    margin-top: 50px;
+}
+
+.service-card {
+    background: radial-gradient(circle at top left, rgba(255,255,255,0.10), rgba(0,0,0,0.85));
+    border-radius: 14px;
+    padding: 22px;
+    border: 1px solid rgba(122,92,235,0.35);
+    box-shadow: 0 18px 40px rgba(0,0,0,0.85);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 25px 55px rgba(0,0,0,0.9);
+}
+
+/* ============================================================
+   CINEMATIC SECTIONS
    ============================================================ */
 
 .cinematic-section {
@@ -255,7 +351,6 @@ html, body {
     max-width: 700px;
     margin: 0 auto;
 }
-
 
 /* ============================================================
    FOOTER
@@ -308,4 +403,6 @@ html, body {
     }
 
     .hero-inner h1 {
-        font
+        font-size: 2.2rem;
+    }
+}
