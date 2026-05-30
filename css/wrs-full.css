@@ -5,10 +5,11 @@
 body {
     margin: 0;
     padding: 0;
-    background: #0b0b0e;
+    background: #010000 !important; /* matches your logo background */
     font-family: Arial, sans-serif;
     color: #ffffff;
 }
+
 
 /* ========================= */
 /*        NAVIGATION         */
