@@ -65,7 +65,7 @@ html, body {
 /* HERO SECTION */
 .hero-music {
     height: 80vh;
-    background: url('desktop3.png') center center/cover no-repeat;
+    background: url('images/desktop3.png') center center/cover no-repeat;
     display: flex;
     align-items: center;
     justify-content: center;
