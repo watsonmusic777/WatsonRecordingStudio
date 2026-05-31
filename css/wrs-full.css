@@ -98,6 +98,13 @@ body {
     margin: 0 auto;
 }
 
+.logo {
+    font-size: 1.6rem;
+    font-weight: 700;
+    color: #f5d76e; /* your gold */
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
 
 
 /* ========================= */
