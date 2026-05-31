@@ -459,5 +459,6 @@ html, body {
 .music-hero {
   width: 100%;
   overflow: hidden;
+  margin-bottom: 40px; 
 }
 
