@@ -518,11 +518,9 @@ body {
 }
 
 .about-image img {
-    width: 350px;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    width: 350px !important;
+    height: auto !important;
+    max-width: 350px !important;
 }
 
 .about-content h2 {
