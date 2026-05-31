@@ -70,6 +70,20 @@ body {
 #nav-menu a:hover::after {
     width: 100%;
 }
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
 
 /* LOGO */
 /* NAVBAR LOGO */
@@ -381,6 +395,19 @@ body {
     font-size: 0.85rem;
     color: #9a9a9a;
 }
+footer {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
 /* ========================= */
 /*   TRACK CARD SPACING      */
 /* ========================= */
