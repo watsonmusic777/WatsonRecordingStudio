@@ -626,3 +626,70 @@ footer .footer-social {
 .section:last-of-type {
     padding-bottom: 60px;
 }
+/* GLOBAL CINEMATIC THEME */
+body {
+    background: #0a0a0a;
+    color: #e6e6e6;
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Gold accent */
+a, h1, h2, h3 {
+    color: #d4af37;
+}
+
+/* Cinematic text glow */
+h1, h2, h3 {
+    text-shadow: 0 0 12px rgba(212, 175, 55, 0.4);
+}
+
+/* Buttons */
+.listen-btn, .cta-btn {
+    background: linear-gradient(145deg, #d4af37, #b38b2e);
+    color: #000;
+    padding: 12px 24px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    box-shadow: 0 4px 12px rgba(212, 175, 55, 0.4);
+    transition: 0.3s ease;
+}
+
+.listen-btn:hover, .cta-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 18px rgba(212, 175, 55, 0.6);
+}
+
+/* 3D glossy cards */
+.track-card, .info-card {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 25px rgba(0,0,0,0.6);
+    backdrop-filter: blur(6px);
+    transition: 0.3s ease;
+}
+
+.track-card:hover, .info-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(212, 175, 55, 0.4);
+}
+
+/* Section titles */
+.section-title {
+    text-align: center;
+    margin-bottom: 40px;
+    font-size: 2.2rem;
+}
+
+/* Page hero headers */
+.page-hero {
+    padding: 120px 20px 60px;
+    text-align: center;
+    background: linear-gradient(to bottom, rgba(0,0,0,0.7), transparent);
+}
+
+
