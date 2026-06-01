@@ -1,3 +1,95 @@
 @charset "utf-8";
-/* CSS Document */
+/* DIGITAL MUSIC PAGE STYLES */
+
+/* Hero Section */
+.digital-hero {
+    background: url('../images/digital-hero.jpg') center/cover no-repeat;
+    padding: 120px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.digital-hero h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-shadow: 0 0 20px rgba(0,0,0,0.7);
+}
+
+.digital-hero p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Featured Section */
+.featured-section {
+    padding: 60px 20px;
+    text-align: center;
+}
+
+.featured-grid {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+.featured-item {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    width: 300px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.featured-item img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Product Grid */
+.category-section {
+    padding: 60px 20px;
+}
+
+.product-grid {
+    display: flex;
+    gap: 30px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.product-card {
+    background: rgba(255,255,255,0.05);
+    padding: 20px;
+    border-radius: 12px;
+    width: 260px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(0,0,0,0.4);
+}
+
+.product-card img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+/* Buttons */
+.buy-btn {
+    background: #d4af37;
+    color: #000;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.buy-btn:hover {
+    background: #f5d76e;
+}
+
 
