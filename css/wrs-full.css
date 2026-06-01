@@ -148,7 +148,8 @@ body {
 .hero-home {
     background-image: url('/images/wrs-portrait-main.png');
     background-size: cover;
-    background-position: center 150px; /* pushes hero image down */
+   background-position: center 900px;
+ /* pushes hero image down */
     background-repeat: no-repeat;
 
     height: 100vh;
