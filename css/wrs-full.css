@@ -147,15 +147,17 @@ body {
         linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
         url('https://watsonrecordingstudio.com/images/wrs-portrait-main.png');
     background-size: cover;
-    background-position: center top -580px;
+    background-position: center top -300px;
     background-repeat: no-repeat;
 }
 
 .hero-logo {
-    width: 300px;   /* or 200px if you prefer */
+    width: 300px;
     height: auto;
     display: block;
-    margin: 40px auto;
+    margin: 80px auto;
+    position: relative;
+    z-index: 5;
 }
 
 .hero-content {
