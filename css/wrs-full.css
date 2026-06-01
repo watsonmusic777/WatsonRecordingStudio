@@ -146,14 +146,13 @@ body {
 /* HOMEPAGE HERO — ONLY the homepage gets the portrait */
 /* HERO FIXES */
 .hero-home {
-    background-image: url('/images/wrs-portrait-main.png');
+    background-image: url('https://watsonrecordingstudio.com/images/wrs-portrait-main.png');
     background-size: cover;
-   background-position: center 900px;
- /* pushes hero image down */
     background-repeat: no-repeat;
-
+    background-position: center 900px;
     min-height: 100vh;
     position: relative;
+
     padding-top: 150px; /* spacing between logo and hero */
 }
 
