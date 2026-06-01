@@ -151,15 +151,15 @@ body {
 /* HERO FIXES */
 .hero-home {
     background-image: url('https://watsonrecordingstudio.com/images/wrs-portrait-main.png');
-    background-size: contain;
+    background-size: cover; /* crop the image */
     background-repeat: no-repeat;
-    background-position: center top;
 
-    padding-top: 420px; /* ← pushes hero image down below nav */
-    min-height: 2000px;
+    height: 850px; /* short hero for face-only crop */
+    background-position: center 260px; /* move image DOWN */
 
     position: relative;
 }
+
 
 .hero-overlay {
     position: absolute;
