@@ -146,16 +146,14 @@ body {
 /* HOMEPAGE HERO — ONLY the homepage gets the portrait */
 /* HERO FIXES */
 .hero-home {
-   background-image: url('/images/wrs-portrait-main.png');
- /* your actual file */
+    background-image: url('/images/wrs-portrait-main.png');
     background-size: cover;
-    background-position: center center;
+    background-position: center 150px; /* pushes hero image down */
     background-repeat: no-repeat;
 
-    height: 100vh; /* or 90vh */
+    height: 100vh;
     position: relative;
-    margin-top: 0;
-    padding-top: 150px;
+    padding-top: 150px; /* spacing between logo and hero */
 }
 
 .hero-overlay {
