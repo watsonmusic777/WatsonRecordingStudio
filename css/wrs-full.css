@@ -132,7 +132,7 @@ body {
 .hero {
     width: 100%;
     min-height: 1700px; /* taller so nothing gets chopped */
-    background-image: url('https://watsonrecordingstudio.com/images/wrs-portrait-main.png');
+    background-image: url('https://watsonrecordingstudio.com/images/wrs-hero-home.jpg');
     background-size: contain; /* show full image */
     background-repeat: no-repeat;
     background-position: center top;
