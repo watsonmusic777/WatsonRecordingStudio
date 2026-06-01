@@ -152,7 +152,7 @@ body {
  /* pushes hero image down */
     background-repeat: no-repeat;
 
-    height: 100vh;
+    min-height: 100vh;
     position: relative;
     padding-top: 150px; /* spacing between logo and hero */
 }
