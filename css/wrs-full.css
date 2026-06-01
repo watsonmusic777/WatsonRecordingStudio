@@ -150,13 +150,12 @@ body {
 /* HOMEPAGE HERO — ONLY the homepage gets the portrait */
 /* HERO FIXES */
 .hero-home {
-    background-image: url('https://watsonrecordingstudio.com/images/wrs-portrait-main.png');
-    background-size: cover; /* crop the image */
+    background-image: url('images/wrs-hero-home.jpg');
+    background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
 
-    height: 850px; /* short hero for face-only crop */
-    background-position: center 260px; /* move image DOWN */
-
+    height: 850px;
     position: relative;
 }
 
