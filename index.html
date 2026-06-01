@@ -5,8 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watson Recording Studio</title>
 
-    <!-- Correct CSS path -->
-    <link rel="stylesheet" href="css/global.css?v=9000">
+    <!-- Load base + cinematic CSS -->
+    <link rel="stylesheet" href="css/global.css?v=1">
+    <link rel="stylesheet" href="css/wrs-full.css?v=2">
 </head>
 
 <body>
@@ -15,48 +16,37 @@
 <!--          NAVBAR           -->
 <!-- ========================= -->
 <header class="navbar">
-    <div class="nav-inner">
-
-        <div class="nav-left">
-            <a href="index.html">
-                <img src="images/watson-logo.png" class="nav-logo" alt="Watson Recording Studio">
-            </a>
-        </div>
-
-        <nav class="nav-center">
-            <ul class="nav-links">
-                <li><a class="active" href="index.html">Home</a></li>
-                <li><a href="about.html">About</a></li>
-                <li><a href="music.html">Music</a></li>
-                <li><a href="digitalmusic.html">Digital Music</a></li>
-                <li><a href="gear.html">Gear</a></li>
-                <li><a href="store.html">Store</a></li>
-                <li><a href="press.html">Press</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-
+    <div class="nav-logo">
+        <a href="index.html">
+            <img src="images/watson-logo.png" alt="Watson Recording Studio">
+        </a>
     </div>
-</header>
 
-<!-- ========================= -->
-<!--     MAIN LOGO CENTER      -->
-<!-- ========================= -->
-<div class="main-logo-container">
-   <img src="https://watsonrecordingstudio.com/images/wrs-logo-main1.png" class="main-logo" alt="Watson Recording Studio Logo">
-</div>
+    <nav>
+        <ul id="nav-menu">
+            <li><a class="active" href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="digitalmusic.html">Digital Music</a></li>
+            <li><a href="gear.html">Gear</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="press.html">Press</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
 
 <!-- ========================= -->
 <!--           HERO            -->
 <!-- ========================= -->
-<div class="hero">
+<section class="hero">
     <div class="hero-overlay"></div>
 
-    <div class="hero-inner">
+    <div class="hero-content">
         <h1>Where Sound Becomes Art</h1>
-        <a href="#" class="btn-primary">Book a Session</a>
+        <a href="#" class="btn">Book a Session</a>
     </div>
-</div>
+</section>
 
 <!-- ========================= -->
 <!--        MAIN CONTENT       -->
@@ -66,61 +56,58 @@
     <!-- ========================= -->
     <!--       AUDIO PLAYER        -->
     <!-- ========================= -->
-    <div class="audio-wrapper">
-        <div class="audio-title">Now Playing</div>
+    <div class="master-player">
         <audio id="jukebox" controls></audio>
     </div>
 
     <!-- ========================= -->
     <!--        MUSIC GRID         -->
     <!-- ========================= -->
-    <section class="music-section">
+    <section class="music-wrapper">
+        <h2 class="section-title">Featured Music</h2>
+
         <div class="music-grid">
 
-            <!-- FEATURED MUSIC -->
-            <div class="featured">
-                <h2>Featured Music</h2>
-
-                <div class="music-card">
-                    <h3>Midnight on River Street</h3>
-                    <p>A cinematic jazz-orchestra piece inspired by late-night River Street energy.</p>
-                    <a class="btn-primary" onclick="playTrack('audio/Midnight on River Street.mp3')">Listen Now</a>
-                </div>
-
-                <div class="music-card">
-                    <h3>Changing to Be Happy</h3>
-                    <p>An upbeat blend of country, rock, and funk with a feel-good groove.</p>
-                    <a class="btn-primary" onclick="playTrack('audio/Changing to be Happy.mp3')">Listen Now</a>
-                </div>
-
-                <div class="music-card">
-                    <h3>Fallen for Each Other (Rock Version 1)</h3>
-                    <p>A powerful rock-infused track driven by heavy guitars and raw emotion.</p>
-                    <a class="btn-primary" onclick="playTrack('audio/Fallen for Each Other (Rock Version 1).mp3')">Listen Now</a>
-                </div>
+            <div class="track-card">
+                <h3>Midnight on River Street</h3>
+                <p>A cinematic jazz-orchestra piece inspired by late-night River Street energy.</p>
+                <a class="btn" onclick="playTrack('audio/Midnight on River Street.mp3')">Listen Now</a>
             </div>
 
-            <!-- LATEST RELEASES -->
-            <div class="releases">
-                <h2>Latest Releases</h2>
+            <div class="track-card">
+                <h3>Changing to Be Happy</h3>
+                <p>An upbeat blend of country, rock, and funk with a feel-good groove.</p>
+                <a class="btn" onclick="playTrack('audio/Changing to be Happy.mp3')">Listen Now</a>
+            </div>
 
-                <div class="music-card">
-                    <h3>Youll Always Have My Heart</h3>
-                    <p>A heartfelt jazz-rock ballad filled with warmth, passion, and timeless emotion.</p>
-                    <a class="btn-primary" onclick="playTrack('audio/Youll Always Have My Heart.mp3')">Listen Now</a>
-                </div>
+            <div class="track-card">
+                <h3>Fallen for Each Other (Rock Version 1)</h3>
+                <p>A powerful rock-infused track driven by heavy guitars and raw emotion.</p>
+                <a class="btn" onclick="playTrack('audio/Fallen for Each Other (Rock Version 1).mp3')">Listen Now</a>
+            </div>
 
-                <div class="music-card">
-                    <h3>Concrete Jungle Love</h3>
-                    <p>A bold rock ballad with emotional depth and a gritty city-night atmosphere.</p>
-                    <a class="btn-primary" onclick="playTrack('audio/Concrete Jungle Love.mp3')">Listen Now</a>
-                </div>
+        </div>
 
-                <div class="music-card">
-                    <h3>Goodbye Baby</h3>
-                    <p>A soulful love ballad with emotional depth and a classic Watson feel.</p>
-                    <a class="btn-primary" onclick="playTrack('audio/Goodbye Baby.mp3')">Listen Now</a>
-                </div>
+        <h2 class="section-title">Latest Releases</h2>
+
+        <div class="music-grid">
+
+            <div class="track-card">
+                <h3>Youll Always Have My Heart</h3>
+                <p>A heartfelt jazz-rock ballad filled with warmth, passion, and timeless emotion.</p>
+                <a class="btn" onclick="playTrack('audio/Youll Always Have My Heart.mp3')">Listen Now</a>
+            </div>
+
+            <div class="track-card">
+                <h3>Concrete Jungle Love</h3>
+                <p>A bold rock ballad with emotional depth and a gritty city-night atmosphere.</p>
+                <a class="btn" onclick="playTrack('audio/Concrete Jungle Love.mp3')">Listen Now</a>
+            </div>
+
+            <div class="track-card">
+                <h3>Goodbye Baby</h3>
+                <p>A soulful love ballad with emotional depth and a classic Watson feel.</p>
+                <a class="btn" onclick="playTrack('audio/Goodbye Baby.mp3')">Listen Now</a>
             </div>
 
         </div>
@@ -236,9 +223,6 @@
 
 </footer>
 
-<!-- ========================= -->
-<!--        AUDIO SCRIPT       -->
-<!-- ========================= -->
 <script>
 function playTrack(file) {
     const player = document.getElementById('jukebox');
