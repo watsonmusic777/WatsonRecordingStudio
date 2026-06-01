@@ -131,7 +131,8 @@ body {
     width: 100%;
     height: 880px;
 
-    background-image: url('img/your-portrait.jpg'); /* update path */
+    background-image: url('https://watsonrecordingstudio.com/images/wrs-portrait-main.png');
+ /* update path */
     background-size: cover;
     background-position: center top -580px; /* pulls image UP above container */
     background-repeat: no-repeat;
