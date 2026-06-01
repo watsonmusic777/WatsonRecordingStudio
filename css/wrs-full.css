@@ -144,7 +144,8 @@ body {
 /* HOMEPAGE HERO — ONLY the homepage gets the portrait */
 /* HERO FIXES */
 .hero-home {
-    background-image: url('https://watsonrecordingstudio.com/images/wrs-portrait-main.png'); /* your actual file */
+   background-image: url('/images/wrs-portrait-main.png');
+ /* your actual file */
     background-size: cover;
     background-position: center center;
     background-repeat: no-repeat;
