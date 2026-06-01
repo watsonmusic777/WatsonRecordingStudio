@@ -131,8 +131,11 @@ body {
 /* GLOBAL HERO — shared layout for all pages */
 .hero {
     width: 100%;
-    height: 880px;
-    background-color: #000;
+    min-height: 1200px; /* taller so nothing gets chopped */
+    background-image: url('https://watsonrecordingstudio.com/images/wrs-portrait-main.png');
+    background-size: contain; /* show full image */
+    background-repeat: no-repeat;
+    background-position: center top;
 
     display: flex;
     justify-content: center;
@@ -140,22 +143,24 @@ body {
     text-align: center;
 
     position: relative;
-    overflow: hidden;
+    overflow: visible; /* ← STOP CUTTING THE IMAGE */
 }
+
 
 /* HOMEPAGE HERO — ONLY the homepage gets the portrait */
 /* HERO FIXES */
 .hero-home {
     background-image: url('https://watsonrecordingstudio.com/images/wrs-portrait-main.png');
-    background-size: cover;
+    background-size: contain; /* ← SHOW FULL IMAGE */
     background-repeat: no-repeat;
-    background-position: center 900px;
+    background-position: center top; /* ← NO MORE FOREHEAD CUTTING */
 
     padding-top: 150px;
-    min-height: 1500px; /* ← THIS is the missing piece */
+    min-height: 2000px; /* ← TALL ENOUGH FOR FULL PORTRAIT */
 
     position: relative;
 }
+
 
 .hero-overlay {
     position: absolute;
