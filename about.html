@@ -4,58 +4,77 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About – Watson Recording Studio</title>
-  <link rel="stylesheet" href="css/global.css?v=1">
-  <link rel="stylesheet" href="css/wrs-full.css?v=2">
 
-
+    <!-- Correct CSS order -->
+    <link rel="stylesheet" href="css/global.css?v=1">
+    <link rel="stylesheet" href="css/wrs-full.css?v=2">
 </head>
 
 <body>
 
-    <!-- NAVBAR -->
-    <header class="navbar">
-        <div class="logo">Watson Recording Studio</div>
-        <nav>
-            <a href="index.html">Home</a>
-            <a href="about.html" class="active">About</a>
-            <a href="services.html">Services</a>
-            <a href="gallery.html">Gallery</a>
-            <a href="store.html">Store</a>
-            <a href="contact.html">Contact</a>
-        </nav>
-    </header>
+<!-- ========================= -->
+<!--          NAVBAR           -->
+<!-- ========================= -->
+<header class="navbar">
+    <div class="nav-logo">
+        <a href="index.html">
+            <img src="images/watson-logo.png" alt="Watson Recording Studio">
+        </a>
+    </div>
 
-    <!-- PAGE HEADER -->
-    <section class="page-header">
+    <nav>
+        <ul id="nav-menu">
+            <li><a href="index.html">Home</a></li>
+            <li><a class="active" href="about.html">About</a></li>
+            <li><a href="music.html">Music</a></li>
+            <li><a href="digitalmusic.html">Digital Music</a></li>
+            <li><a href="gear.html">Gear</a></li>
+            <li><a href="store.html">Store</a></li>
+            <li><a href="press.html">Press</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+</header>
+
+<!-- ========================= -->
+<!--           HERO            -->
+<!-- ========================= -->
+<section class="hero">
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
         <h1>About Watson Recording Studio</h1>
-    </section>
+        <p>The story, the passion, and the journey behind the sound.</p>
+    </div>
+</section>
 
-    <!-- ABOUT SECTION -->
-    <section class="about-container">
+<!-- ========================= -->
+<!--        ABOUT CONTENT      -->
+<!-- ========================= -->
+<main class="main-content">
+
+    <section class="about-wrapper">
+
         <div class="about-image">
             <img src="images/about-600.png" alt="John Watson Portrait">
         </div>
 
-        <div class="about-content">
+        <div class="about-text">
             <h2>The Story Behind the Sound</h2>
             <p>
                 Watson Recording Studio is more than a workspace — it’s the result of a lifetime shaped by rhythm, creativity, family, and the drive to bring music to life.
             </p>
 
             <p>
-                My musical journey started at home. When I was around four to seven years old, my dad put a guitar in my hands. He taught me how to hold chords, how to feel rhythm, and how to listen — really listen — to the heart of a song. Throughout his life, he was my go‑to for advice. Anytime I struggled with a progression or needed guidance, I went straight to him. Those moments weren’t just lessons; they were memories, bonding, and the foundation of everything I would become.
+                My musical journey started at home. When I was around four to seven years old, my dad put a guitar in my hands. He taught me how to hold chords, how to feel rhythm, and how to listen — really listen — to the heart of a song.
             </p>
 
             <p>
-                As I grew older, music expanded beyond the living room. I joined the <strong>SGI Brass Band</strong>, one of the biggest marching groups on Oʻahu. We marched in nearly every major parade — and we didn’t just show up, we <strong>won</strong>, often beating out well‑known high schools with huge programs. That band taught me discipline, teamwork, and the power of precision.
+                I joined the <strong>SGI Brass Band</strong>, one of the biggest marching groups on Oʻahu. We marched in nearly every major parade — and we didn’t just show up, we <strong>won</strong>, often beating out well‑known high schools with huge programs.
             </p>
 
             <p>
-                I started on snare, moved to tenor, and eventually found my home on bass drum, where I excelled. The heartbeat of the band — that was my role. Even though I’m no longer marching, my heart is still there. Those memories shaped who I am as a musician and as a person.
-            </p>
-
-            <p>
-                Music has always been my language. It’s how I think, how I create, and how I connect with people.
+                I started on snare, moved to tenor, and eventually found my home on bass drum — the heartbeat of the band. Those memories shaped who I am as a musician and as a person.
             </p>
 
             <h2>My Creative Approach</h2>
@@ -63,7 +82,7 @@
                 Today, I bring that same energy into Watson Recording Studio — the precision of percussion, the creativity of guitar, the discipline of marching band, and the inspiration that’s been with me since childhood.
             </p>
 
-            <ul class="values">
+            <ul class="values-list">
                 <li>Inspiration over intimidation</li>
                 <li>Collaboration over ego</li>
                 <li>Quality over shortcuts</li>
@@ -86,31 +105,35 @@
                 Music isn’t just sound — it’s emotion, memory, and identity. My goal is to create a space where artists feel inspired, supported, and empowered to make their best work.
             </p>
 
-            <p>
-                Every session is built on trust, creativity, professionalism, and a shared love for music. This studio is more than equipment and walls — it’s a place where ideas come alive.
-            </p>
-
             <div class="cta-buttons">
                 <a href="services.html" class="btn">Explore Services</a>
                 <a href="contact.html" class="btn">Book a Session</a>
             </div>
         </div>
+
     </section>
 
-    <!-- FOOTER -->
-   <footer class="footer">
+</main>
+
+<!-- ========================= -->
+<!--          FOOTER          -->
+<!-- ========================= -->
+<footer class="footer">
+
     <div class="footer-grid">
-        <div class="footer-col">
+
+        <div>
             <h3>Links</h3>
             <a href="index.html">Home</a>
+            <a href="about.html">About</a>
             <a href="music.html">Music</a>
-            <a href="licensing.html">Licensing</a>
-            <a href="contact.html">Contact</a>
+            <a href="gear.html">Gear</a>
             <a href="press.html">Press</a>
+            <a href="contact.html">Contact</a>
             <a href="terms.html">Terms</a>
         </div>
 
-        <div class="footer-col">
+        <div>
             <h3>Social</h3>
             <a href="https://youtube.com/@watsonmusic777" target="_blank">YouTube</a>
             <a href="https://instagram.com/watsonmusic777" target="_blank">Instagram</a>
@@ -118,18 +141,22 @@
             <a href="https://facebook.com/watsonentllc" target="_blank">Facebook</a>
         </div>
 
-        <div class="footer-col">
+        <div>
             <h3>Other</h3>
             <a href="marketplace.html">Marketplace</a>
             <a href="studio.html">Studio</a>
             <a href="events.html">Events</a>
-            <a href="gear.html">Gear</a>
             <a href="faq.html">FAQ</a>
             <a href="support.html">Support</a>
         </div>
-    </div>
-</footer>
 
+    </div>
+
+    <div class="footer-copy">
+        © 2026 Watson Recording Studio — All Rights Reserved.
+    </div>
+
+</footer>
 
 </body>
 </html>
