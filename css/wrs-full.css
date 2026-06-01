@@ -177,7 +177,7 @@ body {
 
 .hero-logo {
     position: absolute;
-    top: 50px;
+    top: 70px;
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
@@ -260,8 +260,9 @@ body {
 /* ========================= */
 
 .master-player {
+    margin-top: 60px;   /* spacing from hero */
+    margin-bottom: 70px;
     text-align: center;
-    margin-bottom: 40px;
 }
 
 .master-player audio {
