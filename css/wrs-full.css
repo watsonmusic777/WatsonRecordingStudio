@@ -147,7 +147,7 @@ body {
         linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.85)),
         url('https://watsonrecordingstudio.com/images/wrs-portrait-main.png');
     background-size: cover;
-    background-position: center top -300px;
+    background-position: center top -150px;
     background-repeat: no-repeat;
 }
 
