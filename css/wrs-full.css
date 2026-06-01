@@ -150,10 +150,11 @@ body {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center 900px;
-    min-height: 100vh;
-    position: relative;
 
-    padding-top: 150px; /* spacing between logo and hero */
+    padding-top: 150px;
+    min-height: 1500px; /* ← THIS is the missing piece */
+
+    position: relative;
 }
 
 .hero-overlay {
