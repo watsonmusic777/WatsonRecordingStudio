@@ -131,7 +131,7 @@ body {
 /* GLOBAL HERO — shared layout for all pages */
 .hero {
     width: 100%;
-    min-height: 1700px; /* taller so nothing gets chopped */
+    min-height: 2000px; /* taller so nothing gets chopped */
     background-image: 
     background-size: contain; /* show full image */
     background-repeat: no-repeat;
@@ -152,11 +152,11 @@ body {
 .hero-home {
    background-image: url('https://watsonrecordingstudio.com/images/wrs-hero-home.jpg');
     background-size: cover;
-   background-position: center 750px;
+   background-position: center 1000px;
 
     background-repeat: no-repeat;
 
-    height: 1500px;
+    height: 2000px;
     position: relative;
 }
 
