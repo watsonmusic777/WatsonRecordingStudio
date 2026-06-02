@@ -131,7 +131,7 @@ body {
 /* GLOBAL HERO — shared layout for all pages */
 .hero {
     width: 100%;
-    min-height: 2000px; /* taller so nothing gets chopped */
+    min-height: 950px; /* taller so nothing gets chopped */
     background-image: 
     background-size: contain; /* show full image */
     background-repeat: no-repeat;
@@ -156,7 +156,7 @@ body {
     background-repeat: no-repeat;
 
     width: 100%;
-    height: 900px; /* your chosen height */
+    height: 950px; /* your chosen height */
     position: relative;
 }
 
