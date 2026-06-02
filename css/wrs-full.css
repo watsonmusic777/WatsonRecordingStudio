@@ -131,7 +131,7 @@ body {
 /* GLOBAL HERO — shared layout for all pages */
 .hero {
     width: 100%;
-    min-height: 1500px; /* taller so nothing gets chopped */
+    min-height: 2500px; /* taller so nothing gets chopped */
     background-image: 
     background-size: contain; /* show full image */
     background-repeat: no-repeat;
@@ -152,11 +152,11 @@ body {
 .hero-home {
     background-image: url('https://watsonrecordingstudio.com/images/wrs-hero-home.jpg');
     background-size: 100% 100%;   /* stretch image to fill container */
-    background-position: center 1500px; /* adjust this */
+    background-position: center 2500px; /* adjust this */
     background-repeat: no-repeat;
 
     width: 100%;
-    height: 1550px; /* your chosen height */
+    height: 2550px; /* your chosen height */
     position: relative;
 }
 
@@ -187,7 +187,7 @@ body {
     left: 50%;
     transform: translateX(-50%);
     z-index: 4;
-    margin-top: 150px; /* adjust this number */
+    margin-top: 50px; /* adjust this number */
 }
 
 .hero-btn {
