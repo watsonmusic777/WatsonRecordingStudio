@@ -131,9 +131,8 @@ body {
 /* GLOBAL HERO — shared layout for all pages */
 .hero {
     width: 100%;
-    min-height: 900px; /* taller so nothing gets chopped */
-    background-image: 
-    background-size: contain; /* show full image */
+    /* min-height: 900px;  REMOVE THIS */
+    /* background-size: contain; REMOVE THIS */
     background-repeat: no-repeat;
     background-position: center top;
 
@@ -143,7 +142,7 @@ body {
     text-align: center;
 
     position: relative;
-    overflow: visible; /* ← STOP CUTTING THE IMAGE */
+    overflow: visible;
 }
 
 
