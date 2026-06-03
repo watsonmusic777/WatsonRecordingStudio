@@ -1,131 +1,141 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
-    <meta charset="utf-8">
+    <meta charset="UTF-8">
     <title>About • Watson Recording Studio</title>
-
-    <!-- Absolute CSS paths -->
-    <link rel="stylesheet" href="https://watsonrecordingstudio.com/css/global.css?v=23">
-    <link rel="stylesheet" href="https://watsonrecordingstudio.com/css/about.css?v=23">
+    <link rel="stylesheet" href="css/global.css">
 </head>
+
 <body>
 
-<!-- ========================= -->
-<!--          NAVBAR           -->
-<!-- ========================= -->
-<header class="navbar">
-    <div class="nav-logo">
-        <a href="https://watsonrecordingstudio.com/">
-            <img src="https://watsonrecordingstudio.com/images/wrs-logo.png" alt="Watson Recording Studio Logo">
-        </a>
+    <!-- UTILITY BAR -->
+    <div class="utility-bar">
+        <div class="utility-left">
+            <select id="lang-choice">
+                <option value="en">English</option>
+                <option value="haw">ʻŌlelo Hawaiʻi</option>
+                <option value="ja">日本語</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+
+        <div class="utility-right">
+            <span class="downloads">Downloads: 0</span>
+            <span class="plays">Plays: 0</span>
+            <a href="#" class="cart">🛒 Cart</a>
+            <a href="#" class="signin">Sign In</a>
+        </div>
     </div>
 
-    <ul id="nav-menu">
-        <li><a href="https://watsonrecordingstudio.com/">Home</a></li>
-        <li><a href="https://watsonrecordingstudio.com/about.html" class="active">About</a></li>
-        <li><a href="https://watsonrecordingstudio.com/music.html">Music</a></li>
-        <li><a href="https://watsonrecordingstudio.com/services.html">Services</a></li>
-        <li><a href="https://watsonrecordingstudio.com/contact.html">Contact</a></li>
-    </ul>
-</header>
+    <!-- GOLD HEADER (your guitar + logo + drum pad goes here) -->
+    <header>
+        <div class="header-row">
+            <div class="header-side left-side">
+                <img src="images/wrs.guitar.png" class="header-design" alt="Gold carved guitar">
+            </div>
 
+            <div class="header-center">
+                <img src="images/wrs.logo.png" class="main-logo" alt="WRS Logo">
+            </div>
 
-<!-- ========================= -->
-<!--      ABOUT CONTENT        -->
-<!-- ========================= -->
-<main class="about-container">
+            <div class="header-side right-side">
+                <img src="images/wrs.drum.png" class="header-design" alt="Gold carved drum pad">
+            </div>
+        </div>
+    </header>
 
-    <div class="about-image">
-        <img src="https://watsonrecordingstudio.com/images/wrs-artist-portrait.png" alt="John Watson Portrait">
-    </div>
+    <!-- NAV -->
+    <nav>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html" class="active">About</a></li>
+                <li><a href="studio.html">Studio</a></li>
+                <li><a href="digital-music.html">Digital Music</a></li>
+                <li><a href="store.html">Store</a></li>
+                <li><a href="memberships.html">Memberships</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
 
-    <div class="about-text">
-        <h2>The Story Behind the Sound</h2>
-        <p>
-            Watson Recording Studio is more than a workspace — it’s the result of a lifetime shaped by rhythm, creativity, family, and the drive to bring music to life.
+    <!-- ABOUT HERO -->
+    <section class="hero about-hero" style="
+        background-image: url('https://watsonrecordingstudio.com/images/wrs-hero-home.jpg');
+        padding-top: 220px;
+    ">
+        <div class="hero-content">
+            <h1>About Watson Recording Studio</h1>
+            <p>Where creativity, passion, and sound come together in perfect harmony.</p>
+        </div>
+    </section>
+
+    <!-- ABOUT CONTENT -->
+    <section class="about-section" style="padding: 80px 20px; max-width: 900px; margin: 0 auto;">
+
+        <h2 style="color: var(--gold); margin-bottom: 20px;">Our Story</h2>
+        <p style="margin-bottom: 30px;">
+            Watson Recording Studio was founded with one mission: to create a space where artists can feel inspired,
+            supported, and empowered to bring their music to life. Built from the ground up with passion and intention,
+            WRS blends world‑class sound with a warm, creative atmosphere.
         </p>
 
-        <p>
-            My musical journey started at home. When I was around four to seven years old, my dad put a guitar in my hands. He taught me how to hold chords, how to feel rhythm, and how to listen — really listen — to the heart of a song.
+        <h2 style="color: var(--gold); margin-bottom: 20px;">Who We Are</h2>
+        <p style="margin-bottom: 30px;">
+            Led by producer and engineer <strong>John Watson</strong>, the studio has become a trusted home for musicians
+            across genres — from jazz and rock to indie, R&B, and cinematic soundscapes. With years of experience and a
+            deep love for music, John brings both technical precision and artistic intuition to every project.
         </p>
 
-        <p>
-            I joined the <strong>SGI Brass Band</strong>, one of the biggest marching groups on Oʻahu. We marched in nearly every major parade — and we didn’t just show up, we <strong>won</strong>, often beating out well‑known high schools with huge programs.
+        <h2 style="color: var(--gold); margin-bottom: 20px;">Our Philosophy</h2>
+        <p style="margin-bottom: 30px;">
+            At WRS, we believe every artist deserves a space where their ideas are respected and their creativity can
+            flourish. Whether you're recording your first demo or producing a full album, we treat your music with the
+            same care, passion, and attention to detail as our own.
         </p>
 
-        <p>
-            I started on snare, moved to tenor, and eventually found my home on bass drum — the heartbeat of the band. Those memories shaped who I am as a musician and as a person.
-        </p>
-
-        <h2>My Creative Approach</h2>
-        <p>
-            Today, I bring that same energy into Watson Recording Studio — the precision of percussion, the creativity of guitar, the discipline of marching band, and the inspiration that’s been with me since childhood.
-        </p>
-
-        <ul class="values-list">
-            <li>Inspiration over intimidation</li>
-            <li>Collaboration over ego</li>
-            <li>Quality over shortcuts</li>
-            <li>Helping artists find their true sound</li>
+        <h2 style="color: var(--gold); margin-bottom: 20px;">What Makes Us Different</h2>
+        <ul style="margin-left: 20px; line-height: 1.8;">
+            <li>Warm, artist‑focused environment</li>
+            <li>Premium microphones, preamps, and analog gear</li>
+            <li>Precision mixing and mastering</li>
+            <li>Creative guidance and production support</li>
+            <li>Flexible sessions tailored to your workflow</li>
+            <li>A studio built with heart, soul, and intention</li>
         </ul>
 
-        <h2>What I Do</h2>
-        <ul class="services-list">
-            <li>Recording</li>
-            <li>Mixing</li>
-            <li>Mastering</li>
-            <li>Music production</li>
-            <li>Artist development</li>
-            <li>Session work</li>
-            <li>Creative consulting</li>
-        </ul>
+    </section>
 
-        <h2>My Philosophy</h2>
-        <p>
-            Music isn’t just sound — it’s emotion, memory, and identity. My goal is to create a space where artists feel inspired, supported, and empowered to make their best work.
-        </p>
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="footer-grid">
+            <div>
+                <h3>Links</h3>
+                <a href="index.html">Home</a><br>
+                <a href="about.html">About</a><br>
+                <a href="studio.html">Studio</a><br>
+                <a href="digital-music.html">Digital Music</a><br>
+                <a href="services.html">Services</a><br>
+                <a href="contact.html">Contact</a>
+            </div>
 
-        <div class="cta-buttons">
-            <a href="https://watsonrecordingstudio.com/services.html" class="btn">Explore Services</a>
-            <a href="https://watsonrecordingstudio.com/contact.html" class="btn">Book a Session</a>
-        </div>
-    </div>
+            <div>
+                <h3>Social</h3>
+                <p>Instagram @watsonmusic777</p>
+                <p>YouTube @watsonmusic777</p>
+                <p>Facebook @watsonmusicnet</p>
+            </div>
 
-</main>
-
-
-<!-- ========================= -->
-<!--          FOOTER           -->
-<!-- ========================= -->
-<footer class="footer">
-    <div class="footer-grid">
-
-        <div>
-            <h3>Links</h3>
-            <a href="https://watsonrecordingstudio.com/">Home</a>
-            <a href="https://watsonrecordingstudio.com/about.html">About</a>
-            <a href="https://watsonrecordingstudio.com/music.html">Music</a>
-            <a href="https://watsonrecordingstudio.com/services.html">Services</a>
-            <a href="https://watsonrecordingstudio.com/contact.html">Contact</a>
+            <div>
+                <h3>Other</h3>
+                <p>Studio Gear</p>
+                <p>Partners</p>
+            </div>
         </div>
 
-        <div>
-            <h3>Social</h3>
-            <a href="#">Instagram</a>
-            <a href="#">YouTube</a>
-            <a href="#">Facebook</a>
-        </div>
-
-        <div>
-            <h3>Other</h3>
-            <a href="#">Studio Gear</a>
-            <a href="#">Partners</a>
-        </div>
-
-    </div>
-
-    <p class="footer-copy">© 2026 Watson Recording Studio</p>
-</footer>
+        <p>© 2026 Watson Recording Studio • Honolulu, Hawaii</p>
+    </footer>
 
 </body>
 </html>
