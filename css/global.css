@@ -35,6 +35,7 @@ html, body {
     padding: 0 20px;
 }
 
+
 .utility-left select {
     padding: 4px 8px;
     border-radius: 4px;
@@ -54,7 +55,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 450px;; /* NEW HEIGHT */
+    height: 525px; /* NEW BIGGER HEIGHT */
     background: #000;
     z-index: 9999;
 }
@@ -62,12 +63,16 @@ header {
 
 
 
+
 .header-row {
-    height: 350px; /* 275 + 75 */
-    padding: 75px 80px 0 80px; /* top padding added */
+    height: 375px; /* 275 logo + 100px spacing */
+    padding-top: 100px; /* pushes logos DOWN */
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding-left: 80px;
+    padding-right: 80px;
     background-color: #000;
 }
 
@@ -153,7 +158,7 @@ nav {
 .hero::before {
     content: "";
     position: absolute;
-    padding-top: 365px; /* +25px */
+     padding-top: 550px;; /* +25px */
     top: 0;
     left: 0;
     width: 100%;
