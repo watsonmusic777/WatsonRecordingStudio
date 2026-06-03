@@ -105,6 +105,7 @@ nav {
     align-items: center;
     background: rgba(0,0,0,0.65);
     backdrop-filter: blur(6px);
+    position: relative; /* NOT fixed */
 }
 
 
@@ -145,37 +146,32 @@ nav {
 /* HERO */
 .hero {
     position: relative;
-    width: 100%;
-    min-height: 90vh;
-   padding-top: 550px;
-    padding-bottom: 80px;
-    text-align: center;
-    background-image: url('https://watsonrecordingstudio.com/images/wrs-hero-home.jpg');
-
+    min-height: calc(100vh - 525px); /* full screen minus header */
+    padding-top: 525px; /* header height */
     background-size: cover;
     background-position: center;
-    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .hero::before {
     content: "";
     position: absolute;
-     padding-top: 550px;; /* +25px */
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.55);
-    backdrop-filter: blur(2px);
+    height: 100%; /* now correct */
+    background: rgba(0,0,0,0.45); /* optional cinematic overlay */
     z-index: 1;
 }
 
 .hero-content {
     position: relative;
-    z-index: 2;
-    max-width: 700px;
-    margin: 0 auto;
+    z-index: 2; /* sits ABOVE overlay */
 }
+
 
 .hero-content h1 {
     font-size: 3rem;
