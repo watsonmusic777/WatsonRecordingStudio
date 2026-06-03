@@ -126,7 +126,7 @@ html, body {
     justify-content: flex-start; /* keep logo + text stacked */
     align-items: center;
     text-align: center;
-    padding-top: 1000px; /* space for navbar */
+    padding-top: 500px; /* space for navbar */
     background-image: url('https://watsonrecordingstudio.com/images/wrs-hero-home.jpg');
     background-size: cover;
     background-position: center;
