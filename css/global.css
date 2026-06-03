@@ -126,7 +126,7 @@ html, body {
     justify-content: flex-start; /* keep logo + text stacked */
     align-items: center;
     text-align: center;
-    padding-top: 140px; /* space for navbar */
+    padding-top: 1000px; /* space for navbar */
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
