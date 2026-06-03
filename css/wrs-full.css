@@ -169,10 +169,6 @@
     overflow: hidden;
 }
 
-.hero-home {
-    background-image: url('https://watsonrecordingstudio.com/images/wrs-hero-home.jpg');
-}
-
 .hero-overlay {
     position: absolute;
     top: 0;
