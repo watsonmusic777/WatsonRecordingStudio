@@ -53,6 +53,28 @@ html, body {
     color: #fff;
     text-decoration: none;
 }
+.header-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  padding: 20px 0;
+  background-color: #000; /* or match your gold image background */
+}
+
+.header-side {
+  width: 275px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-design,
+.main-logo {
+  width: 275px;
+  height: auto;
+  filter: drop-shadow(0 0 6px gold);
+}
 
 /* NAV */
 nav {
