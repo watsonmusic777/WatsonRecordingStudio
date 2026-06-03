@@ -1,62 +1,61 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Watson Recording Studio</title>
 
-    <!-- Load base + cinematic CSS -->
-    <link rel="stylesheet" href="css/global.css?v=1">
-    <link rel="stylesheet" href="css/wrs-full.css?v=2">
-
+    <!-- Main CSS -->
+    <link rel="stylesheet" href="css/global.css">
 </head>
 
 <body>
 
-<!-- ========================= -->
-<!--          NAVBAR           -->
-<!-- ========================= -->
-<header class="navbar">
+    <!-- UTILITY BAR (top strip) -->
+    <div class="utility-bar">
+        <div class="utility-left">
+            <select id="lang-choice">
+                <option value="en">English</option>
+                <option value="haw">ʻŌlelo Hawaiʻi</option>
+                <option value="ja">日本語</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+
+        <div class="utility-right">
+            <span class="downloads">Downloads: 0</span>
+            <span class="plays">Plays: 0</span>
+            <a href="#" class="cart">🛒 Cart</a>
+            <a href="#" class="signin">Sign In</a>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
     <nav>
-    <div class="nav-left">
-        <img src="images/wrs-logo-main1.png" class="main-logo" alt="Watson Recording Studio">
-    </div>
+        <div class="nav-left">
+            <img src="images/wrs-logo-main1.png" class="main-logo" alt="Watson Recording Studio">
+        </div>
 
-    <div class="nav-right">
-        <!-- your nav links here -->
-    </div>
+        <div class="nav-center">
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="studio.html">Studio</a></li>
+                <li><a href="digital-music.html">Digital Music</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </div>
 
+        <div class="nav-right"></div>
     </nav>
-        <ul id="nav-menu">
-            <li><a class="active" href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="music.html">Music</a></li>
-            <li><a href="digitalmusic.html">Digital Music</a></li>
-            <li><a href="gear.html">Gear</a></li>
-            <li><a href="store.html">Store</a></li>
-            <li><a href="press.html">Press</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-</header>
 
-<!-- ========================= -->
-<!--        HERO SECTION       -->
-<!-- ========================= -->
-<section class="hero hero-home">
-
-    <div class="hero-overlay"></div>
-
-    <div class="hero-logo">
-        <img src="images/wrs-logo-main1.png" alt="Watson Recording Studio">
-    </div>
-
-    <div class="hero-content">
-        <h1>Where Sound Becomes Art</h1>
-        <a href="#" class="btn">Book a Session</a>
-    </div>
-
-</section>
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Watson Recording Studio</h1>
+            <p>Honolulu • Recording • Mixing • Digital Releases</p>
+            <a href="digital-music.html" class="btn-primary">Listen & Download</a>
+        </div>
+    </section>
 
 <!-- ========================= -->
 <!--        MAIN CONTENT       -->
@@ -222,8 +221,8 @@
 
     </div>
 
-    <p class="footer-copy">© 2026 Watson Recording Studio</p>
-</footer>
+    <p>© 2026 Watson Recording Studio • Honolulu, Hawaiʻi</p>
+    </footer>
 
 
 <script>
@@ -233,6 +232,12 @@ function playTrack(file) {
     player.play();
 }
 </script>
-
+ <!-- LANGUAGE SWITCHER JS -->
+    <script>
+        document.getElementById('lang-choice').addEventListener('change', function() {
+            const lang = this.value;
+            window.location.href = `?lang=${lang}`;
+        });
+    </script>
 </body>
 </html>
