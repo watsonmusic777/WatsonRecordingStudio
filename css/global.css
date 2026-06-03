@@ -127,7 +127,7 @@ html, body {
     align-items: center;
     text-align: center;
     padding-top: 1000px; /* space for navbar */
-   background-image: url('https://watsonrecordingstudio.com/images/wrs-hero-home.jpg');
+    background-image: url('https://watsonrecordingstudio.com/images/wrs-hero-home.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -154,7 +154,7 @@ html, body {
 }
 
 .hero-logo img {
-    width: 260px;
+    width: 350px;
     height: auto;
 }
 
