@@ -33,6 +33,10 @@ html, body {
     justify-content: space-between;
     align-items: center;
     font-size: 14px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1000;
 }
 
 .utility-left select {
@@ -69,11 +73,16 @@ nav {
     width: 275px;
     height: 275px;
     object-fit: contain;
+
+    /* optional but recommended for your design */
     background: rgba(0,0,0,0.65);
     backdrop-filter: blur(6px);
     padding: 8px;
     border-radius: 10px;
+
+    display: block;
 }
+
 
 
 .nav-center .nav-links {
