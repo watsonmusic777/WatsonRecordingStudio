@@ -53,14 +53,21 @@ html, body {
     color: #fff;
     text-decoration: none;
 }
-.header-row {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 40px;
-  padding: 20px 0;
-  background-color: #000; /* or match your gold image background */
+header {
+    position: relative;
+    z-index: 3004; /* higher than nav */
 }
+
+.header-row {
+    display: flex;
+    justify-content: space-between; /* pushes left, center, right apart */
+    align-items: center;
+    padding: 20px 80px; /* adds breathing room */
+    background-color: #000;
+    position: relative;
+    z-index: 3003; /* ABOVE nav */
+}
+
 
 .header-side {
   width: 275px;
@@ -144,6 +151,7 @@ nav {
 .hero::before {
     content: "";
     position: absolute;
+    padding-top: 365px; /* +25px */
     top: 0;
     left: 0;
     width: 100%;
