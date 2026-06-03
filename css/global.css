@@ -1,8 +1,4 @@
 @charset "utf-8";
-/* ============================================================
-   WATSON RECORDING STUDIO — GLOBAL CINEMATIC THEME
-   Dark • Cinematic • Gold Accents
-   ============================================================ */
 
 /* RESET */
 * {
@@ -13,56 +9,20 @@
 
 html, body {
     width: 100%;
-    height: auto;
     overflow-x: hidden;
-    background: #0b0b0b; /* deep cinematic black */
+    background: #0b0b0b;
     font-family: Arial, Helvetica, sans-serif;
     color: #e6e6e6;
 }
 
-/* GLOBAL COLORS */
+/* COLORS */
 :root {
     --gold: #f5d76e;
     --gold-soft: #d4b85a;
-    --dark: #0b0b0b;
-    --dark2: #141414;
-    --dark3: #1c1c1c;
     --text-light: #e6e6e6;
-    --text-dim: #bfbfbf;
+    --text-muted: #c4c4c4;
 }
 
-/* GLOBAL CONTAINERS */
-.main-content {
-    width: 90%;
-    margin: 0 auto;
-    padding-top: 120px; /* space under navbar */
-}
-
-/* GLOBAL TITLES */
-.section-title {
-    text-align: center;
-    font-size: 2.4rem;
-    margin: 60px 0 30px;
-    color: var(--gold);
-    letter-spacing: 1px;
-}
-
-/* BUTTONS */
-.btn {
-    display: inline-block;
-    padding: 12px 26px;
-    background: var(--gold);
-    color: #000;
-    text-decoration: none;
-    border-radius: 6px;
-    font-weight: bold;
-    transition: 0.25s ease;
-}
-
-.btn:hover {
-    background: #fff;
-    color: #000;
-}
 /* UTILITY BAR */
 .utility-bar {
     width: 100%;
@@ -89,68 +49,29 @@ html, body {
     color: #fff;
     text-decoration: none;
 }
-/* ========================= */
-/*          NAVBAR           */
-/* ========================= */
 
-.navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 18px 0;
-    background: rgba(0, 0, 0, 0.65);
-    backdrop-filter: blur(6px);
-    z-index: 999;
-
-    display: flex;
-    justify-content: center;   /* center everything */
-    align-items: center;
-    gap: 40px;                 /* spacing between logo and menu */
-}
-
-.nav-logo img {
-    width: 70px;
-    height: auto;
-}
-
-#nav-menu {
-    list-style: none;
-    display: flex;
-    gap: 28px;
-    justify-content: center;
-    align-items: center;
-}
-.nav-logo {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-#nav-menu a {
-    color: var(--text-light);
-    text-decoration: none;
-    font-size: 1rem;
-    transition: 0.3s ease;
-}
-
-#nav-menu a:hover,
-#nav-menu .active {
-    color: var(--gold);
-}
+/* NAV */
 nav {
-    height: 320px;
+    position: fixed;
+    top: 30px;
+    width: 100%;
+    height: 90px;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(6px);
     display: flex;
     align-items: center;
-    justify-content: space-between;
-    padding: 0 40px;
-    background: #000;
+    justify-content: center;
+    gap: 40px;
+    z-index: 999;
 }
 
 .main-logo {
-    width: 275px;
-    height: 275px;
-    object-fit: contain;
+    width: 120px;
+    height: auto;
+    background: rgba(0,0,0,0.65);
+    backdrop-filter: blur(6px);
+    padding: 6px;
+    border-radius: 8px;
 }
 
 .nav-center .nav-links {
@@ -160,34 +81,31 @@ nav {
 }
 
 .nav-center .nav-links a {
-    color: #fff;
+    color: var(--text-light);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 1rem;
+    transition: 0.3s;
 }
-/* ========================= */
-/*          HERO             */
-/* ========================= */
 
+.nav-center .nav-links a:hover,
+.nav-center .nav-links .active {
+    color: var(--gold);
+}
+
+/* HERO */
 .hero {
     position: relative;
     width: 100%;
-    min-height: 90vh; /* full screen look */
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* keep logo + text stacked */
-    align-items: center;
+    min-height: 90vh;
+    padding-top: 220px;
+    padding-bottom: 80px;
     text-align: center;
-    padding-top: 500px; /* space for navbar */
     background-image: url('https://watsonrecordingstudio.com/images/wrs-hero-home.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    padding: 80px 40px;
-    background: #111;
-    color: #fff;
 }
 
-/* Dark overlay for cinematic look */
 .hero::before {
     content: "";
     position: absolute;
@@ -198,32 +116,17 @@ nav {
     background: rgba(0,0,0,0.55);
     backdrop-filter: blur(2px);
     z-index: 1;
-  
 }
 
-/* Logo container */
-.hero-logo {
-    position: relative;
-    z-index: 2;
-    margin-bottom: 60px; /* space between logo → hero text */
-}
-
-.hero-logo img {
-    width: 350px;
-    height: auto;
-}
-
-/* Hero text + button */
 .hero-content {
     position: relative;
     z-index: 2;
-    margin-top: 40px; /* adjust this to match nav → logo spacing */
     max-width: 700px;
+    margin: 0 auto;
 }
 
 .hero-content h1 {
     font-size: 3rem;
-    color: var(--text-main);
     margin-bottom: 20px;
 }
 
@@ -233,60 +136,34 @@ nav {
     margin-bottom: 30px;
 }
 
-/* Button */
-.hero-content .btn {
-    display: inline-block;
-    padding: 14px 32px;
+.btn-primary {
+    padding: 12px 24px;
     background: var(--gold);
     color: #000;
+    border-radius: 6px;
+    text-decoration: none;
     font-weight: bold;
-    border-radius: 6px;
-    text-decoration: none;
-    transition: 0.3s ease;
 }
 
-.hero-content .btn:hover {
-    background: #d4b45a;
+/* AUDIO PLAYER */
+.master-player {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin: 40px 0;
 }
-.btn-primary {
-    display: inline-block;
-    padding: 12px 24px;
-    background: #6a0dad;
-    color: #fff;
-    text-decoration: none;
-    border-radius: 6px;
+
+.master-player audio {
+    width: 80%;
+    max-width: 600px;
 }
-/* ========================= */
-/*        RESPONSIVE         */
-/* ========================= */
 
-@media (max-width: 900px) {
-    .hero {
-        padding-top: 120px;
-    }
-
-    .hero-logo img {
-        width: 200px;
-    }
-
-    .hero-content h1 {
-        font-size: 2.2rem;
-    }
-
-    .hero-content p {
-        font-size: 1.1rem;
-    }
-
-
-/* ========================= */
-/*          FOOTER           */
-/* ========================= */
-
+/* FOOTER */
 .footer {
     background: #0f0f0f;
     padding: 60px 20px;
     margin-top: 80px;
-    color: var(--text-dim);
+    color: #bfbfbf;
 }
 
 .footer-grid {
@@ -299,47 +176,34 @@ nav {
 .footer-grid h3 {
     color: var(--gold);
     margin-bottom: 15px;
-    font-size: 1.2rem;
 }
 
 .footer-grid a {
-    display: block;
-    color: var(--text-dim);
+    color: #bfbfbf;
     text-decoration: none;
     margin: 6px 0;
-    transition: 0.3s;
 }
 
 .footer-grid a:hover {
     color: var(--gold);
 }
 
-.footer-copy {
+.footer p {
     text-align: center;
     margin-top: 40px;
-    font-size: 0.9rem;
-    opacity: 0.7;
 }
-.site-footer {
-    background: #111;
-    color: #fff;
-    text-align: center;
-    padding: 20px 0;
-}
-/* ========================= */
-/*        RESPONSIVE         */
-/* ========================= */
 
+/* RESPONSIVE */
 @media (max-width: 900px) {
-    #nav-menu {
-        gap: 16px;
+    .hero {
+        padding-top: 160px;
     }
 
-    .nav-logo img {
-        width: 110px;
+    .main-logo {
+        width: 90px;
     }
 
-    .section-title {
-        font-size: 2rem;
+    .hero-content h1 {
+        font-size: 2.2rem;
     }
 }
