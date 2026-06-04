@@ -257,7 +257,23 @@ function adjustHeroOffset() {
 document.addEventListener("DOMContentLoaded", adjustHeroOffset);
 window.addEventListener("resize", adjustHeroOffset);
 </script>
-</body>
+<script>
+function adjustLayout() {
+    const header = document.querySelector(".site-header");
+    const hero = document.querySelector(".hero");
+    const main = document.querySelector(".main-content");
 
+    const headerHeight = header.offsetHeight;
+
+    // Push hero down
+    hero.style.marginTop = headerHeight + "px";
+
+    // Push main content below hero
+    main.style.marginTop = hero.offsetHeight + "px";
+}
+
+document.addEventListener("DOMContentLoaded", adjustLayout);
+window.addEventListener("resize", adjustLayout);
+</script>
 </body>
 </html>
