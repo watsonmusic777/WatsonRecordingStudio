@@ -28,6 +28,11 @@
     justify-content: space-between;
     padding: 6px 20px;
 }
+header {
+  height: 250px;   /* adjust between 220–260 until perfect */
+   position: relative;
+   z-index: 1;
+}
 
 .header-row {
     height: 240px;
@@ -68,6 +73,10 @@ nav {
     background: rgba(0,0,0,0.75);
     backdrop-filter: blur(6px);
     border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+    position: relative;
+    z-index: 9999;
+}
+
 }
 
 /* ========================= */
