@@ -83,43 +83,61 @@ header {
 /*          NAVBAR           */
 /* ========================= */
 
+/* NAV WRAPPER */
 nav {
-    height: 60px;
     width: 100%;
+    height: 80px; /* clean nav height */
     display: flex;
     justify-content: center;
     align-items: center;
     background: rgba(0,0,0,0.65);
     backdrop-filter: blur(6px);
-    position: fixed;
-    top: 340px;
+    position: relative; /* NOT fixed */
     z-index: 9999;
+    border-bottom: 1px solid rgba(255, 215, 0, 0.25); /* gold line */
 }
 
-nav a {
-    color: #fff;
-    text-decoration: none;
-    opacity: 1;
-    visibility: visible;
-}
-
+/* NAV LINKS */
 .nav-center .nav-links {
     list-style: none;
     display: flex;
-    gap: 24px;
+    gap: 28px;
 }
 
 .nav-center .nav-links a {
     color: #e6e6e6;
     text-decoration: none;
     font-size: 1rem;
-    transition: 0.3s;
+    transition: 0.3s ease;
 }
 
+/* HOVER + ACTIVE */
 .nav-center .nav-links a:hover,
 .nav-center .nav-links .active {
     color: var(--gold);
 }
+
+/* OPTIONAL: underline hover */
+.nav-center .nav-links a {
+    position: relative;
+}
+
+.nav-center .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.nav-center .nav-links a:hover::after,
+.nav-center .nav-links .active::after {
+    width: 100%;
+}
+
 
 /* ========================= */
 /*          HERO HOME        */
