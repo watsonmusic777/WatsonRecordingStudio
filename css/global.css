@@ -99,7 +99,7 @@ nav {
     align-items: center;
     background: rgba(0,0,0,0.65);
     backdrop-filter: blur(6px);
-    position: relative; /* NOT fixed */
+    position:fixed; /* NOT fixed */
 }
 
 
@@ -115,9 +115,6 @@ nav {
     padding: 0;         /* no frame */
     border-radius: 0;   /* no rounded corners */
 }
-
-
-
 
 .nav-center .nav-links {
     list-style: none;
@@ -139,7 +136,7 @@ nav {
 
 /* HERO */
 .hero {
-    position: relative;
+    position: fixed;
     height: calc(100vh - 425px); /* full screen minus header */
     margin-top: 425px; /* pushes hero below header */
     background-size: cover;
@@ -258,6 +255,7 @@ nav {
     color: #bfbfbf;
     text-decoration: none;
     margin: 6px 0;
+    display: block; /* <-- THIS makes links vertical */
 }
 
 .footer-grid a:hover {
@@ -267,9 +265,6 @@ nav {
 .footer p {
     text-align: center;
     margin-top: 40px;
-}
-.footer-grid a {
-    display: block;   /* forces vertical stacking */
 }
 
 /* RESPONSIVE */
