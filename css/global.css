@@ -63,7 +63,7 @@ header {
 
 .header-row {
     height: 375px; /* 275 logo + 100px spacing */
-    padding-top: 100px; /* pushes logos DOWN */
+    padding-top: 50px; /* pushes logos DOWN */
     width: 100%;
     display: flex;
     justify-content: space-between;
@@ -82,7 +82,7 @@ header {
 
 .header-design,
 .main-logo {
-  width: 250px;
+  width: 350px;
   height: auto;
   filter: drop-shadow(0 0 6px gold);
 }
