@@ -56,7 +56,8 @@ header {
 
 .header-row {
     height: 375px;
-    padding-top: 50px;
+    padding-top: 25px;
+    padding-bottom: 25px;
     width: 100%;
     display: flex;
     justify-content: space-between;
