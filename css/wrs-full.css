@@ -114,18 +114,15 @@ nav {
 /* ========================= */
 
 .hero.about-hero {
-    margin-top: 240px; /* adjust for header height */
     width: 100%;
-    min-height: 110vh; /* taller hero */
+    height: 125vh;
+    background-image: url('images/your-hero.jpg');
     background-size: cover;
-    background-position: center top;
+    background-position: center center; /* ADD THIS */
     background-repeat: no-repeat;
-    position: relative; /* REQUIRED for overlay to fill */
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    padding-bottom: 80px;
+    position: relative;
 }
+
 
 /* Full overlay */
 /*.hero-overlay {
