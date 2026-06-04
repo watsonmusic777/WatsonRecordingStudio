@@ -245,6 +245,19 @@ document.getElementById('lang-choice').addEventListener('change', function() {
     window.location.href = `?lang=${lang}`;
 });
 </script>
+<script>
+function adjustHeroOffset() {
+    const header = document.querySelector(".site-header");
+    const hero = document.querySelector(".hero");
+
+    const headerHeight = header.offsetHeight;
+    hero.style.marginTop = (headerHeight - 2) + "px";
+}
+
+document.addEventListener("DOMContentLoaded", adjustHeroOffset);
+window.addEventListener("resize", adjustHeroOffset);
+</script>
+</body>
 
 </body>
 </html>
