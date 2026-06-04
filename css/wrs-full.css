@@ -51,6 +51,7 @@ header {
     height: 450px;
     background: #000;
     z-index: 9998;
+   padding-bottom: 60px;
 }
 
 .header-row {
