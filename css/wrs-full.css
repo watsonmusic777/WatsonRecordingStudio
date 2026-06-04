@@ -114,19 +114,16 @@ nav {
 /* ========================= */
 
 .hero.about-hero {
-    margin-top: 180px; /* total header height */
-    min-height: calc(100vh - 180px); /* full hero minus header */
+    margin-top: 180px; /* header height */
     width: 100%;
-    background-size: cover;
-    background-position: center top;
+    height: auto;
+    background-size: contain;   /* show full image */
     background-repeat: no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 60px 20px;
+    background-position: top center;
+    padding: 120px 20px 80px;   /* space for text */
     text-align: center;
-    position: relative;
 }
+
 
 .hero-home .hero-img {
     position: fixed;
