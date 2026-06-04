@@ -51,24 +51,24 @@ header {
     margin-right: auto;
 }
 .header-side img {
-    width: 140px;       /* adjust 120–180px */
+    width: 140px;
     height: auto;
     display: block;
-    margin-top: 40px;   /* pushes the emblem DOWN */
-    margin-left: auto;
-    margin-right: auto; /* keeps it centered */
-}
-
-    .header-center img {
-    width: 180px;       /* adjust 160–220px */
-    height: auto;
-    display: block;
-    margin-top: 50px;   /* pushes main logo DOWN more */
+    margin-top: 40px;
     margin-left: auto;
     margin-right: auto;
-
-
 }
+
+
+    .header-center img {
+    width: 180px;
+    height: auto;
+    display: block;
+    margin-top: 50px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
   .header-side {
     display: flex;
     align-items: flex-end;
@@ -97,7 +97,7 @@ nav {
     z-index: 9999;
 }
 
-}
+
 
 /* ========================= */
 /*          NAVBAR           */
