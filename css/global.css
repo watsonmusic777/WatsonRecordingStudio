@@ -188,7 +188,35 @@ nav {
     text-decoration: none;
     font-weight: bold;
 }
+.hero-home {
+    width: 100%;
+    height: 100vh; /* full screen */
+    margin-top: 0; /* remove gap under nav */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
 
+.hero-home .hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* keeps full image visible */
+    object-position: center top; /* shows the top of the image */
+}
+.hero-home {
+    padding-top: 60px; /* adjust 40–100px as needed */
+}
+@media (min-width: 768px) {
+    .hero-home .hero-img {
+        position: fixed;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        z-index: -1;
+    }
+}
 /* AUDIO PLAYER */
 .master-player {
     width: 100%;
