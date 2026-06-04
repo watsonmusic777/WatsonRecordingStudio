@@ -116,7 +116,7 @@ nav {
 .hero.about-hero {
     margin-top: 200px; /* pushes hero below fixed header */
     width: 100%;
-    min-height: 100vh; /* full screen hero */
+    min-height: 120vh; /* full screen hero */
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
