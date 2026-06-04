@@ -118,19 +118,21 @@ nav {
     height: 125vh;
     background-image: url('images/your-hero.jpg');
     background-size: cover;
-    background-position: center center; /* ADD THIS */
+    background-position: center center;
     background-repeat: no-repeat;
     position: relative;
 }
+
 .hero-content {
     position: relative;
-    top: 160px; /* moves text down 4–5 inches */
+    top: 160px; /* ← perfect placement */
     z-index: 2;
     max-width: 900px;
     text-align: center;
     color: #fff;
     text-shadow: 0 0 12px rgba(0,0,0,0.9);
 }
+
 
 
 .hero-content p {
@@ -175,7 +177,26 @@ nav {
     );
     z-index: 1;
 }
+.hero.about-hero::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* ← fade height (pickup height) */
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0)
+    );
+    z-index: 1;
+}
 
+.hero.about-hero::after {
+    content: none !important;
+    background: none !important;
+}
 
 /* ========================= */
 /*     RESPONSIVE NAV        */
