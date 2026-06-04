@@ -29,7 +29,7 @@
     padding: 6px 20px;
 }
 header {
-  height: 250px;   /* adjust between 220–260 until perfect */
+  height: 300px;   /* adjust between 220–260 until perfect */
    position: relative;
    z-index: 1;
 }
