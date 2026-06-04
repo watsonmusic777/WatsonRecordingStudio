@@ -25,16 +25,24 @@ html, body {
 
 /* UTILITY BAR */
 .utility-bar {
-    height: 40px;
-    width: 100%;
-    background: #111;
-    color: #fff;
-    display: flex;
-    justify-content: flex-end;
+    background: #111 !important;
+    color: #fff !important;
+
+    display: flex !important;
     align-items: center;
-    padding: 0 20px;
-    opacity: 1;
-    visibility: visible;
+    justify-content: space-between;
+
+    padding: 6px 20px;
+    opacity: 1 !important;
+    visibility: visible !important;
+
+    position: relative;
+    z-index: 9999;
+}
+
+.utility-bar a {
+    color: #fff !important;
+    text-decoration: none;
 }
 
 
@@ -57,7 +65,7 @@ header {
     top: 0;
     left: 0;
     width: 100%;
-    height: 425px; /* NEW BIGGER HEIGHT */
+    height: 400px; /* NEW BIGGER HEIGHT */
     background: #000;
     z-index: 9999;
     margin-bottom: 0;
@@ -102,6 +110,12 @@ nav {
     position:fixed; /* NOT fixed */
 }
 
+nav a {
+    color: #fff !important;
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 9999;
+}
 
 
 
@@ -207,8 +221,33 @@ nav {
     object-position: center top; /* shows the top of the image */
 }
 .hero-home {
-    padding-top: 60px; /* adjust 40–100px as needed */
+    position: relative;
+    overflow: hidden;
+    margin-top: -25px; /* your current adjustment */
+    height: 100vh;
 }
+
+.hero-home .hero-img {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    object-fit: cover;
+    object-position: center top;
+    z-index: -1; /* keeps it behind overlay + text */
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+    z-index: 2;
+}
+
 @media (min-width: 768px) {
     .hero-home .hero-img {
         position: fixed;
