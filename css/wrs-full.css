@@ -40,15 +40,34 @@ header {
     align-items: center;
     justify-content: center;
     height: 100%;
-    padding-top: 30px;   /* pushes emblems + logo down */
+    padding-top: 50px;   /* pushes emblems + logo down */
+}
+.header-center img {
+    width: 180px;        /* adjust 160–220px */
+    height: auto;
+    display: block;
+    margin-top: 50px;    /* pushes main logo DOWN more */
+    margin-left: auto;
+    margin-right: auto;
+}
+.header-side img {
+    width: 140px;       /* adjust 120–180px */
+    height: auto;
+    display: block;
+    margin-top: 40px;   /* pushes the emblem DOWN */
+    margin-left: auto;
+    margin-right: auto; /* keeps it centered */
 }
 
+    .header-center img {
+    width: 180px;       /* adjust 160–220px */
+    height: auto;
+    display: block;
+    margin-top: 50px;   /* pushes main logo DOWN more */
+    margin-left: auto;
+    margin-right: auto;
 
-.header-side img {
-    width: 225px;
-    height: 225px;
-    object-fit: contain; /* keeps it clean and not distorted */
-    margin-bottom: 0; /* adjust 0–20px if needed */
+
 }
   .header-side {
     display: flex;
