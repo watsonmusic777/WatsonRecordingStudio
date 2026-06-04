@@ -128,7 +128,7 @@ nav {
 }
 
 /* Full overlay */
-.hero-overlay {
+/*.hero-overlay {*/
     position: absolute;
     top: 0;
     left: 0;
@@ -140,19 +140,21 @@ nav {
 
 .hero-content {
     position: relative;
-    z-index: 2; /* above overlay */
+    z-index: 2;
     max-width: 900px;
-    color: #fff;
     text-align: center;
-    padding: 0 20px;
+    color: #fff;
+    text-shadow: 0 0 12px rgba(0,0,0,0.9); /* ← makes white text readable */
 }
 
 .hero-content p {
     font-size: 1.3rem;
     line-height: 1.6;
     margin-bottom: 20px;
-    opacity: 0.95;
+    opacity: 1;
+    text-shadow: 0 0 12px rgba(0,0,0,0.9); /* ← strong readability */
 }
+
 .hero-home .hero-img {
     position: fixed;
     top: 0;
@@ -342,7 +344,7 @@ nav {
     opacity: 0.85;
 }
 
-/* BUTTONS (HOMEPAGE OVERRIDE IF NEEDED) */
+/* GLOBAL BUTTONS */
 .btn {
     display: inline-block;
     padding: 12px 26px;
@@ -356,6 +358,22 @@ nav {
 
 .btn:hover {
     background: #9b7dff;
+}
+
+/* HERO BUTTON OVERRIDE */
+.btn-primary {
+    background: linear-gradient(135deg, #d4af37, #f7d774);
+    color: #000;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 6px;
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.45);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #f7d774, #d4af37);
+    box-shadow: 0 0 28px rgba(247, 215, 116, 0.65);
+    transform: translateY(-2px);
 }
 
 /* RESPONSIVE */
