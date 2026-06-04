@@ -166,6 +166,11 @@ nav {
 .hero-content h1 {
     display: none; /* remove Watson Recording Studio text */
 }
+.hero.about-hero::before,
+.hero.about-hero::after {
+    content: none !important;
+    background: none !important;
+}
 
 /* ========================= */
 /*     RESPONSIVE NAV        */
