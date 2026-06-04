@@ -44,6 +44,7 @@ header {
     align-items: center;
     height: 100%;
     padding: 50px 60px 0;            /* top + side spacing */
+    padding-bottom: 50px;   /* adjust 40–70px */
 }
 
 /* LEFT + RIGHT EMBLEMS */
@@ -75,6 +76,9 @@ nav {
     border-bottom: 1px solid rgba(255, 215, 0, 0.25);
     position: relative;
     z-index: 9999;
+    margin-top: 30px;   /* adjust 20–40px if needed */
+}
+
 }
 
 
