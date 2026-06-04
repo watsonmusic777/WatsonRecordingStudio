@@ -114,31 +114,30 @@ nav {
 /* ========================= */
 
 .hero.about-hero {
-    margin-top: 200px; /* pushes hero below fixed header */
+    margin-top: 240px; /* adjust for header height */
     width: 100%;
-    min-height: 125vh; /* full screen hero */
+    min-height: 110vh; /* taller hero */
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
-    position: relative; /* required for overlay */
+    position: relative; /* REQUIRED for overlay to fill */
     display: flex;
     justify-content: center;
     align-items: flex-end;
     padding-bottom: 80px;
 }
 
-/* Full dark overlay */
+/* Full overlay */
 .hero-overlay {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
-    background: rgba(0,0,0,0.55); /* darker for white text */
+    height: 100%; /* FULL coverage */
+    background: rgba(0,0,0,0.55);
     z-index: 1;
 }
 
-/* Hero text container */
 .hero-content {
     position: relative;
     z-index: 2; /* above overlay */
@@ -148,15 +147,12 @@ nav {
     padding: 0 20px;
 }
 
-/* Hero paragraph styling */
 .hero-content p {
     font-size: 1.3rem;
     line-height: 1.6;
     margin-bottom: 20px;
     opacity: 0.95;
 }
-
-
 .hero-home .hero-img {
     position: fixed;
     top: 0;
@@ -167,7 +163,6 @@ nav {
     object-position: center top;
     z-index: -1;
 }
-
 
 .hero-content h1 {
     display: none; /* remove Watson Recording Studio text */
