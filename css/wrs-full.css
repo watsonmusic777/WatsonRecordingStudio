@@ -6,7 +6,7 @@
    ============================================================ */
 
 /* ========================= */
-/*       UTILITY BAR         */
+/*        SITE HEADER        */
 /* ========================= */
 
 .site-header {
@@ -18,9 +18,9 @@
     z-index: 1000;
     display: flex;
     flex-direction: column;
-    margin-top: 200px;   /* adjust 180–260px until it feels right */
 }
 
+/* Utility bar stays the same */
 .utility-bar {
     background: #111;
     color: #fff;
@@ -29,61 +29,40 @@
     justify-content: space-between;
     padding: 6px 20px;
 }
+
+/* Main header area */
 header {
-  height: 300px;   /* adjust between 220–260 until perfect */
-   position: relative;
-   z-index: 1;
+    height: 300px;                 /* full header height */
+    position: relative;
+    z-index: 1;
 }
 
+/* Row that holds LEFT – CENTER – RIGHT emblems */
 .header-row {
     display: flex;
+    justify-content: space-between; /* spreads them out */
     align-items: center;
-    justify-content: center;
     height: 100%;
-    padding-top: 50px;   /* pushes emblems + logo down */
+    padding: 50px 60px 0;           /* top + left/right spacing */
 }
-.header-center img {
-    width: 180px;        /* adjust 160–220px */
-    height: auto;
-    display: block;
-    margin-top: 50px;    /* pushes main logo DOWN more */
-    margin-left: auto;
-    margin-right: auto;
-}
+
+/* LEFT + RIGHT EMBLEMS */
 .header-side img {
-    width: 140px;
+    width: 220px;                   /* bigger emblems */
     height: auto;
     display: block;
-    margin-top: 40px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 20px;               /* vertical adjustment */
 }
 
-
-    .header-center img {
-    width: 180px;
+/* CENTER MAIN LOGO */
+.header-center img {
+    width: 260px;                   /* bigger center logo */
     height: auto;
     display: block;
-    margin-top: 50px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-top: 30px;               /* push down slightly */
 }
 
-  .header-side {
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-}
-
-
-
-.header-design,
-.main-logo {
-    width: 350px;
-    height: auto;
-    filter: drop-shadow(0 0 6px gold);
-}
-
+/* NAVBAR */
 nav {
     width: 100%;
     height: 60px;
