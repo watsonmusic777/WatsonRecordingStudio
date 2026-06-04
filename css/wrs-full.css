@@ -115,10 +115,16 @@ nav {
 
 .hero.about-hero {
     margin-top: 180px; /* total header height */
-    min-height: calc(100vh - 180px);
+    min-height: calc(100vh - 180px); /* full hero minus header */
+    width: 100%;
     background-size: cover;
-    background-position: center;
+    background-position: center top;
     background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px 20px;
+    text-align: center;
     position: relative;
 }
 
@@ -143,12 +149,15 @@ nav {
     z-index: 2;
 }
 
-.hero-content {
-    position: relative;
-    z-index: 1;
-    text-align: center;
-    color: #fff;
-    padding-top: 80px;
+.hero-content h1 {
+    display: none; /* remove Watson Recording Studio text */
+}
+
+.hero-content p {
+    font-size: 1.3rem;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    opacity: 0.95;
 }
 
 /* ========================= */
