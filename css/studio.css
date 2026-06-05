@@ -2,8 +2,12 @@
 /* STUDIO PAGE */
 
 /* Page spacing under the fixed header */
+/* KEEP THIS EXACTLY AS IS */
 .studio-page {
-    padding-top: 400px; /* same as About page */
+    padding-top: 400px;
+    color: #e8e8e8; /* brighter text */
+    font-size: 1.15rem; 
+    line-height: 1.7;
 }
 
 /* Studio Title Section */
@@ -12,15 +16,22 @@
     margin-bottom: 60px;
 }
 
+/* MAIN STUDIO HEADER */
 .studio-title h1 {
-    font-size: 3rem;
+    text-align: center;
+    font-size: 3.2rem;
     color: var(--gold);
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+    letter-spacing: 1px;
 }
 
-.studio-title p {
-    font-size: 1.2rem;
-    color: var(--text-muted);
+/* WELCOME SECTION */
+.studio-section p {
+    max-width: 850px;
+    margin: 0 auto 25px auto;
+    color: #dcdcdc;
+    font-size: 1.15rem;
+    line-height: 1.7;
 }
 
 /* Studio Sections (Gear, Room, Chain, etc.) */
@@ -31,12 +42,27 @@
     text-align: center;
 }
 
-.studio-section h2 {
+studio-section h2 {
+    text-align: center;
     font-size: 2.2rem;
     color: var(--gold);
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
 }
 
+.studio-section h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 2px;
+}
 .studio-section p {
     font-size: 1.1rem;
     color: var(--text-light);
@@ -44,16 +70,30 @@
 }
 
 /* Gear List */
+/* STYLISH GEAR LIST */
 .gear-list {
     list-style: none;
     padding: 0;
-    margin-top: 20px;
+    margin: 30px auto;
+    max-width: 900px;
 }
 
 .gear-list li {
-    margin: 10px 0;
-    font-size: 1.1rem;
-    color: var(--text-muted);
+    background: rgba(255, 215, 0, 0.05); /* subtle gold tint */
+    border-left: 3px solid var(--gold);
+    padding: 14px 20px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    font-size: 1.15rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+    backdrop-filter: blur(2px);
+    transition: 0.2s ease;
+}
+
+.gear-list li:hover {
+    background: rgba(255, 215, 0, 0.12);
+    transform: translateX(4px);
 }
 
 /* Studio Photos */
