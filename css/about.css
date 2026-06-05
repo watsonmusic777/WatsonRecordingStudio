@@ -22,6 +22,9 @@ body {
     padding: 0 !important;
     margin: 0 !important;
 }
+.about-page {
+    padding-top: 300px;
+}
 
 /* Top container (title + intro) */
 .about-top-container {
