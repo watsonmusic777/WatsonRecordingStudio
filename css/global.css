@@ -36,8 +36,10 @@ html, body {
     opacity: 1 !important;
     visibility: visible !important;
 
-    position: relative;
-    z-index: 9999;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 10000;
 }
 
 .utility-bar a {
@@ -62,7 +64,7 @@ html, body {
 }
 header {
     position: fixed;
-    top: 0;
+    top: 40;
     left: 0;
     width: 100%;
     height: 420px; /* NEW BIGGER HEIGHT */
@@ -107,7 +109,8 @@ nav {
     align-items: center;
     background: rgba(0,0,0,0.65);
     backdrop-filter: blur(6px);
-    position:fixed; /* NOT fixed */
+   position: relative;
+    top: 0;
 }
 
 nav a {
