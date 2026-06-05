@@ -66,27 +66,24 @@
     margin-bottom: 10px;
 }
 
-.about-image img {
-    width: 100%;
-    max-width: 380px;
-    height: auto;
-    border-radius: 12px;
-    object-fit: cover;
-    display: block;
-    margin: 0 auto;
+.about-image {
     flex: 1 1 300px;
+    overflow: visible;
+    padding: 10px; /* creates space for the border */
 }
-
 
 .about-image img {
     width: 100%;
     max-width: 380px;   /* perfect for your 475×634 portrait */
     height: auto;
+    border: 4px solid var(--gold);
     border-radius: 12px;
     object-fit: cover;
     display: block;
     margin: 0 auto;
+    filter: none; /* removes glow so border is visible */
 }
+
 
 .about-content {
     display: flex;
