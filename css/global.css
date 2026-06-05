@@ -63,7 +63,7 @@ html, body {
     text-decoration: none;
 }
 header {
-    position: fixed;
+     position: fixed;
     top: 40;
     left: 0;
     width: 100%;
