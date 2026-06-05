@@ -7,6 +7,7 @@
     background: #0d0d0d;
     text-align: center;
     color: #fff;
+    padding-top: 420px; /* pushes content BELOW the fixed header */
 }
 
 .about-top-container {
@@ -65,15 +66,35 @@
     margin-bottom: 10px;
 }
 
-.about-image {
+.about-image img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 12px;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
     flex: 1 1 300px;
 }
 
+
 .about-image img {
     width: 100%;
-    border-radius: 10px;
+    max-width: 380px;   /* perfect for your 475×634 portrait */
+    height: auto;
+    border-radius: 12px;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
+
+.about-content {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    align-items: flex-start; /* keeps both aligned at the top */
+}
+
 
 /* ========================= */
 /*         MOBILE FIX        */
