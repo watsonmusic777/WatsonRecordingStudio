@@ -1,3 +1,75 @@
 @charset "utf-8";
-/* CSS Document */
+/* STUDIO PAGE */
+
+/* Page spacing under the fixed header */
+.studio-page {
+    padding-top: 400px; /* same as About page */
+}
+
+/* Studio Title Section */
+.studio-title {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.studio-title h1 {
+    font-size: 3rem;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.studio-title p {
+    font-size: 1.2rem;
+    color: var(--text-muted);
+}
+
+/* Studio Sections (Gear, Room, Chain, etc.) */
+.studio-section {
+    width: 80%;
+    max-width: 1100px;
+    margin: 0 auto 80px auto;
+    text-align: center;
+}
+
+.studio-section h2 {
+    font-size: 2.2rem;
+    color: var(--gold);
+    margin-bottom: 20px;
+}
+
+.studio-section p {
+    font-size: 1.1rem;
+    color: var(--text-light);
+    line-height: 1.6;
+}
+
+/* Gear List */
+.gear-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+.gear-list li {
+    margin: 10px 0;
+    font-size: 1.1rem;
+    color: var(--text-muted);
+}
+
+/* Studio Photos */
+.studio-photos {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 30px;
+}
+
+.studio-photos img {
+    width: 320px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 8px;
+    filter: drop-shadow(0 0 6px #000);
+}
 
