@@ -95,9 +95,10 @@ header {
 
 .header-design,
 .main-logo {
-  width: 350px;
-  height: auto;
+  width: 250px;
+  height: 250px;
   filter: drop-shadow(0 0 6px gold);
+object-fit: contain; 
 }
 
 /* NAV */
