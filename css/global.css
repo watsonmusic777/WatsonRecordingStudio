@@ -151,8 +151,8 @@ nav a {
 /* HERO */
 .hero {
     position: fixed;
-    height: calc(100vh - 425px); /* full screen minus header */
-    margin-top: 425px; /* pushes hero below header */
+    height: calc(100vh - 480px); /* 420 header + 60 nav */
+    margin-top: 480px;
     background-size: cover;
     background-position: center;
     display: flex;
