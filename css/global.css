@@ -280,6 +280,7 @@ nav a {
     padding: 60px 20px;
     margin-top: 80px;
     color: #bfbfbf;
+    text-align: center;
 }
 
 .footer-grid {
@@ -308,6 +309,15 @@ nav a {
 .footer p {
     text-align: center;
     margin-top: 40px;
+}
+footer a {
+    display: inline-block;
+    margin: 0 12px;
+    color: var(--text-dark);
+}
+
+footer a:hover {
+    color: var(--amber);
 }
 
 /* RESPONSIVE */
