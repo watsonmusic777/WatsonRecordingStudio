@@ -1,107 +1,91 @@
-@charset "utf-8";
-/* ============================================================
-   WATSON RECORDING STUDIO — ABOUT PAGE
-   Portrait • Story • Gold Accents
-   ============================================================ */
+/* ========================= */
+/*       ABOUT PAGE TOP      */
+/* ========================= */
 
-/* Hero Section */
-.about-hero {
-    background: url('../images/about-hero.jpg') center/cover no-repeat;
-    padding: 140px 20px;
+.about-top {
+    padding: 120px 20px 60px;
+    background: #0d0d0d;
     text-align: center;
     color: #fff;
 }
 
-.about-hero h1 {
-    font-size: 3rem;
-    letter-spacing: 2px;
-    text-shadow: 0 0 25px rgba(0,0,0,0.7);
-}
-
-.about-hero p {
-    font-size: 1.2rem;
-    opacity: 0.9;
-    max-width: 700px;
+.about-top-container {
+    max-width: 900px;
     margin: 0 auto;
 }
 
-/* Main About Section */
+.about-top h1 {
+    font-size: 3rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 15px;
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+/* ========================= */
+/*       ABOUT CONTENT       */
+/* ========================= */
+
+.about-section {
+    padding: 80px 20px;
+    background: #0d0d0d;
+    color: #fff;
+}
+
 .about-container {
+    max-width: 1200px;
+    margin: 0 auto;
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
-    padding: 60px 20px;
-    justify-content: center;
-    align-items: flex-start;
 }
 
-/* Portrait */
-.about-photo {
-    width: 320px;
-    border-radius: 14px;
-    overflow: hidden;
-    box-shadow: 0 0 30px rgba(0,0,0,0.5);
-}
-
-.about-photo img {
-    width: 100%;
-    display: block;
-}
-
-/* Text Block */
 .about-text {
-    max-width: 700px;
-    color: #ddd;
+    flex: 1 1 600px;
     line-height: 1.7;
-    font-size: 1.1rem;
 }
 
 .about-text h2 {
-    font-size: 2rem;
+    color: var(--gold);
     margin-bottom: 15px;
-    color: #f5d76e; /* gold accent */
+    font-size: 1.8rem;
 }
 
-.about-text p {
-    margin-bottom: 20px;
+.about-list {
+    margin: 20px 0;
+    padding-left: 20px;
 }
 
-/* Highlight Boxes (optional) */
-.about-highlights {
-    display: flex;
-    gap: 20px;
-    margin-top: 30px;
-    flex-wrap: wrap;
-}
-
-.highlight-box {
-    background: rgba(255,255,255,0.05);
-    padding: 20px;
-    border-radius: 12px;
-    width: 200px;
-    text-align: center;
-    backdrop-filter: blur(10px);
-    box-shadow: 0 0 20px rgba(0,0,0,0.4);
-}
-
-.highlight-box h3 {
-    color: #f5d76e;
+.about-list li {
     margin-bottom: 10px;
 }
 
-.highlight-box p {
-    font-size: 0.95rem;
-    opacity: 0.85;
+.about-image {
+    flex: 1 1 300px;
 }
 
-/* Mobile */
+.about-image img {
+    width: 100%;
+    border-radius: 10px;
+    object-fit: cover;
+}
+
+/* ========================= */
+/*         MOBILE FIX        */
+/* ========================= */
+
 @media (max-width: 768px) {
     .about-container {
         flex-direction: column;
         text-align: center;
     }
 
-    .about-photo {
+    .about-image {
         margin: 0 auto;
     }
 }
