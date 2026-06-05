@@ -3,30 +3,39 @@
 /* ========================= */
 
 .about-top {
-    padding: 120px 20px 60px;
-    background: #0d0d0d;
+    padding-top: 420px; /* clears your fixed header */
+    padding-bottom: 60px;
     text-align: center;
-    color: #fff;
-    padding-top: 420px; /* pushes content BELOW the fixed header */
-}
-
-.about-top-container {
-    max-width: 900px;
-    margin: 0 auto;
+    background: #0b0b0b;
 }
 
 .about-top h1 {
-    font-size: 3rem;
+    font-size: 2.8rem;
     letter-spacing: 2px;
-    text-transform: uppercase;
-    margin-bottom: 15px;
+    color: var(--gold);
+    margin-bottom: 10px;
 }
 
 .about-intro {
     font-size: 1.2rem;
     opacity: 0.85;
-    line-height: 1.6;
+    max-width: 800px;
+    margin: 0 auto;
 }
+
+
+.about-top-container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+.about-divider {
+    width: 120px;
+    height: 3px;
+    background: var(--gold);
+    margin: 20px auto 0;
+    border-radius: 2px;
+}
+
 
 /* ========================= */
 /*       ABOUT CONTENT       */
