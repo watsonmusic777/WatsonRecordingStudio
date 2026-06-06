@@ -137,7 +137,7 @@ nav {
 .home-hero {
     position: relative;
     width: 100%;
-    margin-top: 0; /* no forced spacing */
+    margin-top: 120; /* no forced spacing */
 }
 
 .home-hero {
@@ -454,8 +454,7 @@ nav {
     padding-top: 0 !important;
 }
 
-.hero,
-.home-hero {
+.hero {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
