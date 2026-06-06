@@ -395,19 +395,23 @@ nav {
 }
 
 /* GLOBAL BUTTONS */
+/* GLOBAL BUTTONS — GOLD BRAND */
 .btn {
     display: inline-block;
     padding: 12px 26px;
-    background: #7A5CEB;
-    color: #ffffff;
+    background: linear-gradient(135deg, #d4af37, #f7d774);
+    color: #000;
     text-decoration: none;
     border-radius: 6px;
     font-weight: bold;
     transition: 0.25s ease;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.35);
 }
 
 .btn:hover {
-    background: #9b7dff;
+    background: linear-gradient(135deg, #f7d774, #d4af37);
+    box-shadow: 0 0 20px rgba(247, 215, 116, 0.55);
+    transform: translateY(-2px);
 }
 
 /* HERO BUTTON OVERRIDE */
