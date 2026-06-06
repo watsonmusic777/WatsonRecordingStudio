@@ -137,7 +137,7 @@ nav {
 .home-hero {
     position: relative;
     width: 100%;
-    margin-top: 150px; /* now correct */
+    margin-top: 100px; /* now correct */
     overflow: hidden;
     max-width: 100%;
 }
@@ -170,9 +170,9 @@ nav {
 
 .home-hero-content {
     position: absolute;
-    top: 40%; /* adjust to move text up/down */
+    top: 45%; /* original anchor point */
     left: 50%;
-    transform: translate(-50%, -50%);
+    transform: translate(-50%, calc(-50% + 50px)); /* moved DOWN by 50px */
     width: 90%;
     max-width: 900px;
     text-align: center;
@@ -180,6 +180,7 @@ nav {
     z-index: 2;
     text-shadow: 0 0 12px rgba(0,0,0,0.9);
 }
+
 .hero-section .btn,
 .hero-section .btn-primary {
     margin-top: 10px;
