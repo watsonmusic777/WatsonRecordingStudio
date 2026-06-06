@@ -76,7 +76,7 @@ nav {
     border-bottom: 1px solid rgba(255, 215, 0, 0.25);
     position: relative;
     z-index: 9999;
-    margin-top: 40px;   /* adjust 20–40px if needed */
+    margin-top: 0 !important;
 }
 
 }
