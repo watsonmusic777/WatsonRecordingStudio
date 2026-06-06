@@ -180,6 +180,9 @@ nav {
     z-index: 2;
     text-shadow: 0 0 12px rgba(0,0,0,0.9);
 }
+.hero .btn-primary {
+    margin-top: 8px;   /* adjust 5–10px until it sits perfect */
+}
 
 .home-hero-content p {
     font-size: 1.3rem;
