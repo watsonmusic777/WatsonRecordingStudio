@@ -9,27 +9,32 @@
 }
 
 /* HERO */
+/* HERO — stable, no cropping */
 .studio-hero {
     position: relative;
     width: 100%;
-    height: auto;
-    margin-top: 340px;
+    margin-top: 340px; /* adjust if needed */
 }
 
-.studio-hero img {
+.studio-hero-img {
     width: 100%;
     height: auto;
     display: block;
 }
 
+/* Overlay */
 .studio-hero-overlay {
     position: absolute;
     inset: 0;
     background: rgba(0,0,0,0.55);
 }
 
+/* Text */
 .studio-hero-content {
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     text-align: center;
     z-index: 2;
 }
@@ -44,6 +49,7 @@
     font-size: 1.3rem;
     color: #e8e8e8;
 }
+
 
 /* SECTIONS */
 .studio-section {
