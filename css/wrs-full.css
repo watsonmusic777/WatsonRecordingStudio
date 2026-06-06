@@ -149,14 +149,15 @@ nav {
     object-fit: cover;
 }
 .hero-content {
-  position: absolute;
-  top: 58%;        /* move text down — adjust 55–62% until perfect */
-  left: 50%;
-  transform: translate(-50%, -50%);
-  text-align: center;
-  width: 100%;
-  z-index: 5;
+    position: absolute;
+    top: 58%;
+    left: 50%;
+    transform: translate(-50%, calc(-50% + 50px));
+    text-align: center;
+    width: 100%;
+    z-index: 5;
 }
+
 
 .home-hero-overlay {
     position: absolute;
@@ -167,20 +168,6 @@ nav {
     background: rgba(0,0,0,0.45); /* adjust 0.30–0.60 */
     z-index: 2;
 }
-
-.home-hero-content {
-    position: absolute !important;
-    top: 40% !important;
-    left: 50% !important;
-    transform: translate(-50%, calc(-50% + 50px)) !important;
-    width: 90% !important;
-    max-width: 900px !important;
-    text-align: center !important;
-    color: #fff !important;
-    z-index: 2 !important;
-    text-shadow: 0 0 12px rgba(0,0,0,0.9) !important;
-}
-
 
 .hero-section .btn,
 .hero-section .btn-primary {
