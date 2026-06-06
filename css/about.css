@@ -14,17 +14,7 @@ body {
 }
 
 /* Remove ANY hero spacing that global.css might add */
-.about-top,
-.hero,
-.page-hero {
-    display: none !important;
-    height: 0 !important;
-    padding: 0 !important;
-    margin: 0 !important;
-}
-.about-page {
-    padding-top: 400px;
-}
+
 
 /* Top container (title + intro) */
 .about-top-container {
