@@ -12,12 +12,14 @@
 .studio-hero {
     position: relative;
     width: 100%;
-    height:460px;
-    background: url("../images/wrs.studio.hero.png") center/cover no-repeat;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-     margin-top: 340px;/* pushes hero below fixed header */
+    height: auto;
+    margin-top: 340px;
+}
+
+.studio-hero img {
+    width: 100%;
+    height: auto;
+    display: block;
 }
 
 .studio-hero-overlay {
