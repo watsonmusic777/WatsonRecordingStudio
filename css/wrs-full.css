@@ -137,16 +137,17 @@ nav {
 .home-hero {
     position: relative;
     width: 100%;
-    margin-top: 120; /* no forced spacing */
+    margin-top: 120px; /* now correct */
+    overflow: hidden;
 }
 
-.home-hero {
-    background-image: url('images/your-hero.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 100vh; /* clean, predictable */
+.home-hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    object-fit: cover;
 }
+
 .home-hero-overlay {
     position: absolute;
     top: 0;
