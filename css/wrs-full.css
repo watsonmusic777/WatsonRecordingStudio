@@ -44,7 +44,7 @@ header {
     align-items: center;
     height: 100%;
     padding: 50px 60px 0;            /* top + side spacing */
-    padding-bottom: 50px;   /* adjust 40–70px */
+    padding-bottom: 20px;   /* adjust 40–70px */
 }
 
 /* LEFT + RIGHT EMBLEMS */
