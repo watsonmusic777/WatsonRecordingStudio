@@ -437,17 +437,16 @@ nav {
 
 /* RESPONSIVE */
 @media (max-width: 900px) {
-    .hero {
-        height: 70vh;
+    .home-hero {
+        margin-top: 150px !important; /* or 120px or whatever looks right */
     }
 
-    .hero-content h1 {
-        font-size: 2.2rem;
+    .hero-content {
+        top: 65% !important; /* pushes text DOWN on mobile */
+        transform: translate(-50%, -50%) !important;
     }
+}
 
-    .hero-logo img {
-        width: 130px;
-    }
 /* FIX NAV FLOATING + HEADER GAP */
 .site-header {
     margin-bottom: 0 !important;
@@ -460,7 +459,10 @@ nav {
 }
 
 nav {
-    margin-top: 0 !important;
+    nav {
+    margin-top: 20px !important;
+}
+ !important;
     padding-top: 0 !important;
 }
 
@@ -469,7 +471,3 @@ nav {
     padding-top: 0 !important;
 }
 
-.hero {
-    margin-top: 0 !important;
-    padding-top: 0 !important;
-}
