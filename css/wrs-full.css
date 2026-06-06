@@ -76,7 +76,7 @@ nav {
     border-bottom: 1px solid rgba(255, 215, 0, 0.25);
     position: relative;
     z-index: 9999;
-    margin-top: 30px;   /* adjust 20–40px if needed */
+    margin-top: 40px;   /* adjust 20–40px if needed */
 }
 
 }
@@ -439,4 +439,29 @@ nav {
     .hero-logo img {
         width: 130px;
     }
+/* FIX NAV FLOATING + HEADER GAP */
+.site-header {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+.header-row {
+    margin-bottom: 0 !important;
+    padding-bottom: 0 !important;
+}
+
+nav {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.nav-center {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.hero,
+.home-hero {
+    margin-top: 0 !important;
+    padding-top: 0 !important;
 }
