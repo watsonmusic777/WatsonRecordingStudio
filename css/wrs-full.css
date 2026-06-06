@@ -147,6 +147,16 @@ nav {
     background-repeat: no-repeat;
     height: 100vh; /* clean, predictable */
 }
+.home-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45); /* adjust 0.30–0.60 */
+    z-index: 2;
+}
+
 .home-hero-content {
     position: absolute;
     top: 40%; /* adjust to move text up/down */
