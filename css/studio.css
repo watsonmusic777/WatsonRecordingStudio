@@ -17,7 +17,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-top: 260px; /* pushes hero below fixed header */
+     margin-top: 340px;/* pushes hero below fixed header */
 }
 
 .studio-hero-overlay {
