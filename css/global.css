@@ -111,6 +111,10 @@ object-fit: contain;
     margin-left: 25px;
     margin-right: 25px;
 }
+.header-center img {
+    width: 250px !important;
+    height: auto;
+}
 
 /* NAV */
 nav {
@@ -224,16 +228,12 @@ nav a {
     z-index: 2;
 }
 
-@media (min-width: 768px) {
-    .hero-home .hero-img {
-        position: fixed;
-        top: 0;
-        left: 0;
-        height: 100vh;
-        z-index: -1;
+@media (max-width: 900px) {
+    .hero {
+        padding-top: 160px;
     }
-}
-/* AUDIO PLAYER */
+
+    /* AUDIO PLAYER */
 .master-player {
     width: 100%;
     display: flex;
@@ -297,6 +297,7 @@ footer a:hover {
     .hero {
         padding-top: 160px;
     }
+
 
     .main-logo {
         width: 90px;
