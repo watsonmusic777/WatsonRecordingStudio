@@ -1,6 +1,24 @@
 @charset "utf-8";
 
 /* RESET */
+
+/* UNIVERSAL HEADER SPACING */
+.site-header {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px; /* space between utility bar, logo row, nav */
+}
+/* UNIVERSAL HERO SPACING */
+.hero,
+.studio-hero,
+.about-hero {
+    margin-top: 260px;
+}
+
 * {
     margin: 0;
     padding: 0;
