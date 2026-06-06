@@ -105,6 +105,12 @@ html, body {
   filter: drop-shadow(0 0 6px gold);
 object-fit: contain; 
 }
+/* Spacing between header emblems */
+.header-side img,
+.header-center img {
+    margin-left: 25px;
+    margin-right: 25px;
+}
 
 /* NAV */
 nav {
