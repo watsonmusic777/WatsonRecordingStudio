@@ -148,6 +148,15 @@ nav {
     display: block;
     object-fit: cover;
 }
+.hero-content {
+  position: absolute;
+  top: 58%;        /* move text down — adjust 55–62% until perfect */
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+  width: 100%;
+  z-index: 5;
+}
 
 .home-hero-overlay {
     position: absolute;
