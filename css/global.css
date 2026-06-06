@@ -63,27 +63,19 @@ html, body {
     text-decoration: none;
 }
 header {
-     position: fixed;
-    top: 40px;
-    left: 0;
+    position: relative;
     width: 100%;
-    height: 420px; /* NEW BIGGER HEIGHT */
     background: #000;
-    z-index: 9999;
-    margin-bottom: 0;
-    padding-bottom: 0;
+    z-index: 10;
+    height: auto;
 }
 
 .header-row {
-    height: 375px; /* 275 logo + 100px spacing */
-    padding-top: 50px; /* pushes logos DOWN */
-    width: 100%;
+    height: auto;
+    padding: 50px 60px 25px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding-left: 80px;
-    padding-right: 80px;
-    background-color: #000;
 }
 
 .header-side {
