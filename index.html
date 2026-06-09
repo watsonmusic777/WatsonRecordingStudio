@@ -86,6 +86,11 @@
    <section class="music-wrapper">
     <h2 class="section-title">Featured Music</h2>
 
+       <div class="audio-wrapper">
+    <div class="audio-title">Now Playing</div>
+    <audio id="jukebox" controls></audio>
+</div>
+
     <div class="music-grid">
 
         <div class="track-card">
@@ -251,6 +256,5 @@ document.getElementById('lang-choice').addEventListener('change', function() {
     window.location.href = `?lang=${lang}`;
 });
 </script>
-
 </body>
 </html>
