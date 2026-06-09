@@ -231,6 +231,19 @@ nav a {
     background: rgba(0,0,0,0.45);
     z-index: 2;
 }
+.home-hero .home-hero-content p {
+    font-size: 1.6rem !important;
+    line-height: 1.5 !important;
+    margin-bottom: 25px !important;
+    color: var(--text-light) !important;
+}
+
+.home-hero .home-hero-content .btn-primary {
+    margin-top: 25px !important;
+    font-size: 1rem !important;
+    padding: 12px 24px !important;
+    display: inline-block !important;
+}
 
 @media (max-width: 900px) {
     .hero {
