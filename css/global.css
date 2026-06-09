@@ -334,3 +334,31 @@ nav ul li a {
     transition: 0.3s ease;
 }
 
+/* MASTER AUDIO PLAYER */
+.audio-wrapper {
+    width: 100%;
+    max-width: 700px;
+    margin: 40px auto 50px;
+    padding: 25px 30px;
+    background: rgba(0,0,0,0.55);
+    border: 1px solid var(--gold-soft);
+    border-radius: 12px;
+    backdrop-filter: blur(6px);
+    text-align: center;
+    box-shadow: 0 0 12px rgba(245, 215, 110, 0.25);
+}
+
+.audio-title {
+    font-size: 1.4rem;
+    color: var(--gold);
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+    font-weight: bold;
+}
+
+#audio-wrapper audio,
+#jukebox {
+    width: 100%;
+    outline: none;
+    border-radius: 6px;
+}
