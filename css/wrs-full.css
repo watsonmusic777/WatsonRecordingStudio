@@ -182,10 +182,11 @@ nav {
 
 
 .home-hero-content p {
-    font-size: 1.3rem;
-    line-height: 1.6;
-    margin: 0;
+    font-size: 1.6rem;   /* bigger text */
+    line-height: 1.5;    /* cleaner spacing */
+    margin: 0 0 20px 0;  /* space under text */
 }
+
 
 .hero-content h1 {
     display: none; /* remove Watson Recording Studio text */
