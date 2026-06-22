@@ -1,0 +1,42 @@
+@charset "utf-8";
+/* CSS Document */
+/* TERMS PAGE */
+
+.terms-page {
+    background: #000;
+    color: #fff;
+}
+
+.terms-wrapper {
+    max-width: 900px;
+    margin: 60px auto;
+    padding: 0 20px;
+}
+
+.terms-block {
+    margin-bottom: 50px;
+}
+
+.terms-block h2 {
+    color: #d4af37; /* gold */
+    font-size: 1.8rem;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    letter-spacing: 1px;
+}
+
+.terms-block p {
+    font-size: 1.1rem;
+    line-height: 1.7;
+    color: #ddd;
+}
+
+/* Footer spacing — REMOVED to use global footer */
+/*
+.site-footer {
+    margin-top: 60px;
+    text-align: center;
+    padding: 20px 0;
+    color: #888;
+}
+*/

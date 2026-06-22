@@ -1,0 +1,79 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     width="512" height="512"
+     viewBox="0 0 512 512"
+     role="img">
+  <title>Watson Diamond Guitar Logo</title>
+
+  <!-- Background -->
+  <rect x="0" y="0" width="512" height="512" fill="#111111"/>
+
+  <!-- Diamond base -->
+  <polygon
+    fill="#D4AF37"
+    points="
+      256,80
+      120,200
+      160,360
+      352,360
+      392,200
+    "/>
+
+  <!-- Diamond inner facets -->
+  <polygon
+    fill="#F5D76E"
+    points="
+      256,110
+      145,205
+      190,340
+      322,340
+      367,205
+    "/>
+
+  <!-- Diamond center facet -->
+  <polygon
+    fill="#B8891F"
+    points="
+      256,140
+      180,210
+      205,320
+      307,320
+      332,210
+    "/>
+
+  <!-- Guitar neck -->
+  <rect
+    x="244" y="180"
+    width="24" height="190"
+    fill="#F5F5F5"
+    rx="6" ry="6"/>
+
+  <!-- Guitar headstock -->
+  <rect
+    x="238" y="150"
+    width="36" height="40"
+    fill="#F5F5F5"
+    rx="6" ry="6"/>
+
+  <!-- Guitar tuning pegs -->
+  <circle cx="244" cy="160" r="4" fill="#111111"/>
+  <circle cx="268" cy="160" r="4" fill="#111111"/>
+  <circle cx="244" cy="176" r="4" fill="#111111"/>
+  <circle cx="268" cy="176" r="4" fill="#111111"/>
+
+  <!-- Guitar body -->
+  <ellipse
+    cx="256" cy="340"
+    rx="70" ry="60"
+    fill="#F5F5F5"/>
+
+  <!-- Guitar sound hole -->
+  <circle
+    cx="256" cy="340"
+    r="14"
+    fill="#111111"/>
+
+  <!-- Simple strings -->
+  <rect x="250" y="190" width="2" height="135" fill="#C0C0C0"/>
+  <rect x="254" y="190" width="2" height="135" fill="#C0C0C0"/>
+  <rect x="258" y="190" width="2" height="135" fill="#C0C0C0"/>
+</svg>

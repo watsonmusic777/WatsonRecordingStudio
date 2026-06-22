@@ -1,0 +1,117 @@
+@charset "utf-8";
+
+/* STUDIO PAGE */
+.studio-page {
+    padding-top: 0; /* hero handles spacing */
+    color: #e8e8e8;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+/* HERO */
+/* HERO — stable, no cropping */
+.studio-hero {
+    position: relative;
+    width: 100%;
+    margin-top: 0px; /* adjust if needed */
+}
+
+.studio-hero-img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Overlay */
+.studio-hero-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+}
+
+/* Text */
+.studio-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    z-index: 2;
+}
+
+.studio-hero-content h1 {
+    font-size: 3.4rem;
+    color: var(--amber);
+    margin-bottom: 12px;
+}
+
+.studio-hero-content p {
+    font-size: 1.3rem;
+    color: #e8e8e8;
+}
+
+
+/* SECTIONS */
+.studio-section {
+    width: 80%;
+    max-width: 1100px;
+    margin: 80px auto;
+    text-align: center;
+    padding: 30px 20px;
+}
+
+.studio-section h2 {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--gold);
+    margin-bottom: 30px;
+    position: relative;
+    display: inline-block;
+    padding-bottom: 8px;
+}
+
+.studio-section h2::after {
+    content: "";
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: -6px;
+    width: 60px;
+    height: 3px;
+    background: var(--gold);
+    border-radius: 2px;
+}
+
+.studio-section p {
+    max-width: 850px;
+    margin: 0 auto 25px auto;
+    color: #dcdcdc;
+    font-size: 1.15rem;
+    line-height: 1.7;
+}
+
+/* GEAR LIST */
+.gear-list {
+    list-style: none;
+    padding: 0;
+    margin: 30px auto;
+    max-width: 900px;
+}
+
+.gear-list li {
+    background: rgba(255, 215, 0, 0.05);
+    border-left: 3px solid var(--gold);
+    padding: 14px 20px;
+    margin-bottom: 14px;
+    border-radius: 6px;
+    font-size: 1.15rem;
+    color: #f0f0f0;
+    line-height: 1.6;
+    backdrop-filter: blur(2px);
+    transition: 0.2s ease;
+}
+
+.gear-list li:hover {
+    background: rgba(255, 215, 0, 0.12);
+    transform: translateX(4px);
+}

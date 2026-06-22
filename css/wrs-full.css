@@ -1,0 +1,1501 @@
+<<<<<<< Updated upstream
+@charset "utf-8";
+
+/* ============================================================
+   WATSON RECORDING STUDIO — GLOBAL OVERRIDES (FINAL BUILD)
+   Applies to ALL pages
+   ============================================================ */
+
+/* ========================= */
+/*        SITE HEADER        */
+/* ========================= */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Utility bar stays the same */
+.utility-bar {
+    background: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 20px;
+}
+
+/* Main header area */
+header {
+    height: 300px;                 /* full header height */
+    position: relative;
+    z-index: 1;
+}
+
+/* Row that holds LEFT – CENTER – RIGHT emblems */
+.header-row {
+    display: flex;
+    justify-content: space-between;  /* keeps left / center / right spaced */
+    align-items: center;
+    height: 100%;
+    padding: 50px 60px 0;            /* top + side spacing */
+    padding-bottom: 25px !important;
+}
+
+/* LEFT + RIGHT EMBLEMS */
+.header-side img {
+    width: 220px;                    /* perfect size you liked */
+    height: auto;
+    display: block;
+    margin-top: 20px;                /* keeps them low */
+}
+
+/* CENTER LOGO */
+.header-center img {
+    width: 260px;                    /* perfect size you liked */
+    height: auto;
+    display: block;
+    margin-top: 30px;                /* keeps it sitting lower */
+}
+
+
+/* NAVBAR */
+nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+    position: relative;
+    z-index: 9999;
+    margin-top: 0 !important;
+}
+
+
+
+
+
+/* ========================= */
+/*          NAVBAR           */
+/* ========================= */
+
+/* NAV WRAPPER */
+/* NAV LINKS */
+.nav-center .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+.nav-center .nav-links a {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+/* HOVER + ACTIVE */
+.nav-center .nav-links a:hover,
+.nav-center .nav-links .active {
+    color: var(--gold);
+}
+
+/* OPTIONAL: underline hover */
+.nav-center .nav-links a {
+    position: relative;
+}
+
+.nav-center .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.nav-center .nav-links a:hover::after,
+.nav-center .nav-links .active::after {
+    width: 100%;
+}
+
+
+/* ========================= */
+/*         HERO AREA         */
+/* ========================= */
+
+.home-hero {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.home-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.home-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+}
+
+.home-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    max-width: 700px;
+    padding: 20px;
+}
+
+
+.hero-section .btn,
+.hero-section .btn-primary {
+    margin-top: 10px;
+}
+
+.home-hero-content .btn-primary {
+    margin-top: 25px;
+}
+
+
+
+
+.home-hero-content p {
+    font-size: 1.6rem;   /* bigger text */
+    line-height: 1.5;    /* cleaner spacing */
+    margin: 0 0 20px 0;  /* space under text */
+}
+
+
+.hero-content h1 {
+    display: none; /* remove Watson Recording Studio text */
+}
+.hero.about-hero::before,
+.hero.about-hero::after {
+    content: none !important;
+    background: none !important;
+}
+.hero.about-hero::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0)
+    );
+    z-index: 1;
+}
+.hero.about-hero::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* ← fade height (pickup height) */
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0)
+    );
+    z-index: 1;
+}
+
+.hero.about-hero::after {
+    content: none !important;
+    background: none !important;
+}
+
+/* ========================= */
+/*     RESPONSIVE NAV        */
+/* ========================= */
+
+@media (max-width: 900px) {
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 32px;
+    }
+}
+    nav ul li a {
+        color: #d4af37;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+
+/* ========================= */
+/*   HOMEPAGE CINEMATIC      */
+/*   (Your existing content) */
+/* ========================= */
+
+/* KEEP all your cinematic sections, music grid, experience, etc. */
+/* They stay exactly as they are in your current wrs-full.css */
+
+/* ========================= */
+/*       MAIN CONTENT        */
+/* ========================= */
+
+.main-content {
+    width: 90%;
+    margin: 0 auto 80px;
+    padding-top: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================= */
+/*       AUDIO PLAYER        */
+/* ========================= */
+
+.master-player {
+    width: 100%;
+    margin: 40px auto 60px;
+    text-align: center;
+}
+
+.master-player audio {
+    width: 100%;
+    max-width: 700px;
+    outline: none;
+    border-radius: 6px;
+    background: #111;
+}
+
+/* ========================= */
+/*       MUSIC GRID          */
+/* ========================= */
+
+
+.wr-player-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.wr-now-playing {
+  background: rgba(0,0,0,0.7);
+  border: 1px solid var(--gold-soft);
+  border-radius: 10px;
+  padding: 10px 18px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#wr-now-text {
+  color: var(--gold);
+  font-size: 1.05rem;
+  display: inline-block;
+  animation: wr-marquee 14s linear infinite;
+}
+
+@keyframes wr-marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.wr-player-frame {
+  background: radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 55%),
+              rgba(0,0,0,0.75);
+  border: 1px solid var(--gold-soft);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 0 26px rgba(245, 215, 110, 0.35);
+}
+
+/* PLAYLIST */
+.wr-playlist-container {
+  max-height: 320px;
+  overflow-y: auto;
+  margin-bottom: 18px;
+  padding-right: 8px;
+}
+
+.wr-playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 768px) {
+  .wr-playlist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wr-track-card {
+  background: rgba(0,0,0,0.6);
+  border: 1px solid var(--gold-soft);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.wr-track-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 14px rgba(245, 215, 110, 0.4);
+}
+
+.wr-track-card.active {
+  background: linear-gradient(135deg, #d4af37, #f7d774);
+  color: #000;
+  box-shadow: 0 0 20px rgba(247, 215, 116, 0.6);
+}
+
+.wr-track-title {
+  font-size: 0.95rem;
+}
+
+.wr-buy-btn {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid var(--gold-soft);
+  color: var(--gold);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.wr-track-card.active .wr-buy-btn {
+  border-color: #000;
+  color: #000;
+}
+
+.wr-buy-btn:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+/* PLAYER BAR */
+.wr-player-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 10px;
+  border: 1px solid var(--gold-soft);
+}
+
+.wr-player-bar button {
+  background: linear-gradient(135deg, #d4af37, #f7d774);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(245, 215, 110, 0.4);
+  transition: 0.25s ease;
+}
+
+.wr-player-bar button:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #f7d774, #d4af37);
+}
+
+.wr-progress-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wr-progress-bg {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.wr-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #f7d774, #d4af37);
+  transition: width 0.1s linear;
+}
+
+.wr-time {
+  font-size: 0.75rem;
+  color: var(--gold-soft);
+}
+
+.wr-volume-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 120px;
+}
+
+.wr-vol-icon {
+  color: var(--gold);
+  font-size: 0.9rem;
+}
+
+#wr-volume {
+  width: 90px;
+}
+
+/* BUY POPUP */
+.wr-buy-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.wr-buy-modal {
+  background: rgba(0,0,0,0.9);
+  border: 1px solid var(--gold-soft);
+  border-radius: 12px;
+  padding: 18px 20px;
+  max-width: 320px;
+  width: 90%;
+  box-shadow: 0 0 24px rgba(245, 215, 110, 0.5);
+  text-align: center;
+}
+
+.wr-buy-modal h3 {
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+#wr-buy-track-label {
+  font-size: 0.85rem;
+  color: var(--gold-soft);
+  margin-bottom: 12px;
+}
+
+.wr-buy-option {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--gold-soft);
+  background: transparent;
+  color: var(--gold);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.25s ease;
+}
+
+.wr-buy-option:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+.wr-buy-option.wr-donate {
+  border-width: 2px;
+}
+
+.wr-buy-close {
+  margin-top: 4px;
+  background: rgba(255,255,255,0.08);
+  color: var(--gold-soft);
+}
+
+/* Scrollbar (optional) */
+.wr-playlist-container::-webkit-scrollbar {
+  width: 6px;
+}
+.wr-playlist-container::-webkit-scrollbar-thumb {
+  background: var(--gold-soft);
+  border-radius: 999px;
+}
+
+
+
+
+/* ========================= */
+/*     WATSON EXPERIENCE     */
+/* ========================= */
+
+.wrs-experience {
+    text-align: center;
+    margin: 80px 0;
+    padding: 40px 20px;
+    background: #111;
+    border-radius: 12px;
+    border: 1px solid #222;
+}
+
+.wrs-experience h2 {
+    color: var(--gold);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* ========================= */
+/*       WHAT WE DO          */
+/* ========================= */
+
+.what-we-do {
+    margin: 80px 0;
+}
+
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #141414;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+}
+
+.service-card h3 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+/* ========================= */
+/*    CINEMATIC SECTIONS     */
+/* ========================= */
+
+.cinematic-section {
+    text-align: center;
+    padding: 80px 20px;
+    margin: 60px 0;
+    background: #0f0f0f;
+    border-radius: 12px;
+    border: 1px solid #222;
+}
+
+.cinematic-section h2 {
+    color: var(--gold);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.cinematic-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.85;
+}
+
+/* GLOBAL BUTTONS */
+/* GLOBAL BUTTONS — GOLD BRAND */
+.btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: linear-gradient(135deg, #d4af37, #f7d774);
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.25s ease;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.35);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #f7d774, #d4af37);
+    box-shadow: 0 0 20px rgba(247, 215, 116, 0.55);
+    transform: translateY(-2px);
+}
+
+/* HERO BUTTON OVERRIDE */
+.btn-primary {
+    background: linear-gradient(135deg, #d4af37, #f7d774);
+    color: #000;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 6px;
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.45);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #f7d774, #d4af37);
+    box-shadow: 0 0 28px rgba(247, 215, 116, 0.65);
+    transform: translateY(-2px);
+}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+    /* HERO SPACING */
+    .home-hero {
+        margin-top: 150px !important;
+    }
+}
+    .hero-content {
+        top: 65% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    /* NAV MOBILE STYLE (KEEP THIS PART) */
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    nav ul li a {
+        color: #d4af37;
+        font-size: 18px;
+        font-weight: 500;
+    }
+.service-card img {
+  width: 100%;
+  height: 250px;   /* adjust this number to make the card shorter or taller */
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+=======
+@charset "utf-8";
+
+/* ============================================================
+   WATSON RECORDING STUDIO — GLOBAL OVERRIDES (FINAL BUILD)
+   Applies to ALL pages
+   ============================================================ */
+
+/* ========================= */
+/*        SITE HEADER        */
+/* ========================= */
+
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #000;
+    z-index: 1000;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Utility bar stays the same */
+.utility-bar {
+    background: #111;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 6px 20px;
+}
+
+/* Main header area */
+/* =============================== */
+/*   NEW HEADER SYSTEM — CLEAN     */
+/* =============================== */
+
+
+/* ========================================= */
+/*   FIX HEADER BALANCE — SPREAD EMBLEMS     */
+/* ========================================= */
+
+.header-row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 75px !important; /* increased from 25px */
+    padding: 60px 60px 30px !important;
+}
+
+
+/* Unified emblem sizing */
+.header-design,
+.main-logo {
+    height: 150px !important;
+    width: auto !important;
+    object-fit: contain;
+    margin: 0 !important;
+    padding: 0 !important;
+    filter: drop-shadow(0 0 6px gold);
+}
+
+/* NAV stays tight under header */
+nav.main-nav {
+    margin-top: 0 !important;
+    padding-top: 6px;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+
+
+/* NAVBAR */
+nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+    position: relative;
+    z-index: 9999;
+    margin-top: 0 !important;
+}
+
+
+
+
+
+/* ========================= */
+/*          NAVBAR           */
+/* ========================= */
+
+/* NAV WRAPPER */
+/* NAV LINKS */
+.nav-center .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 28px;
+}
+
+.nav-center .nav-links a {
+    color: #e6e6e6;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+/* HOVER + ACTIVE */
+.nav-center .nav-links a:hover,
+.nav-center .nav-links .active {
+    color: var(--gold);
+}
+
+/* OPTIONAL: underline hover */
+.nav-center .nav-links a {
+    position: relative;
+}
+
+.nav-center .nav-links a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: var(--gold);
+    transition: width 0.3s ease;
+}
+
+.nav-center .nav-links a:hover::after,
+.nav-center .nav-links .active::after {
+    width: 100%;
+}
+
+
+/* ========================= */
+/*         HERO AREA         */
+/* ========================= */
+
+.home-hero {
+    position: relative;
+    width: 100%;
+    min-height: 500px;
+    overflow: hidden;
+}
+
+.home-hero-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.home-hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.45);
+}
+
+.home-hero-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    text-align: center;
+    max-width: 700px;
+    padding: 20px;
+}
+
+
+.hero-section .btn,
+.hero-section .btn-primary {
+    margin-top: 10px;
+}
+
+.home-hero-content .btn-primary {
+    margin-top: 25px;
+}
+
+
+
+
+.home-hero-content p {
+    font-size: 1.6rem;   /* bigger text */
+    line-height: 1.5;    /* cleaner spacing */
+    margin: 0 0 20px 0;  /* space under text */
+}
+
+
+.hero-content h1 {
+    display: none; /* remove Watson Recording Studio text */
+}
+.hero.about-hero::before,
+.hero.about-hero::after {
+    content: none !important;
+    background: none !important;
+}
+.hero.about-hero::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 55%;
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0)
+    );
+    z-index: 1;
+}
+.hero.about-hero::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 40%; /* ← fade height (pickup height) */
+    background: linear-gradient(
+        to top,
+        rgba(0,0,0,0.55),
+        rgba(0,0,0,0.15),
+        rgba(0,0,0,0)
+    );
+    z-index: 1;
+}
+
+.hero.about-hero::after {
+    content: none !important;
+    background: none !important;
+}
+
+/* ========================= */
+/*     RESPONSIVE NAV        */
+/* ========================= */
+
+@media (max-width: 900px) {
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 32px;
+    }
+}
+    nav ul li a {
+        color: #d4af37;
+        font-size: 18px;
+        font-weight: 500;
+    }
+
+
+/* ========================= */
+/*   HOMEPAGE CINEMATIC      */
+/*   (Your existing content) */
+/* ========================= */
+
+/* KEEP all your cinematic sections, music grid, experience, etc. */
+/* They stay exactly as they are in your current wrs-full.css */
+
+/* ========================= */
+/*       MAIN CONTENT        */
+/* ========================= */
+
+.main-content {
+    width: 90%;
+    margin: 0 auto 80px;
+    padding-top: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+/* ========================= */
+/*       AUDIO PLAYER        */
+/* ========================= */
+
+.master-player {
+    width: 100%;
+    margin: 40px auto 60px;
+    text-align: center;
+}
+
+.master-player audio {
+    width: 100%;
+    max-width: 700px;
+    outline: none;
+    border-radius: 6px;
+    background: #111;
+}
+
+/* ========================= */
+/*       MUSIC GRID          */
+/* ========================= */
+
+
+.wr-player-section {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 20px;
+}
+
+.wr-now-playing {
+  background: rgba(0,0,0,0.7);
+  border: 1px solid var(--gold-soft);
+  border-radius: 10px;
+  padding: 10px 18px;
+  margin-bottom: 16px;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+#wr-now-text {
+  color: var(--gold);
+  font-size: 1.05rem;
+  display: inline-block;
+  animation: wr-marquee 14s linear infinite;
+}
+
+@keyframes wr-marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.wr-player-frame {
+  background: radial-gradient(circle at top, rgba(255,255,255,0.06), transparent 55%),
+              rgba(0,0,0,0.75);
+  border: 1px solid var(--gold-soft);
+  border-radius: 14px;
+  padding: 18px;
+  box-shadow: 0 0 26px rgba(245, 215, 110, 0.35);
+}
+
+/* PLAYLIST */
+.wr-playlist-container {
+  max-height: 320px;
+  overflow-y: auto;
+  margin-bottom: 18px;
+  padding-right: 8px;
+}
+
+.wr-playlist-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+
+@media (max-width: 768px) {
+  .wr-playlist-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.wr-track-card {
+  background: rgba(0,0,0,0.6);
+  border: 1px solid var(--gold-soft);
+  border-radius: 10px;
+  padding: 10px 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.wr-track-card:hover {
+  border-color: var(--gold);
+  box-shadow: 0 0 14px rgba(245, 215, 110, 0.4);
+}
+
+.wr-track-card.active {
+  background: linear-gradient(135deg, #d4af37, #f7d774);
+  color: #000;
+  box-shadow: 0 0 20px rgba(247, 215, 116, 0.6);
+}
+
+.wr-track-title {
+  font-size: 0.95rem;
+}
+
+.wr-buy-btn {
+  align-self: flex-start;
+  background: transparent;
+  border: 1px solid var(--gold-soft);
+  color: var(--gold);
+  padding: 4px 10px;
+  border-radius: 999px;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: 0.25s ease;
+}
+
+.wr-track-card.active .wr-buy-btn {
+  border-color: #000;
+  color: #000;
+}
+
+.wr-buy-btn:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+/* PLAYER BAR */
+.wr-player-bar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 14px;
+  background: rgba(0,0,0,0.7);
+  border-radius: 10px;
+  border: 1px solid var(--gold-soft);
+}
+
+.wr-player-bar button {
+  background: linear-gradient(135deg, #d4af37, #f7d774);
+  border: none;
+  padding: 8px 12px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1rem;
+  box-shadow: 0 0 10px rgba(245, 215, 110, 0.4);
+  transition: 0.25s ease;
+}
+
+.wr-player-bar button:hover {
+  transform: translateY(-1px);
+  background: linear-gradient(135deg, #f7d774, #d4af37);
+}
+
+.wr-progress-wrap {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.wr-progress-bg {
+  width: 100%;
+  height: 6px;
+  background: rgba(255,255,255,0.12);
+  border-radius: 999px;
+  overflow: hidden;
+}
+
+.wr-progress-fill {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, #f7d774, #d4af37);
+  transition: width 0.1s linear;
+}
+
+.wr-time {
+  font-size: 0.75rem;
+  color: var(--gold-soft);
+}
+
+.wr-volume-wrap {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  min-width: 120px;
+}
+
+.wr-vol-icon {
+  color: var(--gold);
+  font-size: 0.9rem;
+}
+
+#wr-volume {
+  width: 90px;
+}
+
+/* BUY POPUP */
+.wr-buy-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.7);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+}
+
+.wr-buy-modal {
+  background: rgba(0,0,0,0.9);
+  border: 1px solid var(--gold-soft);
+  border-radius: 12px;
+  padding: 18px 20px;
+  max-width: 320px;
+  width: 90%;
+  box-shadow: 0 0 24px rgba(245, 215, 110, 0.5);
+  text-align: center;
+}
+
+.wr-buy-modal h3 {
+  color: var(--gold);
+  margin-bottom: 6px;
+}
+
+#wr-buy-track-label {
+  font-size: 0.85rem;
+  color: var(--gold-soft);
+  margin-bottom: 12px;
+}
+
+.wr-buy-option {
+  width: 100%;
+  margin-bottom: 8px;
+  padding: 8px 10px;
+  border-radius: 999px;
+  border: 1px solid var(--gold-soft);
+  background: transparent;
+  color: var(--gold);
+  cursor: pointer;
+  font-size: 0.85rem;
+  transition: 0.25s ease;
+}
+
+.wr-buy-option:hover {
+  background: var(--gold);
+  color: #000;
+}
+
+.wr-buy-option.wr-donate {
+  border-width: 2px;
+}
+
+.wr-buy-close {
+  margin-top: 4px;
+  background: rgba(255,255,255,0.08);
+  color: var(--gold-soft);
+}
+
+/* Scrollbar (optional) */
+.wr-playlist-container::-webkit-scrollbar {
+  width: 6px;
+}
+.wr-playlist-container::-webkit-scrollbar-thumb {
+  background: var(--gold-soft);
+  border-radius: 999px;
+}
+
+
+
+
+/* ========================= */
+/*     WATSON EXPERIENCE     */
+/* ========================= */
+
+.wrs-experience {
+    text-align: center;
+    margin: 80px 0;
+    padding: 40px 20px;
+    background: #111;
+    border-radius: 12px;
+    border: 1px solid #222;
+}
+
+.wrs-experience h2 {
+    color: var(--gold);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+/* ========================= */
+/*       WHAT WE DO          */
+/* ========================= */
+
+.what-we-do {
+    margin: 80px 0;
+}
+
+
+.service-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: #141414;
+    padding: 25px;
+    border-radius: 12px;
+    border: 1px solid #2a2a2a;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--gold);
+}
+
+.service-card h3 {
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+/* ========================= */
+/*    CINEMATIC SECTIONS     */
+/* ========================= */
+
+.cinematic-section {
+    text-align: center;
+    padding: 80px 20px;
+    margin: 60px 0;
+    background: #0f0f0f;
+    border-radius: 12px;
+    border: 1px solid #222;
+}
+
+.cinematic-section h2 {
+    color: var(--gold);
+    font-size: 2rem;
+    margin-bottom: 15px;
+}
+
+.cinematic-section p {
+    max-width: 800px;
+    margin: 0 auto;
+    opacity: 0.85;
+}
+
+/* GLOBAL BUTTONS */
+/* GLOBAL BUTTONS — GOLD BRAND */
+.btn {
+    display: inline-block;
+    padding: 12px 26px;
+    background: linear-gradient(135deg, #d4af37, #f7d774);
+    color: #000;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+    transition: 0.25s ease;
+    box-shadow: 0 0 12px rgba(212, 175, 55, 0.35);
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #f7d774, #d4af37);
+    box-shadow: 0 0 20px rgba(247, 215, 116, 0.55);
+    transform: translateY(-2px);
+}
+
+/* HERO BUTTON OVERRIDE */
+.btn-primary {
+    background: linear-gradient(135deg, #d4af37, #f7d774);
+    color: #000;
+    font-weight: 600;
+    padding: 14px 32px;
+    border-radius: 6px;
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.45);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #f7d774, #d4af37);
+    box-shadow: 0 0 28px rgba(247, 215, 116, 0.65);
+    transform: translateY(-2px);
+}
+/* RESPONSIVE */
+@media (max-width: 900px) {
+
+    /* HERO SPACING */
+    .home-hero {
+        margin-top: 150px !important;
+    }
+}
+    .hero-content {
+        top: 65% !important;
+        transform: translate(-50%, -50%) !important;
+    }
+
+    /* NAV MOBILE STYLE (KEEP THIS PART) */
+    nav ul {
+        list-style: none;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    nav ul li a {
+        color: #d4af37;
+        font-size: 18px;
+        font-weight: 500;
+    }
+.service-card img {
+  width: 100%;
+  height: 250px;   /* adjust this number to make the card shorter or taller */
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+/* =============================== */
+/*   NEW HEADER SYSTEM — OVERRIDE  */
+/* =============================== */
+
+header.site-header {
+    height: auto !important;
+}
+
+.header-row {
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    gap: 25px !important;
+    padding: 60px 60px 30px !important;
+}
+
+/* MATCH HEADER SIZE ACROSS ALL PAGES */
+.header-design,
+.main-logo,
+.header-side img,
+.header-center img {
+    height: 225px !important;
+    width: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    object-fit: contain;
+    filter: drop-shadow(0 0 6px gold);
+}
+
+nav.main-nav {
+    margin-top: 0 !important;
+}
+
+/* FORCE WHAT WE DO INTO 3-COLUMN GRID */
+.what-we-do {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 40px !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.what-we-do .card {
+    background: rgba(0,0,0,0.35);
+    border: 1px solid rgba(255, 215, 0, 0.25);
+    padding: 20px;
+    text-align: center;
+    border-radius: 10px;
+}
+
+/* IMAGE SIZE (your 250×400 images) */
+.what-we-do img {
+    width: 250px !important;
+    height: 400px !important;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 15px;
+}
+/* FORCE 3-COLUMN LAYOUT FOR WHAT WE DO */
+.services-grid {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    gap: 40px !important;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* SERVICE CARDS */
+.service-card {
+    display: block;
+    text-align: center;
+}
+
+/* IMAGE SIZE (your 250×400 PNGs) */
+.service-card img {
+    width: 250px !important;
+    height: 400px !important;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto;
+}
+
+/* ========================================= */
+/*   FORCE EMBLEM SPACING — FINAL OVERRIDE   */
+/* ========================================= */
+
+.header-row {
+    gap: 80px !important; /* spread them wider */
+    padding-left: 80px !important;
+    padding-right: 80px !important;
+}
+
+/* Add breathing room around the side emblems */
+.header-design {
+    margin-right: 40px !important;
+}
+
+.header-side img {
+    margin-left: 40px !important;
+}
+>>>>>>> Stashed changes

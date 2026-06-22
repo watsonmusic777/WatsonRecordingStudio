@@ -1,0 +1,106 @@
+/* ————————————————————————————————
+   ABOUT PAGE — WATSON RECORDING STUDIO
+   Clean, hybrid cinematic + warm style
+   No hero section anywhere
+———————————————————————————————— */
+
+/* Reset page spacing */
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #0e0e0e;
+    color: #f2f2f2;
+    font-family: "Inter", sans-serif;
+}
+
+/* Remove ANY hero spacing that global.css might add */
+
+
+/* Top container (title + intro) */
+.about-top-container {
+    padding: 80px 20px 40px;
+    text-align: center;
+}
+
+.about-top-container h1 {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    color: #f7d27c; /* warm gold */
+}
+
+.about-intro {
+    font-size: 1.2rem;
+    max-width: 700px;
+    margin: 0 auto;
+    opacity: 0.85;
+    line-height: 1.6;
+}
+
+.about-divider {
+    width: 120px;
+    height: 2px;
+    background: linear-gradient(to right, #f7d27c, #c59b4a);
+    margin: 30px auto 0;
+    border-radius: 2px;
+}
+
+/* Main content layout */
+.about-section {
+    padding: 40px 20px 80px;
+}
+
+.about-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: flex-start;
+}
+
+/* Text column */
+.about-text {
+    flex: 1 1 550px;
+}
+
+.about-text h2 {
+    font-size: 1.8rem;
+    margin-top: 30px;
+    color: #f7d27c;
+}
+
+.about-text p {
+    line-height: 1.7;
+    opacity: 0.9;
+    margin-top: 10px;
+}
+
+.about-list {
+    margin-top: 15px;
+    padding-left: 20px;
+}
+
+.about-list li {
+    margin-bottom: 8px;
+    opacity: 0.9;
+}
+
+/* Portrait column */
+.about-image {
+    flex: 1 1 350px;
+    text-align: center;
+}
+
+.about-image img {
+    width: 100%;
+    max-width: 380px;
+    border-radius: 12px;
+    box-shadow: 0 0 25px rgba(247, 210, 124, 0.25);
+    filter: contrast(1.1) brightness(1.05) saturate(1.1);
+}
+
+/* Footer spacing fix */
+.footer {
+    margin-top: 40px;
+}
