@@ -250,6 +250,116 @@ nav {
     color: #777;
     font-size: 0.9rem;
 }
+/* PAGE HEADER (Hero) */
+.hero-terms {
+    background: url("images/licensing-header.jpg") center/cover no-repeat;
+    padding: 120px 20px;
+    text-align: center;
+    color: #fff;
+}
+
+.page-header-inner h1 {
+    font-size: 3.2rem;
+    color: #f5d37d;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.4);
+}
+
+.page-header-inner p {
+    font-size: 1.2rem;
+    color: #ddd;
+    margin-top: 10px;
+}
+
+/* SECTION TITLES */
+.section h2 {
+    color: #f5d37d;
+    font-size: 2rem;
+    margin-bottom: 15px;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+/* SECTION TEXT */
+.section p {
+    color: #ccc;
+    line-height: 1.7;
+    max-width: 900px;
+    margin: 0 auto 20px auto;
+}
+
+/* GRID LAYOUT */
+.grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 25px;
+    margin-top: 30px;
+}
+
+/* CARD STYLE */
+.card {
+    background: #0a0a0a;
+    border: 1px solid #b8860b;
+    border-radius: 12px;
+    padding: 25px;
+    width: 280px;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.15);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 0 35px rgba(255, 215, 0, 0.35);
+}
+
+.card h3 {
+    color: #f5d37d;
+    margin-bottom: 10px;
+}
+
+.card p,
+.card ul li {
+    color: #ddd;
+    line-height: 1.6;
+}
+
+/* FEATURE LIST */
+.feature-list {
+    list-style: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.feature-list li {
+    margin: 6px 0;
+}
+
+/* GOLD BUTTONS */
+.btn-primary,
+.btn-secondary {
+    display: inline-block;
+    padding: 12px 20px;
+    margin-top: 15px;
+    border-radius: 8px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.btn-primary {
+    background: linear-gradient(90deg, #b8860b, #ffd700);
+    color: #000;
+}
+
+.btn-secondary {
+    background: #222;
+    border: 1px solid #b8860b;
+    color: #f5d37d;
+}
+
+.btn-primary:hover,
+.btn-secondary:hover {
+    opacity: 0.8;
+}
 
 /* --------------------------------------------------
    RESPONSIVE
