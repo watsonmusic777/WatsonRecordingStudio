@@ -28,7 +28,7 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
     // SMTP settings (Zoho)
     var client = new SmtpClient("smtp.zoho.com", 587)
     {
-        Credentials = new NetworkCredential("booking@watsonrecordingstudio.com", "YOUR_EMAIL_PASSWORD"),
+        Credentials = new NetworkCredential("booking@watsonrecordingstudio.com", "Jolly$7890"),
         EnableSsl = true
     };
 
