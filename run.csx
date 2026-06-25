@@ -18,7 +18,7 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
     string message = data["message"];
 
     // Build email body
-    string body = 
+    string body =
         $"New Contact Form Submission:\n\n" +
         $"Name: {name}\n" +
         $"Email: {email}\n" +
@@ -44,4 +44,6 @@ public static async Task<object> Run(HttpRequestMessage req, TraceWriter log)
 
     // Return success
     return req.CreateResponse(HttpStatusCode.OK, "Message sent successfully.");
+}
+eResponse(HttpStatusCode.OK, "Message sent successfully.");
 }
