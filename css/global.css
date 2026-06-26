@@ -400,3 +400,10 @@ nav {
     margin-top: 0 !important;
     padding-top: 0 !important;
 }
+.home-hero-img {
+    height: auto !important;
+    max-height: none !important;
+}
+.hero {
+    height: auto !important;
+}
