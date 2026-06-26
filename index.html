@@ -649,6 +649,53 @@
     </section>
 
 </main>
+<!-- SYNC POPUP -->
+<div id="syncPopup" class="sync-popup">
+  <div class="sync-popup-content">
+    <h2>Access Sync Licensing</h2>
+
+    <input type="text" id="syncName" placeholder="Your Name">
+    <input type="email" id="syncEmail" placeholder="Your Email">
+
+    <label class="sync-check">
+      <input type="checkbox" id="syncAgree">
+      I agree to the terms
+    </label>
+
+    <button onclick="submitSyncForm()" class="sync-submit">Continue</button>
+    <button onclick="closeSyncPopup()" class="sync-cancel">Cancel</button>
+  </div>
+</div>
+<script>
+function openSyncPopup() {
+    document.getElementById("syncPopup").style.display = "flex";
+}
+
+function closeSyncPopup() {
+    document.getElementById("syncPopup").style.display = "none";
+}
+
+async function submitSyncForm() {
+    const name = document.getElementById("syncName").value;
+    const email = document.getElementById("syncEmail").value;
+    const agree = document.getElementById("syncAgree").checked;
+
+    if (!name || !email || !agree) {
+        alert("Please fill out all fields and agree to the terms.");
+        return;
+    }
+
+    // Send to Azure API
+    await fetch("https://wrs-home.azurewebsites.net/api/submit", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ name, email })
+    });
+
+    // Redirect to sync page
+    window.location.href = `sync.html?email=${encodeURIComponent(email)}`;
+}
+</script>
 
 
 <!-- FOOTER -->
