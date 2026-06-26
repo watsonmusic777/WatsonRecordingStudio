@@ -184,6 +184,16 @@ nav {
     height: 100%;
     object-fit: cover;
 }
+/* FINAL FIX — override global hero rules */
+.home-hero {
+    height: auto !important;
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
+
+.home-hero-img {
+    height: auto !important;
+}
 
 .hero-overlay {
     position: absolute;
