@@ -140,7 +140,9 @@ nav {
     width: 100%;
     min-height: 500px;
     overflow: hidden;
+    margin-top: 0 !important;
 }
+
 
 .home-hero-img {
     width: 100%;
@@ -662,15 +664,16 @@ nav {
 /* RESPONSIVE */
 @media (max-width: 900px) {
 
-    /* HERO SPACING */
-    .home-hero {
-        margin-top: 150px !important;
-    }
+    //* HERO SPACING — FIXED */
+.home-hero {
+    margin-top: 0 !important;
 }
-    .hero-content {
-        top: 65% !important;
-        transform: translate(-50%, -50%) !important;
-    }
+
+/* CENTER HERO TEXT PROPERLY */
+.home-hero-content {
+    top: 50% !important;
+    transform: translate(-50%, -50%) !important;
+}
 
     /* NAV MOBILE STYLE (KEEP THIS PART) */
     nav ul {
