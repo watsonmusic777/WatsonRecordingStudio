@@ -1498,4 +1498,60 @@ nav.main-nav {
 .header-side img {
     margin-left: 40px !important;
 }
->>>>>>> Stashed changes
+.email-popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+.email-popup-content {
+    background: #111;
+    padding: 25px;
+    border-radius: 10px;
+    width: 320px;
+    text-align: center;
+    border: 1px solid gold;
+}
+
+.email-popup-content h2 {
+    color: gold;
+    margin-bottom: 15px;
+}
+
+.email-popup-content input {
+    width: 100%;
+    padding: 10px;
+    margin: 8px 0;
+    border-radius: 5px;
+    border: 1px solid #444;
+    background: #222;
+    color: white;
+}
+
+.email-submit-btn {
+    width: 100%;
+    padding: 10px;
+    background: gold;
+    color: black;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.email-popup-close {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    color: gold;
+    font-size: 22px;
+    cursor: pointer;
+}
+
