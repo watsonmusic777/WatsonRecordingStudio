@@ -393,3 +393,10 @@ nav {
     }
 }
 
+/* OVERRIDE GLOBAL HERO HEIGHT FOR HOME PAGE */
+.home-hero {
+    height: auto !important;
+    min-height: 600px !important; /* or whatever height you want */
+    margin-top: 0 !important;
+    padding-top: 0 !important;
+}
