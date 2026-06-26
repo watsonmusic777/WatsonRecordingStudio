@@ -7,7 +7,15 @@
 <link rel="stylesheet" href="css/sync.css">
 </head>
 
-<body>
+<body class="sync-page">
+
+	<script>
+const params = new URLSearchParams(window.location.search);
+if (!params.get("email")) {
+    window.location.href = "index.html";
+}
+</script>
+
 	<!-- HEADER -->
 <header class="site-header">
 
@@ -53,6 +61,7 @@
 			<li><a href="index.html">Home</a></li>
             <li><a href="about.html">About</a></li>
             <li><a href="music.html">Music</a></li>
+			<li><a href="#" onclick="openSyncPopup()">Sync Licensing</a></li>
             <li><a href="digitalmusic.html">Digital Music</a></li>
             <li><a href="studio.html">Studio</a></li>
 			<li><a href="services.html">Services</a></li>
@@ -128,6 +137,7 @@
             <a href="index.html">Home</a>
             <a href="about.html">About</a>
             <a href="music.html">Music</a>
+			<a href="#" onclick="openSyncPopup()">Sync Licensing</a>
             <a href="digitalmusic.html">Digital Music</a>
             <a href="studio.html">Studio</a>
 			<a href="services.html">Services</a>
