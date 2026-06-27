@@ -53,20 +53,7 @@
     padding: 0 !important;
     filter: drop-shadow(0 0 6px gold);
 }
-/* ---------- Emblem Sizing (Global) ---------- */
 
-.emblem,
-.header-design,
-.main-logo,
-.emblem-img {
-  height: 210px;          /* sweet spot between 200–220 */
-  width: auto;            /* keeps proportions perfect */
-  object-fit: contain;    /* no stretching */
-  display: block;
-  filter: drop-shadow(0 0 6px var(--gold-main));
-  margin: 0;
-  padding: 0;
-}
 
 /* NAV under header */
 nav.main-nav {
