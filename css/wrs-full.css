@@ -358,6 +358,58 @@ nav ul li a {
     justify-content: center;
     margin: 0 auto;
 }
+/* CINEMATIC STYLE FOR WHAT WE DO SECTION */
+.wrs-what-we-do.cinematic-card {
+    background: linear-gradient(145deg, #0b0b0b, #111);
+    border-radius: 18px;
+    padding: 60px 40px;
+    max-width: 1000px;
+    margin: 100px auto 60px auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 0 60px rgba(0,0,0,0.6),
+        0 0 120px rgba(212,175,55,0.15);
+}
+
+/* Gold glow behind the section */
+.wrs-what-we-do.cinematic-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top center,
+        rgba(212,175,55,0.15),
+        transparent 70%
+    );
+    z-index: 0;
+}
+
+/* Grain texture overlay */
+.wrs-what-we-do.cinematic-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('/assets/grain.png');
+    opacity: 0.08;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Title styling */
+.wrs-what-we-do.cinematic-card h2 {
+    position: relative;
+    z-index: 3;
+    font-size: 48px;
+    color: #d4af37;
+    margin-bottom: 25px;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 18px rgba(212,175,55,0.35);
+}
+
+
 /* CINEMATIC CARD (for big section blocks) */
 .cinematic-card {
     background: #0a0a0a;
