@@ -87,11 +87,43 @@ body {
   margin: 0;
   padding: 0;
 }
+nav {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(0,0,0,0.75);
+    backdrop-filter: blur(6px);
+    border-bottom: 1px solid rgba(255, 215, 0, 0.25);
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1px;
+}
+
+
+
 /* ---------- Hero / Header ---------- */
 
 .hero {
   text-align: center;
   margin-bottom: 40px;
+}
+.hero-home {
+    margin-top: 200px;
 }
 
 .hero-logo {
@@ -119,6 +151,11 @@ body {
   margin-left: auto;
   margin-right: auto;
 }
+position: fixed;
+position: sticky;
+height: 100vh;
+overflow: hidden;
+z-index: 9999;
 
 /* ---------- Featured Grid (6 Images) ---------- */
 
@@ -425,4 +462,10 @@ body {
     gap: 8px;
     align-items: flex-start;
   }
+}
+.main-content {
+    position: relative;
+}
+.hero-home .hero-img {
+    position: absolute;
 }
