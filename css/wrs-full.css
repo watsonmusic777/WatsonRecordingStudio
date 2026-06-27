@@ -34,7 +34,7 @@
 .studio-hero,
 .about-hero,
 .home-hero {
-    margin-top: 260px;
+   margin-top: 0 !important;
 }
 
 html,
@@ -130,8 +130,9 @@ nav ul li a {
   margin-bottom: 40px;
 }
 .hero-home {
-    margin-top: 200px;
+    margin-top: 0 !important;
 }
+
 
 .hero-logo {
   font-size: 2.6rem;
@@ -587,5 +588,10 @@ nav ul li a {
     position: relative;
 }
 .hero-home .hero-img {
-    position: absolute;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
 }
+
