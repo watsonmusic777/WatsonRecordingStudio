@@ -29,6 +29,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* HERO SPACING (ALL PAGES THAT USE HERO) */
+.hero,
+.studio-hero,
+.about-hero,
+.home-hero {
+    margin-top: 260px;
+}
 
 html,
 body {
@@ -326,6 +333,116 @@ nav ul li a {
   filter: brightness(1.08);
   box-shadow: 0 0 18px rgba(245, 212, 107, 0.9);
 }
+.sync-popup * {
+    all: unset;
+    display: revert;
+}
+.sync-popup-content input,
+.sync-popup-content button,
+.sync-popup-content label {
+    all: revert;
+}
+
+.services-grid img {
+    width: 400px;
+    height: 500px;
+    object-fit: cover;
+    display: block;
+}
+
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 400px);
+    gap: 30px;
+    justify-content: center;
+    margin: 0 auto;
+}
+/* CINEMATIC STYLE FOR WHAT WE DO SECTION */
+.wrs-what-we-do.cinematic-card {
+    background: linear-gradient(145deg, #0b0b0b, #111);
+    border-radius: 18px;
+    padding: 60px 40px;
+    max-width: 1000px;
+    margin: 100px auto 60px auto;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+    box-shadow:
+        0 0 60px rgba(0,0,0,0.6),
+        0 0 120px rgba(212,175,55,0.15);
+}
+
+/* Gold glow behind the section */
+.wrs-what-we-do.cinematic-card::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+        circle at top center,
+        rgba(212,175,55,0.15),
+        transparent 70%
+    );
+    z-index: 0;
+}
+
+/* Grain texture overlay */
+.wrs-what-we-do.cinematic-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url('/assets/grain.png');
+    opacity: 0.08;
+    mix-blend-mode: overlay;
+    pointer-events: none;
+    z-index: 2;
+}
+
+/* Title styling */
+.wrs-what-we-do.cinematic-card h2 {
+    position: relative;
+    z-index: 3;
+    font-size: 48px;
+    color: #d4af37;
+    margin-bottom: 25px;
+    letter-spacing: 1.5px;
+    text-shadow: 0 0 18px rgba(212,175,55,0.35);
+}
+
+
+/* CINEMATIC CARD (for big section blocks) */
+.cinematic-card {
+    background: #0a0a0a;
+    border: 1px solid #b8860b;
+    border-radius: 16px;
+    padding: 60px 50px;
+    max-width: 1000px;
+    margin: 80px auto;
+    text-align: center;
+    box-shadow: 0 0 40px rgba(255, 215, 0, 0.25);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.cinematic-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 0 60px rgba(255, 215, 0, 0.45);
+}
+
+.cinematic-card h2 {
+    color: #f5d37d;
+    font-size: 2.6rem;
+    margin-bottom: 20px;
+    text-shadow: 0 0 14px rgba(255, 215, 0, 0.35);
+}
+
+.cinematic-card p {
+    color: #ddd;
+    font-size: 1.25rem;
+    line-height: 1.8;
+    max-width: 850px;
+    margin: 0 auto;
+}
+
 
 /* ---------- Email / Popup ---------- */
 

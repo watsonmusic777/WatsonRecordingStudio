@@ -159,15 +159,7 @@ nav {
     width: 100%;
 }
 
-/* --------------------------------------------------
-   HERO SPACING (ALL PAGES)
--------------------------------------------------- */
-.hero,
-.studio-hero,
-.about-hero,
-.home-hero {
-    margin-top: 260px;
-}
+
 
 /* --------------------------------------------------
    HERO BASE
@@ -270,21 +262,6 @@ nav {
     margin-top: 10px;
 }
 
-/* SECTION TITLES */
-.section h2 {
-    color: #f5d37d;
-    font-size: 2rem;
-    margin-bottom: 15px;
-    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
-}
-
-/* SECTION TEXT */
-.section p {
-    color: #ccc;
-    line-height: 1.7;
-    max-width: 900px;
-    margin: 0 auto 20px auto;
-}
 
 /* GRID LAYOUT */
 .grid {
