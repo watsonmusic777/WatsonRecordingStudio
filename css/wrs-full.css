@@ -341,6 +341,11 @@ nav ul li a {
     margin: 0 auto;
     border-radius: 8px;  /* optional, looks clean */
 }
+.services-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
 /* ---------- Email / Popup ---------- */
 
 .email-popup {
