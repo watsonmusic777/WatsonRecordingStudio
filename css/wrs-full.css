@@ -342,7 +342,11 @@ nav ul li a {
     border-radius: 8px;  /* optional, looks clean */
 }
 .services-grid {
-    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+    justify-items: center;
+    max-width: 1400px;
     margin: 0 auto;
 }
 
