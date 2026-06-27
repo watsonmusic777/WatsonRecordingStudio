@@ -277,15 +277,6 @@ nav {
     max-width: 900px;
     margin: 0 auto 20px auto;
 }
-.services-grid img {
-    width: 200px;
-    height: 400px;
-    object-fit: cover;   /* or "contain" depending on your preference */
-    display: block;
-    margin: 0 auto;
-    border-radius: 8px;  /* optional, looks clean */
-}
-
 /* GRID LAYOUT */
 .grid {
     display: flex;
