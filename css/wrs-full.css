@@ -151,11 +151,14 @@ nav ul li a {
   margin-left: auto;
   margin-right: auto;
 }
-position: fixed;
-position: sticky;
-height: 100vh;
-overflow: hidden;
-z-index: 9999;
+.selector-name {
+    position: fixed;
+    position: sticky;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 9999;
+}
+
 
 /* ---------- Featured Grid (6 Images) ---------- */
 
