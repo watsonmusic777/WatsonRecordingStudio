@@ -336,19 +336,19 @@ nav ul li a {
 .services-grid img {
     width: 400px;
     height: 500px;
-    object-fit: cover;   /* or "contain" depending on your preference */
+    object-fit: cover;
     display: block;
-    margin: 0 auto;
-    border-radius: 8px;  /* optional, looks clean */
 }
+
+
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 400px);
     gap: 30px;
-    justify-items: center;
-    max-width: 1400px;
+    justify-content: center;
     margin: 0 auto;
 }
+
 
 /* ---------- Email / Popup ---------- */
 
