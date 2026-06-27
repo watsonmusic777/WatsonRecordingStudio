@@ -29,6 +29,13 @@
   padding: 0;
   box-sizing: border-box;
 }
+/* HERO SPACING (ALL PAGES THAT USE HERO) */
+.hero,
+.studio-hero,
+.about-hero,
+.home-hero {
+    margin-top: 260px;
+}
 
 html,
 body {
