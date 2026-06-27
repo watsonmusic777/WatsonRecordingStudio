@@ -333,6 +333,16 @@ nav ul li a {
   filter: brightness(1.08);
   box-shadow: 0 0 18px rgba(245, 212, 107, 0.9);
 }
+.sync-popup * {
+    all: unset;
+    display: revert;
+}
+.sync-popup-content input,
+.sync-popup-content button,
+.sync-popup-content label {
+    all: revert;
+}
+
 .services-grid img {
     width: 400px;
     height: 500px;
@@ -349,10 +359,7 @@ nav ul li a {
     margin: 0 auto;
 }
 
-.sync-popup * {
-    all: unset;
-    display: revert;
-}
+
 
 /* ---------- Email / Popup ---------- */
 
