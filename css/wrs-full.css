@@ -334,7 +334,7 @@ nav ul li a {
   box-shadow: 0 0 18px rgba(245, 212, 107, 0.9);
 }
 .services-grid img {
-    width: 350px;
+    width: 400px;
     height: 500px;
     object-fit: cover;   /* or "contain" depending on your preference */
     display: block;
