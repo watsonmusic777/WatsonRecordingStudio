@@ -234,7 +234,7 @@ nav ul li a {
 /* ---------- Player Section ---------- */
 
 .player-section {
-  margin-top: 40px;
+  margin-top: 0 !important;
   padding: 18px 16px;
   background: linear-gradient(160deg, #050505, #121212);
   border-radius: 10px;
