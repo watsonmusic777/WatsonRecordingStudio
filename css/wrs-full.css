@@ -333,7 +333,14 @@ nav ul li a {
   filter: brightness(1.08);
   box-shadow: 0 0 18px rgba(245, 212, 107, 0.9);
 }
-
+.services-grid img {
+    width: 200px;
+    height: 400px;
+    object-fit: cover;   /* or "contain" depending on your preference */
+    display: block;
+    margin: 0 auto;
+    border-radius: 8px;  /* optional, looks clean */
+}
 /* ---------- Email / Popup ---------- */
 
 .email-popup {
