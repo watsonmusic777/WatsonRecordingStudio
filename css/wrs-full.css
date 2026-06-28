@@ -629,4 +629,75 @@ nav ul li a {
   font-style: italic;
   letter-spacing: 1px;
 }
+/* WRS Listening Station Banner */
+.wrs-listening-banner {
+  background: linear-gradient(135deg, #0a0b0d, #1a1c22);
+  padding: 40px 20px;
+  text-align: center;
+  border-bottom: 2px solid #f0b63a;
+  margin-top: 40px;
+}
+
+.wrs-listening-banner h2 {
+  font-size: 32px;
+  color: #f0b63a;
+  letter-spacing: 2px;
+  margin-bottom: 10px;
+}
+
+.wrs-listening-banner p {
+  font-size: 16px;
+  color: #d0d3e0;
+}
+
+/* Player */
+.player-container {
+  max-width: 900px;
+  margin: 20px auto;
+  background: #111319;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 0 20px rgba(0,0,0,0.6);
+}
+.track {
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  border-bottom: 1px solid #2a2d36;
+}
+.track:last-child {
+  border-bottom: none;
+}
+.track-title {
+  font-size: 15px;
+  font-weight: bold;
+}
+.track-meta {
+  font-size: 12px;
+  color: #b0b3c0;
+}
+.track-buttons button {
+  margin-left: 5px;
+  padding: 6px 10px;
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+}
+.btn-mp3 {
+  background: #f0b63a;
+  color: #111319;
+}
+.btn-wav {
+  background: #3ac0f0;
+  color: #050608;
+}
+.now-playing {
+  margin-top: 15px;
+  font-size: 13px;
+  color: #d0d3e0;
+}
+audio {
+  width: 100%;
+  margin-top: 10px;
+}
 
