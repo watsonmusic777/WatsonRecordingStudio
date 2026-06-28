@@ -792,3 +792,6 @@ audio {
 .player-container {
     margin-top: 40px; /* space above the player */
 }
+.sync-section {
+    margin-top: 25px;   /* just enough space */
+}
