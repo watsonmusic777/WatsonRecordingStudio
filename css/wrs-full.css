@@ -781,3 +781,14 @@ audio {
       width: 100%;
       margin-top: 10px;
     }
+.wrs-listening-card {
+    margin-bottom: 40px; /* space under the top banner */
+}
+
+.sync-section {
+    margin: 40px auto; /* space above and below the sync form */
+}
+
+.player-container {
+    margin-top: 40px; /* space above the player */
+}
