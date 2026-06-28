@@ -197,21 +197,12 @@ nav {
 /* --------------------------------------------------
    FOOTER (CINEMATIC GOLD)
 -------------------------------------------------- */
-.site-footer {
-    background: #0a0a0a;
-    padding: 60px 0 30px;
-    color: #ccc;
-    border-top: 1px solid rgba(255, 215, 0, 0.25);
-    margin-top: 80px;
-}
 
-.footer-container {
-    width: 90%;
-    max-width: 1400px;
-    margin: auto;
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+.about-page .site-footer,
+.about-page .footer-container {
+    max-width: 1100px !important;
+    width: 100% !important;
+    margin: 0 auto !important;
 }
 
 .footer-col h4 {
