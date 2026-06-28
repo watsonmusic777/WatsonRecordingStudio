@@ -132,6 +132,13 @@ nav ul li a {
 .hero-home {
     margin-top: 0 !important;
 }
+.home-hero {
+    height: 600px;              /* perfect for a 1920x1280 hero */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
 
 
 .hero-logo {
