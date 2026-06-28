@@ -445,7 +445,16 @@ nav ul li a {
     margin: 0 auto;
 }
 
-
+.form-title {
+    text-align: center;
+    color: #FFD700; /* 24K Gold */
+    margin-bottom: 25px;
+    font-size: 2rem;
+    font-weight: 600;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+    text-shadow: 0 0 12px rgba(255, 215, 0, 0.45);
+}
 /* ---------- Email / Popup ---------- */
 
 .email-popup {
