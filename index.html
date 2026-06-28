@@ -377,52 +377,6 @@ async function submitSyncForm() {
 
 <!-- ACTIVE NEW PLAYER -->
 <script>
-const tracks = [
-  { title: "Stronger Now", mp3: "audio/mp3/StrongerNow.03.mp3", wav: "audio/audio/wav/StrongerNow.003.wav" },
-  { title: "Stronger Now (Alt Mix)", mp3: "audio/mp3/strongernow-1.0.mp3", wav: "audio/audio/wav/strongernow.1.0.wav" },
-  { title: "America's Win Is All We Need", mp3: "audio/mp3/americas-win-is-all-we-need-001.mp3", wav: "audio/audio/wav/americas-win-is-all-we-need-001.wav" },
-  { title: "America's Win (Jazz Soulful Vibe)", mp3: "audio/mp3/americas-win-jazz-soulful-vibe.mp3", wav: "audio/audio/wav/americas-win-jazz-soulful-vibe.wav" },
-  { title: "Changing New Rock Funk", mp3: "audio/mp3/changing-newrock-funk-3-430.mp3", wav: "audio/audio/wav/changing-newrock-funk-3-430.wav" },
-  { title: "Goodbye Baby", mp3: "audio/mp3/goodbye-baby-3.99.mp3", wav: "audio/audio/wav/goodbye-baby.3.99.wav" },
-  { title: "Meet Me On The Rooftop (Pop)", mp3: "audio/mp3/meet-me-on-the-rooftop-pop-001.mp3", wav: "audio/audio/wav/meet-me-on-the-rooftop-pop-001.wav" },
-  { title: "My Love (Jazz RnB Ballad)", mp3: "audio/mp3/my-love-ill-return-to-you-jazzrnb-ballad-5-1.mp3", wav: "audio/audio/wav/my-love-ill-return-to-you-jazzrnb-ballad-5-1.wav" },
-  { title: "My Love (Jazz Rock Ballad)", mp3: "audio/mp3/my-love-ill-return-to-you-jazzrock-ballad-1.07.mp3", wav: "audio/audio/wav/my-love-ill-return-to-you-jazzrock-ballad-1.07.wav" },
-  { title: "This Is Our Love Song", mp3: "audio/mp3/this-is-our-love-song-v.mp3", wav: "audio/audio/wav/this-is-our-love-song-r-n-b-version-1.wav" },
-  { title: "Tika My Love", mp3: "audio/mp3/tika-my-love-4.143-jazzrock.rb.mp3", wav: "audio/audio/wav/tika-my-love-4.143-jazzrock-rnb.wav" }
-];
-
-const tracksContainer = document.getElementById("tracks");
-const audioPlayer = document.getElementById("audioPlayer");
-const nowPlaying = document.getElementById("nowPlaying");
-
-function renderTracks() {
-  tracks.forEach((track, index) => {
-    const div = document.createElement("div");
-    div.className = "track";
-
-    div.innerHTML = `
-      <div>
-        <div class="track-title">${index + 1}. ${track.title}</div>
-        <div class="track-meta">${track.mp3 ? "MP3" : ""} ${track.wav ? "+ WAV" : ""}</div>
-      </div>
-      <div class="track-buttons">
-        ${track.mp3 ? `<button class="btn-mp3" onclick="playTrack('${track.title}', '${track.mp3}', 'MP3')">Play MP3</button>` : ""}
-        ${track.wav ? `<button class="btn-wav" onclick="playTrack('${track.title}', '${track.wav}', 'WAV')">Play WAV</button>` : ""}
-      </div>
-    `;
-
-    tracksContainer.appendChild(div);
-  });
-}
-
-function playTrack(title, src, format) {
-  audioPlayer.src = src;
-  audioPlayer.play();
-  nowPlaying.textContent = `Now Playing: ${title} (${format})`;
-}
-
-renderTracks();
-</script>
 const tracksContainer = document.getElementById("tracks");
     const audioPlayer = document.getElementById("audioPlayer");
     const nowPlaying = document.getElementById("nowPlaying");
