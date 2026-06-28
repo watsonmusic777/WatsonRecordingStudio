@@ -80,472 +80,263 @@
     </div>
 </section>
 
-<div class="wrs-listening-card">
+
+    
+    <div class="wrs-listening-card">
   <h2>WRS Listening Station</h2>
   <p class="wrs-subtitle">Assisted by Futuristic Modern Digital Systems</p>
 </div>
 
-<div class="player-container">
+
+    
+    <div class="player-container">
   <div id="tracks"></div>
   <div class="now-playing" id="nowPlaying">Now Playing: —</div>
   <audio id="audioPlayer" controls></audio>
 </div>
-
-
-
-
     
     
 <!-- MAIN CONTENT -->
 <main class="main-content">
 
-    <!-- NOW PLAYING -->
-    <section class="wr-now-playing">
-        <span id="wr-now-text">Original music written and produced by John Watson • Now Playing: —</span>
-    </section>
+    <div class="player-container">
+    <div id="tracks"></div>
 
-    <!-- GOLD FRAME -->
-    <div class="wr-player-frame">
+    <div class="now-playing" id="nowPlaying">Now Playing: —</div>
+    <audio id="audioPlayer" controls></audio>
+  </div>
 
-        <!-- PLAYLIST (SCROLLABLE GRID) -->
-        <div class="wr-playlist-container">
-            <div class="wr-playlist-grid" id="wr-playlist">
+  <script>
+    const tracks = [
+      {
+        title: "Stronger Now",
+        mp3: "audio/mp3/StrongerNow.03.mp3",
+        wav: "audio/audio/wav/StrongerNow.003.wav"
+      },
+      {
+        title: "Stronger Now (Alt Mix)",
+        mp3: "audio/mp3/strongernow-1.0.mp3",
+        wav: "audio/audio/wav/strongernow.1.0.wav"
+      },
+      {
+        title: "America's Win Is All We Need",
+        mp3: "audio/mp3/americas-win-is-all-we-need-001.mp3",
+        wav: "audio/audio/wav/americas-win-is-all-we-need-001.wav"
+      },
+      {
+        title: "America's Win (Jazz Soulful Vibe)",
+        mp3: "audio/mp3/americas-win-jazz-soulful-vibe.mp3",
+        wav: "audio/audio/wav/americas-win-jazz-soulful-vibe.wav"
+      },
+      {
+        title: "America's Win (Country Rock Soul R&B)",
+        mp3: "audio/mp3/americas-win-v-country-rock-soul-r&b.mp3"
+      },
+      {
+        title: "America's Win (Jazz Rock Acoustic Guitar)",
+        mp3: "audio/mp3/americas-win-v-jazz-rock-acoustic-guitar.mp3"
+      },
+      {
+        title: "Changing New Rock Funk",
+        mp3: "audio/mp3/changing-newrock-funk-3-430.mp3",
+        wav: "audio/audio/wav/changing-newrock-funk-3-430.wav"
+      },
+      {
+        title: "Goodbye Baby",
+        mp3: "audio/mp3/goodbye-baby-3.99.mp3",
+        wav: "audio/audio/wav/goodbye-baby.3.99.wav"
+      },
+      {
+        title: "Goodbye Baby (Alt Version)",
+        mp3: "audio/mp3/goodbye-baby-1.03.mp3"
+      },
+      {
+        title: "Meet Me On The Rooftop (Pop)",
+        mp3: "audio/mp3/meet-me-on-the-rooftop-pop-001.mp3",
+        wav: "audio/audio/wav/meet-me-on-the-rooftop-pop-001.wav"
+      },
+      {
+        title: "Meet Me On The Rooftop (P-Funk v2)",
+        mp3: "audio/mp3/meet-me-on-the-rooftop-p-funk-v2.mp3"
+      },
+      {
+        title: "Meet Me On The Rooftop 101",
+        mp3: "audio/mp3/meet-me-on-the-rooftop-101.mp3"
+      },
+      {
+        title: "My Love, I'll Return To You (Jazz RnB Ballad)",
+        mp3: "audio/mp3/my-love-ill-return-to-you-jazzrnb-ballad-5-1.mp3",
+        wav: "audio/audio/wav/my-love-ill-return-to-you-jazzrnb-ballad-5-1.wav"
+      },
+      {
+        title: "My Love, I'll Return To You (Jazz Rock Ballad)",
+        mp3: "audio/mp3/my-love-ill-return-to-you-jazzrock-ballad-1.07.mp3",
+        wav: "audio/audio/wav/my-love-ill-return-to-you-jazzrock-ballad-1.07.wav"
+      },
+      {
+        title: "No Matter (Jazz Orchestra)",
+        wav: "audio/audio/wav/no-matter-jazz-orchest-3-004a.wav"
+      },
+      {
+        title: "No Matter The Road (Jazzy Country Rock)",
+        wav: "audio/audio/wav/no-matter-the-road-jazzy-countryrock-299.wav"
+      },
+      {
+        title: "Now Awake And Strong (Jazz Fusion RnB Funk)",
+        wav: "audio/audio/wav/now-awake-and-strong-jazzfusion-rnb-funk-101.wav"
+      },
+      {
+        title: "This Is Our Love Song (R&B Version)",
+        mp3: "audio/mp3/this-is-our-love-song-v.mp3",
+        wav: "audio/audio/wav/this-is-our-love-song-r-n-b-version-1.wav"
+      },
+      {
+        title: "Tika My Love (Jazz Rock RnB)",
+        mp3: "audio/mp3/tika-my-love-4.143-jazzrock.rb.mp3",
+        wav: "audio/audio/wav/tika-my-love-4.143-jazzrock-rnb.wav"
+      },
+      {
+        title: "Almost Payday",
+        mp3: "audio/mp3/almost-payday.mp3"
+      },
+      {
+        title: "Baby Don't Cry (Soft Rock)",
+        mp3: "audio/mp3/baby-dont-cry-vsoft-rock.mp3"
+      },
+      {
+        title: "Baby Loved You From The First Moment (v8 Soft Rock)",
+        mp3: "audio/mp3/baby-loved-you-from-the-first-moment-v8-s-rock.mp3"
+      },
+      {
+        title: "Changing For Happiness",
+        mp3: "audio/mp3/changing-for-happiness.mp3"
+      },
+      {
+        title: "Changing For Her (Country Rock Ballad)",
+        mp3: "audio/mp3/changing-for-her-v3-0012-country-rock-ballad.mp3"
+      },
+      {
+        title: "Changing My Way (Country Rock Funk)",
+        mp3: "audio/mp3/changing-my-way-vcountry-rock-funk.mp3"
+      },
+      {
+        title: "Concert Jungle Love",
+        mp3: "audio/mp3/concert-jungle-love.mp3"
+      },
+      {
+        title: "Dialysis In Kidney Transplant (ID 1.02 Mixed)",
+        mp3: "audio/mp3/dialysis-in-kidney-transplant-ID-1.02mixed.mp3"
+      },
+      {
+        title: "Fallen For Each Other (Rock Version)",
+        mp3: "audio/mp3/fallen-for-each-other-rock-version-1.mp3"
+      },
+      {
+        title: "Give Me Honesty (Full Lyric)",
+        mp3: "audio/mp3/give-me-honesty-baby-give-me-something-true.mp3"
+      },
+      {
+        title: "Give Me Honesty v8.00",
+        mp3: "audio/mp3/give-me-honesty-v8-00.mp3"
+      },
+      {
+        title: "Give Me Honesty v8.99",
+        mp3: "audio/mp3/give-me-honesty-v8-99.mp3"
+      },
+      {
+        title: "I Don't Need Diamonds (If Your Words Are Real)",
+        mp3: "audio/mp3/i-dont-need-diamonds-if-your-words-is-real.mp3"
+      },
+      {
+        title: "I Loved You (Pop Version)",
+        mp3: "audio/mp3/i-loved-you-pop-version-1.mp3"
+      },
+      {
+        title: "Midnight On Fire",
+        mp3: "audio/mp3/midnight-on-fire.mp3"
+      },
+      {
+        title: "My Version She's Fake (Jazz Funk)",
+        mp3: "audio/mp3/my-version-shes-fake-jazz-funk-7.433.70.mp3"
+      },
+      {
+        title: "She Needs Me (ID 1011 Rock Metal)",
+        mp3: "audio/mp3/she-needs-me-id-1011-rock-metal-version-1.mp3"
+      },
+      {
+        title: "Texas To Tennessee (ID 192 Rock)",
+        mp3: "audio/mp3/texas-to-tennessee-id-192-rock.mp3"
+      },
+      {
+        title: "Wondering Through Life (Jazz R&B)",
+        mp3: "audio/mp3/wondering-through-life-vjazz-r-b.mp3"
+      },
+      {
+        title: "You'll Always Have My Heart (v03)",
+        mp3: "audio/mp3/youll-always-have-my-heart-v03.mp3"
+      }
+    ];
 
-                <!-- TRACK CARDS -->
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/almost-payday.mp3"
-                     data-mp3="audio/audio/mp3/almost-payday.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Almost Payday</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
+    const tracksContainer = document.getElementById("tracks");
+    const audioPlayer = document.getElementById("audioPlayer");
+    const nowPlaying = document.getElementById("nowPlaying");
 
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/americas-win-is-all-we-need-001.mp3"
-                     data-mp3="audio/audio/mp3/americas-win-is-all-we-need-001.mp3"
-                     data-wav="audio/audio/wav/americas-win-is-all-we-need-001.wav"
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">America’s Win Is All We Need 001</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
+    function renderTracks() {
+      tracks.forEach((track, index) => {
+        const trackDiv = document.createElement("div");
+        trackDiv.className = "track";
 
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/baby-dont-cry-soft-rock.mp3"
-                     data-mp3="audio/audio/mp3/baby-dont-cry-soft-rock.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Baby Don’t Cry (Soft Rock)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
+        const infoDiv = document.createElement("div");
+        infoDiv.className = "track-info";
 
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/baby-loved-you-from-the-first-moment-v8-s-rock.mp3"
-                     data-mp3="audio/audio/mp3/baby-loved-you-from-the-first-moment-v8-s-rock.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Baby Loved You From The First Moment v8 (Soft Rock)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
+        const titleDiv = document.createElement("div");
+        titleDiv.className = "track-title";
+        titleDiv.textContent = `${index + 1}. ${track.title}`;
 
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/changing-for-happiness.mp3"
-                     data-mp3="audio/audio/mp3/changing-for-happiness.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Changing For Happiness</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
+        const metaDiv = document.createElement("div");
+        metaDiv.className = "track-meta";
+        metaDiv.textContent =
+          (track.mp3 ? "MP3 " : "") +
+          (track.wav ? (track.mp3 ? "+ WAV" : "WAV") : "");
 
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/changing-my-way-country-rock-funk.mp3"
-                     data-mp3="audio/audio/mp3/changing-my-way-country-rock-funk.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Changing My Way (Country Rock Funk)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
+        infoDiv.appendChild(titleDiv);
+        infoDiv.appendChild(metaDiv);
 
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/changing-newrock-funk-3-430.mp3"
-                     data-mp3="audio/audio/mp3/changing-newrock-funk-3-430.mp3"
-                     data-wav="audio/audio/wav/changing-newrock-funk-3-430.wav"
-                     data-stems="audio/audio/stems/changing-newrock-funk-3-430 Stems.zip"
-                     data-donate="#">
-                  <div class="wr-track-title">Changing (New Rock Funk 3:430)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
+        const buttonsDiv = document.createElement("div");
+        buttonsDiv.className = "track-buttons";
 
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/concert-jungle-love.mp3"
-                     data-mp3="audio/audio/mp3/concert-jungle-love.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Concert Jungle Love</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
+        if (track.mp3) {
+          const mp3Btn = document.createElement("button");
+          mp3Btn.className = "btn-mp3";
+          mp3Btn.textContent = "Play MP3";
+          mp3Btn.onclick = () => playTrack(track.title, track.mp3, "MP3");
+          buttonsDiv.appendChild(mp3Btn);
+        }
 
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/dialysis-in-kidney-transplant-LD-1.02m-ixed.mp3"
-                     data-mp3="audio/audio/mp3/dialysis-in-kidney-transplant-LD-1.02m-ixed.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Dialysis In Kidney Transplant LD 1.02</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
+        if (track.wav) {
+          const wavBtn = document.createElement("button");
+          wavBtn.className = "btn-wav";
+          wavBtn.textContent = "Play WAV";
+          wavBtn.onclick = () => playTrack(track.title, track.wav, "WAV");
+          buttonsDiv.appendChild(wavBtn);
+        }
 
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/fallen-for-each-other-rock-version-1.1.mp3"
-                     data-mp3="audio/audio/mp3/fallen-for-each-other-rock-version-1.1.mp3"
-                     data-wav=""
-                     data-stems="audio/audio/stems/fallen-for-each-other-rockversion-1-stems.zip"
-                     data-donate="#">
-                  <div class="wr-track-title">Fallen For Each Other (Rock Version 1.1)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
+        trackDiv.appendChild(infoDiv);
+        trackDiv.appendChild(buttonsDiv);
+        tracksContainer.appendChild(trackDiv);
+      });
+    }
 
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/give-me-honesty-baby-give-me-something-true.mp3"
-                     data-mp3="audio/audio/mp3/give-me-honesty-baby-give-me-something-true.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Give Me Honesty Baby Give Me Something True</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
+    function playTrack(title, src, format) {
+      audioPlayer.src = src;
+      audioPlayer.play();
+      nowPlaying.textContent = `Now Playing: ${title} (${format})`;
+    }
 
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/give-me-honesty-v8-00.mp3"
-                     data-mp3="audio/audio/mp3/give-me-honesty-v8-00.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Give Me Honesty v8.00</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
+    renderTracks();
+  </script>
 
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/give-me-honesty-v9.mp3"
-                     data-mp3="audio/audio/mp3/give-me-honesty-v9.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Give Me Honesty v9</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/goodbye-baby-3.99.mp3"
-                     data-mp3="audio/audio/mp3/goodbye-baby-3.99.mp3"
-                     data-wav="audio/audio/wav/goodbye-baby.3.99.wav"
-                     data-stems="audio/audio/stems/goodbye-baby-3.99-stems.zip"
-                     data-donate="#">
-                  <div class="wr-track-title">Goodbye Baby 3.99</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/goodbye-baby-1.03.mp3"
-                     data-mp3="audio/audio/mp3/goodbye-baby-1.03.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Goodbye Baby 1.03</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/i-dont-need-diamonds-if-your-words-is-real.mp3"
-                     data-mp3="audio/audio/mp3/i-dont-need-diamonds-if-your-words-is-real.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">I Don’t Need Diamonds If Your Words Are Real</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/i-loved-you-pop-version-1.mp3"
-                     data-mp3="audio/audio/mp3/i-loved-you-pop-version-1.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">I Loved You (Pop Version 1)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/meet-me-on-the-rooftop-pop-001.mp3"
-                     data-mp3="audio/audio/mp3/meet-me-on-the-rooftop-pop-001.mp3"
-                     data-wav="audio/audio/wav/meet-me-on-the-rooftop-pop-001.wav"
-                     data-stems="audio/audio/stems/meet-me-on-the-rooftop-pop-001-stems.zip"
-                     data-donate="#">
-                  <div class="wr-track-title">Meet Me On The Rooftop (Pop 001)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/meet-me-on-the-rooftop-b-funk-v2.mp3"
-                     data-mp3="audio/audio/mp3/meet-me-on-the-rooftop-b-funk-v2.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Meet Me On The Rooftop (B Funk v2)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/meet-me-on-the-rooftop-101.mp3"
-                     data-mp3="audio/audio/mp3/meet-me-on-the-rooftop-101.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Meet Me On The Rooftop 101</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/midnight-on-river-street.mp3"
-                     data-mp3="audio/audio/mp3/midnight-on-river-street.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Midnight On River Street</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/my-love-ill-return-to-you-jazzrnb-ballad-5-1.mp3"
-                     data-mp3="audio/audio/mp3/my-love-ill-return-to-you-jazzrnb-ballad-5-1.mp3"
-                     data-wav="audio/audio/wav/my-love-ill-return-to-you-jazzrnb-ballad-5-1.wav"
-                     data-stems="audio/audio/stems/my-love-ill-return-to-you-jazzrnb-ballad-5-1-stems.zip"
-                     data-donate="#">
-                  <div class="wr-track-title">My Love I’ll Return To You (Jazz RnB Ballad 5.1)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/my-love-ill-return-to-you-jazzrock-ballad-1.07.mp3"
-                     data-mp3="audio/audio/mp3/my-love-ill-return-to-you-jazzrock-ballad-1.07.mp3"
-                     data-wav="audio/audio/wav/my-love-ill-return-to-you-jazzrock-ballad-1.07.wav"
-                     data-stems="audio/audio/stems/my-love-ill-return-to-you-jazzrock-ballad-1.07-stems.zip"
-                     data-donate="#">
-                  <div class="wr-track-title">My Love I’ll Return To You (Jazz Rock Ballad 1.07)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/my-version-shes-fake-jazz-rnb-funk-7.433.70.mp3"
-                     data-mp3="audio/audio/mp3/my-version-shes-fake-jazz-rnb-funk-7.433.70.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">My Version She’s Fake (Jazz R&B Funk 7.433.70)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/no-matter-jazz-orchest-3-004a.mp3"
-                     data-mp3="audio/audio/mp3/no-matter-jazz-orchest-3-004a.mp3"
-                     data-wav="audio/audio/wav/no-matter-jazz-orchest-3-004a.wav"
-                     data-stems="audio/audio/stems/no-matter-jazz-orchest-3-004a stems.zip"
-                     data-donate="#">
-                  <div class="wr-track-title">No Matter (Jazz Orchestral 3.004a)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/no-matter-the-road-jazzy-countryrock-299.mp3"
-                     data-mp3="audio/audio/mp3/no-matter-the-road-jazzy-countryrock-299.mp3"
-                     data-wav="audio/audio/wav/no-matter-the-road-jazzy-countryrock-299.wav"
-                     data-stems="audio/audio/stems/no-matter-the-road-jazzy-countryrock-299-stems.zip"
-                     data-donate="#">
-                  <div class="wr-track-title">No Matter The Road (Jazzy Country Rock 2.99)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/now-awake-and-strong-jazzfusion-rnb-funk-101.mp3"
-                     data-mp3="audio/audio/mp3/now-awake-and-strong-jazzfusion-rnb-funk-101.mp3"
-                     data-wav="audio/audio/wav/now-awake-and-strong-jazzfusion-rnb-funk-101.wav"
-                     data-stems="audio/audio/stems/now-awake-and-strong-jazzfusion-rnb-funk-101-stems.zip"
-                     data-donate="#">
-                  <div class="wr-track-title">Now Awake And Strong (Jazz Fusion RnB Funk 101)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/payday.mp3"
-                     data-mp3="audio/audio/mp3/payday.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Payday</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/she-fake-v-jazz-r-b-funk60.mp3"
-                     data-mp3="audio/audio/mp3/she-fake-v-jazz-r-b-funk60.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">She’s Fake (Jazz R&B Funk 60)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/she-needs-me-id-1011-rock-metal-version-1.mp3"
-                     data-mp3="audio/audio/mp3/she-needs-me-id-1011-rock-metal-version-1.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">She Needs Me (Rock Metal Version 1)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/strongwomen-1.0.mp3"
-                     data-mp3="audio/audio/mp3/strongwomen-1.0.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Strong Women 1.0</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/wav/strongernow.1.0.wav"
-                     data-mp3=""
-                     data-wav="audio/audio/wav/strongernow.1.0.wav"
-                     data-stems="audio/audio/stems/strongernow.1.0-stems.zip"
-                     data-donate="#">
-                  <div class="wr-track-title">Stronger Now 1.0</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/stems/strongernow.1.6-stems.zip"
-                     data-mp3=""
-                     data-wav=""
-                     data-stems="audio/audio/stems/strongernow.1.6-stems.zip"
-                     data-donate="#">
-                  <div class="wr-track-title">Stronger Now 1.6 (Stems)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/stems/strongernow.1.7-stems.zip"
-                     data-mp3=""
-                     data-wav=""
-                     data-stems="audio/audio/stems/strongernow.1.7-stems.zip"
-                     data-donate="#">
-                  <div class="wr-track-title">Stronger Now 1.7 (Stems)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/texas-to-tennessee-id-192-rock.mp3"
-                     data-mp3="audio/audio/mp3/texas-to-tennessee-id-192-rock.mp3"
-                     data-wav="audio/audio/wav/texas-to-tennessee-id-192-rock.wav"
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Texas To Tennessee (Rock 192)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/this-is-our-love-song-v.mp3"
-                     data-mp3="audio/audio/mp3/this-is-our-love-song-v.mp3"
-                     data-wav="audio/audio/wav/this-is-our-love-song-r-n-b-version-1.wav"
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">This Is Our Love Song (R&B Version)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/tika-my-love-4.143-jazzrock-rnb.mp3"
-                     data-mp3="audio/audio/mp3/tika-my-love-4.143-jazzrock-rnb.mp3"
-                     data-wav="audio/audio/wav/tika-my-love-4.143-jazzrock-rnb.wav"
-                     data-stems="audio/audio/stems/tika-my-love-4.143-jazzrock-rnb-stems.zip"
-                     data-donate="#">
-                  <div class="wr-track-title">Tika My Love (Jazz Rock RnB 4.143)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/wondering-through-life-jazz-r-b.mp3"
-                     data-mp3="audio/audio/mp3/wondering-through-life-jazz-r-b.mp3"
-                     data-wav="audio/audio/wav/wondering-through-life-jazz.wav"
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">Wondering Through Life (Jazz R&B)</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-                <div class="wr-track-card"
-                     data-src="audio/audio/mp3/youll-always-have-my-heart-v03.mp3"
-                     data-mp3="audio/audio/mp3/youll-always-have-my-heart-v03.mp3"
-                     data-wav=""
-                     data-stems=""
-                     data-donate="#">
-                  <div class="wr-track-title">You’ll Always Have My Heart v0.3</div>
-                  <button class="wr-buy-btn">Buy / Donate</button>
-                </div>
-
-            </div>
-        </div>
-
-        <!-- PLAYER BAR -->
-        <div class="wr-player-bar">
-            <button id="wr-prev">⏮</button>
-            <button id="wr-play">▶</button>
-            <button id="wr-next">⏭</button>
-
-            <button onclick="stopAudio()">Stop</button>
-            <button onclick="restartAudio()">Restart</button>
-        </div>
-
-        <div class="wr-progress-wrap">
-            <div class="wr-progress-bg">
-                <div class="wr-progress-fill" id="wr-progress"></div>
-            </div>
-            <div class="wr-time" id="wr-time">0:00 / 0:00</div>
-        </div>
-
-        <div class="wr-volume-wrap">
-            <span class="wr-vol-icon">🔊</span>
-            <input type="range" id="wr-volume" min="0" max="1" step="0.01" value="0.8">
-        </div>
-
-        <audio id="wr-audio"></audio>
-
-    </div>
-
-    <!-- BUY / DONATE POPUP -->
-    <div class="wr-buy-overlay" id="wr-buy-overlay">
-        <div class="wr-buy-modal">
-            <h3>Support the Artist</h3>
-            <p id="wr-buy-track-label"></p>
-            <button class="wr-buy-option" id="wr-buy-mp3">MP3 — $2.99</button>
-            <button class="wr-buy-option" id="wr-buy-wav">WAV — $3.99</button>
-            <button class="wr-buy-option" id="wr-buy-stems">STEMS — $5.00</button>
-            <button class="wr-buy-option wr-donate" id="wr-buy-donate">
-                Donate — Pay what you think is fair (min $2.00)
-            </button>
-            <button class="wr-buy-close" id="wr-buy-close">Close</button>
-        </div>
-    </div>
-
+    
     <!-- WATSON EXPERIENCE -->
    <section class="wrs-experience cinematic-card">
     <h2>The Watson Experience</h2>
@@ -848,6 +639,53 @@ if (wrTracks.length > 0) {
 </script>
 
 <script src="js/app.js"></script>
+<script>
+const tracks = [
+  { title: "Stronger Now", mp3: "audio/mp3/StrongerNow.03.mp3", wav: "audio/audio/wav/StrongerNow.003.wav" },
+  { title: "Stronger Now (Alt Mix)", mp3: "audio/mp3/strongernow-1.0.mp3", wav: "audio/audio/wav/strongernow.1.0.wav" },
+  { title: "America's Win Is All We Need", mp3: "audio/mp3/americas-win-is-all-we-need-001.mp3", wav: "audio/audio/wav/americas-win-is-all-we-need-001.wav" },
+  { title: "America's Win (Jazz Soulful Vibe)", mp3: "audio/mp3/americas-win-jazz-soulful-vibe.mp3", wav: "audio/audio/wav/americas-win-jazz-soulful-vibe.wav" },
+  { title: "Changing New Rock Funk", mp3: "audio/mp3/changing-newrock-funk-3-430.mp3", wav: "audio/audio/wav/changing-newrock-funk-3-430.wav" },
+  { title: "Goodbye Baby", mp3: "audio/mp3/goodbye-baby-3.99.mp3", wav: "audio/audio/wav/goodbye-baby.3.99.wav" },
+  { title: "Meet Me On The Rooftop (Pop)", mp3: "audio/mp3/meet-me-on-the-rooftop-pop-001.mp3", wav: "audio/audio/wav/meet-me-on-the-rooftop-pop-001.wav" },
+  { title: "My Love (Jazz RnB Ballad)", mp3: "audio/mp3/my-love-ill-return-to-you-jazzrnb-ballad-5-1.mp3", wav: "audio/audio/wav/my-love-ill-return-to-you-jazzrnb-ballad-5-1.wav" },
+  { title: "My Love (Jazz Rock Ballad)", mp3: "audio/mp3/my-love-ill-return-to-you-jazzrock-ballad-1.07.mp3", wav: "audio/audio/wav/my-love-ill-return-to-you-jazzrock-ballad-1.07.wav" },
+  { title: "This Is Our Love Song", mp3: "audio/mp3/this-is-our-love-song-v.mp3", wav: "audio/audio/wav/this-is-our-love-song-r-n-b-version-1.wav" },
+  { title: "Tika My Love", mp3: "audio/mp3/tika-my-love-4.143-jazzrock.rb.mp3", wav: "audio/audio/wav/tika-my-love-4.143-jazzrock-rnb.wav" }
+];
+
+const tracksContainer = document.getElementById("tracks");
+const audioPlayer = document.getElementById("audioPlayer");
+const nowPlaying = document.getElementById("nowPlaying");
+
+function renderTracks() {
+  tracks.forEach((track, index) => {
+    const div = document.createElement("div");
+    div.className = "track";
+
+    div.innerHTML = `
+      <div>
+        <div class="track-title">${index + 1}. ${track.title}</div>
+        <div class="track-meta">${track.mp3 ? "MP3" : ""} ${track.wav ? "+ WAV" : ""}</div>
+      </div>
+      <div class="track-buttons">
+        ${track.mp3 ? `<button class="btn-mp3" onclick="playTrack('${track.title}', '${track.mp3}', 'MP3')">Play MP3</button>` : ""}
+        ${track.wav ? `<button class="btn-wav" onclick="playTrack('${track.title}', '${track.wav}', 'WAV')">Play WAV</button>` : ""}
+      </div>
+    `;
+
+    tracksContainer.appendChild(div);
+  });
+}
+
+function playTrack(title, src, format) {
+  audioPlayer.src = src;
+  audioPlayer.play();
+  nowPlaying.textContent = `Now Playing: ${title} (${format})`;
+}
+
+renderTracks();
+</script>
 
 </body>
 </html>
