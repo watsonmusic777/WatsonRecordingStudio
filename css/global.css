@@ -562,4 +562,110 @@ body {
   font-size: 14px;
   opacity: 0.9;
 }
+.gold-nav ul,
+.gold-nav .nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+/* ========================= */
+/*        GLOBAL BASE        */
+/* ========================= */
+
+body {
+  background: #000;
+  color: #d4af37;
+  font-family: 'Cinzel', serif;
+  margin: 0;
+}
+
+/* ========================= */
+/*        GLOBAL NAV         */
+/* ========================= */
+
+.gold-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 22px 40px;
+  background: linear-gradient(90deg, #000, #1a1a1a);
+  border-bottom: 2px solid #d4af37;
+}
+
+.gold-nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #d4af37;
+}
+
+/* THIS IS THE FIX — KEEPS NAV HORIZONTAL */
+.gold-nav ul,
+.gold-nav .nav-links {
+  display: flex;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.gold-nav li {
+  list-style: none;
+}
+
+.gold-nav li a {
+  color: #d4af37;
+  text-transform: uppercase;
+  font-weight: 600;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.gold-nav li a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #d4af37;
+}
+
+/* ========================= */
+/*        GLOBAL FOOTER      */
+/* ========================= */
+
+.gold-footer {
+  background: #0a0a0a;
+  border-top: 2px solid #d4af37;
+  padding: 50px 40px;
+  color: #d4af37;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
+  margin-bottom: 30px;
+}
+
+.footer-col h3 {
+  font-size: 20px;
+  margin-bottom: 15px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.footer-col a {
+  display: block;
+  margin-bottom: 10px;
+  font-size: 15px;
+  text-decoration: none;
+  color: #d4af37;
+  transition: 0.3s;
+}
+
+.footer-col a:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #d4af37;
+}
+
+.footer-copy {
+  text-align: center;
+  font-size: 14px;
+  opacity: 0.9;
+}
 
