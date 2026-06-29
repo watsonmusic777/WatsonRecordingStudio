@@ -206,3 +206,69 @@ body {
   justify-content: center;
   gap: 20px;
 }
+/* GLOBAL */
+body {
+  background: #000;
+  color: #d4af37;
+  font-family: 'Cinzel', serif;
+  margin: 0;
+}
+
+/* NAV */
+.gold-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 40px;
+  background: linear-gradient(90deg, #000, #1a1a1a);
+  border-bottom: 2px solid #d4af37;
+}
+.gold-nav .logo {
+  font-size: 22px;
+  font-weight: bold;
+  color: #d4af37;
+  letter-spacing: 2px;
+}
+.gold-nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+}
+.gold-nav li {
+  cursor: pointer;
+  font-weight: 600;
+  text-transform: uppercase;
+  transition: 0.3s;
+}
+.gold-nav li:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #d4af37;
+}
+
+/* FOOTER */
+.gold-footer {
+  text-align: center;
+  padding: 40px 20px;
+  border-top: 2px solid #d4af37;
+  background: #0a0a0a;
+}
+.gold-footer p {
+  margin: 0;
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+.footer-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+}
+.footer-links span {
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s;
+}
+.footer-links span:hover {
+  color: #fff;
+  text-shadow: 0 0 10px #d4af37;
+}
