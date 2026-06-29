@@ -342,7 +342,7 @@ nav {
 
 @media (max-width: 600px) {
     .footer-container {
-        grid-template-columns: 1fr;
+        grid-template-columns: 4,1fr;
     }
 }
 /* MUSIC PLAYER */
@@ -622,50 +622,5 @@ body {
 .gold-nav li a:hover {
   color: #fff;
   text-shadow: 0 0 10px #d4af37;
-}
-
-/* ========================= */
-/*        GLOBAL FOOTER      */
-/* ========================= */
-
-.gold-footer {
-  background: #0a0a0a;
-  border-top: 2px solid #d4af37;
-  padding: 50px 40px;
-  color: #d4af37;
-}
-
-.footer-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  margin-bottom: 30px;
-}
-
-.footer-col h3 {
-  font-size: 20px;
-  margin-bottom: 15px;
-  text-transform: uppercase;
-  letter-spacing: 1px;
-}
-
-.footer-col a {
-  display: block;
-  margin-bottom: 10px;
-  font-size: 15px;
-  text-decoration: none;
-  color: #d4af37;
-  transition: 0.3s;
-}
-
-.footer-col a:hover {
-  color: #fff;
-  text-shadow: 0 0 10px #d4af37;
-}
-
-.footer-copy {
-  text-align: center;
-  font-size: 14px;
-  opacity: 0.9;
 }
 
