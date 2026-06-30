@@ -567,6 +567,13 @@ nav ul li a {
   font-size: 14px;
   opacity: 0.9;
 }
+.footer {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: wrap; /* optional, helps on small screens */
+}
 
 
 .footer {
