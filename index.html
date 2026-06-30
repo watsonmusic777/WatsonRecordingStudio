@@ -113,90 +113,70 @@
   <div class="player-container">
       <div id="tracks"></div>
 
-      <div class="now-playing" id="nowPlaying">Now Playing: —</div>
-      <audio id="audioPlayer" controls></audio>
-  </div>
-</main>
-<script>
-const tracks = [
-  { title: "Stronger Now", mp3: "audio/mp3/StrongerNow.03.mp3", wav: "audio/audio/wav/StrongerNow.003.wav" },
-  { title: "Stronger Now (Alt Mix)", mp3: "audio/mp3/strongernow-1.0.mp3", wav: "audio/audio/wav/strongernow.1.0.wav" },
-  { title: "America's Win Is All We Need", mp3: "audio/mp3/americas-win-is-all-we-need-001.mp3", wav: "audio/audio/wav/americas-win-is-all-we-need-001.wav" },
-  { title: "America's Win (Jazz Soulful Vibe)", mp3: "audio/mp3/americas-win-jazz-soulful-vibe.mp3", wav: "audio/audio/wav/americas-win-jazz-soulful-vibe.wav" },
-  { title: "America's Win (Country Rock Soul R&B)", mp3: "audio/mp3/americas-win-v-country-rock-soul-r&b.mp3" },
-  { title: "America's Win (Jazz Rock Acoustic Guitar)", mp3: "audio/mp3/americas-win-v-jazz-rock-acoustic-guitar.mp3" },
-  { title: "Changing New Rock Funk", mp3: "audio/mp3/changing-newrock-funk-3-430.mp3", wav: "audio/audio/wav/changing-newrock-funk-3-430.wav" },
-  { title: "Goodbye Baby", mp3: "audio/mp3/goodbye-baby-3.99.mp3", wav: "audio/audio/wav/goodbye-baby.3.99.wav" },
-  { title: "Goodbye Baby (Alt Version)", mp3: "audio/mp3/goodbye-baby-1.03.mp3" },
-  { title: "Meet Me On The Rooftop (Pop)", mp3: "audio/mp3/meet-me-on-the-rooftop-pop-001.mp3", wav: "audio/audio/wav/meet-me-on-the-rooftop-pop-001.wav" },
-  { title: "Meet Me On The Rooftop (P-Funk v2)", mp3: "audio/mp3/meet-me-on-the-rooftop-p-funk-v2.mp3" },
-  { title: "Meet Me On The Rooftop 101", mp3: "audio/mp3/meet-me-on-the-rooftop-101.mp3" },
-  { title: "My Love, I'll Return To You (Jazz RnB Ballad)", mp3: "audio/mp3/my-love-ill-return-to-you-jazzrnb-ballad-5-1.mp3", wav: "audio/audio/wav/my-love-ill-return-to-you-jazzrnb-ballad-5-1.wav" },
-  { title: "My Love, I'll Return To You (Jazz Rock Ballad)", mp3: "audio/mp3/my-love-ill-return-to-you-jazzrock-ballad-1.07.mp3", wav: "audio/audio/wav/my-love-ill-return-to-you-jazzrock-ballad-1.07.wav" },
-  { title: "No Matter (Jazz Orchestra)", wav: "audio/audio/wav/no-matter-jazz-orchest-3-004a.wav" },
-  { title: "No Matter The Road (Jazzy Country Rock)", wav: "audio/audio/wav/no-matter-the-road-jazzy-countryrock-299.wav" },
-  { title: "Now Awake And Strong (Jazz Fusion RnB Funk)", wav: "audio/audio/wav/now-awake-and-strong-jazzfusion-rnb-funk-101.wav" },
-  { title: "This Is Our Love Song (R&B Version)", mp3: "audio/mp3/this-is-our-love-song-v.mp3", wav: "audio/audio/wav/this-is-our-love-song-r-n-b-version-1.wav" },
-  { title: "Tika My Love (Jazz Rock RnB)", mp3: "audio/mp3/tika-my-love-4.143-jazzrock.rb.mp3", wav: "audio/audio/wav/tika-my-love-4.143-jazzrock-rnb.wav" },
-  { title: "Almost Payday", mp3: "audio/mp3/almost-payday.mp3" },
-  { title: "Baby Don't Cry (Soft Rock)", mp3: "audio/mp3/baby-dont-cry-vsoft-rock.mp3" },
-  { title: "Baby Loved You From The First Moment (v8 Soft Rock)", mp3: "audio/mp3/baby-loved-you-from-the-first-moment-v8-s-rock.mp3" },
-  { title: "Changing For Happiness", mp3: "audio/mp3/changing-for-happiness.mp3" },
-  { title: "Changing For Her (Country Rock Ballad)", mp3: "audio/mp3/changing-for-her-v3-0012-country-rock-ballad.mp3" },
-  { title: "Changing My Way (Country Rock Funk)", mp3: "audio/mp3/changing-my-way-vcountry-rock-funk.mp3" },
-  { title: "Concert Jungle Love", mp3: "audio/mp3/concert-jungle-love.mp3" },
-  { title: "Dialysis In Kidney Transplant (ID 1.02 Mixed)", mp3: "audio/mp3/dialysis-in-kidney-transplant-ID-1.02mixed.mp3" },
-  { title: "Fallen For Each Other (Rock Version)", mp3: "audio/mp3/fallen-for-each-other-rock-version-1.mp3" },
-  { title: "Give Me Honesty (Full Lyric)", mp3: "audio/mp3/give-me-honesty-baby-give-me-something-true.mp3" },
-  { title: "Give Me Honesty v8.00", mp3: "audio/mp3/give-me-honesty-v8-00.mp3" },
-  { title: "Give Me Honesty v8.99", mp3: "audio/mp3/give-me-honesty-v8-99.mp3" },
-  { title: "I Don't Need Diamonds (If Your Words Are Real)", mp3: "audio/mp3/i-dont-need-diamonds-if-your-words-is-real.mp3" },
-  { title: "I Loved You (Pop Version)", mp3: "audio/mp3/i-loved-you-pop-version-1.mp3" },
-  { title: "Midnight On Fire", mp3: "audio/mp3/midnight-on-fire.mp3" },
-  { title: "My Version She's Fake (Jazz Funk)", mp3: "audio/mp3/my-version-shes-fake-jazz-funk-7.433.70.mp3" },
-  { title: "She Needs Me (ID 1011 Rock Metal)", mp3: "audio/mp3/she-needs-me-id-1011-rock-metal-version-1.mp3" },
-  { title: "Texas To Tennessee (ID 192 Rock)", mp3: "audio/mp3/texas-to-tennessee-id-192-rock.mp3" },
-  { title: "Wondering Through Life (Jazz R&B)", mp3: "audio/mp3/wondering-through-life-vjazz-r-b.mp3" },
-  { title: "You'll Always Have My Heart (v03)", mp3: "audio/mp3/youll-always-have-my-heart-v03.mp3" }
+      
+    <div class="now-playing" id="nowPlaying">Now Playing: —</div>
+    <audio id="audioPlayer" controls></audio>
+    <div>
+      <button onclick="prevTrack()">⏮ Prev</button>
+      <button onclick="nextTrack()">⏭ Next</button>
+    </div>
+  </main>
+
+  <script>
+    const tracks = [
+      { title: "Stronger Now", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/strongernow.1.0.wav?sp=r&st=2026-06-30T15:22:09Z&se=2026-07-02T23:37:09Z&spr=https&sv=2026-02-06&sr=b&sig=Q5EMaKlF8fVYPpepf5+t0HVRtJBU14FKedby7ILqAbs=" },
+      { title: "Now Awake and Strong (Jazz Fusion / RnB Funk)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/now-awake-and-strong-jazzfusion-rnb-funk-101.wav?sp=r&st=2026-06-30T15:21:30Z&se=2026-07-02T23:36:30Z&spr=https&sv=2026-02-06&sr=b&sig=PETjfWb7xdUtR8C/jUWovquQtZ8swAxUhk6oy1yFHoU=" },
+      { title: "This Is Our Love Song (R&B Version)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/this-is-our-love-song-r-n-b-version-1.wav?sp=r&st=2026-06-30T15:22:47Z&se=2026-07-02T23:37:47Z&spr=https&sv=2026-02-06&sr=b&sig=0ZCiPtsTzSKA4RDPe/UqEH5AETD+gwyey9x+Cb/jtIg=" },
+      { title: "My Love I’ll Return to You (Jazz/RnB Ballad)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/my-love-ill-return-to-you-jazzrnb-ballad-5-1.wav?sp=r&st=2026-06-30T15:18:52Z&se=2026-07-02T23:33:52Z&spr=https&sv=2026-02-06&sr=b&sig=jT6vHtwR7Ucuc5zS321Chd35uwuP95V0J01zIAPvaEo=" },
+      { title: "My Love I’ll Return to You (Jazz/Rock Ballad)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/my-love-ill-return-to-you-jazzrock-ballad-1.07.wav?sp=r&st=2026-06-30T15:19:26Z&se=2026-07-02T23:34:26Z&spr=https&sv=2026-02-06&sr=b&sig=ZISZcKy7RhP54boYI594bMEcv59PELuToD99b2elLes=" },
+      { title: "No Matter (Jazz Orchestra)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/no-matter-jazz-orchest-3-004a.wav?sp=r&st=2026-06-30T15:20:18Z&se=2026-07-02T23:35:18Z&spr=https&sv=2026-02-06&sr=b&sig=0qmDTC/7790YmwNerwPQR/wiTRBx8jxCK8rDOOLX1SM=" },
+      { title: "No Matter the Road (Jazzy Country Rock)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/no-matter-the-road-jazzy-countryrock-299.wav?sp=r&st=2026-06-30T15:20:59Z&se=2026-07-02T23:35:59Z&spr=https&sv=2026-02-06&sr=b&sig=QjqWulIThspGQmBg5WVCbFzeV4LY5p/hjmIJOh/zSJs=" }
+      { title: "Stronger Now", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/strongernow.1.0.wav?...SAS..." },
+      { title: "This Is Our Love Song (R&B Version)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/this-is-our-love-song-r-n-b-version-1.wav?...SAS..." },
+     { title: "Now Awake and Strong (Jazz Fusion / RnB Funk)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/now-awake-and-strong-jazzfusion-rnb-funk-101.wav?...SAS..." },
+     { title: "No Matter (Jazz Orchestra)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/no-matter-jazz-orchest-3-004a.wav?...SAS..." },
+     { title: "No Matter the Road (Jazzy Country Rock)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/no-matter-the-road-jazzy-countryrock-299.wav?...SAS..." },
+     { title: "My Love I’ll Return to You (Jazz/RnB Ballad)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/my-love-ill-return-to-you-jazzrnb-ballad-5-1.wav?...SAS..." },
+     { title: "My Love I’ll Return to You (Jazz/Rock Ballad)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/my-love-ill-return-to-you-jazzrock-ballad-1.07.wav?...SAS..." }
 ];
 
-const tracksContainer = document.getElementById("tracks");
-const audioPlayer = document.getElementById("audioPlayer");
-const nowPlaying = document.getElementById("nowPlaying");
-
-function renderTracks() {
-  tracks.forEach((track, index) => {
-    const div = document.createElement("div");
-    div.className = "track";
-
-    div.innerHTML = `
-      <div>
-        <div class="track-title">${index + 1}. ${track.title}</div>
-        <div class="track-meta">${track.mp3 ? "MP3" : ""} ${track.wav ? "+ WAV" : ""}</div>
-      </div>
-      <div class="track-buttons">
-        ${track.mp3 ? `<button class="btn-mp3" onclick="playTrack('${track.title}', '${track.mp3}', 'MP3')">Play MP3</button>` : ""}
-        ${track.wav ? `<button class="btn-wav" onclick="playTrack('${track.title}', '${track.wav}', 'WAV')">Play WAV</button>` : ""}
-      </div>
-    `;
-
-    tracksContainer.appendChild(div);
-  });
-}
-
-function playTrack(title, src, format) {
-  audioPlayer.src = src;
-  audioPlayer.play();
-  nowPlaying.textContent = `Now Playing: ${title} (${format})`;
-}
-
-renderTracks();
-</script>
     
-<script>
-document.addEventListener('contextmenu', event => event.preventDefault());
-</script>
+    
+    
+    
+    
+    
+    ];
 
+
+      
+
+
+      
+
+    let currentTrack = 0;
+    const audioPlayer = document.getElementById('audioPlayer');
+    const nowPlaying = document.getElementById('nowPlaying');
+
+    function loadTrack(index) {
+      audioPlayer.src = tracks[index].url;
+      nowPlaying.textContent = "Now Playing: " + tracks[index].title;
+      audioPlayer.play();
+    }
+
+    function nextTrack() {
+      currentTrack = (currentTrack + 1) % tracks.length;
+      loadTrack(currentTrack);
+    }
+
+    function prevTrack() {
+      currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
+      loadTrack(currentTrack);
+    }
+
+    // Auto-load first track
+    loadTrack(currentTrack);
+  </script>
     
 
            <!-- WATSON EXPERIENCE -->
