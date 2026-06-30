@@ -567,47 +567,6 @@ nav ul li a {
   font-size: 14px;
   opacity: 0.9;
 }
-.footer {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-wrap: wrap; /* optional, helps on small screens */
-}
-
-
-.footer {
-  width: 100%;
-  max-width: 1200px;
-  margin-top: 40px;
-  padding-top: 20px;
-  border-top: 1px solid rgba(212, 175, 55, 0.35);
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  color: var(--text-soft);
-  font-size: 0.8rem;
-}
-
-.footer-left {
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-}
-
-.footer-right {
-  display: flex;
-  gap: 12px;
-}
-
-.footer-link {
-  color: var(--gold-main);
-  text-decoration: none;
-  font-size: 0.8rem;
-}
-
-.footer-link:hover {
-  text-decoration: underline;
-}
 
 /* ---------- Utility Classes ---------- */
 
