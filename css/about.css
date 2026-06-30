@@ -85,13 +85,13 @@ body {
     margin-bottom: 8px;
     opacity: 0.9;
 }
-.about-image {
-    flex: 1 1 350px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-start;
-    margin-top: 20px;
+.about-image img {
+    width: 250px;      /* shrink the image */
+    height: auto;      /* keep proportions */
+    object-fit: cover; /* prevents weird stretching */
+    border-radius: 12px;
 }
+
 
 
 .about-image img {
