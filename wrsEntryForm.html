@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<body>
+<head>
+<style>
+  form#wrsEntryForm {
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    gap: 10px;
+  }
+
+  form#wrsEntryForm label {
+    font-weight: bold;
+    margin-top: 10px;
+  }
+
+  form#wrsEntryForm input {
+    padding: 6px;
+  }
+</style>
+</head>
+
+<body>
+
+<form id="wrsEntryForm">
+  <h2>WRSMusic Entry Form</h2>
+
+  <!-- Track Title -->
+  <label>Track Title</label>
+  <input type="text" id="trackTitle" required>
+
+  <!-- MP3 Upload + SAS Link -->
+  <label>MP3 File</label>
+  <input type="file" id="mp3File" accept=".mp3">
+
+  <label>MP3 SAS Link</label>
+  <input type="text" id="mp3Sas">
+
+  <!-- WAV Upload + SAS Link -->
+  <label>WAV File</label>
+  <input type="file" id="wavFile" accept=".wav">
+
+  <label>WAV SAS Link</label>
+  <input type="text" id="wavSas">
+
+  <!-- STEMS Upload + SAS Link -->
+  <label>Stems File (ZIP)</label>
+  <input type="file" id="stemsFile" accept=".zip">
+
+  <label>Stems SAS Link</label>
+  <input type="text" id="stemsSas">
+
+  <!-- Auto ID -->
+  <label>Auto‑Generated Track ID</label>
+  <input type="text" id="trackId" readonly>
+
+  <button type="submit">Add to Catalog</button>
+</form>
+
+<div id="result"></div>
+
+
+<script>
+document.getElementById("wrsEntryForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const title = document.getElementById("trackTitle").value.trim();
+
+  const mp3File = document.getElementById("mp3File").files[0];
+  const mp3Sas = document.getElementById("mp3Sas").value.trim();
+
+  const wavFile = document.getElementById("wavFile").files[0];
+  const wavSas = document.getElementById("wavSas").value.trim();
+
+  const stemsFile = document.getElementById("stemsFile").files[0];
+  const stemsSas = document.getElementById("stemsSas").value.trim();
+
+  // AUTO ID
+  const now = new Date();
+  const id = "wrs-" +
+    now.getFullYear().toString() +
+    (now.getMonth()+1).toString().padStart(2, "0") +
+    now.getDate().toString().padStart(2, "0") + "-" +
+    now.getHours().toString().padStart(2, "0") +
+    now.getMinutes().toString().padStart(2, "0") +
+    now.getSeconds().toString().padStart(2, "0") +
+    "-" + title.replace(/\s+/g, "-").toLowerCase();
+
+  document.getElementById("trackId").value = id;
+
+  // “NO FILE → NO LINK” RULES
+  const entry = {
+    id: id,
+    title: title,
+
+    mp3: mp3File ? mp3File.name : "no mp3",
+    mp3_sas: mp3File ? (mp3Sas || "missing mp3 sas link") : "no mp3 sas link",
+
+    wav: wavFile ? wavFile.name : "no wav",
+    wav_sas: wavFile ? (wavSas || "missing wav sas link") : "no wav sas link",
+
+    stems: stemsFile ? stemsFile.name : "no stems",
+    stems_sas: stemsFile ? (stemsSas || "missing stems sas link") : "no stems sas link",
+
+    timestamp: now.toISOString()
+  };
+
+  document.getElementById("result").innerHTML =
+    "<pre>" + JSON.stringify(entry, null, 2) + "</pre>";
+});
+</script>
+
+</body>
+</html>

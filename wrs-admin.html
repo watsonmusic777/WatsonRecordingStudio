@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WRS Music – Add Track</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+        background: #111;
+        color: #f2f2f2;
+        padding: 20px;
+    }
+    h1 {
+        color: gold;
+    }
+    label {
+        display: block;
+        margin-top: 10px;
+        font-weight: bold;
+    }
+    input, textarea {
+        width: 100%;
+        padding: 8px;
+        margin-top: 4px;
+        border-radius: 4px;
+        border: none;
+    }
+    button {
+        margin-top: 20px;
+        padding: 12px 20px;
+        background: gold;
+        color: black;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+    #output {
+        margin-top: 30px;
+        padding: 20px;
+        background: #222;
+        border-radius: 6px;
+        white-space: pre-wrap;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>WRS Music – Add Track</h1>
+
+<label>Track Title</label>
+<label>Version</label>
+<input id="version">
+
+<label>Genre</label>
+<input id="genre">
+
+<label>BPM</label>
+<input id="bpm">
+
+<label>Key</label>
+<input id="key">
+
+<label>Description</label>
+<textarea id="description"></textarea>
+
+<label>MP3 URL</label>
+<input id="mp3">
+
+<label>WAV URL</label>
+<input id="wav">
+
+<label>ZIP URL</label>
+<input id="zip">
+
+<label>Cover Art URL</label>
+<input id="cover">
+
+<button onclick="addTrack()">Add Track</button>
+
+<div id="output"></div>
+
+<script>
+function addTrack() {
+    const track = {
+        title: document.getElementById("title").value,
+        version: document.getElementById("version").value,
+        genre: document.getElementById("genre").value,
+        bpm: document.getElementById("bpm").value,
+        key: document.getElementById("key").value,
+        description: document.getElementById("description").value,
+        mp3: document.getElementById("mp3").value,
+        wav: document.getElementById("wav").value,
+        zip: document.getElementById("zip").value,
+        cover: document.getElementById("cover").value
+    };
+
+    document.getElementById("output").textContent =
+        JSON.stringify(track, null, 4);
+}
+</script>
+
+</body>
+</html>
