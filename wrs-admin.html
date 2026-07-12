@@ -1,105 +1,262 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-<meta charset="UTF-8">
-<title>WRS Music – Add Track</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #111;
-        color: #f2f2f2;
-        padding: 20px;
-    }
-    h1 {
-        color: gold;
-    }
-    label {
-        display: block;
-        margin-top: 10px;
-        font-weight: bold;
-    }
-    input, textarea {
-        width: 100%;
-        padding: 8px;
-        margin-top: 4px;
-        border-radius: 4px;
-        border: none;
-    }
-    button {
-        margin-top: 20px;
-        padding: 12px 20px;
-        background: gold;
-        color: black;
-        font-weight: bold;
-        border: none;
-        border-radius: 4px;
-        cursor: pointer;
-    }
-    #output {
-        margin-top: 30px;
-        padding: 20px;
-        background: #222;
-        border-radius: 6px;
-        white-space: pre-wrap;
-    }
-</style>
+  <meta charset="UTF-8">
+  <title>WRS Track Admin</title>
 </head>
-
 <body>
+<form id="trackForm">
+  <h2>Add New Track</h2>
 
-<h1>WRS Music – Add Track</h1>
+  <label>Song Title</label>
+  <input type="text" id="title" required>
 
-<label>Track Title</label>
-<label>Version</label>
-<input id="version">
+  <label>Version</label>
+  <input type="text" id="version" required>
 
-<label>Genre</label>
-<input id="genre">
+  <label>Genre</label>
+  <input type="text" id="genre" required>
 
-<label>BPM</label>
-<input id="bpm">
+  <label>BPM</label>
+  <input type="number" id="bpm">
 
-<label>Key</label>
-<input id="key">
+  <label>Key</label>
+  <input type="text" id="key">
 
-<label>Description</label>
-<textarea id="description"></textarea>
+  <label>Description</label>
+  <textarea id="description"></textarea>
 
-<label>MP3 URL</label>
-<input id="mp3">
+  <label>MP3 SAS URL</label>
+  <input type="url" id="mp3" required>
 
-<label>WAV URL</label>
-<input id="wav">
+  <label>WAV SAS URL</label>
+  <input type="url" id="wav">
 
-<label>ZIP URL</label>
-<input id="zip">
+  <label>ZIP/Stems SAS URL</label>
+  <input type="url" id="zip">
 
-<label>Cover Art URL</label>
-<input id="cover">
+  <label>Cover Art URL</label>
+  <input type="url" id="cover">
 
-<button onclick="addTrack()">Add Track</button>
+  <button type="submit">Add Track</button>
+</form>
 
-<div id="output"></div>
+<hr>
+
+<div>
+  <h3>Admin Controls</h3>
+  <button onclick="renderTracks('all')">Show All</button>
+  <button onclick="renderGrouped('genre')">Group by Genre</button>
+  <button onclick="renderGrouped('version')">Group by Version</button>
+  <button onclick="renderGrouped('project')">Group by Project</button>
+  <button onclick="downloadJSON()">Download JSON</button>
+
+  <br><br>
+  <label>Search</label>
+  <input type="text" id="search" oninput="searchTracks(this.value)" placeholder="Title, genre, version...">
+
+  <br><br>
+  <button onclick="sortByBPM('asc')">Sort BPM ↑</button>
+  <button onclick="sortByBPM('desc')">Sort BPM ↓</button>
+
+  <button onclick="filterByBPM(70, 80)">70–80 BPM</button>
+  <button onclick="filterByBPM(80, 90)">80–90 BPM</button>
+  <button onclick="filterByBPM(90, 100)">90–100 BPM</button>
+  <button onclick="filterByBPM(100, 120)">100–120 BPM</button>
+
+  <button onclick="showMissingBPM()">Missing BPM</button>
+</div>
+
+<hr>
+
+<pre id="output"></pre>
+<div id="dashboard"></div>
 
 <script>
-function addTrack() {
-    const track = {
-        title: document.getElementById("title").value,
-        version: document.getElementById("version").value,
-        genre: document.getElementById("genre").value,
-        bpm: document.getElementById("bpm").value,
-        key: document.getElementById("key").value,
-        description: document.getElementById("description").value,
-        mp3: document.getElementById("mp3").value,
-        wav: document.getElementById("wav").value,
-        zip: document.getElementById("zip").value,
-        cover: document.getElementById("cover").value
-    };
+let tracks = [];
 
-    document.getElementById("output").textContent =
-        JSON.stringify(track, null, 4);
+document.getElementById("trackForm").addEventListener("submit", function(e) {
+  e.preventDefault();
+
+  const track = {
+    title: document.getElementById("title").value.trim(),
+    version: document.getElementById("version").value.trim(),
+    genre: document.getElementById("genre").value.trim(),
+    bpm: document.getElementById("bpm").value ? Number(document.getElementById("bpm").value) : null,
+    key: document.getElementById("key").value.trim(),
+    description: document.getElementById("description").value.trim(),
+    mp3: document.getElementById("mp3").value.trim(),
+    wav: document.getElementById("wav").value.trim(),
+    zip: document.getElementById("zip").value.trim(),
+    cover: document.getElementById("cover").value.trim()
+  };
+
+  tracks.push(track);
+  document.getElementById("output").textContent = JSON.stringify(track, null, 2);
+  renderTracks('all');
+  e.target.reset();
+});
+
+function renderTracks(mode = 'all') {
+  const dash = document.getElementById("dashboard");
+  dash.innerHTML = "<h3>All Tracks</h3>";
+
+  if (!tracks.length) {
+    dash.innerHTML += "<p>No tracks yet.</p>";
+    return;
+  }
+
+  const list = document.createElement("ul");
+  tracks.forEach((t, i) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      ${t.title} (${t.version}) — ${t.genre} — ${t.bpm || "No BPM"} BPM
+      [${t.mp3}]
+      <button onclick="editBPM(${i})">Edit BPM</button>
+    `;
+    list.appendChild(li);
+  });
+  dash.appendChild(list);
+}
+
+function groupBy(field) {
+  return tracks.reduce((groups, track) => {
+    let key = "Unknown";
+
+    if (field === "project") {
+      key = track.title.split(" - ")[0] || track.title || "Unknown";
+    } else {
+      key = track[field] || "Unknown";
+    }
+
+    if (!groups[key]) groups[key] = [];
+    groups[key].push(track);
+    return groups;
+  }, {});
+}
+
+function renderGrouped(field) {
+  const groups = groupBy(field);
+  const dash = document.getElementById("dashboard");
+  dash.innerHTML = `<h3>Grouped by ${field}</h3>`;
+
+  Object.keys(groups).forEach(groupName => {
+    const section = document.createElement("div");
+    section.innerHTML = `<h4>${groupName}</h4>`;
+    const list = document.createElement("ul");
+
+    groups[groupName].forEach((t, i) => {
+      const li = document.createElement("li");
+      li.innerHTML = `
+        ${t.title} (${t.version}) — ${t.genre} — ${t.bpm || "No BPM"} BPM
+        [${t.mp3}]
+        <button onclick="editBPM(${tracks.indexOf(t)})">Edit BPM</button>
+      `;
+      list.appendChild(li);
+    });
+
+    section.appendChild(list);
+    dash.appendChild(section);
+  });
+}
+
+function searchTracks(query) {
+  query = query.toLowerCase();
+  const dash = document.getElementById("dashboard");
+  dash.innerHTML = `<h3>Search: "${query}"</h3>`;
+
+  const results = tracks.filter(t =>
+    t.title.toLowerCase().includes(query) ||
+    t.genre.toLowerCase().includes(query) ||
+    t.version.toLowerCase().includes(query)
+  );
+
+  if (!results.length) {
+    dash.innerHTML += "<p>No matches.</p>";
+    return;
+  }
+
+  const list = document.createElement("ul");
+  results.forEach((t, i) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      ${t.title} (${t.version}) — ${t.genre} — ${t.bpm || "No BPM"} BPM
+      [${t.mp3}]
+      <button onclick="editBPM(${tracks.indexOf(t)})">Edit BPM</button>
+    `;
+    list.appendChild(li);
+  });
+  dash.appendChild(list);
+}
+
+function downloadJSON() {
+  const dataStr = "data:text/json;charset=utf-8," + encodeURIComponent(JSON.stringify(tracks, null, 2));
+  const a = document.createElement("a");
+  a.setAttribute("href", dataStr);
+  a.setAttribute("download", "tracks.json");
+  a.click();
+}
+
+function editBPM(index) {
+  const newBPM = prompt("Enter BPM for this track:", tracks[index].bpm || "");
+  if (newBPM !== null && newBPM.trim() !== "") {
+    tracks[index].bpm = Number(newBPM);
+    renderTracks('all');
+  }
+}
+
+function sortByBPM(direction = "asc") {
+  tracks.sort((a, b) => {
+    const bpmA = a.bpm || 0;
+    const bpmB = b.bpm || 0;
+    return direction === "asc" ? bpmA - bpmB : bpmB - bpmA;
+  });
+  renderTracks('all');
+}
+
+function filterByBPM(min, max) {
+  const dash = document.getElementById("dashboard");
+  dash.innerHTML = `<h3>BPM ${min}–${max}</h3>`;
+
+  const results = tracks.filter(t => t.bpm >= min && t.bpm <= max);
+
+  if (!results.length) {
+    dash.innerHTML += "<p>No tracks in this BPM range.</p>";
+    return;
+  }
+
+  const list = document.createElement("ul");
+  results.forEach((t, i) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+      ${t.title} (${t.version}) — ${t.genre} — ${t.bpm || "No BPM"} BPM
+      [${t.mp3}]
+      <button onclick="editBPM(${tracks.indexOf(t)})">Edit BPM</button>
+    `;
+    list.appendChild(li);
+  });
+  dash.appendChild(list);
+}
+
+function showMissingBPM() {
+  const dash = document.getElementById("dashboard");
+  dash.innerHTML = "<h3>Tracks Missing BPM</h3>";
+
+  const missing = tracks.filter(t => !t.bpm);
+
+  if (!missing.length) {
+    dash.innerHTML += "<p>All tracks have BPM.</p>";
+    return;
+  }
+
+  const list = document.createElement("ul");
+  missing.forEach(t => {
+    const li = document.createElement("li");
+    li.textContent = `${t.title} (${t.version}) — ${t.genre}`;
+    list.appendChild(li);
+  });
+  dash.appendChild(list);
 }
 </script>
-
 </body>
 </html>
