@@ -73,21 +73,7 @@
 const catalog = [];
 let editingId = null;
 	
-	document.getElementById("downloadJsonBtn").addEventListener("click", () => {
-    const json = JSON.stringify(catalog, null, 2);
-    const blob = new Blob([json], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
 
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "wrsCatalog.json";
-    a.click();
-
-    URL.revokeObjectURL(url);
-});
-	
-	
-	
 
 // ADD NEW TRACK
 document.getElementById("addNewBtn").addEventListener("click", function() {
@@ -200,7 +186,20 @@ function clearForm() {
 }
 </script>
 	
+  document.getElementById("downloadJsonBtn").addEventListener("click", () => {
+  const json = JSON.stringify(catalog, null, 2);
+  const blob = new Blob([json], { type: "application/json" });
+  const url = URL.createObjectURL(blob);
+
+  const a = document.createElement("a");
+   a.href = url;
+   a.download = "wrsCatalog.json";
+   a.click();
+
+   URL.revokeObjectURL(url);
 	
+});
+
 
 
 </body>
