@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html>
-<body>
 <head>
 <style>
   form#wrsEntryForm {
@@ -18,6 +17,13 @@
   form#wrsEntryForm input {
     padding: 6px;
   }
+
+  #trackList li {
+    cursor: pointer;
+    padding: 6px;
+    margin-top: 4px;
+    background: #f2f2f2;
+  }
 </style>
 </head>
 
@@ -26,57 +32,54 @@
 <form id="wrsEntryForm">
   <h2>WRSMusic Entry Form</h2>
 
-  <!-- Track Title -->
   <label>Track Title</label>
   <input type="text" id="trackTitle" required>
 
-  <!-- MP3 Upload + SAS Link -->
   <label>MP3 File</label>
   <input type="file" id="mp3File" accept=".mp3">
 
   <label>MP3 SAS Link</label>
   <input type="text" id="mp3Sas">
 
-  <!-- WAV Upload + SAS Link -->
   <label>WAV File</label>
   <input type="file" id="wavFile" accept=".wav">
 
   <label>WAV SAS Link</label>
   <input type="text" id="wavSas">
 
-  <!-- STEMS Upload + SAS Link -->
   <label>Stems File (ZIP)</label>
   <input type="file" id="stemsFile" accept=".zip">
 
   <label>Stems SAS Link</label>
   <input type="text" id="stemsSas">
 
-  <!-- Auto ID -->
-  <label>Auto‑Generated Track ID</label>
+  <label>Track ID</label>
   <input type="text" id="trackId" readonly>
 
-  <button type="submit">Add to Catalog</button>
+  <button type="button" id="addNewBtn">Add New Track</button>
+  <button type="button" id="saveChangesBtn" style="display:none;">Save Changes</button>
 </form>
+
+<h3>Track Catalog</h3>
+<ul id="trackList"></ul>
 
 <div id="result"></div>
 
-
 <script>
-document.getElementById("wrsEntryForm").addEventListener("submit", function(e) {
-  e.preventDefault();
+const catalog = [];
+let editingId = null;
+
+// ADD NEW TRACK
+document.getElementById("addNewBtn").addEventListener("click", function() {
 
   const title = document.getElementById("trackTitle").value.trim();
-
   const mp3File = document.getElementById("mp3File").files[0];
   const mp3Sas = document.getElementById("mp3Sas").value.trim();
-
   const wavFile = document.getElementById("wavFile").files[0];
   const wavSas = document.getElementById("wavSas").value.trim();
-
   const stemsFile = document.getElementById("stemsFile").files[0];
   const stemsSas = document.getElementById("stemsSas").value.trim();
 
-  // AUTO ID
   const now = new Date();
   const id = "wrs-" +
     now.getFullYear().toString() +
@@ -89,26 +92,92 @@ document.getElementById("wrsEntryForm").addEventListener("submit", function(e) {
 
   document.getElementById("trackId").value = id;
 
-  // “NO FILE → NO LINK” RULES
   const entry = {
     id: id,
     title: title,
-
-    mp3: mp3File ? mp3File.name : "no mp3",
-    mp3_sas: mp3File ? (mp3Sas || "missing mp3 sas link") : "no mp3 sas link",
-
-    wav: wavFile ? wavFile.name : "no wav",
-    wav_sas: wavFile ? (wavSas || "missing wav sas link") : "no wav sas link",
-
-    stems: stemsFile ? stemsFile.name : "no stems",
-    stems_sas: stemsFile ? (stemsSas || "missing stems sas link") : "no stems sas link",
-
+    mp3: mp3File ? mp3File.name : "",
+    mp3_sas: mp3Sas,
+    wav: wavFile ? wavFile.name : "",
+    wav_sas: wavSas,
+    stems: stemsFile ? stemsFile.name : "",
+    stems_sas: stemsSas,
     timestamp: now.toISOString()
   };
 
+  catalog.push(entry);
+
+  document.getElementById("trackList").innerHTML += `
+    <li data-id="${entry.id}">
+      ${entry.title}
+    </li>
+  `;
+
   document.getElementById("result").innerHTML =
     "<pre>" + JSON.stringify(entry, null, 2) + "</pre>";
+
+  clearForm();
 });
+
+// SAVE CHANGES
+document.getElementById("saveChangesBtn").addEventListener("click", function() {
+
+  const index = catalog.findIndex(t => t.id === editingId);
+  if (index === -1) return;
+
+  const mp3File = document.getElementById("mp3File").files[0];
+  const wavFile = document.getElementById("wavFile").files[0];
+  const stemsFile = document.getElementById("stemsFile").files[0];
+
+  catalog[index].title = document.getElementById("trackTitle").value.trim();
+  catalog[index].mp3_sas = document.getElementById("mp3Sas").value.trim();
+  catalog[index].wav_sas = document.getElementById("wavSas").value.trim();
+  catalog[index].stems_sas = document.getElementById("stemsSas").value.trim();
+
+  if (mp3File) catalog[index].mp3 = mp3File.name;
+  if (wavFile) catalog[index].wav = wavFile.name;
+  if (stemsFile) catalog[index].stems = stemsFile.name;
+
+  catalog[index].timestamp = new Date().toISOString();
+
+  document.getElementById("result").innerHTML =
+    "<pre>" + JSON.stringify(catalog[index], null, 2) + "</pre>";
+
+  clearForm();
+});
+
+// CLICK TO LOAD TRACK
+document.getElementById("trackList").addEventListener("click", function(e) {
+  if (e.target.tagName !== "LI") return;
+
+  const id = e.target.dataset.id;
+  const track = catalog.find(t => t.id === id);
+  if (!track) return;
+
+  editingId = id;
+
+  document.getElementById("trackTitle").value = track.title;
+  document.getElementById("mp3Sas").value = track.mp3_sas;
+  document.getElementById("wavSas").value = track.wav_sas;
+  document.getElementById("stemsSas").value = track.stems_sas;
+  document.getElementById("trackId").value = track.id;
+
+  document.getElementById("saveChangesBtn").style.display = "block";
+});
+
+// CLEAR FORM
+function clearForm() {
+  document.getElementById("trackTitle").value = "";
+  document.getElementById("mp3File").value = "";
+  document.getElementById("mp3Sas").value = "";
+  document.getElementById("wavFile").value = "";
+  document.getElementById("wavSas").value = "";
+  document.getElementById("stemsFile").value = "";
+  document.getElementById("stemsSas").value = "";
+  document.getElementById("trackId").value = "";
+
+  editingId = null;
+  document.getElementById("saveChangesBtn").style.display = "none";
+}
 </script>
 
 </body>
