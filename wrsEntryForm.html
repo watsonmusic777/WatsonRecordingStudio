@@ -58,7 +58,9 @@
 
   <button type="button" id="addNewBtn">Add New Track</button>
   <button type="button" id="saveChangesBtn" style="display:none;">Save Changes</button>
-   <button id="downloadJsonBtn">Download JSON</button>
+  <button id="downloadJsonBtn">Download JSON</button>
+  <button onclick="addTrack()">Add New Track</button>
+
 </form>
 
 <h3>Track Catalog</h3>
@@ -73,6 +75,17 @@
 const catalog = [];
 let editingId = null;
 	
+function addTrack() {
+    const track = {
+        title: document.getElementById("trackTitle").value,
+        mp3: document.getElementById("mp3Sas").value,
+        wav: document.getElementById("wavSas").value,
+        stems: document.getElementById("stemsSas").value,
+        id: document.getElementById("trackId").value
+    };
+
+    catalog.push(track);
+}
 
 
 // ADD NEW TRACK
