@@ -58,12 +58,13 @@
 
   <button type="button" id="addNewBtn">Add New Track</button>
   <button type="button" id="saveChangesBtn" style="display:none;">Save Changes</button>
+   <button id="downloadJsonBtn">Download JSON</button>
 </form>
 
 <h3>Track Catalog</h3>
 <ul id="trackList"></ul>
 	
-<button id="downloadJsonBtn">Download JSON</button>
+
 
 
 <div id="result"></div>
@@ -71,6 +72,22 @@
 <script>
 const catalog = [];
 let editingId = null;
+	
+	document.getElementById("downloadJsonBtn").addEventListener("click", () => {
+    const json = JSON.stringify(catalog, null, 2);
+    const blob = new Blob([json], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "wrsCatalog.json";
+    a.click();
+
+    URL.revokeObjectURL(url);
+});
+	
+	
+	
 
 // ADD NEW TRACK
 document.getElementById("addNewBtn").addEventListener("click", function() {
@@ -184,18 +201,7 @@ function clearForm() {
 </script>
 	
 	
-document.getElementById("downloadJsonBtn").addEventListener("click", () => {
-    const json = JSON.stringify(catalog, null, 2);
-    const blob = new Blob([json], { type: "application/json" });
-    const url = URL.createObjectURL(blob);
 
-    const a = document.createElement("a");
-    a.href = url;
-    a.download = "wrsCatalog.json";
-    a.click();
-
-    URL.revokeObjectURL(url);
-});
 
 </body>
 </html>
