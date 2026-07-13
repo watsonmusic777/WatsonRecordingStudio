@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>WRSMusic Player</title>
+
+<style>
+    body {
+        background: #111;
+        color: gold;
+        font-family: Arial, sans-serif;
+        padding: 20px;
+    }
+    h1 {
+        color: gold;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+    #trackList {
+        background: #222;
+        padding: 20px;
+        border: 2px solid gold;
+        margin-bottom: 20px;
+    }
+    .trackItem {
+        padding: 10px;
+        border-bottom: 1px solid #444;
+        cursor: pointer;
+    }
+    .trackItem:hover {
+        background: #333;
+    }
+    #playerArea {
+        background: #222;
+        padding: 20px;
+        border: 2px solid gold;
+    }
+    audio {
+        width: 100%;
+        margin-top: 10px;
+    }
+    img {
+        width: 200px;
+        border: 2px solid gold;
+        margin-top: 10px;
+    }
+</style>
+</head>
+
+<body>
+
+<h1>WRSMusic Player</h1>
+
+<input type="file" id="jsonFile" accept=".json">
+<button onclick="loadJson()">Load Catalog</button>
+
+<div id="trackList"></div>
+
+<div id="playerArea">
+    <h2 id="trackTitle">Select a track</h2>
+    <p id="trackInfo"></p>
+
+    <img id="coverArt" src="" alt="Cover Art">
+
+    <h3>MP3</h3>
+    <audio id="mp3Player" controls></audio>
+
+    <h3>WAV</h3>
+    <audio id="wavPlayer" controls></audio>
+
+    <h3>ZIP (Stems)</h3>
+    <a id="zipLink" href="#" target="_blank" style="color: gold;">Download Stems</a>
+</div>
+
+<script>
+
+let catalog = [];
+
+function loadJson() {
+    const fileInput = document.getElementById("jsonFile");
+    const file = fileInput.files[0];
+
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = function(e) {
+        catalog = JSON.parse(e.target.result);
+
+        // ⭐ AUTO‑ID FIX INSIDE PLAYER
+        catalog.forEach((track, index) => {
+            track.id = index + 1;
+        });
+
+        displayTracks();
+    };
+    reader.readAsText(file);
+}
+
+function displayTracks() {
+    const list = document.getElementById("trackList");
+    list.innerHTML = "";
+
+    catalog.forEach(track => {
+        const div = document.createElement("div");
+        div.className = "trackItem";
+        div.textContent = `${track.id}. ${track.title}`;
+        div.onclick = () => loadTrack(track);
+        list.appendChild(div);
+    });
+}
+
+function loadTrack(track) {
+    document.getElementById("trackTitle").textContent = track.title;
+
+    document.getElementById("trackInfo").innerHTML = `
+        <b>Version:</b> ${track.version}<br>
+        <b>Genre:</b> ${track.genre}<br>
+        <b>BPM:</b> ${track.bpm}<br>
+        <b>Description:</b> ${track.description}
+    `;
+
+    document.getElementById("mp3Player").src = track.mp3;
+    document.getElementById("wavPlayer").src = track.wav;
+    document.getElementById("zipLink").href = track.zip;
+
+    if (track.cover) {
+        document.getElementById("coverArt").src = track.cover;
+        document.getElementById("coverArt").style.display = "block";
+    } else {
+        document.getElementById("coverArt").style.display = "none";
+    }
+}
+
+</script>
+
+</body>
+</html>
