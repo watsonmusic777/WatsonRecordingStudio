@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>WRSMusic Entry Form</title>
+    <style>
+        body {
+            background: #111;
+            color: #f2f2f2;
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+        h1 {
+            color: gold;
+        }
+        label {
+            display: block;
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        input {
+            width: 300px;
+            padding: 6px;
+            margin-top: 4px;
+        }
+        button {
+            margin-top: 15px;
+            padding: 10px 20px;
+            background: gold;
+            border: none;
+            font-weight: bold;
+            cursor: pointer;
+        }
+        #catalogDisplay {
+            margin-top: 30px;
+            padding: 20px;
+            background: #222;
+            border: 1px solid gold;
+        }
+        pre {
+            background: #000;
+            padding: 15px;
+            border: 1px solid #444;
+            color: #0f0;
+        }
+    </style>
+</head>
+
+<body>
+
+<h1>WRSMusic Track Entry Form</h1>
+
+<label>Track Title</label>
+<input id="trackTitle">
+
+<label>Version</label>
+<input id="trackVersion">
+
+<label>Genre</label>
+<input id="trackGenre">
+
+<label>BPM</label>
+<input id="trackBpm">
+
+<label>Key</label>
+<input id="trackKey">
+
+<label>Description</label>
+<input id="trackDescription">
+
+<label>MP3 SAS Link</label>
+<input id="mp3Sas">
+
+<label>WAV SAS Link</label>
+<input id="wavSas">
+
+<label>STEMS SAS Link</label>
+<input id="stemsSas">
+
+<label>Cover Art URL</label>
+<input id="coverArt">
+
+<label>Track ID</label>
+<input id="trackId">
+
+<button onclick="addTrack()">Add Track</button>
+<button id="downloadJsonBtn">Download JSON</button>
+
+<div id="catalogDisplay">
+    <h2>Catalog Preview</h2>
+    <pre id="catalogJson"></pre>
+</div>
+
+<script>
+
+// ⭐ REAL STORAGE ARRAY
+let catalog = [];
+
+// ⭐ ADD TRACK FUNCTION
+function addTrack() {
+
+    const track = {
+        id: document.getElementById("trackId").value,
+        title: document.getElementById("trackTitle").value,
+        version: document.getElementById("trackVersion").value,
+        genre: document.getElementById("trackGenre").value,
+        bpm: document.getElementById("trackBpm").value,
+        key: document.getElementById("trackKey").value,
+        description: document.getElementById("trackDescription").value,
+        mp3: document.getElementById("mp3Sas").value,
+        wav: document.getElementById("wavSas").value,
+        stems: document.getElementById("stemsSas").value,
+        coverArt: document.getElementById("coverArt").value
+    };
+
+    catalog.push(track);
+
+    updateCatalogPreview();
+}
+
+// ⭐ LIVE PREVIEW
+function updateCatalogPreview() {
+    document.getElementById("catalogJson").textContent =
+        JSON.stringify(catalog, null, 2);
+}
+
+// ⭐ DOWNLOAD JSON BUTTON
+document.getElementById("downloadJsonBtn").addEventListener("click", () => {
+    const json = JSON.stringify(catalog, null, 2);
+    const blob = new Blob([json], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "wrsCatalog.json";
+    a.click();
+
+    URL.revokeObjectURL(url);
+});
+
+</script>
+
+</body>
+</html>
