@@ -698,4 +698,19 @@ body {
     border-radius: 6px;
     box-sizing: border-box; /* ensures padding doesn't break the size */
 }
+.banner-title {
+    margin-bottom: 18px;
+}
+
+.banner-subtitle {
+    margin-bottom: 22px;
+}
+
+.banner-line {
+    margin-bottom: 18px;
+}
+
+.banner-sync {
+    margin-top: 25px;
+}
 
