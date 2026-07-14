@@ -713,4 +713,10 @@ body {
 .banner-sync {
     margin-top: 25px;
 }
+.sync-section {
+    width: 880px;          /* match banner width */
+    margin: 30px auto;     /* centers the section */
+    display: flex;
+    justify-content: center;
+}
 
