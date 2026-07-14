@@ -623,4 +623,41 @@ body {
   color: #fff;
   text-shadow: 0 0 10px #d4af37;
 }
+/* Full background banner */
+.listening-center-banner {
+    width: 100%;
+    padding: 80px 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    text-align: center;
+    color: var(--text-main);
+}
+
+/* Musical background image */
+.musical-bg {
+    background-image: url('https://images.unsplash.com/photo-1511379938547-c1f69419868d');
+    filter: brightness(0.75);
+}
+
+/* Centered content matching Watson Experience width */
+.banner-inner {
+    max-width: 1100px; /* SAME WIDTH as your Watson Experience section */
+    margin: 0 auto;
+    padding: 0 20px; /* side spacing */
+}
+
+.listening-center-banner h2 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    color: gold;
+    text-shadow: 0 0 10px rgba(0,0,0,0.6);
+}
+
+.listening-center-banner p {
+    font-size: 1.4rem;
+    opacity: 0.95;
+    color: #f0f0f0;
+    text-shadow: 0 0 8px rgba(0,0,0,0.5);
+}
 
