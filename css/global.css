@@ -624,6 +624,7 @@ body {
   text-shadow: 0 0 10px #d4af37;
 }
 /* Full background banner */
+/* Full background banner */
 .listening-center-banner {
     width: 100%;
     padding: 80px 0;
@@ -642,7 +643,7 @@ body {
 
 /* Centered content matching Watson Experience width */
 .banner-inner {
-    max-width: 1100px; /* SAME WIDTH as your Watson Experience section */
+    max-width: 1100px; /* SAME WIDTH as The Watson Experience */
     margin: 0 auto;
     padding: 0 20px; /* side spacing */
 }
@@ -660,4 +661,3 @@ body {
     color: #f0f0f0;
     text-shadow: 0 0 8px rgba(0,0,0,0.5);
 }
-
