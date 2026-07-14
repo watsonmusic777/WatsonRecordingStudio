@@ -731,4 +731,9 @@ body {
     margin-bottom: 40px; /* or 50px or 60px */
 }
 
+.sync-privacy {
+    font-size: 0.85rem;
+    color: #aaa;
+    margin-top: 6px;
+}
 
