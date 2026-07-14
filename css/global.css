@@ -724,4 +724,8 @@ body {
     display: flex;
     justify-content: center;
 }
+.listening-center-banner {
+    border: 2px solid #d4af37;
+}
+
 
