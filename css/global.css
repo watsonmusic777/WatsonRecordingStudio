@@ -727,5 +727,8 @@ body {
 .listening-center-banner {
     border: 2px solid #d4af37;
 }
+.listening-center-banner {
+    margin-bottom: 40px; /* or 50px or 60px */
+}
 
 
