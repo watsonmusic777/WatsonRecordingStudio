@@ -661,3 +661,23 @@ body {
     color: #f0f0f0;
     text-shadow: 0 0 8px rgba(0,0,0,0.5);
 }
+/* Dark overlay on musical banner */
+.listening-center-banner.musical-bg {
+    position: relative;
+}
+
+.listening-center-banner.musical-bg::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.55); /* dark overlay */
+    z-index: 1;
+}
+
+.banner-inner {
+    position: relative;
+    z-index: 2; /* text stays above overlay */
+}
