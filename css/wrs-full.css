@@ -372,10 +372,16 @@ nav ul li a {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(3, 400px);
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
     gap: 30px;
-    justify-content: center;
-    margin: 0 auto;
+    justify-items: center;
+}
+.service-card {
+    background: #111;
+    padding: 25px;
+    border-radius: 10px;
+    width: 100%;
+    max-width: 320px;
 }
 /* CINEMATIC STYLE FOR WHAT WE DO SECTION */
 .wrs-what-we-do.cinematic-card {
