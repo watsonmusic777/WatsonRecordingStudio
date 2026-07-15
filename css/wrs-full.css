@@ -356,6 +356,11 @@ nav ul li a {
 .sync-popup-content label {
     all: revert;
 }
+.what-we-do {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+}
 
 .services-grid img {
     width: 250px;
