@@ -372,17 +372,21 @@ nav ul li a {
 
 .services-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    grid-template-columns: repeat(3, 1fr); /* 3 columns */
     gap: 30px;
-    justify-items: center;
+    max-width: 1200px;
+    margin: 0 auto; /* centers the whole grid */
+    justify-items: center; /* centers each card */
 }
+
 .service-card {
-    background: #111;
-    padding: 25px;
-    border-radius: 10px;
-    width: 100%;
-    max-width: 320px;
+    border: 3px solid #d4af37;
+    border-radius: 14px;
+    padding: 20px;
+    background: #0a0a0a;
+    box-shadow: 0 0 22px rgba(212, 175, 55, 0.25);
 }
+
 /* CINEMATIC STYLE FOR WHAT WE DO SECTION */
 .wrs-what-we-do.cinematic-card {
     background: linear-gradient(145deg, #0b0b0b, #111);
