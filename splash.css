@@ -1,0 +1,48 @@
+@charset "utf-8";
+/* CSS Document */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 100%;
+    overflow: hidden; /* PAGE HOLDS */
+    font-family: Arial, sans-serif;
+    background: black; /* fallback */
+}
+
+.wrs-video-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+    opacity: 0.35;
+    filter: saturate(1.2) contrast(1.1);
+}
+
+.wrs-overlay {
+    position: fixed; /* HOLDS CENTER */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: gold;
+    text-shadow: 0 0 10px black;
+    width: 100%;
+    pointer-events: none; /* prevents weird clicks */
+}
+
+.wrs-title {
+    font-size: 4rem;
+    font-weight: bold;
+    letter-spacing: 4px;
+}
+
+.wrs-sub {
+    font-size: 1.5rem;
+    margin-top: 10px;
+    opacity: 0.9;
+}
+
