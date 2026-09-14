@@ -2,13 +2,29 @@
 <html lang="en-US">
 <head>
     <meta charset="UTF-8">
-    <title>Watson Recording Studio</title>
+
+    <title>WRSS Studio — Digital Music Licensing, Production & Creative Services</title>
+
+    <meta name="description" content="WRSS Studio provides professional digital music licensing, production services, artist development, and exclusive content through our online studio platform.">
+    <meta name="keywords" content="WRSS Studio, music licensing, sync licensing, digital music production, Honolulu studio, WRSS Online Studio, artist development, music services, creative tools">
+    <meta name="author" content="WRSS Studio">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="WRSS Studio — Digital Music Licensing & Production">
+    <meta property="og:description" content="Explore digital music licensing, production services, and exclusive WRSS Studio content through our online studio platform.">
+    <meta property="og:image" content="https://wrsstudio.online/assets/og-home.jpg">
+    <meta property="og:url" content="https://wrsstudio.online">
+    <meta property="og:type" content="website">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0A0A0A">
+    <link rel="canonical" href="https://wrsstudio.online">
+
     <link rel="stylesheet" href="css/global.css?v=333">
     <link rel="stylesheet" href="css/wrs-full.css?v=299">
 </head>
 
 <body class="home">
- 
 
 <!-- HEADER -->
 <header class="site-header">
@@ -67,19 +83,18 @@
 
 <!-- HERO -->
 <section class="home-hero" style="background-image: url('https://watsonmusic777.github.io/WatsonRecordingStudio/images/home-hero-studio.png');">
-       <div class="home-hero-content">
+    <div class="home-hero-content">
         <p>
             <strong>Crafting Sound With Cinematic Precision</strong><br>
             Watson Recording Studio is a premium production house specializing in high-end music creation,
             digital sound design, and immersive audio experiences.
         </p>
-          <a href="membership.html" class="btn-primary">Join Membership</a>
-   </div>
+        <a href="membership.html" class="btn-primary">Join Membership</a>
+    </div>
 </section>
 
-
-    -
-   <section class="listening-center-banner musical-bg">
+<!-- LISTENING CENTER -->
+<section class="listening-center-banner musical-bg">
     <div class="banner-inner">
 
         <h2 class="banner-title">The WRSMusic Catalog</h2>
@@ -91,114 +106,101 @@
         <p class="banner-line">Enjoy the Listening Center and listen to every track instantly.</p>
 
         <p class="banner-sync">Proceed to the Sync Page to download your MP3, WAV, Stems, Lyrics, and Bundle.</p>
-       
-         <p class="banner-assist">Assisted by Futuristic Modern Digital Systems</p>
+
+        <p class="banner-assist">Assisted by Futuristic Modern Digital Systems</p>
     </div>
-
-            </div>
 </section>
-<!-- SYNC FORM SECTION (correct placement) -->
-<section class="sync-section">
-    <form class="sync-form" action="sync.html" method="GET">
-        <label>Your Name</label>
-        <input type="text" name="name" required>
 
-        <label>Your Email</label>
-        <input type="email" name="email" required>
+<!-- SIGNUP HEADER -->
+<div class="header-banner">
+    <h2>WRSS Listener Account Sign Up</h2>
+    <p>Effortless Sign Up — Easy and Quick</p>
+</div>
 
-        <div class="sync-terms">
-            <input type="checkbox" id="agree" required>
-            <label for="agree">I agree to the terms</label>
+<div class="scroll-arrow"></div>
+
+<!-- SIGNUP FORM -->
+<div class="gold-section">
+
+    <form onsubmit="return validatePassword()">
+
+        <div class="form-row">
+            <label>Name</label>
+            <input type="text">
         </div>
 
-        <button type="submit" class="btn-gold">Continue</button>
-        <button type="button" class="btn-dark">Cancel</button>
-<p class="sync-consent">
-    I agree to allow WRSMusic to store my name and email for account sync and platform access.
-</p>
+        <div class="form-row">
+            <label>Email</label>
+            <input type="email">
+        </div>
 
-<p class="sync-privacy">
-    We will not sell your information.
-</p>
-      </form> 
-  </section>
+        <div class="form-row">
+            <label>Password</label>
+            <div style="width:55%;">
+                <input type="password" id="password">
+                <small class="password-rules">
+                    Minimum 7 characters. Use uppercase, lowercase, numbers, and symbols.
+                </small>
+            </div>
+        </div>
 
+        <div class="form-row">
+            <label>Favorite Genre</label>
+            <input type="text" class="genre-box">
+        </div>
 
+        <button>Submit</button>
+    </form>
 
- 
+    <p class="signin-link">
+        Already have an account? <a href="sync.html">Sign in here</a>
+    </p>
 
+</div>
 
+<div class="scroll-arrow"></div>
 
-   
-<!-- MAIN CONTENT -->
-<main class="main-content">
-  <div class="player-container">
-      <div id="tracks"></div>
+<!-- SECOND SIGN-IN BOX -->
+<div class="gold-section">
+    <p class="signin-link">
+        Already have an account? <a href="sync.html">Sign in here</a>
+    </p>
+</div>
 
-      
-    <div class="now-playing" id="nowPlaying">Now Playing: —</div>
-    <audio id="audioPlayer" controls></audio>
-    <div>
-      <button onclick="prevTrack()">⏮ Prev</button>
-      <button onclick="nextTrack()">⏭ Next</button>
-    </div>
-  </main>
+<script>
+function validatePassword() {
+    const password = document.getElementById("password").value;
 
-  <script>
-    const tracks = [
-      { title: "Stronger Now", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/strongernow.1.0.wav?sp=r&st=2026-06-30T15:22:09Z&se=2026-07-02T23:37:09Z&spr=https&sv=2026-02-06&sr=b&sig=Q5EMaKlF8fVYPpepf5+t0HVRtJBU14FKedby7ILqAbs=" },
-      { title: "Now Awake and Strong (Jazz Fusion / RnB Funk)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/now-awake-and-strong-jazzfusion-rnb-funk-101.wav?sp=r&st=2026-06-30T15:21:30Z&se=2026-07-02T23:36:30Z&spr=https&sv=2026-02-06&sr=b&sig=PETjfWb7xdUtR8C/jUWovquQtZ8swAxUhk6oy1yFHoU=" },
-      { title: "This Is Our Love Song (R&B Version)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/this-is-our-love-song-r-n-b-version-1.wav?sp=r&st=2026-06-30T15:22:47Z&se=2026-07-02T23:37:47Z&spr=https&sv=2026-02-06&sr=b&sig=0ZCiPtsTzSKA4RDPe/UqEH5AETD+gwyey9x+Cb/jtIg=" },
-      { title: "My Love I’ll Return to You (Jazz/RnB Ballad)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/my-love-ill-return-to-you-jazzrnb-ballad-5-1.wav?sp=r&st=2026-06-30T15:18:52Z&se=2026-07-02T23:33:52Z&spr=https&sv=2026-02-06&sr=b&sig=jT6vHtwR7Ucuc5zS321Chd35uwuP95V0J01zIAPvaEo=" },
-      { title: "My Love I’ll Return to You (Jazz/Rock Ballad)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/my-love-ill-return-to-you-jazzrock-ballad-1.07.wav?sp=r&st=2026-06-30T15:19:26Z&se=2026-07-02T23:34:26Z&spr=https&sv=2026-02-06&sr=b&sig=ZISZcKy7RhP54boYI594bMEcv59PELuToD99b2elLes=" },
-      { title: "No Matter (Jazz Orchestra)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/no-matter-jazz-orchest-3-004a.wav?sp=r&st=2026-06-30T15:20:18Z&se=2026-07-02T23:35:18Z&spr=https&sv=2026-02-06&sr=b&sig=0qmDTC/7790YmwNerwPQR/wiTRBx8jxCK8rDOOLX1SM=" },
-      { title: "No Matter the Road (Jazzy Country Rock)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/no-matter-the-road-jazzy-countryrock-299.wav?sp=r&st=2026-06-30T15:20:59Z&se=2026-07-02T23:35:59Z&spr=https&sv=2026-02-06&sr=b&sig=QjqWulIThspGQmBg5WVCbFzeV4LY5p/hjmIJOh/zSJs=" }
-      { title: "Stronger Now", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/strongernow.1.0.wav?...SAS..." },
-      { title: "This Is Our Love Song (R&B Version)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/this-is-our-love-song-r-n-b-version-1.wav?...SAS..." },
-     { title: "Now Awake and Strong (Jazz Fusion / RnB Funk)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/now-awake-and-strong-jazzfusion-rnb-funk-101.wav?...SAS..." },
-     { title: "No Matter (Jazz Orchestra)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/no-matter-jazz-orchest-3-004a.wav?...SAS..." },
-     { title: "No Matter the Road (Jazzy Country Rock)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/no-matter-the-road-jazzy-countryrock-299.wav?...SAS..." },
-     { title: "My Love I’ll Return to You (Jazz/RnB Ballad)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/my-love-ill-return-to-you-jazzrnb-ballad-5-1.wav?...SAS..." },
-     { title: "My Love I’ll Return to You (Jazz/Rock Ballad)", url: "https://formcontrolgroup8393.blob.core.windows.net/wrs-wav/my-love-ill-return-to-you-jazzrock-ballad-1.07.wav?...SAS..." }
-];
+    const rules = {
+        length: password.length >= 7,
+        upper: /[A-Z]/.test(password),
+        lower: /[a-z]/.test(password),
+        number: /[0-9]/.test(password),
+        symbol: /[^A-Za-z0-9]/.test(password)
+    };
 
-       
-
-    let currentTrack = 0;
-    const audioPlayer = document.getElementById('audioPlayer');
-    const nowPlaying = document.getElementById('nowPlaying');
-
-    function loadTrack(index) {
-      audioPlayer.src = tracks[index].url;
-      nowPlaying.textContent = "Now Playing: " + tracks[index].title;
-      audioPlayer.play();
+    if (!rules.length || !rules.upper || !rules.lower || !rules.number || !rules.symbol) {
+        alert("Password must be at least 7 characters and include uppercase, lowercase, numbers, and symbols.");
+        return false;
     }
 
-    function nextTrack() {
-      currentTrack = (currentTrack + 1) % tracks.length;
-      loadTrack(currentTrack);
-    }
+    return true;
+}
+</script>
 
-    function prevTrack() {
-      currentTrack = (currentTrack - 1 + tracks.length) % tracks.length;
-      loadTrack(currentTrack);
-    }
 
-    // Auto-load first track
-    loadTrack(currentTrack);
-  </script>
+
+
     
-
-           <!-- WATSON EXPERIENCE -->
-   <section class="wrs-experience cinematic-card">
+<!-- WATSON EXPERIENCE -->
+<section class="wrs-experience cinematic-card">
     <h2>The Watson Experience</h2>
     <p>You’re not just booking studio time — you’re stepping into a creative home built for artists who want to level up.</p>
 </section>
 
+<div class="section-divider"></div>
 
-    <div class="section-divider"></div>
-
-  <!-- WHAT WE DO -->
+<!-- WHAT WE DO -->
 <section class="what-we-do">
     <h2>What We Do</h2>
 
@@ -231,51 +233,27 @@
     </div>
 </section>
 
+<div class="section-divider"></div>
 
-    <div class="section-divider"></div>
+<!-- CINEMATIC SECTIONS -->
+<section class="cinematic-card">
+    <h2>A Studio Built for Artists</h2>
+    <p>Every detail in this space was designed to elevate your creativity and bring out your best performance.</p>
+</section>
 
-    <!-- CINEMATIC SECTIONS -->
-    <section class="cinematic-card">
-        <h2>A Studio Built for Artists</h2>
-        <p>Every detail in this space was designed to elevate your creativity and bring out your best performance.</p>
-    </section>
+<section class="cinematic-card">
+    <h2>Crafted With Passion</h2>
+    <p>From the first note to the final master, your music is treated with the care and intention it deserves.</p>
+</section>
 
-    <section class="cinematic-card">
-        <h2>Crafted With Passion</h2>
-        <p>From the first note to the final master, your music is treated with the care and intention it deserves.</p>
-    </section>
-
-    <section class="cinematic-card">
-        <h2>Experience the Watson Difference</h2>
-        <p>Where technology, artistry, and soul come together to create something unforgettable.</p>
-    </section>
+<section class="cinematic-card">
+    <h2>Experience the Watson Difference</h2>
+    <p>Where technology, artistry, and soul come together to create something unforgettable.</p>
+</section>
 
 </main>
 
 
-<div class="form-title">
-    Proceed to the Sync Page to Download Your MP3, WAV, Stems, Lyrics, and Bundle
-</div>
-<!-- SYNC POPUP -->
-<center><div id="syncPopup" class="sync-popup">
-  <div class="sync-popup-content">
-    ...
-  </div>
-</div>
-    <input type="text" id="syncName" placeholder="Your Name">
-    <input type="email" id="syncEmail" placeholder="Your Email">
-
-    <label class="sync-check">
-      <input type="checkbox" id="syncAgree">
-      I agree to the terms
-    </label>
-
-    <button onclick="submitSyncForm()" class="sync-submit">Continue</button>
-    <button onclick="closeSyncPopup()" class="sync-cancel">Cancel</button>
-  </div>
-</div>
-</center>
-    
 <!-- FOOTER -->
 <footer class="gold-footer">
 
@@ -288,7 +266,7 @@
             <a href="about.html">About</a>
             <a href="studio.html">Studio</a>
             <a href="services.html">Services</a>
-            <a href=blogt.html">Blog</a>
+            <a href="blog.html">Blog</a>
             <a href="contact.html">Contact</a>
         </div>
 
@@ -298,13 +276,12 @@
             <a href="marketplace.html">Marketplace</a>
             <a href="membership.html">Membership</a>
             <a href="licensing.html">Licensing</a>
-         </div>
+        </div>
 
         <!-- Column 3: Legal -->
         <div class="footer-col">
             <h4>Legal</h4>
             <a href="terms.html">Terms</a>
-            <a href="privacy.html">Privacy</a>
             <a href="support.html">Support</a>
             <a href="press.html">Press</a>
         </div>
@@ -326,7 +303,6 @@
     </div>
 
 </footer>
-
 
 <!-- Language selector -->
 <script>
@@ -426,8 +402,6 @@ const tracksContainer = document.getElementById("tracks");
 
     renderTracks();
   </script>
-
-
 
 </body>
 </html>
