@@ -1,0 +1,203 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>membership-signup</title>
+<link href="css/membership-signup.css" rel="stylesheet" type="text/css">
+<link href="css/global.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<!-- HEADER -->
+<header class="site-header">
+
+    <!-- UTILITY BAR -->
+    <div class="utility-bar">
+        <div class="utility-left">
+            <select id="lang-choice">
+                <option value="en">English</option>
+                <option value="haw">ʻŌlelo Hawaiʻi</option>
+                <option value="ja">日本語</option>
+                <option value="zh">中文</option>
+            </select>
+        </div>
+
+        <div class="utility-right">
+            <span class="downloads">Downloads: 0</span>
+            <span class="plays">Plays: 0</span>
+            <a href="#" class="cart">🛒 Cart</a>
+            <a href="#" class="signin">Sign In</a>
+        </div>
+    </div>
+
+    <!-- GOLD HEADER -->
+    <div class="header-row">
+        <div class="header-side left-side">
+            <img src="images/wrs.guitar.png" class="header-design" alt="Gold carved guitar">
+        </div>
+
+        <div class="header-center">
+            <img src="images/wrs.logo.png" class="main-logo" alt="WRS Logo">
+        </div>
+
+        <div class="header-side right-side">
+            <img src="images/wrs.bass.png" class="header-design" alt="Gold carved drum pad">
+        </div>
+    </div>
+
+    <!-- NAV -->
+   <!-- NAV -->
+   <nav class="main-nav">
+    <div class="nav-container">
+            <ul class="nav-links">
+			<li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="studio.html">Studio</a></li>
+			<li><a href="services.html">Services</a></li>
+            <li><a href="marketplace.html">Marketplace</a></li>
+            <li><a href="membership.html">Membership</a></li>
+            <li><a href="blog.html">Blog</a></li>
+            <li><a href="contact.html">Cont&nbsp;</a></li>
+            <li><a href="contact.html">act</a></li>
+        </ul>
+    </div>
+</nav>
+
+</header>	
+	
+	
+	<div class="membership-info">
+
+    <h2>What great value and benefits do we have for you today?</h2>
+
+    <p>
+        You’ve already seen the full WRSS benefits list — now here’s what you unlock when you sign up:
+    </p>
+
+    <p>
+        With your membership login, you can access the 
+        <strong>Listener’s Center</strong>, 
+        <strong>Licensing Center</strong>, 
+        and the <strong>Members‑Only Platform</strong>. 
+        Explore, listen, learn, and enjoy everything at your own pace.
+    </p>
+
+    <p>
+        Your membership begins with a <strong>3‑day FREE trial</strong>, giving you time to check out all we offer without any pressure.
+        After your trial ends, your monthly membership of <strong>$29.99</strong> will begin automatically.
+    </p>
+
+    <p>
+        You can <strong>cancel anytime</strong>.
+    </p>
+
+</div>
+<form action="signup.php" method="POST" class="signup-form">
+
+    <label>Name</label>
+    <input type="text" name="name" required>
+
+    <label>Email</label>
+    <input type="email" name="email" required>
+
+    <label>Password</label>
+    <input type="password" name="password" required>
+
+    <label>Favorite Genre<br>
+    </label>
+    <input type="text" name="genre">
+
+    <button type="submit">Create Account<br>
+    </button>
+
+</form>
+		
+	
+<p style="text-align:center; font-weight:bold; margin-top:25px; margin-bottom:25px;">
+    Pay here for your WRSS Membership.
+</p>
+
+		
+	<div class="paypal-wrap">
+    <!-- your PayPal subscription code goes here -->
+
+	<div id="paypal-button-container-P-30A24553CP7822458NKOYNWI"></div>
+<script src="https://www.paypal.com/sdk/js?client-id=BAAlleevTLcCvYVWQPvWTVTaZB7MuiHWB-vMvcj_RTiPhMJq9svh39rMMxwbucwW_Z3nO_YpghLWVd3aS0&vault=true&intent=subscription" data-sdk-integration-source="button-factory"></script>
+<script>
+  paypal.Buttons({
+      style: {
+          shape: 'rect',
+          color: 'gold',
+          layout: 'vertical',
+          label: 'subscribe'
+      },
+      createSubscription: function(data, actions) {
+        return actions.subscription.create({
+          /* Creates the subscription */
+          plan_id: 'P-30A24553CP7822458NKOYNWI'
+        });
+      },
+      onApprove: function(data, actions) {
+        alert(data.subscriptionID); // You can add optional success message for the subscriber here
+      }
+  }).render('#paypal-button-container-P-30A24553CP7822458NKOYNWI'); // Renders the PayPal button
+</script>
+	
+	</div>
+
+	
+	
+<!-- FOOTER -->
+<footer class="gold-footer">
+
+    <div class="footer-grid">
+
+        <!-- Column 1: Site -->
+        <div class="footer-col">
+            <h4>Site</h4>
+            <a href="index.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="studio.html">Studio</a>
+            <a href="services.html">Services</a>
+            <a href="blog.html">Blog</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <!-- Column 2: Business -->
+        <div class="footer-col">
+            <h4>Business</h4>
+            <a href="marketplace.html">Marketplace</a>
+            <a href="membership.html">Membership</a>
+            <a href="licensing.html">Licensing</a>
+         </div>
+
+        <!-- Column 3: Legal -->
+        <div class="footer-col">
+            <h4>Legal</h4>
+            <a href="terms.html">Terms</a>
+            <a href="support.html">Support</a>
+            <a href="press.html">Press</a>
+        </div>
+
+        <!-- Column 4: External -->
+        <div class="footer-col">
+            <h4>External</h4>
+            <a href="#">Affiliate Gear</a>
+            <a href="#">Partner Companies</a>
+            <a href="#">Recommended Tools</a>
+            <a href="#">External Resources</a>
+            <a href="#">Business Info</a>
+        </div>
+
+    </div>
+
+    <div class="footer-copy">
+        © 2026 Watson Recording Studio. All Rights Reserved.
+    </div>
+
+</footer>
+
+	
+	
+</body>
+</html>

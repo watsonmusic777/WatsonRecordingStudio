@@ -10,26 +10,38 @@
 </head>
 
 <body>
+	
+	
+	<header class="wrss-header">
+		
+  <div class="wrss-header-inner">
+   <img src="images/headerpic1.png" class="wrss-header-img" alt="WRSS Header">
 
-<!-- Background Video -->
-<video autoplay muted loop playsinline class="wrs-video-bg">
-    <source src="video/11048711-hd_1920_1080_30fps.mp4" type="video/mp4">
-</video>
 
-<!-- Overlay Content -->
-<div class="wrs-overlay">
-    <div class="wrs-title">WRSS</div>
-    <div class="wrs-sub">Worldwide Recording Sound Studio</div>
+  </div>
+</header>
+
+   <div class="signin-section">
+    <h2 class="signin-title">Sign In</h2>
+    <p class="signin-subtitle">Please sign in with the email and password you used when signing up.</p>
+
+    <button class="signin-toggle">Sign In</button>
+
+    <div class="signin-form" style="display:none;">
+        <form>
+            <input type="email" placeholder="Email">
+            <input type="password" placeholder="Password">
+            <button type="submit">Enter Studio</button>
+        </form>
+    </div>
 </div>
-<video autoplay muted loop playsinline class="wrs-video-bg">
-    <source src="video/11048711-hd_1920_1080_30fps.mp4" type="video/mp4">
-</video>
 
-<div class="wrs-overlay">
-    <div class="wrs-title">WRSS</div>
-    <div class="wrs-sub">Worldwide Recording Sound Studio</div>
-</div>
-
+<script>
+document.querySelector('.signin-toggle').addEventListener('click', function() {
+    const form = document.querySelector('.signin-form');
+    form.style.display = (form.style.display === 'none') ? 'block' : 'none';
+});
+</script>
 </body>
 </html>
 
