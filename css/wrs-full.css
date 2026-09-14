@@ -855,3 +855,652 @@ audio {
   color: #ffffff;
   text-shadow: 0 0 12px rgba(0,0,0,0.85);
 }
+#player {
+  width: 350px;
+  padding: 20px;
+  background: #111;
+  color: #fff;
+  border-radius: 10px;
+  font-family: Arial;
+}
+
+#controls button {
+  background: #222;
+  color: #fff;
+  border: none;
+  padding: 10px;
+  margin: 5px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#seek {
+  width: 100%;
+  margin-top: 10px;
+}
+#wrss-player {
+  max-width: 500px;
+  margin: 40px auto;
+  text-align: center;
+  color: #ffd700;
+  font-family: Arial, sans-serif;
+}
+
+.wrss-title {
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.wrss-controls {
+  margin: 20px 0;
+}
+
+.wrss-btn {
+  background: #333;
+  color: #ffd700;
+  border: none;
+  padding: 10px 18px;
+  margin: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  border-radius: 6px;
+}
+
+.wrss-btn:hover {
+  background: #444;
+}
+
+.wrss-main {
+  background: #ffd700;
+  color: #000;
+  font-weight: bold;
+}
+
+.wrss-playlist a {
+  display: block;
+  padding: 8px;
+  color: #ffd700;
+  text-decoration: none;
+  text-align: left;
+}
+
+.wrss-playlist a.active {
+  background: #333;
+}
+body {
+  margin: 0;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  background: radial-gradient(circle at top, #222 0%, #000 60%);
+  color: #f5f5f5;
+}
+
+.wrss-wrapper {
+  max-width: 1100px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.wrss-header h1 {
+  margin: 0;
+  font-size: 1.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #f9e27b;
+}
+
+.wrss-header p {
+  margin-top: 6px;
+  color: #ccc;
+}
+
+.wrss-main {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-top: 24px;
+}
+
+/* Gold Player Panel */
+.wrss-player-panel {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.wrss-player-bar {
+  position: relative;
+  background: linear-gradient(135deg, #1a1a1a, #333);
+  border-radius: 14px;
+  padding: 16px 20px;
+  box-shadow: 0 0 25px rgba(249, 226, 123, 0.25);
+  overflow: hidden;
+}
+
+.wrss-gold-strip {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, #f9e27b, #f5c84c, #f9e27b);
+  opacity: 0.18;
+  pointer-events: none;
+}
+
+.wrss-controls {
+  position: relative;
+  display: flex;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.wrss-controls button {
+  border: none;
+  padding: 8px 16px;
+  border-radius: 999px;
+  background: #111;
+  color: #f9e27b;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  cursor: pointer;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.6);
+  transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+}
+
+.wrss-controls button:hover {
+  background: #222;
+  box-shadow: 0 0 18px rgba(249, 226, 123, 0.35);
+}
+
+.wrss-controls button:active {
+  transform: scale(0.96);
+}
+
+.wrss-track-info {
+  position: relative;
+  margin-top: 4px;
+  font-size: 0.95rem;
+  color: #f5f5f5;
+}
+
+/* Now Playing Scroll */
+.wrss-now-scroll {
+  background: #111;
+  border-radius: 999px;
+  padding: 8px 16px;
+  border: 1px solid rgba(249, 226, 123, 0.4);
+  overflow: hidden;
+}
+
+#wr-now-text-scroll {
+  white-space: nowrap;
+  animation: wrss-scroll 18s linear infinite;
+  color: #f9e27b;
+  font-size: 0.9rem;
+}
+
+
+/* Playlist Panel */
+.wrss-playlist-panel {
+  background: rgba(12, 12, 12, 0.9);
+  border-radius: 14px;
+  padding: 16px 18px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.7);
+}
+
+.wrss-playlist-panel h2 {
+  margin: 0 0 10px;
+  font-size: 1rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #f9e27b;
+}
+
+.wrss-playlist-list {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  max-height: 360px;
+  overflow-y: auto;
+}
+
+.wrss-playlist-item {
+  padding: 6px 8px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 0.9rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #181818;
+  color: #eee;
+  transition: background 0.2s, color 0.2s;
+}
+
+.wrss-playlist-item span {
+  pointer-events: none;
+}
+
+.wrss-playlist-item:hover {
+  background: #222;
+  color: #f9e27b;
+}
+
+.wrss-playlist-item.active {
+  background: #f9e27b;
+  color: #111;
+}
+
+/* Responsive */
+@media (max-width: 800px) {
+  .wrss-main {
+    grid-template-columns: 1fr;
+  }
+	}
+.signin-box {
+  background: #111;
+  color: #fff;
+  padding: 25px;
+  border-radius: 10px;
+  max-width: 400px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+
+.signin-title {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #d4af37;
+}
+
+.signin-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.signin-form label {
+  text-align: left;
+  font-size: 14px;
+}
+
+.signin-form input {
+  padding: 10px;
+  border-radius: 6px;
+  border: none;
+}
+
+.signin-btn {
+  background: #d4af37;
+  color: #000;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.signin-btn:hover {
+  background: #c19b2f;
+}
+
+.signup-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signup-link a {
+  color: #d4af37;
+  font-weight: bold;
+}
+.signup-box {
+  background: #111;
+  color: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  max-width: 420px;
+  margin: 40px auto;
+  text-align: center;
+  box-shadow: 0 0 20px rgba(0,0,0,0.5);
+}
+
+.signup-title {
+  margin-bottom: 10px;
+  font-size: 24px;
+  color: #d4af37;
+  letter-spacing: 1px;
+}
+
+.signup-tagline {
+  margin-bottom: 20px;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.signup-form label {
+  text-align: left;
+  font-size: 14px;
+  color: #d4af37;
+}
+
+.signup-form input {
+  padding: 12px;
+  border-radius: 6px;
+  border: 2px solid #444;
+  background: #222;
+  color: #fff;
+}
+
+.signup-btn {
+  background: #d4af37;
+  color: #000;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.signup-btn:hover {
+  background: #c19b2f;
+}
+
+.signin-link {
+  margin-top: 15px;
+  font-size: 14px;
+}
+
+.signin-link a {
+  color: #d4af37;
+  font-weight: bold;
+}
+
+.signup-form {
+  display: flex !important;
+  flex-direction: column !important;
+  gap: 14px;
+  width: 100%;
+}
+
+.signup-form label,
+.signup-form input,
+.signup-form button {
+  display: block !important;
+  width: 100%;
+}
+/* FORCE VERTICAL STACKING */
+.signup-form {
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  width: 100% !important;
+}
+
+.signup-form label,
+.signup-form input,
+.signup-form button {
+  display: block !important;
+  width: 100% !important;
+  margin: 8px 0 !important;
+}
+.signup-box {
+  display: block !important;
+}
+
+.signup-form {
+  display: flex !important;
+  flex-direction: column !important;
+  width: 100% !important;
+}
+
+.signup-form label,
+.signup-form input,
+.signup-form button {
+  display: block !important;
+  width: 100% !important;
+}
+}
+.signin-link a {
+  color: #d4af37;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.signin-link a:hover {
+  color: #c19b2f;
+}
+.sync-hero {
+  margin-bottom: 40px;
+}
+.listening-center-banner {
+  margin-bottom: 50px;
+}
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* spacing between fields */
+    width: 100%;
+}
+/* Container centers the whole form */
+.form-container {
+    max-width: 480px;
+    margin: 0 auto;
+}
+
+/* Each row: label left, box right */
+.form-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 18px;
+}
+
+/* Label styling */
+.form-row label {
+    width: 40%;
+    font-size: 15px;
+    color: #fff;
+}
+
+/* Input styling */
+.form-row input {
+    width: 55%;
+    height: 35px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    border: 1px solid #d4a72c; /* WRSS gold */
+    background-color: #fff;
+}
+
+/* Genre box longer */
+.form-row input.genre-box {
+    width: 70%;
+}
+
+/* Password rules message */
+.password-rules {
+    display: block;
+    margin-top: 6px;
+    font-size: 13px;
+    color: #d4a72c; /* gold accent */
+}
+
+/* Submit button */
+button {
+    background-color: #d4a72c;
+    color: #000;
+    padding: 12px 20px;
+    border-radius: 6px;
+    border: none;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 10px;
+}
+button:hover {
+    background-color: #e6b94a;
+}
+
+/* Sign-in link spacing */
+.signin-link {
+    margin-top: 12px;
+    display: block;
+    color: #d4a72c;
+    font-size: 14px;
+}
+.form-header {
+    margin-bottom: 30px; /* adjust 30–50px depending on your eye */
+}
+margin-bottom: 40px;
+.form-header {
+    margin-top: 60px;   /* adjust 40–60px depending on your eye */
+    margin-bottom: 30px;
+}
+.signup-banner h2 {
+    color: #d4a72c;       /* WRSS gold */
+    font-size: 38px;      /* bigger, more presence */
+    font-weight: 700;     /* stronger */
+    margin-bottom: 10px;
+}
+
+.signup-banner p {
+    color: #fff;
+    font-size: 20px;      /* slightly bigger too */
+}
+.signup-banner h2 {
+    color: #d4a72c;       /* WRSS gold */
+    font-size: 42px;      /* bigger, eye-catching */
+    font-weight: 800;     /* strong presence */
+    letter-spacing: 1px;  /* subtle spacing for premium look */
+    margin-bottom: 12px;
+}
+
+.signup-banner p {
+    color: #fff;
+    font-size: 22px;      /* slightly bigger */
+    font-weight: 400;
+}
+.signup-banner h2 {
+    text-shadow: 0 0 10px rgba(212,167,44,0.6);
+}
+.signup-banner h2 {
+    border-bottom: 2px solid #d4a72c;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+.signup-banner {
+    background-image: url('studio-blur.jpg'); /* replace with your actual image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 50px 25px;     /* gives the header breathing room */
+    text-align: center;     /* keeps header centered */
+    margin-top: 40px;       /* spacing from hero */
+    margin-bottom: 40px;    /* spacing before form */
+    border-radius: 10px;    /* clean WRSS look */
+    backdrop-filter: blur(2px); /* optional subtle blur */
+}
+
+.signup-banner h2 {
+    color: #d4a72c;         /* WRSS gold */
+    font-size: 42px;        /* bigger, eye-catching */
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.signup-banner p {
+    color: #fff;
+    font-size: 22px;
+    font-weight: 400;
+}
+.scroll-arrow {
+    width: 70px;
+    height: 70px;
+    margin: 30px auto;
+    border-radius: 50%;
+    border: 3px solid #d4a72c; /* WRSS gold */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.4); /* subtle dark fill */
+    box-shadow: 0 0 12px rgba(212,167,44,0.35); /* gold glow */
+}
+
+.scroll-arrow::after {
+    content: "↓";               /* bold downward arrow */
+    font-size: 40px;            /* large, noticeable */
+    color: #d4a72c;             /* WRSS gold */
+    font-weight: 700;
+}
+.scroll-arrow {
+    width: 70px;
+    height: 70px;
+    margin: 30px auto 25px auto; /* 25px space BELOW the arrow */
+    border-radius: 50%;
+    border: 3px solid #d4a72c;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0,0,0,0.4);
+    box-shadow: 0 0 12px rgba(212,167,44,0.35);
+}
+
+.scroll-arrow::after {
+    content: "↓";
+    font-size: 40px;
+    color: #d4a72c;
+    font-weight: 700;
+}
+.gold-section {
+    border: 2px solid #d4a72c; /* WRSS gold */
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px auto;
+    background: rgba(0,0,0,0.6);
+    box-shadow: 0 0 12px rgba(212,167,44,0.35);
+}
+.gold-section {
+    border: 2px solid #d4a72c; /* WRSS gold */
+    border-radius: 12px;
+    padding: 30px;
+    margin: 40px auto;
+    background: rgba(0,0,0,0.6);
+    box-shadow: 0 0 12px rgba(212,167,44,0.35);
+}
+.header-banner {
+    background-image: url('studio-blur.jpg'); /* replace with your banner image */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    padding: 50px 25px;
+    text-align: center;
+    margin: 40px auto;
+    border-radius: 12px;
+    border: 2px solid #d4a72c; /* WRSS gold border */
+    box-shadow: 0 0 12px rgba(212,167,44,0.35); /* gold glow */
+}
+
+.header-banner h2 {
+    color: #d4a72c;
+    font-size: 42px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    margin-bottom: 12px;
+}
+
+.header-banner p {
+    color: #fff;
+    font-size: 22px;
+}

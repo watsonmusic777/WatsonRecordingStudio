@@ -5,7 +5,6 @@ body, html {
     padding: 0;
     height: 100%;
     width: 100%;
-    overflow: hidden; /* PAGE HOLDS */
     font-family: Arial, sans-serif;
     background: black; /* fallback */
 }
@@ -44,5 +43,175 @@ body, html {
     font-size: 1.5rem;
     margin-top: 10px;
     opacity: 0.9;
+}
+.wrs-header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* Your combined mic image behind the title */
+.mic-bg {
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    width: 420px;
+    height: 420px;
+    //+background-image:r uploaded mic photo */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.30; /* lets the gold text shine */
+    transform: translateX(-50%);
+    filter: drop-shadow(0px 0px 18px rgba(255, 0, 0, 0.45)); /* reddish glow */
+}
+
+.wrs-title-block {
+    position: relative;
+    z-index: 10;
+}
+
+.wrs-title {
+    font-size: 95px;
+    font-weight: bold;
+    color: gold;
+    letter-spacing: 4px;
+    text-shadow: 0px 0px 14px rgba(255, 215, 0, 0.7); /* gold glow */
+}
+
+.wrs-subtitle {
+    font-size: 26px;
+    color: gold;
+    margin-top: -8px;
+    letter-spacing: 2px;
+    text-shadow: 0px 0px 10px rgba(255, 215, 0, 0.5);
+}
+
+.wrs-header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    margin-top: 60px;
+}
+
+/* Your combined mic image behind the title */
+.mic-bg {
+    position: absolute;
+    left: 50%;
+    top: -60px;
+    width: 420px;      /* tuned for your image's width */
+    height: 420px;
+    background-image: url('images/mic.png'); /* your single mic photo */
+    background-size: contain;
+    background-repeat: no-repeat;
+    opacity: 0.30;     /* softer so WRSS pops */
+    transform: translateX(-50%);
+    filter: drop-shadow(0px 0px 12px rgba(255, 0, 0, 0.4));
+}
+
+.wrs-title-block {
+    position: relative;
+    z-index: 10;
+}
+
+.wrs-title {
+    font-size: 95px;
+    font-weight: bold;
+    color: gold;
+    letter-spacing: 4px;
+    text-shadow: 0px 0px 12px rgba(255, 215, 0, 0.6);
+}
+
+.wrs-subtitle {
+    font-size: 26px;
+    color: white;
+    margin-top: -8px;
+    letter-spacing: 2px;
+}
+.wrs-header {
+    position: fixed;
+    top: 40px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: auto;
+    z-index: 100;
+}
+.dropdown-title {
+    margin-top: 200px;
+    text-align: center;
+    color: gold;
+    font-size: 22px;
+}
+.signin-form {
+    position: relative;
+    margin-top: 20px;
+}
+.center-wrapper {
+    width: 100%;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+}
+.wrss-header {
+  width: 100%;
+  background-color: #000; /* or whatever your site bg is */
+}
+
+.wrss-header-inner {
+  max-width: 1200px;      /* adjust to your layout */
+  margin: 0 auto;
+}
+
+.wrss-header-img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+.signin-title {
+    font-size: 32px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+.signin-subtitle {
+    font-size: 18px;
+    text-align: center;
+    margin-bottom: 15px;
+    color: #ccc;
+    letter-spacing: 1px;
+}
+
+.signin-form {
+    display: none !important;
+}
+/* Gold Glow Around Form */
+.signin-form {
+    background: rgba(255, 255, 255, 0.08);
+    padding: 20px;
+    border-radius: 10px;
+    width: 100%;
+    box-sizing: border-box;
+
+    /* GOLD GLOW */
+    box-shadow: 0 0 18px rgba(212, 175, 55, 0.55),
+                0 0 35px rgba(212, 175, 55, 0.35);
+    border: 1px solid rgba(212, 175, 55, 0.45);
+}
+/* Disclaimer Text */
+.signin-disclaimer {
+    font-size: 12px;        /* smaller text */
+    color: #bbb;            /* softer color */
+    margin-top: 10px;
+    line-height: 1.3;
+    text-align: center;
+}
+.signin-subtitle {
+    font-size: 11px !important;   /* force smaller */
+    color: #777 !important;       /* softer */
+    opacity: 0.65 !important;     /* faded */
+    margin-bottom: 12px !important;
+    line-height: 1.3 !important;
+    font-weight: normal !important;
 }
 

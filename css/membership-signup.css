@@ -1,0 +1,50 @@
+@charset "utf-8";
+.paypal-wrap {
+    transform: scale(0.90);
+    transform-origin: top left;
+}
+
+.paypal-wrap {
+    transform: scale(0.90);
+    transform-origin: top center;
+    margin: 0 auto;
+    width: fit-content;
+}
+.membership-info h2 {
+    text-align: center;
+}
+
+.membership-info p {
+    text-align: justify;
+}
+.membership-info p {
+    text-align: justify;
+    line-height: 1.6;   /* spacing between lines */
+    margin-bottom: 15px; /* spacing between paragraphs */
+}
+
+.membership-info h2 {
+    text-align: center;
+    margin-bottom: 20px; /* spacing under the header */
+}
+.signup-form {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    display: block;
+}
+<div class="enter-wrapper">
+.signup-form {
+    display: block !important;
+    width: 100%;
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.signup-form label,
+.signup-form input,
+.signup-form button {
+    display: block !important;
+    width: 100%;
+    margin-bottom: 15px;
+}

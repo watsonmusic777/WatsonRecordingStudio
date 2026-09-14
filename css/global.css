@@ -747,4 +747,10 @@ body {
     text-align: center;
 }
 
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px; /* spacing between fields */
+    width: 100%;
+}
 

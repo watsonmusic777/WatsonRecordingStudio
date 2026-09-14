@@ -1,0 +1,44 @@
+@charset "utf-8";
+.wrss-enter-page {
+  text-align: center;
+  padding-top: 120px;
+}
+
+.enter-big {
+  width: 360px;
+  height: auto;
+}
+
+.enter-actions {
+  margin-top: 40px;
+}
+
+.enter-btn {
+  background: gold;
+  color: black;
+  padding: 15px 40px;
+  font-size: 22px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  box-shadow: 0 0 20px gold;
+}
+/* CSS Document */
+.enter-big {
+  width: 420px;
+}
+.enter-login-container {
+    width: 400px !important;
+    max-width: 400px !important;
+    margin: 40px auto !important;
+}
+.enter-login-links a {
+    color: gold !important;
+    text-decoration: none;
+}
+
+.enter-login-links a:hover {
+    color: #ffdd55 !important;
+}
+
